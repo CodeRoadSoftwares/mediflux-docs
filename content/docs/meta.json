@@ -1,0 +1,13 @@
+{
+  "title": "MediFlux",
+  "pages": [
+    "---Introduction---",
+    "introduction",
+    "---Sales---",
+    "sales",
+    "---Purchases---",
+    "purchases",
+    "---Reports---",
+    "reports"
+  ]
+}

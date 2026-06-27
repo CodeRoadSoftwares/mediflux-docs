@@ -1,0 +1,61 @@
+---
+title: Sales
+description: Manage pharmacy sales and transactions.
+icon: ShoppingCart
+---
+
+The Sales section of MediFlux provides a complete point-of-sale system tailored for pharmacy operations. It handles everything from over-the-counter product sales to prescription dispensing, with built-in support for insurance claims processing, discount programs, and regulatory compliance.
+
+Every sale in MediFlux follows a structured workflow that ensures accuracy, maintains audit trails, and automatically updates your inventory and accounting records. The POS interface is designed for speed — pharmacy staff can process a typical transaction in under 30 seconds while the system handles all the background bookkeeping.
+
+## Sales Workflow
+
+A standard sales transaction flows through these stages:
+
+1. **Item Entry** — Scan barcodes or search for products to add to the sale
+2. **Prescription Verification** — For Rx items, verify and attach the prescription
+3. **Pricing & Discounts** — Apply insurance, loyalty programs, or manual discounts
+4. **Payment Processing** — Accept cash, card, or split payment methods
+5. **Receipt & Dispensing** — Generate the receipt and dispense medications
+
+## Explore Sales Features
+
+<Cards>
+  <Card
+    title="Create Sale"
+    description="Step-by-step guide to creating and processing a new sale transaction."
+    href="/docs/sales/create-sale"
+  />
+  <Card
+    title="Returns"
+    description="Process returns, exchanges, and refunds for pharmacy sales."
+    href="/docs/sales/returns"
+  />
+</Cards>
+
+## Sales Dashboard
+
+The sales dashboard provides real-time visibility into your pharmacy's transaction activity. Key metrics displayed include:
+
+- **Today's Revenue** — Total sales revenue for the current day
+- **Transaction Count** — Number of completed transactions
+- **Average Sale Value** — Mean transaction amount
+- **Top-Selling Items** — Products with the highest unit sales
+- **Pending Prescriptions** — Rx orders awaiting pharmacist verification
+
+<Callout type="info">
+  Sales data syncs to the [Accounting](/docs/accounting) module in real time. Revenue is posted to your sales ledger and cost of goods sold is calculated automatically based on your inventory costing method (FIFO, weighted average, or specific identification).
+</Callout>
+
+## Payment Methods
+
+MediFlux supports a range of payment methods out of the box:
+
+| Method         | Description                                | Settlement    |
+| -------------- | ------------------------------------------ | ------------- |
+| Cash           | Physical currency with change calculation  | Immediate     |
+| Credit Card    | Visa, Mastercard, Amex via payment gateway | 1–2 days      |
+| Debit Card     | Direct bank account debit                  | Same day      |
+| Insurance      | Third-party payer claims submission        | 7–30 days     |
+| Store Credit   | Previously issued credit balance           | Immediate     |
+| Split Payment  | Combine multiple methods in one sale       | Varies        |

@@ -1,0 +1,81 @@
+---
+title: Accounting
+description: Comprehensive accounting and financial management.
+icon: Calculator
+---
+
+The Accounting module in MediFlux provides a complete double-entry bookkeeping system designed specifically for pharmacy operations. It integrates seamlessly with the Pharmacy module, automatically recording financial transactions as sales, purchases, and inventory movements occur.
+
+Rather than treating accounting as an afterthought, MediFlux makes it a core part of the platform. Every transaction that has a financial impact — from selling a bottle of aspirin to receiving a shipment of prescription medications — generates the appropriate journal entries in real time. This eliminates the manual data entry and reconciliation work that consumes hours in traditional pharmacy accounting workflows.
+
+## Module Overview
+
+<Cards>
+  <Card
+    title="Ledgers"
+    description="Manage your general ledger, subsidiary ledgers, and chart of accounts."
+    href="/docs/accounting/ledgers"
+  />
+  <Card
+    title="Reports"
+    description="Generate financial statements including profit & loss, balance sheet, and cash flow."
+    href="/docs/accounting/reports"
+  />
+</Cards>
+
+## Chart of Accounts
+
+MediFlux ships with a pharmacy-specific chart of accounts that covers the most common account types. You can customize it to match your existing accounting structure or use it as-is for a quick start.
+
+```typescript title="Example: View chart of accounts"
+const accounts = await fetch("https://api.mediflux.io/v1/accounts", {
+  headers: { Authorization: "Bearer your-api-key" },
+});
+
+const data = await accounts.json();
+// Returns accounts organized by type:
+// Assets, Liabilities, Equity, Revenue, Expenses
+```
+
+The default chart of accounts includes pharmacy-specific accounts like:
+
+| Account Code | Account Name                | Type     |
+| ------------ | --------------------------- | -------- |
+| 1100         | Cash and Cash Equivalents   | Asset    |
+| 1200         | Accounts Receivable         | Asset    |
+| 1300         | Inventory - Pharmaceuticals | Asset    |
+| 1310         | Inventory - OTC Products    | Asset    |
+| 1320         | Inventory - Medical Devices | Asset    |
+| 2100         | Accounts Payable            | Liability|
+| 2200         | Sales Tax Payable           | Liability|
+| 3100         | Owner's Equity              | Equity   |
+| 4100         | Pharmacy Sales Revenue      | Revenue  |
+| 4200         | OTC Sales Revenue           | Revenue  |
+| 5100         | Cost of Goods Sold - Rx     | Expense  |
+| 5200         | Cost of Goods Sold - OTC    | Expense  |
+| 6100         | Salaries and Wages          | Expense  |
+| 6200         | Rent and Utilities          | Expense  |
+
+<Callout type="info">
+  MediFlux enforces the accounting equation (Assets = Liabilities + Equity) at the database level. Every journal entry must balance — the system rejects any transaction where debits don't equal credits.
+</Callout>
+
+## Automatic Journal Entries
+
+The following transactions automatically generate journal entries without manual intervention:
+
+- **Sales** — Debits cash/receivables, credits revenue, and records COGS
+- **Purchase Receipts** — Debits inventory, credits accounts payable
+- **Supplier Payments** — Debits accounts payable, credits cash
+- **Returns** — Reverses the original sale entries proportionally
+- **Inventory Adjustments** — Debits/credits inventory with an offset to an adjustment account
+
+This automation ensures your books are always up to date and reduces the risk of errors from manual data entry.
+
+## Multi-Location Accounting
+
+For pharmacy chains operating multiple locations, MediFlux supports both consolidated and per-location financial reporting. Each location maintains its own set of transactions while rolling up to organization-level financial statements.
+
+<Callout type="warning">
+  Ensure each location has its own bank account configured in MediFlux for accurate cash flow tracking. Inter-location transfers are recorded as internal transactions with proper elimination entries in consolidated reports.
+</Callout>

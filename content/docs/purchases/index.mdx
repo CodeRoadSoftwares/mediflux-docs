@@ -1,0 +1,71 @@
+---
+title: Purchases
+description: Manage pharmacy purchase orders and inventory.
+icon: Package
+---
+
+The Purchases section of MediFlux handles procurement — the process of ordering products from your suppliers and receiving them into inventory. Effective purchase management ensures your pharmacy maintains optimal stock levels without tying up excess capital in overstock.
+
+MediFlux streamlines the entire procurement cycle from identifying what needs to be ordered, creating purchase orders, sending them to suppliers, and receiving inventory. The system integrates with the Accounting module to automatically record purchase expenses, accounts payable, and inventory valuations.
+
+## Procurement Workflow
+
+The standard procurement cycle in MediFlux follows these stages:
+
+1. **Demand Detection** — The system identifies items that have fallen below their reorder point based on sales velocity and current stock levels
+2. **Purchase Order Creation** — Generate a purchase order manually or through automated reorder suggestions
+3. **Supplier Communication** — Send the PO to your supplier via email, EDI, or the supplier portal
+4. **Receiving** — Record received inventory against the purchase order, noting any discrepancies
+5. **Invoice Matching** — Match the supplier's invoice against the PO and receiving report
+6. **Payment** — Process payment to the supplier through accounts payable
+
+<Cards>
+  <Card
+    title="Create Purchase"
+    description="Step-by-step guide to creating and managing purchase orders from suppliers."
+    href="/docs/pharmacy/purchases/create-purchase"
+  />
+</Cards>
+
+## Supplier Management
+
+MediFlux maintains a comprehensive supplier directory where you store contact information, payment terms, lead times, and product catalogs for each of your vendors.
+
+```typescript title="Example: Register a supplier"
+const supplier = await fetch("https://api.mediflux.io/v1/suppliers", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "Bearer your-api-key",
+  },
+  body: JSON.stringify({
+    name: "PharmaDist National",
+    code: "SUP-PDN-001",
+    contact_email: "orders@pharmadist.example.com",
+    payment_terms: 30,
+    lead_time_days: 3,
+    minimum_order: 250.0,
+    currency: "USD",
+    categories: ["prescription", "otc", "medical_supplies"],
+  }),
+});
+```
+
+<Callout type="info">
+  Setting accurate lead times for each supplier allows MediFlux to calculate optimal reorder points. The system considers lead time, average daily sales, and safety stock when generating reorder suggestions.
+</Callout>
+
+## Automated Reordering
+
+MediFlux can automatically generate purchase order suggestions based on your inventory levels, sales velocity, and supplier lead times. The system analyzes historical sales patterns to predict demand and recommends order quantities that minimize both stockouts and overstock.
+
+| Setting                 | Description                                      | Default    |
+| ----------------------- | ------------------------------------------------ | ---------- |
+| Reorder Point           | Stock level that triggers a reorder suggestion    | Calculated |
+| Safety Stock            | Buffer quantity to prevent stockouts              | Calculated |
+| Economic Order Quantity | Optimal order size balancing cost and carrying    | Calculated |
+| Review Frequency        | How often the system checks for reorder needs     | Daily      |
+
+<Callout type="warning">
+  Automated purchase orders always require manual approval before being sent to suppliers. MediFlux never places orders automatically without human review.
+</Callout>
