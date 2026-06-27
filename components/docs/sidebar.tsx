@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { icons } from "lucide-react";
+import { ArrowUpRight, icons } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Root, Node, Folder, Item } from "fumadocs-core/page-tree";
 
@@ -149,8 +149,8 @@ function SidebarFolder({
           isActive
             ? "bg-primary-light text-primary"
             : isChildActive
-              ? "text-foreground hover:bg-accent/50"
-              : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
+              ? "text-foreground hover:bg-accent"
+              : "text-muted-foreground hover:bg-accent hover:text-foreground"
         )}
         style={{ paddingLeft: `${sidebarPaddingLeft(level)}px` }}
       >
@@ -164,6 +164,12 @@ function SidebarFolder({
   );
 }
 
+function resolveItemIcon(node: Item, iconMap: Record<string, string>) {
+  if (iconMap[node.url]) return iconMap[node.url];
+  if (typeof node.icon === "string") return node.icon;
+  return undefined;
+}
+
 function SidebarItem({
   node,
   level,
@@ -174,23 +180,56 @@ function SidebarItem({
   iconMap: Record<string, string>;
 }) {
   const pathname = usePathname();
-  const isActive = pathname === node.url;
-  const iconName = iconMap[node.url];
+  const isExternal =
+    node.external ??
+    (node.url.startsWith("http://") || node.url.startsWith("https://"));
+  const isActive = !isExternal && pathname === node.url;
+  const iconName = resolveItemIcon(node, iconMap);
+
+  const className = cn(
+    "flex items-center gap-2 rounded-md px-2 py-1.5 mt-0.5 transition-colors duration-150",
+    isActive
+      ? "bg-primary/15 font-medium !text-primary"
+      : "hover:bg-accent hover:text-foreground",
+      isExternal ? "text-[15px] hover:text-primary group hover:bg-primary/10": "text-muted-foreground"
+  );
+  const style = { paddingLeft: `${sidebarPaddingLeft(level)}px` };
+
+  const content = (
+    <>
+      {iconName && <LucideIcon name={iconName} className={cn("h-3.5 w-3.5 shrink-0", isExternal ? "h-6 w-6 text-muted-foreground bg-gray-200/70 border border-gray-200 rounded-sm p-1 group-hover:text-primary transition-colors duration-200 group-hover:bg-white dark:bg-gray-800 dark:border-gray-700" : "h-3.5 w-3.5")} />}
+      <span className="truncate">{node.name}</span>
+      {isExternal && (
+        <ArrowUpRight
+          className="h-3.5 w-3.5 shrink-0 group-hover:text-primary transition-colors duration-200"
+          aria-hidden
+        />
+      )}
+    </>
+  );
+
+  if (isExternal) {
+    return (
+      <a
+        href={node.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        style={style}
+      >
+        {content}
+      </a>
+    );
+  }
 
   return (
     <Link
       href={node.url}
-      className={cn(
-        "flex items-center gap-2 rounded-md px-2 py-1.5 mt-0.5 transition-colors duration-150",
-        isActive
-          ? "bg-primary-light font-medium text-primary"
-          : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
-      )}
-      style={{ paddingLeft: `${sidebarPaddingLeft(level)}px` }}
+      className={className}
+      style={style}
       aria-current={isActive ? "page" : undefined}
     >
-      {iconName && <LucideIcon name={iconName} className="h-3.5 w-3.5 shrink-0" />}
-      <span className="truncate">{node.name}</span>
+      {content}
     </Link>
   );
 }

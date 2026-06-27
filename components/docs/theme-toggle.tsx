@@ -17,13 +17,13 @@ interface ThemeToggleProps {
 }
 
 export function ThemeToggle({ variant = "icon", className }: ThemeToggleProps) {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  const toggle = () => setTheme(theme === "dark" ? "light" : "dark");
-  const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
+  const toggle = () => setTheme(isDark ? "light" : "dark");
   const Icon = isDark ? Sun : Moon;
 
   if (!mounted) {
