@@ -7,11 +7,21 @@
     "external:[CalendarCheck][Book Free Demo](https://demo.mediflux.in)",
     "---Introduction---",
     "introduction",
-    "---Sales---",
-    "sales",
+    "---Supplier---",
+    "supplier",
     "---Purchases---",
     "purchases",
+    "---Inventory---",
+    "inventory",
+    "---Customers---",
+    "customers",
+    "---Sales---",
+    "sales",
     "---Reports---",
-    "reports"
+    "reports",
+    "---Settings---",
+    "settings",
+    "---Clinic Module---",
+    "clinics"
   ]
 }

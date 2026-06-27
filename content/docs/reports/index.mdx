@@ -1,88 +1,22 @@
 ---
 title: Reports
-description: Generate and analyze financial reports.
-icon: BarChart3
+description: Generate business reports for sales, inventory, purchases, and performance.
+icon: FileChartColumn
 ---
 
-MediFlux provides a comprehensive suite of financial reports that give you visibility into your pharmacy's financial performance. All reports pull data directly from your ledger entries, ensuring accuracy and consistency across every report you generate.
+The Reports section of MediFlux provides analytics and exportable summaries to help you understand pharmacy performance. Review trends in revenue, stock movement, supplier activity, and operational metrics.
 
-Reports can be generated on demand, scheduled for automatic delivery, or accessed through the reporting dashboard. Every report supports date range filtering, multi-location consolidation, and export to PDF, Excel, or CSV formats.
+## Overview
 
-## Available Reports
+Reports pull data from sales, inventory, purchases, and accounting modules so you can make decisions based on up-to-date information.
 
-<Cards>
-  <Card
-    title="Profit & Loss"
-    description="Revenue, expenses, and net income for a specified period."
-    href="/docs/accounting/reports/profit-loss"
-  />
-</Cards>
+## Key Capabilities
 
-## Standard Financial Reports
-
-MediFlux generates the three core financial statements that every business needs:
-
-### Profit & Loss Statement (Income Statement)
-
-Shows your pharmacy's revenue, cost of goods sold, gross profit, operating expenses, and net income for a specified period. This is your primary tool for understanding profitability. See the [detailed guide](/docs/accounting/reports/profit-loss).
-
-### Balance Sheet
-
-Provides a snapshot of your pharmacy's financial position at a specific point in time — what you own (assets), what you owe (liabilities), and the residual value (equity).
-
-### Cash Flow Statement
-
-Tracks the movement of cash in and out of your pharmacy, organized by operating activities, investing activities, and financing activities.
-
-## Pharmacy-Specific Reports
-
-Beyond standard financial statements, MediFlux generates reports tailored to pharmacy operations:
-
-| Report                     | Description                                            | Frequency       |
-| -------------------------- | ------------------------------------------------------ | ---------------- |
-| Sales Summary              | Daily, weekly, or monthly sales by category            | Daily            |
-| Inventory Valuation        | Current value of on-hand inventory by costing method   | Weekly           |
-| Expiry Report              | Products approaching or past expiration date           | Weekly           |
-| Controlled Substance Log   | Complete transaction history for Schedule II–V items   | Monthly / Audit  |
-| Supplier Spend Analysis    | Purchase spend breakdown by supplier                   | Monthly          |
-| Margin Analysis            | Profit margins by product, category, or supplier       | Monthly          |
-| Tax Report                 | Sales tax collected and payable by jurisdiction         | Monthly / Quarterly |
+- **Sales Reports** — Daily revenue, transaction counts, and product performance
+- **Inventory Reports** — Stock valuation, expiry risk, and movement summaries
+- **Purchase Reports** — Supplier spend and order fulfillment tracking
+- **Export Options** — Download or share reports for accounting and management review
 
 <Callout type="info">
-  All reports can be scheduled for automatic generation and delivery via email. Configure report schedules in **Settings → Reports → Schedules**.
-</Callout>
-
-## Generating Reports via API
-
-```typescript title="Example: Generate a profit & loss report"
-const report = await fetch("https://api.mediflux.io/v1/reports/profit-loss", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: "Bearer your-api-key",
-  },
-  body: JSON.stringify({
-    start_date: "2024-01-01",
-    end_date: "2024-01-31",
-    location_id: "all",
-    format: "json",
-    compare_to: "previous_period",
-  }),
-});
-
-const data = await report.json();
-console.log("Net Income:", data.net_income);
-```
-
-## Export Options
-
-Every report supports multiple export formats:
-
-- **PDF** — Formatted document suitable for printing and sharing
-- **Excel (.xlsx)** — Full data export with formulas for further analysis
-- **CSV** — Raw data export for importing into other systems
-- **JSON** — Structured data for programmatic consumption via the API
-
-<Callout type="success">
-  Scheduled reports are automatically generated and delivered to the configured recipients via email at the specified frequency. No manual intervention required.
+  More report guides will be added here as documentation is expanded.
 </Callout>
