@@ -12,7 +12,11 @@ When a patient books an appointment themselves using your **Public Booking Link*
 
 The search bar lets you search by **patient name or phone**. A **1 Pending** counter at the top shows how many booking requests are awaiting action, and the refresh icon reloads the list.
 
-*[Screenshot: Pending Bookings page]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/a555140b-dc50-4bd0-9d9f-b0af27806b47-pending-bookings.png"
+  title="Pending Bookings page"
+  description="Search pending bookings by patient name or phone with pending counter"
+/>
 
 ---
 
@@ -28,7 +32,11 @@ Each pending booking is shown as a card with:
 | **Time** | Requested time slot |
 | **Symptoms** | Symptoms entered by the patient while booking |
 
-*[Screenshot: Booking request card]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/d62482e6-7ea5-4787-8469-22ef90177ea7-booking-request-card.png"
+  title="Booking request card"
+  description="Pending booking card showing patient details, doctor, date, time, and symptoms"
+/>
 
 ---
 
@@ -57,12 +65,14 @@ The booking request is declined and does not appear in your Appointments list.
 
 ---
 
-## Common Mistakes to Avoid
+## Common Mistake to Avoid
 
-- Leaving booking requests unattended, patients booking through the public link expect a timely response, so review pending bookings regularly
-- Approving a booking without checking doctor availability, since these are patient-submitted requests, double-check the requested date and time don't conflict with existing appointments
+<Callout type="warning" title="Don't approve without checking availability">
+  Approving a booking without checking doctor availability can lead to double-bookings. Since these are patient-submitted requests, always double-check the requested date and time don't conflict with existing appointments before confirming.
+</Callout>
 
 ---
+
 ## Booking decided
 
 <Cards cols={2}>

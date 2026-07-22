@@ -1,0 +1,323 @@
+---
+title: Doctor Dashboard
+description: A quick look at what a doctor can see and do once their account is created, including prescriptions, schedules, and appointments.
+icon: Stethoscope
+---
+
+Once an admin creates a **user account** for a doctor from the Doctors page, the doctor gets their own login to MediFlux. Signing in takes them straight into the **Clinic** section, scoped to just their own work: their prescriptions, their schedules, and their appointments.
+
+<Note>
+A doctor's login only gives them access to the **Clinic** section. They won't be able to view or manage other parts of MediFlux like Sales, Inventory, or Customers.
+</Note>
+
+---
+
+## The doctor sidebar
+
+Doctors see a simplified version of the Clinic sidebar, with five sections:
+
+| Section | What it's for |
+| --- | --- |
+| **Dashboard** | Overview of appointments, prescriptions, and schedules |
+| **My Prescriptions** | All prescriptions the doctor has issued |
+| **My Signature & Stamp** | Upload a signature and stamp for prescriptions |
+| **My Schedules** | View and manage availability schedules |
+| **Appointments** | View and consult patient appointments |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/a75c1a08-1612-4ee1-b17e-0f214ac995e5-doctor-sidebar.png"
+  title="Doctor sidebar"
+  description="Simplified Clinic sidebar with Dashboard, Prescriptions, Signature and Stamp, Schedules, and Appointments"
+/>
+
+---
+
+## Dashboard
+
+The Dashboard is the doctor's landing page after login. It opens with a welcome banner showing the doctor's name and speciality, followed by four stat cards:
+
+| Card | Shows |
+| --- | --- |
+| **Today's Appointments** | Number of appointments scheduled for today |
+| **This Week** | Number of appointments scheduled this week |
+| **This Month** | Number of appointments scheduled this month |
+| **Total Prescriptions** | Total prescriptions issued by the doctor |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/a7442ee1-097e-4f2e-aa92-de39f077e3b9-lets_us_be.png"
+  title="Doctor dashboard overview"
+  description="Welcome banner with stat cards for appointments and prescriptions"
+/>
+
+Below the stat cards are three panels:
+
+| Panel | What it shows |
+| --- | --- |
+| **Today's Appointments** | A list of today's appointments, or "No appointments scheduled for today" if there are none |
+| **Upcoming Appointments** | A list of future appointments, or "No upcoming appointments" if there are none |
+| **Active Schedules** | The doctor's active availability schedules, showing fee and day |
+
+Each of the Today and Upcoming Appointments panels has a **View All** link, and the Active Schedules panel has a **Manage Schedules** link.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/305ffa83-e633-479e-ad34-3337dc04be68-appointment-panel.png"
+  title="Active schedules and appointment panels"
+  description="Today's appointments, upcoming appointments, and active schedules panels"
+/>
+
+### Quick actions
+
+At the bottom of the Dashboard, four shortcut cards let the doctor jump straight into common tasks:
+
+| Shortcut | Takes you to |
+| --- | --- |
+| **New Prescription** | Start a new prescription |
+| **View Appointments** | The Appointments page |
+| **My Prescriptions** | The My Prescriptions page |
+| **My Schedules** | The My Schedules page |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/35861ef4-291f-47cb-a455-83eb940630fc-quick-actions.png"
+  title="Dashboard quick action shortcuts"
+  description="Shortcut cards for New Prescription, View Appointments, My Prescriptions, and My Schedules"
+/>
+
+---
+
+## My Prescriptions
+
+This page lists every prescription the doctor has issued.
+
+The header shows the **Total** count of prescriptions, and an **Add Prescription** button to start a new one. Below that is a search bar that lets the doctor search by **patient name, medicine, or notes**.
+
+The **Prescription History** table shows:
+
+| Column | Description |
+| --- | --- |
+| **Patient** | Patient's name, with their phone number shown below it |
+| **Date & Time** | When the prescription was issued |
+| **Medicines** | Medicines prescribed, shown as tags |
+| **Actions** | Quick action menu for that prescription |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/69cd4f35-2fee-45ab-b379-eaf20ab76846-my-prescription.png"
+  title="My Prescriptions page"
+  description="Prescription history with patient details, date, medicines, and actions"
+/>
+
+---
+
+## Writing a prescription
+
+A prescription can be started in two ways:
+
+- Clicking **Add Prescription** on the My Prescriptions page, or **New Prescription** on the Dashboard. This opens a **Create Prescription** screen to select a patient first.
+- Clicking **Consult** on an appointment from the Appointments page. This skips patient selection and opens the prescription form directly, pre-filled with that patient's details.
+
+### Selecting a patient
+
+When starting from **Add Prescription** or **New Prescription**, the doctor first sees a **Create Prescription** screen to choose who the prescription is for:
+
+| Field | Description |
+| --- | --- |
+| **Search bar** | Search existing patients by **name, phone, or address** |
+| **Recent Patients** | Quick-select cards for recently seen patients, showing name, phone, and address |
+| **Add New Patient** | Create a new patient record if they aren't in the system yet |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/eb78f2e8-6686-4bbf-b4aa-76c1e473e661-add-new-patient.png"
+  title="Create Prescription — Select Patient"
+  description="Add a new patient"
+/>
+
+Once a patient is selected (or added), the doctor moves into the prescription form itself.
+
+The prescription form includes:
+
+| Section | What it captures |
+| --- | --- |
+| **Patient Information** | Name, Age, Gender, Phone, Date, Address (with a "Change Patient" link) |
+| **Complaints** | Patient's complaints |
+| **History** | Relevant medical history |
+| **Diagnosis** | Diagnosis notes |
+| **Investigations** | Investigations ordered |
+| **Observation** | Observation notes |
+| **Medications** | Medicine name, frequency, and duration |
+| **Vitals** | BP, Weight, Height, Temp, Pulse, SpO2 |
+| **Follow-up Date** | A date picker, plus quick options: 1 Day, 3 Days, 1 Week, 2 Weeks |
+| **Remarks** | Additional notes or instructions |
+| **Doctor's Signature** | Auto-filled from My Signature & Stamp, if uploaded |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/e6cd207a-6a2b-4328-a0bd-25d99b67fe22-prescription-form.png"
+  title="Prescription form"
+  description="Complete prescription form with patient info, complaints, diagnosis, medications, vitals, and follow-up"
+/>
+
+Once filled in, click **Save & Print** to save the prescription, or **Cancel** to discard it.
+
+---
+
+## My Signature & Stamp
+
+Doctors can upload a signature and a stamp image, which are then automatically included on every prescription they issue.
+
+| Field | Description |
+| --- | --- |
+| **Signature** | Image of the doctor's signature |
+| **Stamp** | Image of the doctor's clinic stamp |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/d4acf08d-1800-44d9-8bc3-398b2b7dcb90-signature-stamp.png"
+  title="My Signature & Stamp page"
+  description="Upload signature and stamp images for automatic inclusion on prescriptions"
+/>
+
+---
+
+## My Schedules
+
+This page shows the doctor's own availability schedules.
+
+The header includes an **Add Schedule** button, a search bar (search by **doctor name or speciality**), and a **Filters** button.
+
+Each schedule card shows:
+
+| Field | Description |
+| --- | --- |
+| **Name & Speciality** | Doctor's name and speciality |
+| **Fee** | Consultation fee for the schedule |
+| **Day** | Day(s) the schedule applies to |
+| **Status** | Active, Draft, Inactive, or Archived |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f427eb23-2ccd-4b5b-b522-62cfc69e566d-my-schedule-page.png"
+  title="My Schedules page"
+  description="Schedule cards showing name, speciality, fee, day, and status"
+/>
+
+### Row actions
+
+Click the **⋮** menu on a schedule card to:
+
+| Action | What it does |
+| --- | --- |
+| **View** | View the schedule's full details |
+| **Edit** | Opens the schedule for editing |
+| **Booking Link** | Get a shareable link for booking this schedule |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/669f8bfa-6405-4c83-b13e-bb2465fe35de-row-actions.png"
+  title="Schedule row actions menu"
+  description="View, Edit, and Booking Link options for each schedule"
+/>
+
+### Filtering schedules
+
+Clicking **Filters** opens a panel to refine the schedule list:
+
+| Filter | What it does |
+| --- | --- |
+| **Days of Week** | Filter by one or more days (Sunday to Saturday) |
+| **Time Slot** | Filter by Start Time and End Time |
+| **Status** | Filter by Active, Draft, Inactive, or Archived |
+| **Consultation Fee Range** | Filter by a Minimum and Maximum fee |
+| **Sort By** | Sort results (e.g., Recently Added), in Ascending or Descending order |
+
+Use **Reset** to clear all filters, or **Apply Filters** to run the search.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/51ff880a-d156-4cba-ba2b-91ef1c37e6b0-filter-button.png"
+  title="Filter & Sort panel"
+  description="Filter schedules by days, time slot, status, fee range, and sort order"
+/>
+
+### Adding a schedule
+
+Click **+ Add Schedule** to open the **Add New Schedule** form:
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/0ddbb687-72ac-4fa3-a619-6475a16cd22c-add-schedule.png"
+  title="Add Schedule button"
+  description="Button to open the Add New Schedule form"
+/>
+
+| Field | Description |
+| --- | --- |
+| **Select Doctor** | The doctor this schedule applies to, required |
+| **Consultation Fee** | Fee charged for this schedule, required |
+| **Schedule Type** | **Slot Based** (patients book specific time slots) or **Token Based** (patients book by date, with a max per day) |
+| **Recurring Schedule** | Add one or more days this schedule repeats on |
+| **Break Times** | Add break periods within the schedule |
+| **Exception Dates** | Add specific dates when the doctor is unavailable, overriding the recurring schedule |
+| **Booking Rules** | Configure rules around how patients can book this schedule |
+| **Schedule Poster** | Optional image shown on the schedule's share link |
+| **Effective From** | Date the schedule starts applying from |
+| **Notes** | Additional notes about the schedule |
+
+Once filled in, click **Create Schedule** to save it, or **Cancel** to discard it.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/40816682-962a-4f9b-b2dc-70542ed4a4aa-add-schedule-form.png"
+  title="Add New Schedule form"
+  description="Complete form for creating a new availability schedule with all fields"
+/>
+
+---
+
+## Appointments
+
+This page lists all of the doctor's patient appointments.
+
+The header includes a search bar (search by **patient name, phone, or email**), a **Filters** button, a per-page dropdown, and a refresh button.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/38d3adde-9e51-435a-96ae-b89b9c80a06a-appointments.png"
+  title="Appointments page"
+  description="Doctor's appointments list with search, filters, and refresh options"
+/>
+
+Each appointment card shows:
+
+| Field | Description |
+| --- | --- |
+| **Patient** | Patient's name, with phone number shown below it |
+| **Doctor** | Doctor assigned to the appointment |
+| **Date & Time** | Scheduled date and time |
+| **Status** | e.g., Scheduled |
+| **Payment Status** | e.g., Partially Paid, with the remaining amount and an **Add Payment** button |
+| **Type** | Appointment type tag, e.g., Routine Checkup |
+| **Consult** | Opens the prescription form for this appointment |
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+ 
+  <Card
+    title="Prescriptions"
+    description="Learn more about issuing and managing prescriptions."
+    href="/docs/clinic/prescriptions"
+    icon="FileText"
+  />
+  <Card
+    title="Schedules"
+    description="Configure availability and booking rules for doctors."
+    href="/docs/clinic/schedules"
+    icon="Calendar"
+  />
+  <Card
+    title="Appointments"
+    description="Manage patient appointments and booking requests."
+    href="/docs/clinic/appointments"
+    icon="CalendarCheck"
+  />
+  <Card
+    title="Pending Bookings"
+    description="Review and approve online booking requests from patients."
+    href="/docs/clinic/pending-bookings"
+    icon="Clock"
+  />
+  
+</Cards>

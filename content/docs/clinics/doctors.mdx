@@ -1,7 +1,7 @@
 ---
 title: Doctors
 description: View and manage doctor profiles, search by qualification or speciality, and add new doctors to your clinic.
-icon: Stethoscope
+icon: BriefcaseMedical
 ---
 
 The **Doctors** page is your directory of every doctor associated with your pharmacy's clinic. It gives you a quick view of each doctor's contact details, qualifications, and specialities, with the ability to search, filter, and manage profiles from one place.
@@ -12,7 +12,11 @@ The **Doctors** page is your directory of every doctor associated with your phar
 
 The search bar lets you search by **name, phone, email, or registration number**. Just start typing and the list filters instantly.
 
-*[Screenshot: Doctors search bar]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/bc81105a-8c70-4875-a00f-78a2fad20e4b-searching-doctors.png"
+  title="Doctors search bar"
+  description="Search for doctors by name, phone, email, or registration number"
+/>
 
 ---
 
@@ -27,7 +31,11 @@ Two dropdowns next to the search bar let you narrow the list further:
 
 You can type in either dropdown to search for a qualification or speciality, and select a match from the list.
 
-*[Screenshot: Qualifications and Specialities dropdowns]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/849c120f-9a50-4bbb-af59-bff9b9e65b34-drop-down.png"
+  title="Qualifications and Specialities dropdowns"
+  description="Filter doctors by qualification and speciality using the dropdowns"
+/>
 
 ---
 
@@ -42,7 +50,11 @@ You can type in either dropdown to search for a qualification or speciality, and
 | **Speciality** | Speciality or specialities the doctor practices in |
 | **Actions** | Quick action menu for that doctor row |
 
-*[Screenshot: Doctors table]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/adfcc8a1-3a2c-4382-8543-e802c8497b1f-doctors-table.png"
+  title="Doctors table"
+  description="Doctors table showing all columns and data"
+/>
 
 ---
 
@@ -61,7 +73,11 @@ Click the **⋮** menu on any doctor row to:
 | **Edit** | Opens the doctor's profile for editing |
 | **Delete** | Removes the doctor from your clinic |
 
-*[Screenshot: Row actions menu]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/383486f9-7cc2-4bd6-b1e8-065cc1f36e30-actions.png"
+  title="Row actions menu"
+  description="Row actions menu with Edit and Delete options"
+/>
 
 ---
 
@@ -82,7 +98,11 @@ Click on any doctor's name to open their full profile, showing:
 | **Qualifications** | All qualifications, shown as tags |
 | **Specialities** | All specialities, shown as tags |
 
-*[Screenshot: Doctor detail page]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f9067d5d-75db-479a-9fd5-61bf2856b365-doctors-detailed-page.png"
+  title="Doctor detail page"
+  description="Doctor profile page showing all sections and information"
+/>
 
 ---
 
@@ -90,9 +110,13 @@ Click on any doctor's name to open their full profile, showing:
 
 Click **+ Add Doctor** at the top of the page to open the **Add New Doctor** form:
 
-*[Screenshot: Add Doctor button]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/a7079db4-8da7-4230-80a6-2a1215da4ee2-add-doctor.png"
+  title="Add Doctor button"
+  description="Add Doctor button located at the top of the page"
+/>
 
-## The Doctors form:
+### The Doctors form
 
 | Field | Description |
 | --- | --- |
@@ -105,7 +129,11 @@ Click **+ Add Doctor** at the top of the page to open the **Add New Doctor** for
 
 Qualifications and specialities you type in are added to the list and can be searched or filtered by later using the dropdowns on this page.
 
-*[Screenshot: Add New Doctor form]*
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/9334c73a-dba7-4ea9-a681-72a505f282ba-doctors-form.png"
+  title="Add New Doctor form"
+  description="Add New Doctor form with all required and optional fields"
+/>
 
 ### Creating a user account for the doctor
 
@@ -132,12 +160,11 @@ The doctor is removed from your Doctors list. Records linked to them elsewhere, 
 
 ---
 
-## Common Mistakes to Avoid
+## Common Mistake to Avoid
 
-- Skipping Qualifications and Specialities — without these, the doctor won't show up when filtering by qualification or speciality
-- Adding a doctor without a correct registration number — this is a required field and is used to identify the doctor
-- Enabling **Create User Account** without informing the doctor — since this gives them direct login access, make sure they're aware and have their credentials
-- Deleting a doctor instead of editing their details when information changes — check **Edit** first before removing a profile
+<Callout type="warning" title="Don't skip Qualifications and Specialities">
+  Without these, the doctor won't show up when filtering by qualification or speciality — making them harder to find and schedule later. Fill them in during setup to keep your clinic directory fully searchable.
+</Callout>
 
 ---
 
