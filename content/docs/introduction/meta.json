@@ -1,4 +1,8 @@
 {
   "title": "Introduction",
-  "pages": ["index", "getting-started", "installation"]
+  "pages": [
+    "index",
+    "getting-started",
+    "installation"
+  ]
 }
