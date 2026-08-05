@@ -4,7 +4,7 @@ description: Configure invoice numbering format, counters, and auto-reset behavi
 icon: Hash
 ---
 
-The **Invoice Counter** tab controls how invoice numbers are generated across MediFlux — the prefix, numbering format, date components, and whether the counter resets periodically. Sales and Purchases have their own independent settings, so you can configure each separately.
+The **Invoice Counter** tab controls how invoice numbers are generated across MediFlux, the prefix, numbering format, date components, and whether the counter resets periodically. Sales and Purchases have their own independent settings, so you can configure each separately.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/ca7e27fa-b017-4ad0-9fb4-bdda7f51719a-invoice-counter-1.png"
@@ -88,14 +88,17 @@ Click **Save Settings** to apply your changes. The button shows how many fields 
 
 ## FAQs
 
-**Can I change the Counter Start after invoices have already been generated?**
-No, Counter Start becomes read-only once invoices exist, to prevent numbering conflicts with invoices already issued.
-
-**Do Sales and Purchases share the same invoice counter?**
-No, each has its own independent settings under the Sale Settings and Purchase Settings tabs.
-
-**What happens if I enable Auto-Reset with a Yearly period?**
-Your counter will automatically reset back to the Counter Start value at the beginning of each year.
+<Accordions>
+  <Accordion title="Can I change the Counter Start after invoices have already been generated?">
+    No, Counter Start becomes read-only once invoices exist, to prevent numbering conflicts with invoices already issued.
+  </Accordion>
+  <Accordion title="Do Sales and Purchases share the same invoice counter?">
+    No, each has its own independent settings under the Sale Settings and Purchase Settings tabs.
+  </Accordion>
+  <Accordion title="What happens if I enable Auto-Reset with a Yearly period?">
+    Your counter will automatically reset back to the Counter Start value at the beginning of each year.
+  </Accordion>
+</Accordions>
 
 ---
 ## What's Next

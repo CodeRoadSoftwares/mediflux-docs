@@ -14,10 +14,10 @@ Navigate here from the sidebar: **Suppliers → Ledger**. You can also jump dire
 
 The Ledger page is split into two panels:
 
-**Left panel — Supplier list**
+**Left panel: Supplier list**
 Shows all your suppliers with their name, address, and individual outstanding balance in red. The total outstanding across all suppliers is shown at the bottom. Use the search bar to find a specific supplier instantly. Click **View All Suppliers** to go back to the full Supplier List page.
 
-**Right panel — Ledger entries**
+**Right panel: Ledger entries**
 Shows the transactions for the selected supplier, or all entries across every supplier if no supplier is selected.
 
 <Figure
@@ -81,16 +81,16 @@ Both views use the same tabs to filter what you see:
 | --- | --- |
 | **Supplier** *(consolidated view only)* | Name and contact number of the supplier |
 | **Date** | Date and time of the transaction, with the entry type shown as a label |
-| **Debit** | Amount reducing what you owe — payments and credit notes |
-| **Credit** | Amount increasing what you owe — purchases and opening balance |
-| **Balance** *(individual view only)* | Running outstanding balance after every entry — updates automatically with each transaction |
+| **Debit** | Amount reducing what you owe: payments and credit notes |
+| **Credit** | Amount increasing what you owe: purchases and opening balance |
+| **Balance** *(individual view only)* | Running outstanding balance after every entry: updates automatically with each transaction |
 | **Receipt** | Receipt or reference number if recorded |
 | **Notes** | Any notes added at the time of entry |
 | **Actions** | Delete the entry |
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783580928418-894092389-all-columns.png"
-  title="All Supplier Entries — consolidated table"
+  title="All Supplier Entries, consolidated table"
   description="Combined view showing transactions across all suppliers."
 />
 
@@ -112,7 +112,7 @@ The **Balance** column updates after every single entry, so you can trace exactl
 
 ## How the outstanding balance works
 
-MediFlux calculates your supplier outstanding automatically — you never need to update it manually:
+MediFlux calculates your supplier outstanding automatically, you never need to update it manually:
 
 - When you record a **Purchase** → the amount is added to Credit, increasing what you owe
 - When you make a **Payment** → the amount is added to Debit, reducing what you owe
@@ -140,7 +140,7 @@ If you need to manually correct a supplier's ledger balance, for example a price
 | **Adjustment Amount** | Enter a positive number (e.g. `500`) to increase what you owe, or a negative number (e.g. `-500`) to reduce what you owe |
 | **Entry Date** | Defaults to today's date. Can be changed |
 | **Receipt / Reference Number** | Optional reference number for this adjustment |
-| **Notes** | Reason for the adjustment — e.g. price correction, rounding adjustment, write-off |
+| **Notes** | Reason for the adjustment: e.g. price correction, rounding adjustment, write-off |
 
 Click **Add** to save. Click **Reset** to clear all fields.
 
@@ -168,10 +168,10 @@ Click **Filter** on the individual supplier ledger to open the Ledger Filters pa
 
 | Filter | Options |
 | --- | --- |
-| **Date Range** | Today, This Month, Last Month, This Quarter, Last Quarter, This Year, Last Year — or set a custom Start and End date |
+| **Date Range** | Today, This Month, Last Month, This Quarter, Last Quarter, This Year, Last Year: or set a custom Start and End date |
 | **Entry Type** | All Types, Payment, Purchase, Credit Note, Adjustment |
 | **Payment Method** | All Methods, Cash, Card, UPI, Net Banking |
-| **Sort By** | Sort field and order — ascending or descending |
+| **Sort By** | Sort field and order: ascending or descending |
 
 Click **Apply** to apply the filters. Click **Clear** to reset them all.
 
@@ -220,17 +220,16 @@ Click **Export** to download.
 
 ---
 
-## Frequently asked questions
-
+## FAQs
 <Accordions>
   <Accordion title="Can I delete a ledger entry?">
-    Yes — click the three-dot menu on any entry row and select <strong>Delete Entry</strong>. Note that deleting a purchase or payment entry will affect your outstanding balance immediately.
+    Yes, click the three-dot menu on any entry row and select <strong>Delete Entry</strong>. Note that deleting a purchase or payment entry will affect your outstanding balance immediately.
   </Accordion>
   <Accordion title="What is the difference between Debit and Credit in the ledger?">
-    Debit entries reduce what you owe a supplier — these are payments and credit notes. Credit entries increase what you owe — these are purchase bills and opening balance. Your outstanding balance is always Credit minus Debit.
+    Debit entries reduce what you owe a supplier, these are payments and credit notes. Credit entries increase what you owe, these are purchase bills and opening balance. Your outstanding balance is always Credit minus Debit.
   </Accordion>
   <Accordion title="Can I edit a payment or purchase entry after saving?">
-    Purchase entries can be edited from the Purchases section. Payment and credit note entries cannot be edited — if you made an error, delete the entry and record it again with the correct details.
+    Purchase entries can be edited from the Purchases section. Payment and credit note entries cannot be edited, if you made an error, delete the entry and record it again with the correct details.
   </Accordion>
   <Accordion title="Why does my Balance column not start from zero?">
     If you set an Opening Balance when adding the supplier, the Balance column starts from that amount. This represents the amount you already owed that supplier before starting MediFlux.

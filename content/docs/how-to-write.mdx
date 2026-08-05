@@ -1,6 +1,6 @@
 ---
 title: How to Write Docs
-description: Internal guide for the MediFlux documentation team — file structure, frontmatter, components, and writing conventions.
+description: Internal guide for the MediFlux documentation team, file structure, frontmatter, components, and writing conventions.
 enableToc: true
 ---
 
@@ -49,7 +49,7 @@ All documentation files live in `content/docs/`. The folder structure determines
 ### Naming rules
 
 - Use **kebab-case** for file and folder names: `create-sale.mdx`, not `CreateSale.mdx`.
-- Every section folder should have an **`index.mdx`** — this is the landing page for that section (e.g. `/docs/sales`).
+- Every section folder should have an **`index.mdx`**: this is the landing page for that section (e.g. `/docs/sales`).
 - Co-locate a **`meta.json`** inside each section folder to control sidebar order.
 
 ### Where to put a new page
@@ -59,7 +59,7 @@ All documentation files live in `content/docs/`. The folder structure determines
 3. Add the slug (without `.mdx`) to `{section}/meta.json` under `"pages"`.
 4. If you created a **new section**, also add the folder name to the root `content/docs/meta.json`.
 
-Example — adding a page to Sales:
+Example, adding a page to Sales:
 
 ```json title="content/docs/sales/meta.json"
 {
@@ -68,7 +68,7 @@ Example — adding a page to Sales:
 }
 ```
 
-Example — root navigation with section dividers:
+Example, root navigation with section dividers:
 
 ```json title="content/docs/meta.json"
 {
@@ -128,16 +128,16 @@ Icons appear in search results and are auto-filled on `<Card>` / `<WideCard>` wh
 
 Follow this pattern for most guides:
 
-1. **Opening paragraph** — what the page covers and who it's for (2–4 sentences).
-2. **Prerequisites or context** — link to related pages if needed.
-3. **Main sections** — use `##` for top-level sections (these appear in the table of contents).
-4. **Steps or tabs** — for procedural or multi-path content.
-5. **Reference tables or code** — for API fields, shortcuts, config options.
-6. **Next steps** — cards linking to related docs.
+1. **Opening paragraph**, what the page covers and who it's for (2–4 sentences).
+2. **Prerequisites or context**, link to related pages if needed.
+3. **Main sections**, use `##` for top-level sections (these appear in the table of contents).
+4. **Steps or tabs**, for procedural or multi-path content.
+5. **Reference tables or code**, for API fields, shortcuts, config options.
+6. **Next steps**, cards linking to related docs.
 
 ### Headings
 
-- Use a single `#` only if you need an in-page heading — the page `title` in frontmatter is already rendered as the H1.
+- Use a single `#` only if you need an in-page heading: the page `title` in frontmatter is already rendered as the H1.
 - Use `##` for main sections (shown in TOC).
 - Use `###` inside steps, tabs, or accordions.
 - Keep heading text short and scannable.
@@ -186,7 +186,7 @@ Ordered:
 
 ## Standard Markdown elements
 
-These work out of the box — no custom components needed.
+These work out of the box, no custom components needed.
 
 ### Tables
 
@@ -340,7 +340,7 @@ Switch between alternative content (install methods, languages, auth types).
 
 ### Cards
 
-Grid of link cards — ideal for section index pages and "Explore" sections.
+Grid of link cards, ideal for section index pages and "Explore" sections.
 
 **`<Cards>` / `<CardGroup>` props:** `cols` (`1` | `2` | `3` | `4`, default `2`)
 
@@ -376,7 +376,7 @@ When `href` points to an internal doc page, **title, description, and icon are a
 
 ### Wide cards
 
-Full-width stacked link rows — good for "Next steps" at the bottom of a page.
+Full-width stacked link rows, good for "Next steps" at the bottom of a page.
 
 **`<WideCards>` props:** optional `className`
 
@@ -513,7 +513,7 @@ Hosted MP4 or other video URL.
 
 ---
 
-## Putting it together — checklist
+## Putting it together, checklist
 
 Before opening a PR for a new doc page:
 
