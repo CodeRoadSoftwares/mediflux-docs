@@ -1,0 +1,19 @@
+{
+  "title": "Accounting",
+  "pages": [
+    "index",
+    "accounting-basics",
+    "daybook",
+    "add-journal-entry",
+    "dashboard",
+    "ledger",
+    "journals",
+    "general-ledger",
+    "trial-balance",
+    "balance-sheet",
+    "bank-accounts",
+    "p&l-statements",
+    "itc-reversals"
+
+  ]
+}
