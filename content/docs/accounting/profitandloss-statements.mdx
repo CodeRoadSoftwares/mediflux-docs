@@ -1,0 +1,282 @@
+---
+title: Profit & Loss
+description: View revenue, expenses, and net profit for a selected period.
+icon: TrendingUp
+---
+
+The **Profit & Loss Statement** (also called the Income Statement) shows how much money your pharmacy earned and spent during a specific period. It starts with total income, subtracts all expenses, and arrives at your net profit or loss. Unlike the Balance Sheet which is a snapshot, the P&L covers a period of time: a month, a quarter, or a full year.
+
+Navigate here from the sidebar: **Accounting → Profit & Loss**.
+
+<Note>
+The screenshot below is from a mature store with active sales and purchases. A newly initialized store will show mostly zero values until transactions are recorded.
+</Note>
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/f1c6fc4c-0634-4017-b028-6d2f197fdb40-PL-overview.png"
+  title="Profit & Loss Statement"
+  description="Income and Expenses panels with summary cards."
+/>
+
+---
+
+## Filter and export
+
+At the top of the page you control the period and can export the report.
+
+| Control | What it does |
+|---------|--------------|
+| **Search ledgers...** | Search for a specific income or expense account by name |
+| **Date range** | Select the period for the report. Defaults to the current month. Click to open a calendar picker with quick options |
+| **FY 2026-27** | Select the financial year. The date range automatically adjusts |
+| **Export** | Download the P&L as **PDF Document** or **Excel Sheet** |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/2d5f0601-35a0-4638-b25d-16dbb09ef039-filter-searchbar-PL.png"
+  title=" Filter and export options"
+  description="Search and filter with custom dates or export in pdf or excel formats."
+/>
+
+---
+## Top summary cards
+
+Four cards at the top give you the headline numbers.
+
+| Card | What it shows |
+|------|---------------|
+| **Total Income** | Sum of all revenue and other income lines in the selected period. Shows the count of income lines below |
+| **Total Expenses** | Sum of all expense lines in the selected period. Shows the count of expense lines below |
+| **Net Profit** | `Total Income − Total Expenses`. Green if positive (profit), red if negative (loss) |
+| **Profit Margin** | `(Net Profit / Net Sales) × 100`. Shows how much profit you keep from every rupee of sales |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/63a576d4-3a6b-409c-9876-8732409428e3-top-summarycards.png"
+  title="Top summary cards"
+  description="Total Income, Total Expenses, Net Profit, and Profit Margin."
+/>
+---
+
+## Income panel
+
+The left panel lists every account that contributes to your income, grouped into categories.
+
+| Column | Description |
+|--------|-------------|
+| **Ledger** | Account name. Parent groups can be expanded to reveal child accounts |
+| **Amount** | The total for that account or group in the selected period |
+
+### Revenue from Operations
+
+This is your core business income from selling medicines and services.
+
+| Account | Amount |
+|---------|--------|
+| **Revenue from Operations** | `₹18,980.11` |
+| Retail Sales | `₹12,559.10` |
+| Wholesale Sales | `₹9,411.51` |
+| Returns & Discounts | `-₹2,990.50` |
+
+<Note>
+**Returns & Discounts** is a **contra-revenue** account with a negative amount. It reduces your total revenue because it represents sales that were returned or discounted.
+</Note>
+
+### Other Income
+
+Non-sales income such as bank interest, round-off gains, or supplier adjustments.
+
+| Account | Amount |
+|---------|--------|
+| **Other Income** | `₹4.41` |
+| Round Off Gain | `₹4.41` |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/465be24a-b131-4c25-8f9e-d2f9f9910ef8-other-income-PL.png"
+  title="Income panel"
+  description="Revenue from retail and wholesale sales, minus returns and discounts."
+/>
+
+**Total Income** is the sum of all income categories. In the example above, the total is `₹63,304.98`.
+
+---
+
+## Expenses panel
+
+The right panel lists every cost of running the pharmacy, organized by category.
+
+| Column | Description |
+|--------|-------------|
+| **Ledger** | Account name. Parent groups can be expanded to reveal child accounts |
+| **Amount** | The total for that account or group in the selected period |
+
+### Cost of Goods Sold (COGS)
+
+Direct costs tied to the products you sold.
+
+| Account | Amount |
+|---------|--------|
+| **Cost of Goods Sold (COGS)** | `₹20,501.06` |
+| Opening Stock | `₹6,000.00` |
+| Closing Stock | `₹10,74,432.37` |
+| Change in Inventory | `-₹10,68,432.37` |
+
+<Note>
+**Closing Stock** and **Change in Inventory** work together. Closing Stock is the value of inventory at period end. Change in Inventory is the adjustment that converts your purchases into the actual cost of goods sold. A negative change in inventory means your stock level increased during the period, which reduces your COGS.
+</Note>
+
+### Operating Expenses
+
+Day-to-day costs of running the pharmacy.
+
+| Account | Amount |
+|---------|--------|
+| **Employee Benefits Expense** | `–` |
+| Salaries & Wages | `–` |
+| Direct Labor | `–` |
+| **Depreciation & Amortization Expense** | `–` |
+| Depreciation | `–` |
+| **Finance Cost** | `–` |
+| Interest Expense | `–` |
+| **Other Expenses** | `₹29,675.76` |
+
+<Note>
+Accounts showing `–` have no activity in the selected period. They will show amounts once transactions are posted to those ledgers.
+</Note>
+
+### Partner Remuneration
+
+Payments to business partners for their services.
+
+| Account | Amount |
+|---------|--------|
+| **Partner Remuneration** | `₹10,000.00` |
+| Partner Remuneration - Mehreen | `₹10,000.00` |
+
+### Exceptional Items
+
+One-off or unusual expenses that are not part of normal operations.
+
+| Account | Amount |
+|---------|--------|
+| **Exceptional Items** | `₹200.00` |
+| Exceptional Items | `₹200.00` |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/7a23a49e-4075-4586-8048-c4d8850e93dd-expenses-PL.png"
+  title="Expenses panel"
+  description="Cost of goods sold, operating costs, partner remuneration, and exceptional items."
+/>
+
+**Total Expenses** is the sum of all expense categories. In the example above, the total is `₹39,675.76`.
+
+---
+## Bottom summary cards
+
+Below the two panels, four cards give you deeper insight into profitability.
+
+| Card | Formula | What it tells you |
+|------|---------|-------------------|
+| **Net Profit** | `Revenue − Expenses` | The bottom line. What remains after all costs are deducted from all income |
+| **Gross Profit** | `Income − COGS` | Profit after direct product costs. Shows how much you make before operating expenses |
+| **Before Remu** | `Profit before remuneration` | Profit before partner salaries or drawings are deducted. Useful for partnerships |
+| **PBT** | `Profit before tax` | Profit before income tax. This is the figure tax calculations are based on |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/4c12f285-bff7-433e-a634-976d08c6f5bb-bottom-summarycards.png"
+  title="Bottom summary cards"
+  description="Net Profit, Gross Profit, Before Remu, and PBT."
+/>
+
+In the example above:
+
+| Metric | Value |
+|--------|-------|
+| **Net Profit** | `₹23,641.09` |
+| **Gross Profit** | `₹42,803.92` |
+| **Before Remu** | `₹33,641.09` |
+| **PBT** | `₹23,641.09` |
+
+<Note>
+**Before Remu** is higher than **Net Profit** because partner remuneration (`₹10,000.00`) was deducted after the Before Remu stage. In this example, PBT equals Net Profit because no income tax has been recorded yet.
+</Note>
+
+---
+
+## How to read the Profit & Loss Statement
+
+The P&L flows from top to bottom like a waterfall:
+
+1. **Start with Income** – everything the business earned  
+2. **Subtract COGS** – the direct cost of what was sold  
+3. **Arrive at Gross Profit** – your margin on products  
+4. **Subtract Operating Expenses** – rent, salaries, utilities, marketing  
+5. **Subtract Partner Remuneration** – payments to partners  
+6. **Arrive at PBT** – profit before tax  
+7. **Subtract Tax** – income tax on profits  
+8. **Arrive at Net Profit** – the final bottom line  
+
+If **Net Profit** is positive, the business made money. If negative, it operated at a loss.
+
+---
+
+## Common mistakes
+
+<Warning title="Ignoring Returns & Discounts">
+**Returns & Discounts** is a contra-revenue account. It reduces your total revenue but is easy to overlook. Always check this line. Net Sales = Gross Sales − Returns − Discounts. Ignoring it will make your income and profit margin look higher than they really are.
+</Warning>
+
+<Warning title="Treating Closing Stock as an expense">
+Closing Stock is an **asset**, not a cost. It reduces your COGS. Higher closing stock means lower COGS and higher gross profit. Treating it as an expense will understate your profitability.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="What is the difference between P&L and Balance Sheet?">
+    The **Profit & Loss Statement** shows performance over a **period** of time – how much was earned and spent. The **Balance Sheet** shows position at a **point** in time – what the business owns and owes. The P&L explains how the equity on the Balance Sheet changed during the period.
+  </Accordion>
+  <Accordion title="Why is my Profit Margin over 100%?">
+    A profit margin over 100% usually means your **Net Sales** figure is very low compared to net profit. This can happen if you have large **Other Income** (like supplier adjustments or interest) that is not part of core sales, or if your COGS is negative due to large inventory increases. Focus on **Gross Profit** margin for a clearer picture of core business performance.
+  </Accordion>
+  <Accordion title="What does Change in Inventory mean?">
+    **Change in Inventory** is the adjustment that converts your opening stock and purchases into the actual cost of goods sold. If your inventory increased during the period, this figure is negative (reducing COGS). If inventory decreased, it is positive (increasing COGS). It ensures your P&L only reflects the cost of items actually sold, not everything purchased.
+  </Accordion>
+  <Accordion title="Why do some accounts show a dash (–)?">
+    A dash means there was no activity in that account during the selected period. The account exists in your Chart of Accounts but no transactions were posted to it. Once you record transactions, amounts will appear.
+  </Accordion>
+  <Accordion title="Can I export the P&L for my accountant?">
+    Yes. Click **Export** and choose **Excel Sheet** for a spreadsheet your accountant can work with, or **PDF Document** for a formatted report suitable for filing or presentation.
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<Cards>
+  <Card
+    title="Balance Sheet"
+    description="View your assets, liabilities, and equity at a point in time."
+    href="/docs/accounting/balance-sheet"
+    icon="Landmark"
+  />
+  <Card
+    title="Trial Balance"
+    description="Verify that all ledger debits and credits are in balance."
+    href="/docs/accounting/trial-balance"
+    icon="Scale"
+  />
+  <Card
+    title="General Ledger"
+    description="Drill down into any income or expense account to see its transaction history."
+    href="/docs/accounting/ledger"
+    icon="FileText"
+  />
+  <Card
+    title="Ledgers"
+    description="Browse and manage your complete Chart of Accounts."
+    href="/docs/accounting/accounts"
+    icon="BookOpen"
+  />
+</Cards>

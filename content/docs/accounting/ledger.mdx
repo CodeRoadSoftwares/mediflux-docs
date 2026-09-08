@@ -1,7 +1,392 @@
 ---
-title: Ledger
-description: View account balances and transaction entries.
-icon: BookOpenCheck
+title: Ledgers
+description: Manage your chart of accounts, assets, liabilities, equity, revenues, and expenses.
+icon: BookOpen
 ---
 
-Content for this guide is coming soon.
+## What are Ledgers
+
+In MediFlux, **Ledgers** are the individual accounts that make up your Chart of Accounts. Each ledger tracks a specific category of financial activity - from cash in your bank to money owed by customers, from sales revenue to monthly rent. Every transaction you record posts to at least two ledgers, keeping your books balanced automatically.
+
+---
+
+## Open your Chart of Accounts
+
+Go to **Accounting → Ledgers** from the left sidebar. You will see your full Chart of Accounts with all parent groups collapsed by default.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/3c9f9d0f-79cd-4c9e-9343-0cfb0692ed1a-ledger-overview.png"
+  alt="Ledgers overview page showing all parent accounts collapsed"
+  title="Ledgers overview"
+  description="Ledgers page with all parent accounts collapsed."
+/>
+
+---
+
+## Find and filter accounts
+
+Use **Search Ledgers** at the top to find any account by name instantly.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/123e891b-ae26-441c-9d4a-9f97ece3088f-search_ledger.png"
+  title="Search Bar"
+  description="Search Ledger directly by account name."
+/>
+
+Below the search bar, five filter cards let you narrow the table to a specific account group. Click any card to show only accounts from that group:
+
+| Card | What it shows |
+|------|---------------|
+| **Liability** | All current and non-current liability accounts |
+| **Assets** | All current and non-current asset accounts |
+| **Equity** | Owner capital, drawings, retained earnings, and current year earnings |
+| **Revenue** | Sales revenue, other income, and service income accounts |
+| **Expenses** | COGS, indirect expenses, and other operating expenses |
+
+Click the same card again to clear the filter and return to the full list.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/5b6700ed-0129-4edb-a104-11303c5cae07-filter-bars.png"
+  alt="Equity filter selected showing only equity accounts"
+  title="Filter Cards"
+  description="Equity filter active - only equity accounts are visible."
+/>
+
+---
+
+## Browse the accounts table
+
+The main table lists every ledger in a nested tree. Parent groups (like **Cash & Bank** or **Inventory**) show folder icons and can be expanded to reveal their child accounts. Leaf-level accounts show document icons.
+
+| Column | What it means |
+|--------|---------------|
+| **Ledger** | Account name with a `Dr` or `Cr` badge showing its normal balance. Folder icons indicate parent groups. Document icons indicate leaf-level accounts |
+| **Type** | Color-coded tag such as `CURRENT ASSET`, `CURRENT LIABILITY`, `EQUITY`, `REVENUE`, `EXPENSE`, `NON CURRENT ASSET`, or `NON CURRENT LIABILITY` |
+| **Description** | A short explanation of what the account tracks |
+
+> **What is Normal Balance?** In double-entry accounting, every account type has a normal balance - the side (debit or credit) on which the account naturally increases. Assets and expenses normally increase on the debit side (`Dr`). Liabilities, equity, and revenue normally increase on the credit side (`Cr`). The `Dr`/`Cr` badge in the UI shows this normal balance.
+
+Click the **arrow icon** at the far right of any row to jump directly to that account's **General Ledger**. This opens a dedicated report showing every transaction posted to that ledger, with running balances and date filters.
+
+---
+
+## Edit Chart of Accounts
+
+Click **+ Edit** at the top of the Ledgers page to open the **Setup Chart of Accounts** screen. This is where you control which accounts are active and can edit account names or descriptions.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/3bf9b853-8613-4895-886b-9a67d4c3f825-edit-button.png"
+  alt="Edit Button"
+  title="Edit Button"
+  description="Click + Edit on the Ledgers page to open this screen. Select accounts and manage the nested tree."
+/>
+
+### What you can do on this screen
+
+- **Add new accounts** using the **ADD NEW ACCOUNTS** section at the top (for example, add Owner capital).
+- Expand parent groups to see child accounts.
+- Check or uncheck accounts to include or exclude them from your Chart of Accounts.
+- Accounts marked with a red asterisk (`*`) are required and cannot be unchecked.
+- Click **Update** in the top-right to save your changes.
+
+### Edit an account name or description
+
+Click the **pencil (edit) icon** on the right side of any account row. The **Edit Custom Account** dialog opens.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/f531316f-4daf-4c71-bfd8-5235d71bdd67-edit-dialog.png"
+  alt="Edit Custom Account dialog"
+  title="Edit Custom Account"
+  description="Change the Account Name and Description, then click Update Account."
+/>
+
+In this dialog you can:
+
+- Change the **Account Name**
+- Update the **Description**
+
+Other fields (Account Type, Account Side, Parent Account, Contra) are shown for reference. After making changes, click **Update Account** to save.
+
+Click **Cancel** or the **X** to close without saving.
+
+---
+
+## Account breakdown
+
+The following sections list every parent group and its child accounts. **Parent groups that contain further sub-groups are shown in bold.** Use these tables as a quick reference to understand what each ledger tracks and where your transactions post.
+
+### Assets
+
+Assets are what your pharmacy owns. They are split into **Current Assets** (convertible to cash within a year) and **Non-Current Assets** (long-term holdings).
+
+#### Current Assets
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Accounts Receivable** | `Dr` | CURRENT ASSET | Amounts customers owe to the pharmacy |
+| Customer Receivables | `Dr` | CURRENT ASSET | Outstanding credit bills from customers |
+| Other Receivables | `Dr` | CURRENT ASSET | Any other money owed to the store |
+| **Cash & Bank** | `Dr` | CURRENT ASSET | All cash, bank, and wallet balances |
+| **Bank Accounts** | `Dr` | CURRENT ASSET | Money held in bank accounts |
+| &nbsp;&nbsp;<small>└─ Test Bank</small> | `Dr` | CURRENT ASSET | <small>Individual bank account (shows bank details in description)</small> |
+| Cash on Hand | `Dr` | CURRENT ASSET | Physical cash held at the store |
+| Digital Wallets | `Dr` | CURRENT ASSET | Balances in UPI, wallets, and payment gateways |
+| **Inventory** | `Dr` | CURRENT ASSET | Value of all stock held for sale |
+| Medicine Inventory | `Dr` | CURRENT ASSET | All pharmaceutical items in stock |
+| Non-Drug Inventory | `Dr` | CURRENT ASSET | OTC goods, cosmetics, and FMCG items |
+| Purchase Return | `Cr` | CURRENT ASSET | Value of medicines returned to suppliers |
+| Purchase Return - Non-Drug Inventory | `Cr` | CURRENT ASSET | Value of non-drug inventory returned to suppliers |
+| **Prepaid Expenses** | `Dr` | CURRENT ASSET | Advance payments made by the store |
+| Staff Advances | `Dr` | CURRENT ASSET | Loans or advances given to staff |
+| Supplier Advances | `Dr` | CURRENT ASSET | Advance amounts paid to suppliers |
+| **Tax Assets** | `Dr` | CURRENT ASSET | Input GST balances claimable |
+| GST Input CGST | `Dr` | CURRENT ASSET | CGST paid that can be claimed as credit |
+| GST Input IGST | `Dr` | CURRENT ASSET | IGST paid that can be claimed as credit |
+| GST Input SGST | `Dr` | CURRENT ASSET | SGST paid that can be claimed as credit |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/afb9c3fe-b905-4f81-825d-256469ec96d8-current-assests.png"
+  alt="Assets section expanded showing child accounts"
+  title="Assets expanded"
+  description="Nested child accounts under each parent group."
+/>
+
+#### Non-Current Assets
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Deposits** | `Dr` | NON CURRENT ASSET | Refundable deposits paid by the store |
+| Security Deposits | `Dr` | NON CURRENT ASSET | Deposits with landlords or service providers |
+| Utility Deposits | `Dr` | NON CURRENT ASSET | Deposits paid to utility companies |
+| **Fixed Assets** | `Dr` | NON CURRENT ASSET | Long-term assets used in store operations |
+| Accumulated Depreciation | `Cr` | NON CURRENT ASSET | The value of assets that has been used up over time |
+| Equipment | `Dr` | NON CURRENT ASSET | Computers, printers, barcode scanners, air conditioning |
+| Furniture & Fixtures | `Dr` | NON CURRENT ASSET | Shelves, counters, racks, and furniture |
+| Leasehold Improvements | `Dr` | NON CURRENT ASSET | Renovations or improvements to rented space |
+| Property/Building | `Dr` | NON CURRENT ASSET | The building you own |
+| Vehicles | `Dr` | NON CURRENT ASSET | Delivery vehicles |
+
+> **Note:** `Accumulated Depreciation` carries a `Cr` balance because it is a **contra-asset** account. It reduces the book value of your fixed assets over time rather than adding to them.
+
+---
+
+### Liabilities
+
+Liabilities are what your pharmacy owes to others. They are split into **Current Liabilities** (due within a year) and **Non-Current Liabilities** (due after more than one year).
+
+#### Current Liabilities
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Accounts Payable** | `Cr` | CURRENT LIABILITY | Amounts owed to suppliers for inventory and expenses |
+| Non-Inventory Payables | `Cr` | CURRENT LIABILITY | Payables for non-stock expenses like rent or utilities |
+| Trade Creditors | `Cr` | CURRENT LIABILITY | Outstanding amounts due to product suppliers |
+| **Accrued Expenses** | `Cr` | CURRENT LIABILITY | Expenses incurred but not yet paid |
+| Accrued Salaries | `Cr` | CURRENT LIABILITY | Employee salaries due but unpaid |
+| Accrued Utilities | `Cr` | CURRENT LIABILITY | Electricity, water, and internet charges due but unpaid |
+| **GST Payable** | `Cr` | CURRENT LIABILITY | GST collected on sales and owed to the government |
+| GST Adjustment | `Cr` | CURRENT LIABILITY | Temporary GST adjustments and rounding differences |
+| **Output GST** | `Cr` | CURRENT LIABILITY | GST collected from customers during sales |
+| &nbsp;&nbsp;<small>├─ GST Output CGST</small> | `Cr` | CURRENT LIABILITY | <small>Central GST collected from customers</small> |
+| &nbsp;&nbsp;<small>├─ GST Output IGST</small> | `Cr` | CURRENT LIABILITY | <small>Integrated GST collected from customers</small> |
+| &nbsp;&nbsp;<small>└─ GST Output SGST</small> | `Cr` | CURRENT LIABILITY | <small>State GST collected from customers</small> |
+| **Short-Term Liabilities** | `Cr` | CURRENT LIABILITY | Loans and obligations due within one year |
+| Credit Card Payable | `Cr` | CURRENT LIABILITY | Outstanding business credit card balance |
+| Short-Term Loan | `Cr` | CURRENT LIABILITY | Bank loan instalments due within the current year |
+| **Statutory Liabilities** | `Cr` | CURRENT LIABILITY | Taxes collected or deducted but not yet remitted |
+| TCS Payable | `Cr` | CURRENT LIABILITY | Tax collected at source and to be deposited |
+| TDS Payable | `Cr` | CURRENT LIABILITY | Tax deducted at source and owed to the government |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/1b8ef3c2-3341-42f1-9b64-58083684908f-liabilities.png"
+  alt="Liabilities section expanded showing child accounts"
+  title="Liabilities expanded"
+  description="Nested child accounts under each parent group."
+/>
+
+#### Non-Current Liabilities
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Long-Term Liabilities** | `Cr` | NON CURRENT LIABILITY | Financial obligations due after more than one year |
+| Long-Term Loan | `Cr` | NON CURRENT LIABILITY | Bank loans repayable over more than one year |
+| Mortgage Loan | `Cr` | NON CURRENT LIABILITY | Long-term building or property loan |
+
+---
+
+### Equity
+
+Equity represents the owner's stake in the business. These accounts track capital invested, drawings taken, and profits retained.
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Equity** | `Cr` | EQUITY | Owner's total stake in the business after liabilities |
+| Additional Paid-In Capital | `Cr` | EQUITY | Any extra capital invested by owners beyond the initial investment |
+| Current Year Earnings (Calculated) | `Cr` | EQUITY | Profit or loss generated in the ongoing accounting period |
+| **Mehreen Aijaz** | `Cr` | EQUITY | Partner account group |
+| &nbsp;&nbsp;<small>├─ Owner's Capital - Mehreen Aijaz</small> | `Cr` | EQUITY | <small>Capital account for the partner</small> |
+| &nbsp;&nbsp;<small>├─ Owner's Drawings - Mehreen Aijaz</small> | `Dr` | EQUITY | <small>Drawing account for the partner</small> |
+| &nbsp;&nbsp;<small>└─ Partner Remuneration - Mehreen Aijaz</small> | `Dr` | EXPENSE | <small>Remuneration paid to the partner for services</small> |
+| Opening Balance equity | `Cr` | EQUITY | Temporary equity account used to record the net difference during setup |
+| Retained Earnings | `Cr` | EQUITY | Accumulated profits kept in the business from previous years |
+
+> **Note:** `Mehreen Aijaz` is shown here as an example partner account. In your system, you will see the name of the partner or owner you configured during setup.
+>
+> `Current Year Earnings (Calculated)` is highlighted in the table because it is auto-computed by MediFlux. It aggregates all revenue and expense transactions for the current accounting period. You cannot post manual journal entries to it.
+>
+> `Partner Remuneration` sits under the **Equity** parent but is tagged as `EXPENSE` because it represents an operating cost paid to the partner for services rendered.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/d3837fa9-0cd2-42ed-8c6c-d225696be344-equity.png"
+  alt="Equity section expanded showing partner accounts"
+  title="Equity expanded"
+  description="Partner capital, drawings, and retained earnings."
+/>
+
+---
+
+### Revenue
+
+Revenue accounts track all income earned by the pharmacy.
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Revenue** | `Cr` | REVENUE | Total income earned from pharmacy sales and services |
+| **Other Income** | `Cr` | REVENUE | Non-sales income such as bank interest and supplier discounts |
+| &nbsp;&nbsp;<small>├─ Bank Interest</small> | `Cr` | REVENUE | <small>Interest income earned on bank balances and fixed deposits</small> |
+| &nbsp;&nbsp;<small>├─ Customer Adjustment Income</small> | `Cr` | REVENUE | <small>Income recognized from customer account adjustments</small> |
+| &nbsp;&nbsp;<small>├─ Customer Credit Write-off</small> | `Cr` | REVENUE | <small>Income recognized when customer credit balances are written off</small> |
+| &nbsp;&nbsp;<small>├─ Round Off Gain</small> | `Cr` | REVENUE | <small>Gain arising due to rounding off invoice totals</small> |
+| &nbsp;&nbsp;<small>├─ Supplier Adjustment Income</small> | `Cr` | REVENUE | <small>Income recognized from supplier account adjustments</small> |
+| &nbsp;&nbsp;<small>└─ Supplier Waive-off & Adjustments</small> | `Cr` | REVENUE | <small>Income recognized when supplier dues or payable balances are waived</small> |
+| **Sales Revenue** | `Cr` | REVENUE | Primary income from selling medicines - retail and wholesale |
+| &nbsp;&nbsp;<small>├─ Retail Sales</small> | `Cr` | REVENUE | <small>Revenue from selling medicines directly to customers</small> |
+| &nbsp;&nbsp;<small>├─ Retail Sales discount</small> | `Dr` | REVENUE | <small>Customer discount reducing total revenue</small> |
+| &nbsp;&nbsp;<small>├─ Sales Retail Returns</small> | `Dr` | REVENUE | <small>Customer returns reducing total revenue</small> |
+| &nbsp;&nbsp;<small>├─ Wholesale Sales</small> | `Cr` | REVENUE | <small>Revenue from bulk medicine sales to other retailers or pharmacies</small> |
+| &nbsp;&nbsp;<small>├─ Wholesale sales discount</small> | `Dr` | REVENUE | <small>Wholesale discount reducing total revenue</small> |
+| &nbsp;&nbsp;<small>└─ Wholesale sales returns</small> | `Dr` | REVENUE | <small>Wholesale returns reducing total revenue</small> |
+| **Service Income** | `Cr` | REVENUE | Income from services such as delivery and consultation |
+| &nbsp;&nbsp;<small>├─ Service Income</small> | `Cr` | REVENUE | <small>Income from services such as delivery and consultation</small> |
+| &nbsp;&nbsp;<small>└─ Service Income Discount</small> | `Dr` | REVENUE | <small>Discount given on services</small> |
+| Stock Adjustment Gain | `Cr` | REVENUE | Income arising from stock adjustments where physical stock exceeds book stock |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/6ad91eb8-40a5-4069-8bee-450f4a719602-revenue.png"
+  alt="Revenue section expanded showing sales and other income"
+  title="Revenue expanded"
+  description="Nested sales revenue, other income, and service income accounts."
+/>
+
+> **Note:** Discount and return accounts carry a `Dr` balance because they are **contra-revenue** accounts. They reduce your total revenue rather than add to it.
+
+---
+
+### Expenses
+
+Expense accounts track every cost of running the pharmacy.
+
+| Account | Normal Balance | Type | Tracks |
+|---------|----------------|------|--------|
+| **Expenses** | `Dr` | EXPENSE | All business expenses required to operate the pharmacy |
+| **Cost of Goods Sold (COGS)** | `Dr` | EXPENSE | Direct cost of medicines and goods sold, including purchases |
+| &nbsp;&nbsp;<small>├─ Direct Labor</small> | `Dr` | EXPENSE | <small>Wages for staff directly involved in sales operations</small> |
+| &nbsp;&nbsp;<small>├─ Freight & Transportation (Purchases)</small> | `Dr` | EXPENSE | <small>Transport expenses for purchasing medicines</small> |
+| &nbsp;&nbsp;<small>├─ Purchase Cost of Medicines</small> | `Dr` | EXPENSE | <small>Cost of buying medicines for resale</small> |
+| &nbsp;&nbsp;<small>├─ Purchase Cost of Non-Drug Inventory</small> | `Dr` | EXPENSE | <small>Cost of purchasing non-pharmaceutical inventory for resale</small> |
+| &nbsp;&nbsp;<small>└─ Purchase discount</small> | `Cr` | EXPENSE | <small>Records discounts and price reductions received from suppliers</small> |
+| **Indirect Expenses** | `Dr` | EXPENSE | Expenses not directly attributable to specific products or sales |
+| &nbsp;&nbsp;<small>├─ Advertising and Marketing</small> | `Dr` | EXPENSE | <small>Expenses for pharmacy promotion, online ads, banners</small> |
+| &nbsp;&nbsp;<small>├─ Bank Charges</small> | `Dr` | EXPENSE | <small>Bank fees, transaction charges, and account maintenance</small> |
+| &nbsp;&nbsp;<small>├─ Customer Adjustment Expense</small> | `Dr` | EXPENSE | <small>Expense recognized from customer account adjustments</small> |
+| &nbsp;&nbsp;<small>├─ Depreciation Expense</small> | `Dr` | EXPENSE | <small>Monthly depreciation of furniture, equipment, computers</small> |
+| &nbsp;&nbsp;<small>├─ GST Credit Reversal Expense</small> | `Dr` | EXPENSE | <small>Expense recognized when previously claimed GST input is reversed</small> |
+| &nbsp;&nbsp;<small>├─ Insurance Expense</small> | `Dr` | EXPENSE | <small>Business insurance and employee insurance costs</small> |
+| &nbsp;&nbsp;<small>├─ Interest Expense</small> | `Dr` | EXPENSE | <small>Interest paid on loans, overdrafts, and credit card balances</small> |
+| &nbsp;&nbsp;<small>├─ Office Supplies</small> | `Dr` | EXPENSE | <small>Stationery, printer paper, and general office consumables</small> |
+| &nbsp;&nbsp;<small>├─ Professional Fees</small> | `Dr` | EXPENSE | <small>CA fees, legal charges, consultant charges</small> |
+| &nbsp;&nbsp;<small>├─ Rent Expense</small> | `Dr` | EXPENSE | <small>Monthly rent for the pharmacy premises</small> |
+| &nbsp;&nbsp;<small>├─ Repairs and Maintenance</small> | `Dr` | EXPENSE | <small>Repair and maintenance of pharmacy equipment and premises</small> |
+| &nbsp;&nbsp;<small>├─ Round Off Loss</small> | `Dr` | EXPENSE | <small>Loss arising due to rounding off invoice totals</small> |
+| &nbsp;&nbsp;<small>├─ Salaries and Wages</small> | `Dr` | EXPENSE | <small>Salaries for pharmacists, staff, helpers, and wages</small> |
+| &nbsp;&nbsp;<small>├─ Supplier Adjustment Expense</small> | `Dr` | EXPENSE | <small>Expense recognized from supplier account adjustments</small> |
+| &nbsp;&nbsp;<small>├─ Taxes and Licenses</small> | `Dr` | EXPENSE | <small>License renewal fees and non-recoverable taxes</small> |
+| &nbsp;&nbsp;<small>├─ Travel and Conveyance</small> | `Dr` | EXPENSE | <small>Fuel costs, delivery-related travel, and staff travel allowance</small> |
+| &nbsp;&nbsp;<small>├─ Utilities Expense</small> | `Dr` | EXPENSE | <small>Electricity, water, internet, and phone expenses</small> |
+| &nbsp;&nbsp;<small>└─ Waive off & Bad Debts</small> | `Dr` | EXPENSE | <small>Expense recognized for customer receivable amounts that are uncollectible</small> |
+| **Other Expenses** | `Dr` | EXPENSE | Expenses that do not fall under standard operating categories |
+| &nbsp;&nbsp;<small>└─ Stock Loss & Adjustments</small> | `Dr` | EXPENSE | <small>Records losses and adjustments in medicine inventory due to damage, expiry, or theft</small> |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/b90657dc-ad07-442a-8130-151204e39702-expenses.png"
+  alt="Expenses section expanded showing COGS and indirect expenses"
+  title="Expenses expanded"
+  description="Nested cost of goods sold, indirect expenses, and other operating costs."
+/>
+
+> **Note:** `Purchase discount` carries a `Cr` balance because it is a **contra-expense**. It reduces your total cost of purchases rather than adding to it.
+
+---
+
+## Common Mistakes To Avoid
+
+<Warning title="Creating duplicate accounts for the same purpose">
+Before adding a custom ledger, search the existing list. If you create **Shop Rent** when **Rent Expense** already exists, your payments split across two ledgers and you will never see your true rent total in reports.
+</Warning>
+
+<Warning title="Posting manual entries to auto-computed accounts">
+**Current Year Earnings (Calculated)** is updated automatically by MediFlux. If you post a manual journal entry to it, your Profit & Loss will be permanently incorrect and cannot be fixed without reversing the entry.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="Can I add my own custom ledger?">
+    Yes. Click **+ Edit** on the Ledgers page, then use the **Add New Accounts** section at the top of the Setup Chart of Accounts screen. You can create custom parent groups or child accounts as needed.
+  </Accordion>
+  <Accordion title="Why does Current Year Earnings show (Calculated)?">
+    This account is auto-computed by MediFlux. It aggregates all revenue and expense transactions for the current accounting period. You cannot post manual journal entries to it.
+  </Accordion>
+  <Accordion title="What is the difference between Current Assets and Non-Current Assets?">
+    **Current Assets** are expected to be converted to cash or used up within one year - cash, inventory, receivables, and prepaid expenses. **Non-Current Assets** are long-term holdings like equipment, furniture, vehicles, and property.
+  </Accordion>
+  <Accordion title="Why do some accounts have a Cr normal balance?">
+    In double-entry accounting, liability, equity, and revenue accounts normally carry credit balances. Asset and expense accounts normally carry debit balances. Contra accounts (like Purchase discount or Accumulated Depreciation) carry the opposite balance of their parent category to reduce the net amount.
+  </Accordion>
+  <Accordion title="Can I rename or delete a ledger?">
+    You can rename custom ledgers you created. System default ledgers cannot be renamed or deleted. To remove a custom ledger, uncheck it in the Setup Chart of Accounts and click **Update**.
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<Cards>
+  <Card
+    title="Add a Journal Entry"
+    description="Learn how to manually record transactions that hit multiple ledgers."
+    href="/docs/accounting/add-journal-entry"
+    icon="Pencil"
+  />
+  <Card
+    title="Ledger Reports"
+    description="View detailed transaction history and balances for any individual ledger."
+    href="/docs/accounting/ledger"
+    icon="FileText"
+  />
+  <Card
+    title="Trial Balance"
+    description="See a summary of all ledger balances to verify your books are in balance."
+    href="/docs/accounting/trial-balance"
+    icon="Scale"
+  />
+  <Card
+    title="Accounting Fundamentals"
+    description="Review the basics of debits, credits, and financial statements."
+    href="/docs/accounting/accounting-basics"
+    icon="BookOpen"
+  />
+</Cards>

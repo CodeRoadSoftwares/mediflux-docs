@@ -31,7 +31,7 @@ Before you can use any accounting features, you need to turn on the module from 
   </Step>
 </Steps>
 
-<Figure src="/images/accounting/enable-module.png" title="Enable Accounting Module" description="The Accounting Module appears in the Modules list with an Enable button." />
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/0e834c50-d64e-46ad-996c-f1e8b50bb8a8-enable-accounting.png" title="Enable Accounting Module" description="The Accounting Module appears in the Modules list with an Enable button." />
 
 Once enabled, the **Accounting** section appears in the left sidebar with all its sub-menu items.
 
@@ -55,7 +55,7 @@ The first time you open the Accounting section, MediFlux prompts you to initiali
   </Step>
 </Steps>
 
-<Figure src="/images/accounting/setup-chart-of-accounts.png" title="Setup Chart of Accounts" description="Review pre-selected account groups and add custom accounts before initializing." />
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/260e09df-5349-490f-b3d6-22dc6f504c9a-initialize-accounting.png" title="Setup Chart of Accounts" description="Review pre-selected account groups and add custom accounts before initializing." />
 
 
 ## Set up system balances
@@ -104,13 +104,14 @@ After initialization, a dialog opens to capture your opening balances. MediFlux 
   </Step>
 </Steps>
 
-<Figure src="/images/accounting/system-balances-assets.png" title="System Balances: Assets" description="Assets section with auto-filled inventory values and manual Cash in Hand entry." />
-
-<Figure src="/images/accounting/add-bank-account.png" title="Add Bank Account" description="Bank account registration form with account type dropdown and default account checkbox." />
-
-<Figure src="/images/accounting/system-balances-liabilities.png" title="System Balances: Liabilities and Tax Credits" description="Liabilities and Tax Credits sections with pre-filled GST values." />
-
-<Figure src="/images/accounting/owners-partners.png" title="Owners and Partners" description="Owner capital entry and automatically calculated retained earnings." />
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/548a7386-7228-456c-ad2a-29aec68e7ffc-assests.png" 
+  title="System Balances: Assets" 
+  description="Assets section with auto-filled inventory values and manual Cash in Hand entry." />
+---
+### Add Owners and partners
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/acc0c15b-5a9c-4eca-95a6-10f42fed2a38-owners-acc.png" 
+  title="Owners and Partners" 
+  description="Owner capital entry and automatically calculated retained earnings." />
 
 <Warning title="Do not skip the opening balance setup">
 If you skip or rush through the opening balance setup, your Trial Balance and Balance Sheet will not reconcile with your actual business position. Always verify the auto-filled inventory and GST values against your physical records.
@@ -120,7 +121,8 @@ If you skip or rush through the opening balance setup, your Trial Balance and Ba
 
 After setup, the Accounting sidebar gives you access to every financial tool in MediFlux.
 
-<Figure src="/images/accounting/accounting-sidebar.png" title="Accounting Sidebar Menu" description="Full Accounting menu with Daybook, Journal Entry, Dashboard, Accounts, Journals, Ledger, Trial Balance, Balance Sheet, Bank Accounts, P&L Statement, and ITC Reversals." />
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/23d46373-852c-42d6-b23c-0e110ad6ae06-accounting-navigation.png" 
+  title="Accounting Sidebar Menu" description="Full Accounting menu with Daybook, Journal Entry, Dashboard, Accounts, Journals, Ledger, Trial Balance, Balance Sheet, Bank Accounts, P&L Statement, and ITC Reversals." />
 
 | Menu Item | Purpose |
 |-----------|---------|
@@ -138,11 +140,13 @@ After setup, the Accounting sidebar gives you access to every financial tool in 
 
 ## Common mistakes
 
-- **Entering wrong Cash in Hand**: Count physical cash before typing the amount. Discrepancies here affect your cash ledger forever.
-- **Forgetting to add all bank accounts**: Add every account you use for business, even if the balance is zero. You can add more later, but opening balances are easier to set now.
-- **Ignoring auto-filled GST values**: Double-check **GST Input** and **GST Output** figures. They come from your purchase and sale history, but manual bills entered outside MediFlux will not be included.
-- **Skipping owner capital**: If you have partners, enter each person's investment. Retained earnings alone may not reflect the true equity structure.
-- **Setting the wrong default bank account**: The default account is used for quick transactions. Choose the account you use most frequently.
+<Warning title="Entering the wrong Cash in Hand amount">
+Count your physical cash carefully before typing the amount. An error here permanently affects your cash ledger and makes every future cash report incorrect.
+</Warning>
+
+<Warning title="Skipping or rushing the opening balance setup">
+If you skip verification of auto-filled inventory, GST, and payable values, your Trial Balance and Balance Sheet will not match your actual business position. Always cross-check the numbers against your physical records before clicking **Save & Continue**.
+</Warning>
 
 ## FAQs
 

@@ -1,8 +1,306 @@
 ---
 title: Bank Accounts
-description: Manage your business bank accounts and account balances.
+description: Manage your bank accounts and view current balances.
 icon: Landmark
 ---
 
-Content for this guide is coming soon.
+The **Bank Accounts** page lets you add, manage, and view all bank accounts linked to your pharmacy. Every account you add here automatically creates a ledger under **Cash & Bank → Bank Accounts** in your Chart of Accounts, so every deposit, withdrawal, and transfer is tracked in your books.
 
+From this page you can view current balances, filter by account type, set a default account for transactions, and reconcile your records against actual bank statements.
+
+Navigate here from the sidebar: **Accounting → Bank Accounts**.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/8a6fcbbe-df53-49d8-92c2-ea0ff4496478-Bank-accounts.png"
+  alt="Bank Accounts page showing a list of bank accounts with balances"
+  title="Bank Accounts overview"
+  description="Manage all connected bank accounts, view balances, and access reconciliation tools."
+/>
+
+---
+
+## Search and filter
+
+Use the controls at the top to find accounts quickly.
+
+| Control | What it does |
+|---------|--------------|
+| **Search accounts...** | Search for a specific bank account by name or account number |
+| **All account types** | Filter the list by account type: **Savings**, **Current**, **Fixed Deposit**, or **Recurring Deposit** |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/73d41b3c-0d05-4c45-88b1-27b9fdddf77b-search-filter-ba.png"
+  alt="Account type filter dropdown"
+  title="Account type filter"
+  description="Show only Savings, Current, Fixed Deposit, or Recurring Deposit accounts."
+/>
+
+---
+
+## Summary cards
+
+Two cards sit above the table, giving you a quick view of your cash position:
+
+| Card | What it shows |
+|------|---------------|
+| **In Current** | The total balance across all **Current** accounts |
+| **Total Balance** | The combined balance across **all** bank accounts regardless of type |
+
+<Note>
+Fixed Deposits and Recurring Deposits are not included in the **In Current** total because they are not immediately liquid. They are included in **Total Balance**.
+</Note>
+
+---
+
+## Accounts table
+
+| Column | What it means |
+|--------|---------------|
+| **Account Name** | The name you gave the account, plus the bank name and branch below it |
+| **Account Type** | Tag showing **Savings**, **Current**, **Fixed Deposit**, or **Recurring Deposit** |
+| **Account Number** | The bank account number |
+| **Balance** | The current ledger balance in MediFlux for this account |
+
+Click the **three-dot menu** at the far right of any row to access account actions.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/c042f2d9-354a-47eb-b57f-f161cd548799-row-actions-ba.png"
+  alt="Three-dot menu showing View Details and Set as Default options"
+  title="Account actions"
+  description="View details or set the account as the default bank account."
+/>
+
+| Action | What it does |
+|--------|--------------|
+| **View Details** | Opens the detailed ledger for this bank account, showing every transaction |
+| **Set as Default** | Makes this the default bank account for new transactions. Only one account can be default at a time |
+
+---
+
+## Top action buttons
+
+Four buttons sit in the top-right corner of the page:
+
+| Button | What it does |
+|--------|--------------|
+| **View Rules** | Opens the list of existing reconciliation rules |
+| **Add Rules** | Opens the dialog to create a new reconciliation rule |
+| **Reconcile** | Opens the Bank Reconciliation screen |
+| **Add Bank** | Opens the dialog to add a new bank account |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/d54ceb0d-bcb0-4790-965b-777b2b776211-action-buttons.png"
+  title="Actions Buttons"
+  description="View , Set Reconciliation rules and add bank."
+/>
+
+---
+
+## Add a bank account
+
+<Steps>
+  <Step title="Click Add Bank">
+    Click **Add Bank** in the top-right corner.
+  </Step>
+  <Step title="Fill in the details">
+    - **Account Name** – A friendly name (e.g. Main Business Account)
+    - **Account Number** – The full bank account number
+    - **Bank Name** – The name of the bank
+    - **IFSC Code** – The Indian Financial System Code for the branch
+    - **Branch** – The branch name
+    - **Account Type** – Select **Savings**, **Current**, **Fixed Deposit**, or **Recurring Deposit**
+  </Step>
+  <Step title="Set as default (optional)">
+    Check **Set as default bank account** if this should be the default for new transactions.
+  </Step>
+  <Step title="Save">
+    Click **Add Bank Account**.
+  </Step>
+</Steps>
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/a719cf14-d096-488b-8937-4cd6b9ca28e6-add-bank-acc.png"
+  alt="Add Bank Account dialog"
+  title="Add Bank Account"
+  description="Fill in bank details to create a new account."
+/>
+
+<Note>
+When you add a bank account, MediFlux automatically creates a corresponding ledger under **Cash & Bank → Bank Accounts**. You do not need to create the ledger manually.
+</Note>
+
+---
+
+## Reconcile your bank account
+
+**Bank reconciliation** is the process of comparing the transactions recorded in MediFlux against the transactions shown on your actual bank statement. The goal is to ensure both records agree.
+
+Differences can happen for several reasons:
+
+| Reason | Explanation |
+|--------|-------------|
+| **Pending transactions** | A cheque you deposited has not cleared yet, or a payment you made is still processing |
+| **Bank fees or interest** | The bank charged a fee or credited interest that you have not yet recorded in MediFlux |
+| **Errors in recording** | A transaction was entered with the wrong amount, wrong date, or posted to the wrong account |
+| **Missing transactions** | A transaction happened at the bank but was never recorded in MediFlux |
+
+### Open the Reconciliation screen
+
+Click **Reconcile** on the Bank Accounts page.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/fd011030-8e21-46a4-96ec-800108131a6b-reconcile-ba.png"
+  alt="Bank Reconciliation screen"
+  title="Bank Reconciliation"
+  description="Match system transactions (left) with imported bank statement (right)."
+/>
+
+The screen is split into two panels:
+
+| Panel | What it shows |
+|-------|---------------|
+| **System Transactions** (left) | All transactions recorded in MediFlux for the selected bank account and period |
+| **Import Statement** (right) | Where you upload your bank statement file |
+
+### Before you start
+
+<Steps>
+  <Step title="Select the account">
+    Choose the **Account** from the dropdown at the top.
+  </Step>
+  <Step title="Select the period">
+    Choose the **Period** that matches your bank statement.
+  </Step>
+  <Step title="Download the statement">
+    Download your bank statement from your bank’s website or app and save it as **CSV** or **Excel (XLSX)**.
+  </Step>
+</Steps>
+
+### Import your bank statement
+
+<Steps>
+  <Step title="Choose the file">
+    In the **Import Statement** panel, click **Choose File** and select your downloaded statement.
+  </Step>
+  <Step title="Map the columns">
+    Match the columns in your file to the required fields: **Date**, **Description**, **Debit**, **Credit**, and **Balance**.
+  </Step>
+  <Step title="Import">
+    Click **Import** to load the statement data.
+  </Step>
+</Steps>
+
+### How matching works
+
+MediFlux attempts to auto-match transactions based on amount, date, and description.
+
+| Scenario | What it means | What to do |
+|----------|---------------|------------|
+| **Appears on both sides** | Already recorded in MediFlux and on the bank statement | Confirm the match and mark it reconciled |
+| **Only on bank statement** | Missing from MediFlux | Create the missing journal entry, then match it |
+| **Only in MediFlux** | Not yet cleared the bank, or reversed by the bank | Check if it is pending. If it never happened, reverse the entry |
+| **Amounts do not match** | Same transaction but different amounts | Investigate bank fees, partial payments, or data entry errors |
+
+### Set up reconciliation rules
+
+Reconciliation rules automatically match recurring transactions so you do not have to do it manually every month.
+
+<Steps>
+  <Step title="Click Add Rules">
+    Click **Add Rules** on the Bank Accounts page.
+  </Step>
+  <Step title="Fill in the rule">
+    - **Bank Account** – The account this rule applies to
+    - **Narration** – A keyword or phrase from the bank statement (e.g. “Bank charges”)
+    - **Entry Type** – **Debit** or **Credit**
+    - **Amount Type** – **Exact**, **Contains**, or **Any**
+    - **Amount** – Optional. Enter the exact amount if you chose **Exact**
+  </Step>
+  <Step title="Save">
+    Click **Add Rule**.
+  </Step>
+</Steps>
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/fa401419-3ec6-41ac-b332-3fc93dbef187-reconcilation-rule.png"
+  alt="Add Reconciliation Rule dialog"
+  title="Add Reconciliation Rule"
+  description="Automate matching for recurring transactions such as bank fees or EMIs."
+/>
+
+<Note>
+Example: If your bank charges a fixed monthly fee of `₹500`, create a rule with Narration = “Bank charges”, Entry Type = Debit, Amount Type = Exact, and Amount = `500`. MediFlux will auto-match it every month.
+</Note>
+
+### Complete the reconciliation
+
+Once all transactions are matched and any discrepancies are resolved, click **Complete**. MediFlux marks the reconciliation as done for the selected period. The bank account balance in MediFlux now matches your bank statement.
+
+<Note>
+Reconcile your bank accounts at least once a month, ideally when you receive your monthly bank statement.
+</Note>
+
+---
+
+## Common mistakes
+
+<Warning title="Creating duplicate entries during reconciliation">
+When you see a transaction on your bank statement that is missing from MediFlux, do not create a new journal entry without checking if it already exists under a different description. Use the match function first.
+</Warning>
+
+<Warning title="Ignoring small differences">
+A difference of even a few rupees is usually a bank fee, interest, or rounding error. If you ignore it, your MediFlux balance will drift further from your actual bank balance every month.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="What happens if I delete a bank account?">
+    Deleting a bank account removes it from the Bank Accounts list but does not delete the corresponding ledger in your Chart of Accounts. Historical transactions remain intact and can still be viewed in the General Ledger.
+  </Accordion>
+  <Accordion title="Can I reconcile multiple bank accounts at once?">
+    No. Reconciliation is done one account at a time. Select the account from the dropdown on the Reconciliation screen and import the statement for that specific account.
+  </Accordion>
+  <Accordion title="What file formats does the statement import support?">
+    MediFlux supports **CSV** and **Excel (XLSX)** files. Most banks allow you to download your statement in one of these formats.
+  </Accordion>
+  <Accordion title="Why is my MediFlux balance different from my bank balance?">
+    This is normal until reconciliation is complete. Common causes include pending cheques, unrecorded bank fees, or transactions recorded with the wrong date. Reconcile monthly to identify and fix these differences.
+  </Accordion>
+  <Accordion title="What is the difference between a Current account and a Savings account?">
+    In MediFlux the type is for your own organization and reporting. **Current** accounts are typically business accounts used for daily operations. **Savings** accounts are lower-transaction accounts. **Fixed Deposit** and **Recurring Deposit** are locked-in savings instruments.
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<Cards>
+  <Card
+    title="General Ledger"
+    description="View the complete transaction history for any bank account ledger."
+    href="/docs/accounting/ledger"
+    icon="FileText"
+  />
+  <Card
+    title="Ledgers"
+    description="Browse the Chart of Accounts and see how bank accounts fit into the structure."
+    href="/docs/accounting/accounts"
+    icon="BookOpen"
+  />
+  <Card
+    title="Add a Journal Entry"
+    description="Manually record bank fees, transfers, and other transactions."
+    href="/docs/accounting/add-journal-entry"
+    icon="Pencil"
+  />
+  <Card
+    title="Trial Balance"
+    description="Verify that your bank account balances are reflected correctly in the overall books."
+    href="/docs/accounting/trial-balance"
+    icon="Scale"
+  />
+</Cards>
