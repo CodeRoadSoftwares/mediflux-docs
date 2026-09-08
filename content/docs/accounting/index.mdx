@@ -1,0 +1,179 @@
+---
+title: Accounting
+description: Manage your pharmacy's books, journal entries, ledgers, GST compliance, and financial reports with MediFlux Accounting.
+icon: Landmark
+---
+
+MediFlux Accounting helps you track every rupee that flows through your pharmacy. From daily journal entries to GST returns, from bank reconciliations to profit and loss statements, the module gives you a complete view of your financial health.
+
+## What you can do
+
+- View a financial **Dashboard** with key metrics and summaries.
+- Manage **Accounts**, **Journals**, and **Ledgers** for detailed bookkeeping.
+- Generate statutory reports such as **Trial Balance**, **Balance Sheet**, and **P&L Statement**.
+- Reconcile **Bank Accounts** and track deposits, withdrawals, and transfers.
+- Handle **ITC Reversals** for GST input credit adjustments.
+
+<Note>
+The Accounting module is disabled by default. You must enable it from **Settings** before you can access any accounting features.
+</Note>
+
+## Enable the Accounting module
+
+Before you can use any accounting features, you need to turn on the module from your store settings.
+
+<Steps>
+  <Step title="Open Settings">
+    Go to **Settings** from the top navigation bar and select the **Modules** tab.
+  </Step>
+  <Step title="Enable Accounting">
+    Find the **Accounting Module** card and click **Enable**. The module becomes active immediately.
+  </Step>
+</Steps>
+
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/0e834c50-d64e-46ad-996c-f1e8b50bb8a8-enable-accounting.png" title="Enable Accounting Module" description="The Accounting Module appears in the Modules list with an Enable button." />
+
+Once enabled, the **Accounting** section appears in the left sidebar with all its sub-menu items.
+
+## Set up Chart of Accounts
+
+<Note> **New to accounting?** We recommend reading [Accounting Basics ](/docs/accounting/accounting-basics) first. 
+It explains how accounts and account groups work,
+so the Chart of Accounts setup will be easier to understand. </Note>
+
+The first time you open the Accounting section, MediFlux prompts you to initialize your Chart of Accounts. This step creates the default account heads required for double-entry bookkeeping.
+
+<Steps>
+  <Step title="Open Accounting">
+    Click **Accounting** in the left sidebar. The **Setup Chart of Accounts** screen opens.
+  </Step>
+  <Step title="Review default accounts">
+    MediFlux pre-selects essential account groups such as **Cash & Bank**, **Accounts Receivable**, and **Accounts Payable**. You can also add custom accounts like **Owner Capital** under **Add New Accounts**.
+  </Step>
+  <Step title="Initialize">
+    Click the **Initialize** button to create the accounts.
+  </Step>
+</Steps>
+
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/260e09df-5349-490f-b3d6-22dc6f504c9a-initialize-accounting.png" title="Setup Chart of Accounts" description="Review pre-selected account groups and add custom accounts before initializing." />
+
+
+## Set up system balances
+
+<Note> This setup uses concepts such as assets, liabilities, tax credits, owner capital, and retained earnings. Read [Accounting Basics ](/docs/accounting/accounting-basics)
+ to understand what these terms mean and how they affect your books. </Note>
+
+After initialization, a dialog opens to capture your opening balances. MediFlux automatically pulls values from your existing inventory and supplier data, so you only need to fill in a few fields.
+
+<Steps>
+  <Step title="Review Assets">
+    The **Assets** section shows pre-filled values:
+    - **Drug Inventory value**: pulled from your current stock
+    - **Non Drug Inventory value**: pulled from non-drug stock
+    - **Accounts receivable**: outstanding customer dues
+    
+    Enter your **Cash in Hand** amount. This is the only physical cash field you need to fill manually.
+  </Step>
+  <Step title="Add Bank Accounts">
+    Click **+ Add bank** to register your bank accounts. For each account you must provide:
+    - **Account Name**
+    - **Account Number**
+    - **Bank Name**
+    - **IFSC Code**
+    - **Branch**
+    - **Account Type**: choose from `Savings`, `Current`, `FD`, or `Recurring Deposit`
+    
+    Check **Set as default bank account** if this account should be used as the default for transactions.
+  </Step>
+  <Step title="Review Liabilities">
+    The **Liabilities** section shows:
+    - **Accounts payable**: outstanding supplier dues
+    - **GST Output CGST**, **GST Output SGST**, **GST Output IGST**: tax liabilities
+  </Step>
+  <Step title="Review Tax Credits">
+    The **Tax Credits** section displays **GST Input CGST**, **GST Input SGST**, and **GST Input IGST** values that you can claim back.
+  </Step>
+  <Step title="Add Owner Capital">
+    Under **Owners & Partners**, click **Add owner** and enter the amount invested by each owner or partner. MediFlux creates a capital account for each owner automatically.
+  </Step>
+  <Step title="Review Retained Earnings">
+    **Retained earnings** is calculated automatically to balance your books. It represents profits or losses carried forward from previous years. You do not need to edit this value.
+  </Step>
+  <Step title="Save and Continue">
+    Click **Save & Continue** to complete the setup.
+  </Step>
+</Steps>
+
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/548a7386-7228-456c-ad2a-29aec68e7ffc-assests.png" 
+  title="System Balances: Assets" 
+  description="Assets section with auto-filled inventory values and manual Cash in Hand entry." />
+---
+### Add Owners and partners
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/acc0c15b-5a9c-4eca-95a6-10f42fed2a38-owners-acc.png" 
+  title="Owners and Partners" 
+  description="Owner capital entry and automatically calculated retained earnings." />
+
+<Warning title="Do not skip the opening balance setup">
+If you skip or rush through the opening balance setup, your Trial Balance and Balance Sheet will not reconcile with your actual business position. Always verify the auto-filled inventory and GST values against your physical records.
+</Warning>
+
+## Navigating the Accounting section
+
+After setup, the Accounting sidebar gives you access to every financial tool in MediFlux.
+
+<Figure src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/23d46373-852c-42d6-b23c-0e110ad6ae06-accounting-navigation.png" 
+  title="Accounting Sidebar Menu" description="Full Accounting menu with Daybook, Journal Entry, Dashboard, Accounts, Journals, Ledger, Trial Balance, Balance Sheet, Bank Accounts, P&L Statement, and ITC Reversals." />
+
+| Menu Item | Purpose |
+|-----------|---------|
+| **Daybook** | View all daily transactions in chronological order. |
+| **Add Journal Entry** | Create manual journal entries for adjustments and transfers. |
+| **Dashboard** | See financial KPIs, summaries, and trends at a glance. |
+| **Accounts** | Browse and manage your Chart of Accounts. |
+| **Journals** | View and filter all journal entries by date, account, or type. |
+| **Ledger** | Drill down into individual account ledgers with running balances. |
+| **Trial Balance** | Verify that total debits equal total credits. |
+| **Balance Sheet** | View assets, liabilities, and equity at a point in time. |
+| **Bank Accounts** | Manage bank accounts, balances, and reconcile statements. |
+| **P&L Statement** | Track revenue, expenses, and net profit over a period. |
+| **ITC Reversals** | Record and track GST input tax credit reversals. |
+
+## Common mistakes
+
+<Warning title="Entering the wrong Cash in Hand amount">
+Count your physical cash carefully before typing the amount. An error here permanently affects your cash ledger and makes every future cash report incorrect.
+</Warning>
+
+<Warning title="Skipping or rushing the opening balance setup">
+If you skip verification of auto-filled inventory, GST, and payable values, your Trial Balance and Balance Sheet will not match your actual business position. Always cross-check the numbers against your physical records before clicking **Save & Continue**.
+</Warning>
+
+## FAQs
+
+<Accordions>
+  <Accordion title="Can I enable Accounting later if I have already made sales and purchases?">
+    Yes. MediFlux will pull existing inventory values and outstanding balances automatically when you run the setup. However, you should still verify every auto-filled field against your physical records.
+  </Accordion>
+  <Accordion title="What happens if I do not enter owner capital?">
+    The missing capital will be absorbed into **Retained Earnings**, which may inflate or deflate your equity section. Enter accurate owner capital to keep your Balance Sheet correct.
+  </Accordion>
+  <Accordion title="Can I add more bank accounts after setup?">
+    Yes. Go to **Bank Accounts** from the Accounting sidebar and click **Add Bank Account** at any time.
+  </Accordion>
+  <Accordion title="Why is Retained Earnings calculated automatically?">
+    Retained Earnings is the balancing figure that makes Assets equal Liabilities plus Equity. It captures historical profits or losses that are not attributed to current owner capital.
+  </Accordion>
+  <Accordion title="Do I need to set up Accounting to use GST reports?">
+    Basic GST reports in MediFlux work without the Accounting module. However, advanced compliance features such as **ITC Reversals**, **Trial Balance**, and **Balance Sheet** require Accounting to be enabled and initialized.
+  </Accordion>
+</Accordions>
+
+## Next steps
+
+<Cards cols={2}>
+  <Card title="Daybook" href="/docs/accounting/daybook" description="View and understand your daily transaction log." />
+  <Card title="Add Journal Entry" href="/docs/accounting/add-journal-entry" description="Create manual journal entries for adjustments and transfers." />
+  <Card title="Dashboard" href="/docs/accounting/dashboard" description="Explore financial KPIs and summary cards." />
+  <Card title="Accounts" href="/docs/accounting/accounts" description="Manage your Chart of Accounts and account heads." />
+ 
+</Cards>

@@ -12,8 +12,7 @@ There are two ways to create a debit note in MediFlux.
 
 ---
 
-## Method 1: From the Drug List (Separated View)
-
+## Method 1: From The Drug List (Separated View)
 Select one or more drugs from the **Separated View** on the Drug List, then click **Generate Debit Note** from the bulk actions toolbar. This opens the **Create Debit Note** dialog for the drugs you selected.
 
 <Figure
@@ -27,7 +26,6 @@ Selected medications will not be available for sale after creating the debit not
 </Note>
 
 ### Available Medications
-
 For each selected drug, you'll see:
 
 | Field | Description |
@@ -49,7 +47,6 @@ Once you're done, click **Create Debit Note** to proceed.
 ---
 
 ## Method 2: From Drugs → Create Debit Note
-
 This opens a dedicated page to build a debit note from scratch, useful when you want to add drugs individually rather than starting from a selection on the Drug List.
 
 | Field | Description |
@@ -57,8 +54,7 @@ This opens a dedicated page to build a debit note from scratch, useful when you 
 | **Date** | Date of the debit note |
 | **Search for suppliers** | Select the supplier the debit note is being raised to |
 
-### Drug entry table
-
+### Drug Entry Table
 For each drug added to the note, fill in:
 
 | Column | Description |
@@ -84,8 +80,7 @@ Click the **+** below the table to add another drug row, or the trash icon to re
 
 ---
 
-## Confirming the debit note
-
+## Confirming The Debit Note
 **Method 1 (Separated View)** shows a confirmation prompt before finalizing:
 
 > **Create Debit Note?**
@@ -112,8 +107,7 @@ The newly created debit note appears in **Billing Notes → Debit Notes**, where
 
 ---
 
-## Mistakes to Avoid
-
+## Mistakes To Avoid
 <Warning title="Leaving required fields empty">
 **Batch**, **Expiry**, **Cost**, **MRP**, and at least one GST rate (**CGST**, **SGST**, or **IGST**) are mandatory for each drug row. Missing any of these will block submission with an error.
 </Warning>
@@ -123,8 +117,7 @@ Once confirmed, the stock is deducted immediately and cannot be added back autom
 </Warning>
 
 
-## Restock or review
-
+## Restock Or Review
 <Cards cols={2}>
   <Card
     title="Billing Notes"
@@ -141,7 +134,7 @@ Once confirmed, the stock is deducted immediately and cannot be added back autom
   <Card
     title="Supplier Ledger"
     description="Check if the supplier issued a credit note against your debit note."
-    href="/docs/suppliers/ledger"
+    href="/docs/supplier/supplier-ledger"
     icon="BookOpen"
   />
   <Card

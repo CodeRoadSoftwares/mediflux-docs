@@ -8,8 +8,7 @@ The **Schedules** page is where you define when each doctor is available for con
 
 ---
 
-## Searching and filtering schedules
-
+## Searching And Filtering Schedules
 The search bar lets you search by **doctor name or speciality**.
 
 <Figure
@@ -38,8 +37,7 @@ Click **Apply Filters** to apply, or **Reset** to clear all filters.
 
 ---
 
-## The schedules list
-
+## The Schedules List
 Each schedule card shows the doctor's name and speciality, their **consultation fee**, the **days** they're available, and their **status** (e.g., Active).
 
 Click the **⌄** arrow on a card to expand it and see full details:
@@ -65,8 +63,7 @@ Click the **⌄** arrow on a card to expand it and see full details:
 
 ---
 
-## Row actions
-
+## Row Actions
 Click the **⋮** menu on any schedule card to:
 
 | Action | What it does |
@@ -85,8 +82,7 @@ Click the **⋮** menu on any schedule card to:
 
 ---
 
-## Adding a schedule
-
+## Adding A Schedule
 Click **+ Add Schedule** to open the **Add New Schedule** form:
 
 <Figure
@@ -101,7 +97,6 @@ Click **+ Add Schedule** to open the **Add New Schedule** form:
 | **Consultation Fee** | Fee charged per consultation, required |
 
 ### Schedule Type
-
 Choose how patients book against this schedule:
 
 | Type | What it means |
@@ -110,7 +105,6 @@ Choose how patients book against this schedule:
 | **Token Based** | Patients book by date, with a maximum number of patients per day. Selecting this adds a **Max Patients Per Day** field, required |
 
 ### Recurring Schedule
-
 Click **+ Add Day** to add a day to the doctor's weekly availability. For each day:
 
 - Select the **day of the week**
@@ -119,15 +113,12 @@ Click **+ Add Day** to add a day to the doctor's weekly availability. For each d
 - Use the copy icon to duplicate a day's schedule, or the delete icon to remove it
 
 ### Break Times
-
 Click **+ Add Break Time** to block out a recurring time range within the day (e.g., a lunch break), with a time range and a label describing the break.
 
 ### Exception Dates
-
 Click **+ Add Exception Date** to mark a specific date as an exception to the doctor's regular schedule, set a date, mark it **Unavailable** (or otherwise), and optionally add a reason.
 
 ### Booking Rules
-
 | Field | Description |
 | --- | --- |
 | **Slot Duration (minutes)** | Length of each bookable slot |
@@ -138,8 +129,7 @@ Click **+ Add Exception Date** to mark a specific date as an exception to the do
 | **Allow Walk-ins** | Allows patients to be added without a prior booking |
 | **Allow Rescheduling** | Lets patients reschedule an existing booking |
 
-### Other fields
-
+### Other Fields
 | Field | Description |
 | --- | --- |
 | **Schedule Poster** | Optional image shown on the schedule's booking link |
@@ -172,39 +162,37 @@ Once configured, click **Create Schedule** to save, or **Cancel** to discard.
 
 ---
 
-## Common Mistakes to Avoid
-
+## Common Mistakes To Avoid
 - Setting **Advance Booking** too short: if it's too restrictive, patients may not be able to book far enough ahead
 - Forgetting to add **Break Times**: without this, patients could end up booking into a doctor's lunch or rest period
 - Leaving old schedules active instead of archiving them: this can cause confusion when multiple schedules exist for the same doctor
 
 ---
 
-## Your schedule is live
-
+## Your Schedule Is Live
 <Cards cols={2}>
   <Card
     title="Appointments"
     description="See bookings made against this schedule."
-    href="/docs/clinic/appointments"
+    href="/docs/clinics/appointments"
     icon="CalendarCheck"
   />
   <Card
     title="Pending Bookings"
     description="Confirm or reject requests for this schedule."
-    href="/docs/clinic/pending-bookings"
+    href="/docs/clinics/pending-bookings"
     icon="Clock"
   />
   <Card
     title="Doctors"
     description="View the doctor whose schedule you just configured."
-    href="/docs/clinic/doctors"
+    href="/docs/clinics/doctors"
     icon="Stethoscope"
   />
   <Card
     title="Prescriptions"
     description="View prescriptions written during these appointments."
-    href="/docs/clinic/prescriptions"
+    href="/docs/clinics/prescriptions"
     icon="FileText"
   />
 </Cards>

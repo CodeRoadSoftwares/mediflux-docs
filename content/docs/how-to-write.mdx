@@ -10,8 +10,7 @@ enableToc: true
 
 This guide covers everything you need to author, organize, and publish MediFlux documentation. The site is built with [Fumadocs](https://fumadocs.dev) + Next.js. All doc content lives as MDX files under `content/docs/`.
 
-## Quick reference
-
+## Quick Reference
 | Task | What to do |
 | ---- | ---------- |
 | Add a new page | Create `content/docs/{section}/{slug}.mdx` |
@@ -25,8 +24,7 @@ This guide covers everything you need to author, organize, and publish MediFlux 
 
 ---
 
-## File structure and URLs
-
+## File Structure And URLs
 All documentation files live in `content/docs/`. The folder structure determines the URL:
 
 <FileTree>
@@ -38,7 +36,7 @@ All documentation files live in `content/docs/`. The folder structure determines
     </FileTreeFolder>
     <FileTreeFolder name="sales">
       <FileTreeFile name="index.mdx → /docs/sales" />
-      <FileTreeFile name="create-sale.mdx → /docs/sales/create-sale" />
+      <FileTreeFile name="create-sale.mdx → /docs/sales/add-sale-retail" />
       <FileTreeFile name="meta.json" />
     </FileTreeFolder>
     <FileTreeFile name="meta.json (root navigation)" />
@@ -46,14 +44,12 @@ All documentation files live in `content/docs/`. The folder structure determines
   </FileTreeFolder>
 </FileTree>
 
-### Naming rules
-
+### Naming Rules
 - Use **kebab-case** for file and folder names: `create-sale.mdx`, not `CreateSale.mdx`.
 - Every section folder should have an **`index.mdx`**: this is the landing page for that section (e.g. `/docs/sales`).
 - Co-locate a **`meta.json`** inside each section folder to control sidebar order.
 
-### Where to put a new page
-
+### Where To Put A New Page
 1. Pick the section (e.g. `sales`, `purchases`, `introduction`).
 2. Create `{section}/{slug}.mdx`.
 3. Add the slug (without `.mdx`) to `{section}/meta.json` under `"pages"`.
@@ -87,7 +83,6 @@ Strings like `"---Introduction---"` render as **non-clickable section labels** i
 ---
 
 ## Frontmatter
-
 Every MDX file starts with YAML frontmatter between `---` delimiters:
 
 ```yaml
@@ -98,8 +93,7 @@ icon: Plus
 ---
 ```
 
-### Supported fields
-
+### Supported Fields
 | Field | Required | Description |
 | ----- | -------- | ----------- |
 | `title` | Yes | Page heading (H1) and browser tab title |
@@ -110,7 +104,6 @@ icon: Plus
 | `index` | Optional | Fumadocs index flag (default: `false`) |
 
 ### Icons
-
 Use any icon name from [Lucide Icons](https://lucide.dev/icons) in **PascalCase**:
 
 ```yaml
@@ -122,10 +115,8 @@ Icons appear in search results and are auto-filled on `<Card>` / `<WideCard>` wh
 
 ---
 
-## Writing a doc
-
+## Writing A Doc
 ### Structure
-
 Follow this pattern for most guides:
 
 1. **Opening paragraph**, what the page covers and who it's for (2–4 sentences).
@@ -136,14 +127,12 @@ Follow this pattern for most guides:
 6. **Next steps**, cards linking to related docs.
 
 ### Headings
-
 - Use a single `#` only if you need an in-page heading: the page `title` in frontmatter is already rendered as the H1.
 - Use `##` for main sections (shown in TOC).
 - Use `###` inside steps, tabs, or accordions.
 - Keep heading text short and scannable.
 
 ### Links
-
 Internal links use root-relative paths:
 
 ```markdown
@@ -152,8 +141,7 @@ See [Installation](/docs/introduction/installation) for setup steps.
 
 External links open in a new tab automatically. You don't need to add `target="_blank"`.
 
-### Text formatting
-
+### Text Formatting
 ```markdown
 **Bold** for UI labels and emphasis.
 *Italic* for terms on first use.
@@ -165,7 +153,6 @@ Keyboard shortcuts use the `<kbd>` HTML tag:
 Press <kbd>F2</kbd> to start a new sale.
 
 ### Lists
-
 Unordered:
 
 ```markdown
@@ -184,12 +171,10 @@ Ordered:
 
 ---
 
-## Standard Markdown elements
-
+## Standard Markdown Elements
 These work out of the box, no custom components needed.
 
 ### Tables
-
 Tables are wrapped automatically in a responsive scroll container:
 
 | Column | Type | Description |
@@ -197,8 +182,7 @@ Tables are wrapped automatically in a responsive scroll container:
 | `id` | string | Unique identifier |
 | `status` | enum | `pending`, `completed` |
 
-### Code blocks
-
+### Code Blocks
 Use fenced code blocks with an optional language and title:
 
 ````markdown
@@ -216,7 +200,6 @@ Features:
 Supported title syntax: ` ```lang title="My title" ` or the `data-title` attribute.
 
 ### Images
-
 Standard Markdown images get a styled figure with the alt text as caption:
 
 ```markdown
@@ -228,11 +211,9 @@ For separate title and description, use the `Figure` component (see [Media](#med
 ---
 
 ## Components
-
 All components below are registered in `lib/mdx-components.tsx` and available in every MDX file without importing.
 
 ### Callout
-
 Highlighted boxes for tips, warnings, and important notes.
 
 **Props:** `type` (`info` | `warning` | `success` | `danger` | `note`), optional `title`
@@ -277,7 +258,6 @@ Highlighted boxes for tips, warnings, and important notes.
 ---
 
 ### Steps
-
 Numbered vertical steps for procedures. Each step can contain headings, paragraphs, code, and callouts.
 
 **`<Steps>` props:** optional `className`
@@ -290,8 +270,7 @@ Numbered vertical steps for procedures. Each step can contain headings, paragrap
     Body text for step one.
   </Step>
   <Step>
-    ### Or use a heading inside
-
+    ### Or Use A Heading Inside
     Body text for step two.
   </Step>
 </Steps>
@@ -309,7 +288,6 @@ Numbered vertical steps for procedures. Each step can contain headings, paragrap
 ---
 
 ### Tabs
-
 Switch between alternative content (install methods, languages, auth types).
 
 **`<Tabs>` props:** `items` (tab labels), optional `defaultValue`, optional `className`
@@ -339,7 +317,6 @@ Switch between alternative content (install methods, languages, auth types).
 ---
 
 ### Cards
-
 Grid of link cards, ideal for section index pages and "Explore" sections.
 
 **`<Cards>` / `<CardGroup>` props:** `cols` (`1` | `2` | `3` | `4`, default `2`)
@@ -353,9 +330,9 @@ When `href` points to an internal doc page, **title, description, and icon are a
   <Card
     title="Create Sale"
     description="Step-by-step sale workflow."
-    href="/docs/sales/create-sale"
+    href="/docs/sales/add-sale-retail"
   />
-  <Card href="/docs/sales/returns" />
+  <Card href="/docs/sales/returned-sales" />
 </Cards>
 ```
 
@@ -374,8 +351,7 @@ When `href` points to an internal doc page, **title, description, and icon are a
 
 ---
 
-### Wide cards
-
+### Wide Cards
 Full-width stacked link rows, good for "Next steps" at the bottom of a page.
 
 **`<WideCards>` props:** optional `className`
@@ -407,7 +383,6 @@ External URLs open in a new tab automatically. Use `target="_blank"` to force it
 ---
 
 ### Accordion
-
 Collapsible sections for FAQ-style or advanced content.
 
 Use `<Accordions>` as the wrapper and `<Accordion>` for each item (these names map to the underlying Accordion / AccordionItem components).
@@ -439,7 +414,6 @@ Use `<Accordions>` as the wrapper and `<Accordion>` for each item (these names m
 ---
 
 ### Badge
-
 Inline status labels.
 
 **Props:** `variant` (`default` | `secondary` | `destructive` | `outline`)
@@ -455,8 +429,7 @@ Examples: <Badge>New</Badge> <Badge variant="secondary">Beta</Badge> <Badge vari
 
 ---
 
-### File tree
-
+### File Tree
 Visual folder structure for explaining project layout.
 
 **`<FileTree>` props:** optional `className`
@@ -477,9 +450,7 @@ Visual folder structure for explaining project layout.
 ---
 
 ### Media
-
 #### Figure
-
 Image with separate title and description (better than Markdown when you need both).
 
 **Props:** `src`, `title`, optional `description`, optional `alt`, optional `className`
@@ -493,7 +464,6 @@ Image with separate title and description (better than Markdown when you need bo
 ```
 
 #### YouTube
-
 **Props:** `id` or `url`, optional `title`, optional `description`
 
 ```mdx
@@ -502,7 +472,6 @@ Image with separate title and description (better than Markdown when you need bo
 ```
 
 #### Video
-
 Hosted MP4 or other video URL.
 
 **Props:** `src`, optional `title`, optional `description`
@@ -513,8 +482,7 @@ Hosted MP4 or other video URL.
 
 ---
 
-## Putting it together, checklist
-
+## Putting It Together, Checklist
 Before opening a PR for a new doc page:
 
 1. File is in the correct section folder with kebab-case name
@@ -530,8 +498,7 @@ Before opening a PR for a new doc page:
 
 ---
 
-## Local development
-
+## Local Development
 ```bash
 npm install
 npm run dev
@@ -543,8 +510,7 @@ After editing MDX, the dev server hot-reloads. If a new file doesn't appear, res
 
 ---
 
-## Adding a new component
-
+## Adding A New Component
 If the team needs a component that doesn't exist yet:
 
 1. Create it in `components/mdx/your-component.tsx`
@@ -556,6 +522,5 @@ Keep components in `components/mdx/` and follow existing patterns (Tailwind clas
 
 ---
 
-## Markdown export
-
-Every public doc page exposes a raw markdown version at `{url}.md` (e.g. `/docs/sales/create-sale.md`). This is used by the "Copy markdown" action and LLM integrations. Write content so it reads well in both rendered and plain markdown form.
+## Markdown Export
+Every public doc page exposes a raw markdown version at `{url}.md` (e.g. `/docs/sales/add-sale-retail.md`). This is used by the "Copy markdown" action and LLM integrations. Write content so it reads well in both rendered and plain markdown form.

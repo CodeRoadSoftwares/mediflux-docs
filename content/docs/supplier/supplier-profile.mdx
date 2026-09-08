@@ -8,8 +8,7 @@ Clicking on any supplier's name in the Supplier List opens their **Supplier Prof
 
 ---
 
-## Profile header
-
+## Profile Header
 At the top of the page you'll see:
 
 - The supplier's name in large text under the **SUPPLIER** label
@@ -25,8 +24,7 @@ At the top of the page you'll see:
 
 ---
 
-## Summary cards
-
+## Summary Cards
 Five stat cards sit below the header giving you a quick performance snapshot of this supplier:
 
 | Card | What it shows |
@@ -45,8 +43,7 @@ Five stat cards sit below the header giving you a quick performance snapshot of 
 
 ---
 
-## Page-level actions
-
+## Page-Level Actions
 Three buttons and a menu sit at the top-right of the supplier profile:
 
 | Button | What it does |
@@ -56,7 +53,6 @@ Three buttons and a menu sit at the top-right of the supplier profile:
 | **More** | Opens a dropdown with additional actions |
 
 ### Add Purchase
-
 Click **Add Purchase** to create a new purchase entry directly linked to this supplier, without having to search for or select the supplier again in the purchase form.
 
 <Figure
@@ -66,7 +62,6 @@ Click **Add Purchase** to create a new purchase entry directly linked to this su
 />
 
 ### Ledger
-
 Click **Ledger** to jump straight to this supplier's individual ledger, showing their full transaction history, running balance, and options to add payments, credit notes, or adjustments.
 
 <Figure
@@ -75,8 +70,7 @@ Click **Ledger** to jump straight to this supplier's individual ledger, showing 
   description="Quick access to the supplier's transaction ledger."
 />
 
-### More menu options
-
+### More Menu Options
 | Option | What it does |
 | --- | --- |
 | **Purchases** | View all purchases linked to this supplier |
@@ -92,12 +86,11 @@ Click **Ledger** to jump straight to this supplier's individual ledger, showing 
 
 ---
 
-## Editing a supplier
-
+## Editing A Supplier
 Click **Edit** from the **More** menu to open the **Update Supplier** form. You can edit Store Name, License Number, GSTIN, Contact Person, Phone Number, Email Address, Website, Address, Notes, and Reliability Score.
 
 <Note>
-The **Opening Balance** field cannot be edited from here. It is locked once the supplier is created. If you need to correct it, create an **Adjustment entry** from the supplier's <a href="/docs/suppliers/ledger">Ledger</a> instead.
+The **Opening Balance** field cannot be edited from here. It is locked once the supplier is created. If you need to correct it, create an **Adjustment entry** from the supplier's <a href="/docs/supplier/supplier-ledger">Ledger</a> instead.
 </Note>
 
 Click **Update Supplier** to save your changes, or **Cancel** to discard them.
@@ -111,7 +104,6 @@ Click **Update Supplier** to save your changes, or **Cancel** to discard them.
 ---
 
 ## Recent Purchases
-
 Below the summary cards, the **Recent Purchases** table shows the latest purchase entries recorded against this supplier:
 
 | Column | Description |
@@ -133,21 +125,19 @@ Click **View More** at the bottom of the table to load older purchase entries.
 ---
 
 ## Notes
-
 At the bottom of the profile, the **Notes** section displays any internal remarks entered when the supplier was first created. If no notes were added, it shows **No remarks provided**.
 
 To update the notes, use the **Edit** option from the **More** menu.
 
 ---
 
-## Common mistakes to avoid
-
+## Common Mistakes To Avoid
 <Warning title="Trying to edit the Opening Balance from the supplier profile">
-The Opening Balance field is locked in the Edit form and cannot be changed here. If the original amount was wrong, add an **Adjustment entry** from the supplier's <a href="/docs/suppliers/ledger">Ledger</a> instead.
+The Opening Balance field is locked in the Edit form and cannot be changed here. If the original amount was wrong, add an **Adjustment entry** from the supplier's <a href="/docs/supplier/supplier-ledger">Ledger</a> instead.
 </Warning>
 
 <Warning title="Deleting a supplier instead of editing them">
-If you only need to update a supplier's details, use **Edit**, not **Delete**. Deleting moves the supplier to <a href="/docs/suppliers/trash">Trash</a>. Although purchase history is preserved, it removes them from your active Supplier List until restored.
+If you only need to update a supplier's details, use **Edit**, not **Delete**. Deleting moves the supplier to <a href="/docs/supplier/supplier-trash">Trash</a>. Although purchase history is preserved, it removes them from your active Supplier List until restored.
 </Warning>
 
 ---
@@ -155,13 +145,13 @@ If you only need to update a supplier's details, use **Edit**, not **Delete**. D
 ## FAQs
 <Accordions>
   <Accordion title="Can I edit a supplier's Opening Balance from their profile?">
-    No. The Opening Balance field is locked once the supplier is saved. To correct it, go to the supplier's <a href="/docs/suppliers/ledger">Ledger</a> and add an <strong>Adjustment entry</strong>.
+    No. The Opening Balance field is locked once the supplier is saved. To correct it, go to the supplier's <a href="/docs/supplier/supplier-ledger">Ledger</a> and add an <strong>Adjustment entry</strong>.
   </Accordion>
   <Accordion title="What happens if I delete a supplier from their profile?">
-    The supplier moves to <a href="/docs/suppliers/trash">Trash</a>. All purchase history and ledger entries are preserved and can be viewed from there. You can restore the supplier at any time.
+    The supplier moves to <a href="/docs/supplier/supplier-trash">Trash</a>. All purchase history and ledger entries are preserved and can be viewed from there. You can restore the supplier at any time.
   </Accordion>
   <Accordion title="Why is my Outstanding showing ₹0.00 even though I have purchases?">
-    This means all purchases from this supplier have been fully paid off through payments or credit notes recorded in the <a href="/docs/suppliers/ledger">Ledger</a>.
+    This means all purchases from this supplier have been fully paid off through payments or credit notes recorded in the <a href="/docs/supplier/supplier-ledger">Ledger</a>.
   </Accordion>
   <Accordion title="Can I export a single supplier's purchase history?">
     Yes. Click <strong>Export Purchases</strong> from the <strong>More</strong> menu to export just this supplier's purchase records.
@@ -170,8 +160,7 @@ If you only need to update a supplier's details, use **Edit**, not **Delete**. D
 
 ---
 
-## From this supplier
-
+## From This Supplier
 <Cards cols={2}>
   <Card
     title="Add Purchase"
@@ -182,7 +171,7 @@ If you only need to update a supplier's details, use **Edit**, not **Delete**. D
   <Card
     title="Supplier Ledger"
     description="Check outstanding balance and record payments."
-    href="/docs/suppliers/ledger"
+    href="/docs/supplier/supplier-ledger"
     icon="BookOpen"
   />
   <Card

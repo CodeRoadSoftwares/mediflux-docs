@@ -1,0 +1,256 @@
+---
+title: Trial Balance
+description: Full view with opening balance, period activity, and closing balance for all ledger accounts.
+icon: ChartLine
+---
+
+A **Trial Balance** lists every ledger account in your Chart of Accounts along with its opening balance, total debits, total credits, and closing balance for a given period. It is the checkpoint that tells you whether your books are mathematically correct. If total debits equal total credits, your double-entry bookkeeping is in balance.
+
+In MediFlux, the Trial Balance is generated automatically from all posted journal entries. You do not need to calculate anything manually.
+
+Navigate here from the sidebar: **Accounting → Trial Balance**.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/0edfad56-3f63-47f1-9375-334dbe49b2b5-trial-balance.png"
+  alt="Trial Balance page showing all account categories with debit and credit totals"
+  title="Trial Balance overview"
+  description="All ledger accounts with opening, activity, and closing balances."
+/>
+
+---
+
+## Filter and export
+
+Use the controls at the top of the page to control what appears in the report.
+
+| Control | What it does |
+|---------|--------------|
+| **Search ledgers...** | Search for a specific account by name |
+| **Date range** | Select the period for the report. Defaults to the current month. Click to open a calendar picker with quick options |
+| **FY 2026-27** | Select the financial year. The date range automatically adjusts |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/77f9f962-6da5-48be-8813-2ced0ec0fedc-TB-Filterepanel.png"
+  alt="Date picker showing calendar with quick filter options"
+  title="Filter and Export"
+  description="Search by account name or Filter by dates etc."
+/>
+## Export the Trial Balance
+
+Click **Export** in the top-right corner to download the report.
+
+| Option | What you get |
+|--------|--------------|
+| **PDF Document** | A formatted report suitable for sharing or printing |
+| **Excel Sheet** | A spreadsheet you can open and analyse further |
+
+The export respects the current date range and any search filter you have applied.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/5ecbde31-432a-4607-a9d3-fcf7305b4c58-TB-EXPORT.png"
+  alt="Export dropdown showing PDF Document and Excel Sheet options"
+  title="Export options"
+  description="Download the trial balance as PDF or Excel."
+/>
+
+---
+
+## Category filter cards
+
+Below the search and date filters, six cards act as quick filters for each account category. Click any card to show only the accounts that belong to that group.
+
+| Card | What it filters |
+|------|-----------------|
+| **Current Asset** | All current asset accounts |
+| **Non-Current Asset** | All non-current asset accounts |
+| **Current Liability** | All current liability accounts |
+| **Equity** | All equity accounts |
+| **Revenue** | All revenue accounts |
+| **Expense** | All expense accounts |
+
+### Each card also shows:
+- Total debit amount
+- Total credit amount
+- Number of ledgers in that category
+
+Click the same card again to clear the filter and return to the full list.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/be69dfe5-8879-4306-8b67-36793b55bf86-filterCards-tb.png"
+  alt="Category filter cards on Trial Balance"
+  title="Category filter cards"
+  description="Click a card (for example Non-Current Asset) to filter the table to only that category."
+/>
+
+<Note>
+In the example above, the **Non-Current Asset** card is selected, so the table shows only Fixed Assets and Property/Building.
+</Note>
+---
+
+## Total Debits and Total Credits
+
+Two large cards sit below the category cards:
+
+| Card | What it shows |
+|------|---------------|
+| **Total Debits** | The sum of all debit columns across every account in the selected period |
+| **Total Credits** | The sum of all credit columns across every account in the selected period |
+
+These two numbers must be **exactly equal**. If they match, the trial balance tallies. If they do not match, there is a bookkeeping error that must be resolved.
+
+---
+
+## Accounts table
+
+The main table lists every parent account group. Click the arrow next to any parent to expand it and see its child accounts.
+
+| Column | What it means |
+|--------|---------------|
+| **Ledger** | Account name with `Dr` or `Cr` badge. Parent groups can be expanded to reveal children |
+| **Type** | Color-coded category tag such as `CURRENT ASSET`, `CURRENT LIABILITY`, `EQUITY`, `REVENUE`, or `EXPENSE` |
+| **Opening** | The account balance at the start of the selected period |
+| **Debit** | Total amount debited to this account during the period |
+| **Credit** | Total amount credited to this account during the period |
+| **Closing** | The account balance at the end of the period |
+
+### How the closing balance is calculated
+
+| Normal balance | Formula |
+|----------------|---------|
+| **Debit Normal** (Assets, Expenses) | `Closing = Opening + Debit − Credit` |
+| **Credit Normal** (Liabilities, Equity, Revenue) | `Closing = Opening + Credit − Debit` |
+
+--- 
+
+#### Example from a live store
+
+| Account | Type | Opening | Debit | Credit | Closing | Calculation |
+|---------|------|---------|-------|--------|---------|-------------|
+| **Accounts Receivable** | CURRENT ASSET | `–` | `₹1,08,589.00` | `₹14,007.69` | `₹94,581.31 Dr` | `0 + 1,08,589.00 − 14,007.69` |
+| **Cash & Bank** | CURRENT ASSET | `–` | `₹47,83,340.86` | `₹53,053.06` | `₹47,30,287.80 Dr` | `0 + 47,83,340.86 − 53,053.06` |
+| **Accounts Payable** | CURRENT LIABILITY | `₹41,370.00 Cr` | `₹30,595.47` | `₹2,89,925.10` | `₹3,00,699.63 Cr` | `41,370 + 2,89,925.10 − 30,595.47` |
+| **Equity** | EQUITY | `–` | `₹10,773.80` | `₹58,43,742.89` | `₹58,32,969.09 Cr` | `0 + 58,43,742.89 − 10,773.80` |
+| **Expenses** | EXPENSE | `–` | `₹32,218.26` | `₹2,564.67` | `₹29,653.59 Dr` | `0 + 32,218.26 − 2,564.67` |
+| **Revenue** | REVENUE | `–` | `₹3,035.50` | `₹66,340.48` | `₹63,304.98 Cr` | `0 + 66,340.48 − 3,035.50` |
+
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/6c4b9c6a-ce2e-4763-800e-1243cdcbb72d-trial-balance-example.png"
+  alt="Expanded Trial Balance showing parent and child accounts with all columns"
+  title="Trial Balance expanded"
+  description="Parent groups with child accounts and full column breakdown."
+/>
+<Note>
+In the example above, the **Equity** parent shows a debit of `₹10,773.80`. This comes from debit entries such as **Owner's Drawings** or **Partner Remuneration**, which reduce the total equity balance.
+</Note>
+
+---
+
+## Why the trial balance must tally
+
+Every transaction affects at least two accounts, and the total debits always equal the total credits in every journal entry. When you add up all debits and all credits across every account for the period, the two sides must still be equal.
+
+| Principle | Explanation |
+|-----------|-------------|
+| **Every transaction is balanced** | A sale debits Cash or Accounts Receivable and credits Revenue. A purchase debits Inventory and credits Cash or Accounts Payable. The two sides always match |
+| **Contra accounts preserve the balance** | When a sale is returned, Revenue is debited and Cash or Accounts Receivable is credited. Both sides still match |
+| **The total row proves correctness** | If `Total Debits = Total Credits`, every journal entry was posted correctly |
+
+### What if the totals do not match?
+
+| Error | What to check |
+|-------|---------------|
+| **Missing journal entry** | A transaction was recorded in one account but not the other |
+| **Wrong amount posted** | The debit and credit sides of a journal entry were entered with different amounts |
+| **Entry posted twice** | The same journal entry was posted twice |
+| **Account not initialized** | A ledger was used in a transaction but was not properly set up in the Chart of Accounts |
+
+<Note>
+MediFlux prevents most of these errors at the source. When you create a journal entry, the system requires that total debits equal total credits before the entry can be saved.
+</Note>
+
+---
+
+## Newly initialized stores
+
+If you have just enabled the Accounting module, your Trial Balance will look simple. Most accounts will show zero opening balances, and only a few accounts will have activity from the initial setup.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/fb21c132-5c7c-4e90-8879-7647c2a8eec8-new-accounting-tb.png"
+  alt="Trial Balance for a newly initialized store showing minimal activity"
+  title="Trial Balance on a new store"
+  description="Only initialization entries are present. Total Debits equal Total Credits."
+/>
+
+In a typical new store:
+- **Current Asset** shows activity from **Inventory** and **Tax Assets**
+- **Current Liability** shows activity from **Accounts Payable**
+- **Equity** shows the balancing figure
+- **Total Debits** and **Total Credits** are equal
+
+As you record sales, purchases, and journal entries, these numbers will grow and more categories will appear.
+
+---
+
+## Common mistakes
+
+<Warning title="Panicking when a category shows both debit and credit">
+A category like **Current Asset** showing both green (debit) and red (credit) does not mean your books are wrong. Contra-assets such as **Purchase Return** and **Accumulated Depreciation** naturally carry credit balances. Expand the parent group to see which accounts are causing it.
+</Warning>
+
+<Warning title="Comparing Trial Balance directly to your bank statement">
+The Trial Balance includes non-cash accounts like **Accounts Receivable** and **Accounts Payable**. It is not a cash report. To reconcile your bank balance, open the **Cash & Bank** ledger or use the **Balance Sheet**.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<Accordions>
+  <Accordion title="What is the difference between Trial Balance and Balance Sheet?">
+    The **Trial Balance** lists every ledger account with its activity and balance. It is an internal tool used to verify that debits equal credits. The **Balance Sheet** is a financial statement that groups accounts into Assets, Liabilities, and Equity to show the financial position of the business at a point in time.
+  </Accordion>
+  <Accordion title="Why does the Current Asset card show a credit amount?">
+    This happens because of **contra-asset** accounts like **Purchase Return** or **Accumulated Depreciation**, which carry credit balances. These credits reduce the net value of your assets.
+  </Accordion>
+  <Accordion title="Can I export the Trial Balance?">
+    Yes. Click **Export** and choose either **PDF Document** for a formatted report or **Excel Sheet** for further analysis.
+  </Accordion>
+  <Accordion title="What period should I select?">
+    Most businesses run the Trial Balance monthly. You can also run it for a quarter, half-year, or full financial year by adjusting the date range or selecting a different fiscal year.
+  </Accordion>
+  <Accordion title="Does a balanced Trial Balance mean there are no errors?">
+    A balanced Trial Balance confirms that total debits equal total credits. It does not catch errors of omission (a transaction was completely forgotten) or errors of principle (a transaction was posted to the wrong type of account).
+  </Accordion>
+</Accordions>
+
+---
+
+## Next steps
+
+<Cards>
+  <Card
+    title="General Ledger"
+    description="Drill down into any account to see its full transaction history."
+    href="/docs/accounting/ledger"
+    icon="FileText"
+  />
+  <Card
+    title="Balance Sheet"
+    description="View your assets, liabilities, and equity in a formal financial statement."
+    href="/docs/accounting/balance-sheet"
+    icon="Landmark"
+  />
+  <Card
+    title="Profit and Loss Statement"
+    description="See your revenue, expenses, and net profit for the period."
+    href="/docs/accounting/pl-statement"
+    icon="TrendingUp"
+  />
+  <Card
+    title="Ledgers"
+    description="Browse and manage your complete Chart of Accounts."
+    href="/docs/accounting/accounts"
+    icon="BookOpen"
+  />
+</Cards>

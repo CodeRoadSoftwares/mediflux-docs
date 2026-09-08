@@ -1,0 +1,166 @@
+---
+title: Mediflux Dashboard
+description: Your pharmacy's command centre. View real-time stats on inventory, sales, payments, expired drugs, and drug movement at a glance.
+icon: LayoutDashboard
+---
+
+The **Dashboard** is the first screen you see when you log into MediFlux. It gives you a real-time snapshot of everything happening in your pharmacy: how much stock you have, what your sales look like, who owes you money, which drugs have expired, and how your inventory is moving. No navigation required. Everything critical is surfaced automatically.
+
+---
+
+## Welcome banner
+
+At the top of the Dashboard, a personalised banner greets you by name and shows the current date and time. This helps you quickly confirm you're logged into the right store and keeps the day's context visible.
+
+---
+
+## Overview cards
+
+Below the banner, five summary cards give you an instant health check of your pharmacy:
+
+| Card | What it shows |
+| --- | --- |
+| **Drugs** | Total number of unique drugs currently in your inventory |
+| **Drug Value** | Total MRP value of all stock on hand |
+| **Suppliers** | Number of supplier profiles linked to your store |
+| **Supplier Outstanding** | Total amount you currently owe to all suppliers, shown in red |
+| **Customers** | Number of customer profiles in your system |
+
+<Figure
+  src="/images/dashboard-overview-cards.png"
+  title="Overview cards"
+  description="Five summary cards showing Drugs, Drug Value, Suppliers, Supplier Outstanding, and Customers."
+/>
+
+---
+
+## Expired drugs
+
+If any drugs in your inventory have crossed their expiry date, they appear here in a dedicated table so you can take action immediately.
+
+| Column | Description |
+| --- | --- |
+| **DRUG** | Name of the expired drug |
+| **SUPPLIER** | Supplier the drug was purchased from |
+| **EXPIRY** | Expiry date, shown in red |
+| **QTY** | Quantity still in stock |
+
+Click **View All** to jump to the full Drug List with expiry filters applied, where you can update or remove these items.
+
+<Figure
+  src="/images/dashboard-expired-drugs.png"
+  title="Expired Drugs"
+  description="Table of expired drugs with supplier, expiry date, and quantity."
+/>
+
+---
+
+## Sales
+
+The **Sales** section shows your revenue performance over time. Use the **Last 7 Days** dropdown or click **Custom** to change the date range.
+
+| Element | What it shows |
+| --- | --- |
+| **Sales Overview** | Total sales value for the selected period |
+| **Profit vs Sales chart** | A line graph comparing profit (green) against total sales (teal) day by day |
+| **Collected on Sale** | Percentage of sales revenue collected upfront |
+| **Payment breakdown** | How much came via Cash, UPI, Net Banking, and how much is still on Credit |
+| **Collected / On Credit** | Total cash collected versus total amount still outstanding from customers |
+
+<Figure
+  src="/images/dashboard-sales.png"
+  title="Sales performance"
+  description="Revenue chart with profit vs sales trend and payment method breakdown."
+/>
+
+<Note>
+If **On Credit** is high, it means a large portion of your revenue is tied up in customer dues. Use the **Customers → Ledger** page to follow up on outstanding payments.
+</Note>
+
+---
+
+## Payment Analytics
+
+The **Payment Analytics** section (marked **New**) tracks how effectively you're converting billed amounts into actual cash.
+
+| Card | What it shows |
+| --- | --- |
+| **Collections Over Time** | Total cash collected in the selected period, with a billed vs collected trend chart |
+| **Net Receivable** | Total outstanding amount across all your books |
+| **Collected (Last 7d)** | Actual cash recovered in the last 7 days |
+| **Billed (Last 7d)** | New credit extended to customers in the last 7 days |
+| **Credit Expansion (Last 30d)** | How much new credit was given versus how much was recovered |
+| **Avg Daily Recovery** | Rolling average of daily collections over the last 7 days |
+| **Stale Balances (45d+)** | Old outstanding amounts that haven't been paid in over 45 days |
+| **Highest Exposure** | The customer who owes you the most, with their name and amount |
+| **Payment Regularity** | Percentage of customers who paid on time vs total billed customers |
+
+<Figure
+  src="/images/dashboard-payment-analytics.png"
+  title="Payment Analytics"
+  description="Collections trend, net receivable, recovery stats, and credit health metrics."
+/>
+
+<Warning title="Concentration Risk">
+If a small number of customers hold a large percentage of your total receivables, a banner appears at the top warning you that **Top 20% of customers hold X% of your receivables**. This means your cash flow depends heavily on just a few accounts. Follow up on these immediately.
+</Warning>
+
+---
+
+## Drug Movement
+
+The **Drug Movement** section shows which drugs are selling fast and which are sitting idle.
+
+| Tab | What it shows |
+| --- | --- |
+| **By Quantity Sold** | Drugs ranked by total units sold in the selected period |
+| **By Sales Velocity** | Drugs ranked by how quickly they turn over |
+
+Each side lists drugs with their sold quantity, split into:
+
+- **Fast Moving:** your best sellers, the drugs that move off the shelf quickly
+- **Slow Moving:** drugs with low or no sales activity, potential dead stock
+
+Use the **This Month** dropdown to change the period, or click **PDF** / **CSV** to export the list.
+
+<Figure
+  src="/images/dashboard-drug-movement.png"
+  title="Drug Movement"
+  description="Fast Moving and Slow Moving drug lists with quantity sold."
+/>
+
+<Note>
+Slow moving drugs tie up working capital and shelf space. Consider running promotions, returning them to suppliers via debit notes, or reducing future orders for these items.
+</Note>
+
+---
+
+## Next steps
+
+<Cards cols={2}>
+  <Card
+    title="Drugs"
+    description="View and manage your full inventory."
+    href="/docs/inventory/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Sales"
+    description="Record sales, issue credit notes, and manage returns."
+    href="/docs/sales"
+    icon="ShoppingCart"
+  />
+  <Card
+    title="Customers"
+    description="Manage customer profiles and track outstanding dues."
+    href="/docs/customers"
+    icon="Users"
+  />
+  <Card
+    title="Accounting"
+    description="View detailed financial reports and GST compliance."
+    href="/docs/accounting"
+    icon="Calculator"
+  />
+  
+</Cards>
