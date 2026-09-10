@@ -8,7 +8,7 @@ enableToc: true
   This page is **not linked in the sidebar or navigation**. Share the URL directly with team members: `/docs/how-to-write`. Do not add this file to any `meta.json`.
 </Callout>
 
-This guide covers everything you need to author, organize, and publish MediFlux documentation. The site is built with [Fumadocs](https://fumadocs.dev) + Next.js. All doc content lives as MDX files under `content/docs/`.
+This guide covers everything you need to author, organize, and publish MediFlux documentation. The site is built with [Fumadocs](https://fumadocs.dev) + Next.js. Documentation lives under `content/docs/`. Help & FAQs live under `content/help/` with the same folder, `meta.json`, and MDX component setup.
 
 ## Quick Reference
 | Task | What to do |
@@ -17,7 +17,10 @@ This guide covers everything you need to author, organize, and publish MediFlux 
 | Set the URL | File path maps to `/docs/{section}/{slug}` (omit `index` for section roots) |
 | Show in sidebar | Add the slug to that section's `meta.json` → `pages` array |
 | Page title & SEO | Set `title` and `description` in frontmatter |
-| Sidebar icon | Set `icon` to a [Lucide](https://lucide.dev/icons) icon name (PascalCase) |
+| Sidebar icon (docs only) | Set `icon` to a [Lucide](https://lucide.dev/icons) icon name (PascalCase) |
+| FAQ tags (help only) | Set `tags` to a list of strings, e.g. `[sales, gst]` |
+| Related docs (help only) | Set `related` to `/docs/...` URLs for the full guides |
+| Add a Help FAQ | Create `content/help/{section}/{slug}.mdx` and add the slug to that section's `meta.json` |
 | Step-by-step guides | Use `<Steps>` + `<Step>` |
 | Link grids on index pages | Use `<Cards>` + `<Card>` |
 | Full-width link rows | Use `<WideCards>` + `<WideCard>` |
@@ -82,6 +85,46 @@ Strings like `"---Introduction---"` render as **non-clickable section labels** i
 
 ---
 
+## Help & FAQs
+Help articles use the same MDX components and `meta.json` navigation as docs. They live in `content/help/` and map to `/help/{section}/{slug}`.
+
+Do **not** put an `index.mdx` at the help root: `/help` is the searchable FAQ list. Each section still needs its own `index.mdx` and `meta.json`.
+
+### Help vs documentation
+Keep these as two layers, not two copies of the same page.
+
+| | Documentation (`content/docs`) | Help & FAQs (`content/help`) |
+| - | --- | --- |
+| Job | Explain how a feature works | Unblock someone who is stuck |
+| Voice | “Here is Sales List and what you can do” | “How do I find last week’s bill?” |
+| Length | Full guide | Short answer, then a link to the guide |
+| In-page FAQs | Short accordion answers on the doc are fine | Do not paste the whole doc into Help |
+
+Rules:
+
+1. **Docs own the feature.** Help should not retell the full workflow.
+2. **Help owns the stuck moment.** Write the question the way a pharmacist would ask it.
+3. **Link, don’t copy.** Every Help article should set `related` to one or more `/docs/...` URLs. Those render as “Related documentation” under the answer.
+4. **Doc-page FAQs stay short.** If an accordion answer on a doc grows past a few sentences, move it to Help and link there.
+
+```yaml
+---
+title: Why is GST not applying on a sale?
+description: Check tax settings, item HSN, and customer GSTIN when GST is missing from a bill.
+tags: [sales, gst, billing]
+related:
+  - /docs/sales/add-sale-retail
+---
+```
+
+- Use `title` and `description` the same way as docs.
+- Use `tags` instead of `icon`. Tags appear as filters on `/help`.
+- Use `related` for the canonical doc pages. Titles and descriptions are pulled from those pages.
+- Add the slug to `{section}/meta.json`, and add new sections to `content/help/meta.json`.
+- Search on `/help` matches title, description, tags, section, **and the answer body**.
+
+---
+
 ## Frontmatter
 Every MDX file starts with YAML frontmatter between `---` delimiters:
 
@@ -98,7 +141,9 @@ icon: Plus
 | ----- | -------- | ----------- |
 | `title` | Yes | Page heading (H1) and browser tab title |
 | `description` | Recommended | Subtitle under the title; used for SEO and search |
-| `icon` | Optional | Lucide icon name for search results and cards that link to this page |
+| `icon` | Optional | Docs only. Lucide icon name for search results and cards that link to this page |
+| `tags` | Optional | Help & FAQs only. List of strings shown as filters on `/help` |
+| `related` | Optional | Help & FAQs only. List of `/docs/...` URLs shown as related guides |
 | `badge` | Optional | Small label (reserved for future use) |
 | `enableToc` | Optional | Show table of contents on the right (default: `true`). Set `false` for short pages |
 | `index` | Optional | Fumadocs index flag (default: `false`) |

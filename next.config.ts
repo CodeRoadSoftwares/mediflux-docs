@@ -73,6 +73,10 @@ const nextConfig: NextConfig = {
         source: "/docs/:path*.md",
         destination: "/llms.mdx/docs/:path*",
       },
+      {
+        source: "/help/:path*.md",
+        destination: "/llms.mdx/help/:path*",
+      },
     ];
   },
 };
