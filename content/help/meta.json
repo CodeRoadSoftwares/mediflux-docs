@@ -3,9 +3,13 @@
   "pages": [
     "---Getting Started---",
     "getting-started",
+    "---Purchases---",
+    "purchases",
     "---Sales---",
     "sales",
     "---Account---",
-    "account"
+    "account",
+    "---Ledgers---",
+    "ledgers"
   ]
 }
