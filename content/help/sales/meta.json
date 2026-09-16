@@ -1,0 +1,7 @@
+{
+  "title": "Sales",
+  "pages": ["index", "wrong-calculation", "cannot-find-a-sale","nrx-sale",
+   "create-credit-note", "create-debit-note", "draft-and-add-sale-diff", "return-sale","update-sale", 
+    "print-or-share-bill", "todays-sale"]
+}
+
