@@ -4,10 +4,9 @@ import { SITE_URL } from "@/lib/site";
 
 export const revalidate = false;
 
-export function GET() {
-  const index = llms(source)
-    .index()
-    .replace(/\]\(\//g, `](${SITE_URL}/`);
+export async function GET() {
+  const rawIndex = await llms(source).index();
+  const index = rawIndex.replace(/\]\(\//g, `](${SITE_URL}/`);
 
   const body = `# MediFlux Documentation
 
