@@ -1,146 +1,730 @@
 ---
 title: Create Debit Note
-description: Raise a debit note to a supplier to remove medications from your inventory and request a return.
+description: Create debit notes from the Drug List, manually, or through full and partial purchase returns, including warehouse stock.
 icon: FilePlus
 ---
 
 <YouTube url="https://youtu.be/6nUgZKH6kn8" title="" />
 
-A **Debit Note** is how you formally record that you're returning medications to a supplier, for reasons like damaged stock, excess quantity, or expired drugs. Creating a debit note permanently removes the selected quantity from your inventory, since that stock is no longer available for sale once it's marked for return.
+A **Debit Note** records medications being returned to a supplier, such as damaged, expired, or excess stock.
 
-There are two ways to create a debit note in MediFlux.
+Creating a debit note deducts the returned quantity from your inventory, making that stock unavailable for sale.
+
+There are three ways to create a debit note in MediFlux.
+
+| Method | When to use it |
+| --- | --- |
+| **Method 1: From Drug List** | Select medications from your inventory and generate a debit note using prefilled details |
+| **Method 2: From Create Debit Note** | Select a supplier, search for medications, and enter return details manually |
+| **Method 3: From Purchase List** | Return an entire purchase or selected medications and quantities from an existing purchase |
+
+<Note>
+**Warehouse module:** Your **Main Store** is available by default. To add and manage additional warehouses, subscribe to and enable the **Warehouse** module under **Settings → Modules**.
+
+When enabled, you can also create debit notes for medications stored in warehouses.
+
+For more information, see [**Modules**](/docs/settings/modules).
+</Note>
 
 ---
 
-## Method 1: From The Drug List (Separated View)
-Select one or more drugs from the **Separated View** on the Drug List, then click **Generate Debit Note** from the bulk actions toolbar. This opens the **Create Debit Note** dialog for the drugs you selected.
+## Method 1: From Drug List (Separated View)
+
+This method lets you create a debit note directly from your existing inventory without entering medication details manually.
+
+You can select one or more medications and adjust their return quantities, suppliers, discounts, and pricing before creating the debit note.
+
+### How To Create A Debit Note From Drug List
+
+<Steps>
+
+<Step title="Select medications">
+
+Go to **Drugs → Drug List → Separated View**.
+
+Find the medications you want to return and select them using the checkboxes.
+
+Once selected, the bulk actions toolbar appears.
+
+Click **Generate Debit Note**.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589497473-114623559-generate-debitnote.png"
+  src="/images/inventory/generate-debit-note.png"
   title="Generate Debit Note from Drug List"
-  description="Bulk action toolbar showing Generate Debit Note option."
+  description="Select medications in Separated View and click Generate Debit Note from the bulk actions toolbar."
 />
 
-<Note>
-Selected medications will not be available for sale after creating the debit note.
-</Note>
+</Step>
 
-### Available Medications
-For each selected drug, you'll see:
+<Step title="Review the selected medications">
+
+The **Create Debit Note** dialog opens with the selected medications already added.
+
+MediFlux automatically fills in the available medication details, including the drug name, current stock, supplier, and unit cost.
+
+You can review and modify the return details before creating the debit note.
+
+<Figure
+  src="/images/inventory/create-debit-note-dialog.png"
+  title="Create Debit Note dialog"
+  description="Review selected medications, current stock, return quantities, pricing, and suppliers."
+/>
+
+</Step>
+
+<Step title="Set return quantities">
+
+You can enter the return quantity manually using **Strips Qty** and **Tablets Qty**, where applicable.
+
+Alternatively, use **Return % Stock** to calculate the return quantities automatically.
+
+| Option | What it does |
+| --- | --- |
+| **25%** | Calculates 25% of available stock |
+| **50%** | Calculates 50% of available stock |
+| **75%** | Calculates 75% of available stock |
+| **100% (Full)** | Calculates the full available stock |
+| **Custom %** | Lets you enter a custom return percentage |
+
+Select the percentage and click **Apply**.
+
+MediFlux automatically fills the return quantity fields based on the selected percentage.
+
+You can adjust the calculated quantities manually.
+
+<Figure
+  src="/images/inventory/debit-note-return-percentage.png"
+  title="Return percentage"
+  description="Calculate return quantities using preset or custom percentages."
+/>
+
+</Step>
+
+<Step title="Review medication details">
+
+Each selected medication has its own row containing the following information:
 
 | Field | Description |
 | --- | --- |
-| **Medication Details** | Drug name, units per strip, and supplier |
-| **Current Stock** | Units currently available |
-| **Quantity to Remove** | Enter the quantity to remove, in strips and tablets, for precise amounts |
+| **Medication Details** | Drug name and units per strip |
+| **Current Stock** | Available stock quantity |
+| **Strips Qty** | Number of strips to return |
+| **Tablets Qty** | Additional tablets to return |
+| **Free Qty** | Free quantity included in the return |
+| **Disc %** | Discount percentage |
+| **Unit Cost (₹)** | Cost per unit |
+| **Supplier** | Supplier against whom the debit note will be created |
 
-The dialog shows a running **Total medications selected** and **Total units to remove** at the bottom. Use **Reset All** to clear your quantities and start over.
+You can modify the return quantities, free quantity, discount, unit cost, and supplier.
 
-Once you're done, click **Create Debit Note** to proceed.
+</Step>
+
+<Step title="Assign suppliers">
+
+The **Supplier** field is populated automatically for each selected medication.
+
+If you want to create the debit note against a different supplier, select another supplier from that medication's dropdown.
+
+You can also use **Assign Supplier to All Medications** to select a common supplier for every medication in the dialog.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589576596-186366788-debitnote-dialogue.png"
-  title="Available Medications"
-  description="Selected drugs with current stock and quantity to remove fields."
+  src="/images/inventory/debit-note-assign-suppliers.png"
+  title="Assign suppliers"
+  description="Change the supplier for an individual medication or assign one supplier to all selected medications."
 />
+
+</Step>
+
+<Step title="Review totals">
+
+At the bottom of the dialog, MediFlux displays:
+
+- **Medications:** Number of medications included
+- **Total Units:** Total quantity selected for return
+
+Use **Reset** to reset the return quantities.
+
+You can also remove an individual medication using the delete icon beside its row.
+
+</Step>
+
+<Step title="Create the debit note">
+
+Review the return quantities, pricing, discounts, and suppliers.
+
+Click **Create Debit Note**.
+
+A confirmation prompt appears showing the total quantity to be removed.
+
+Click **Confirm** to finalize the debit note or **Cancel** to return without submitting.
+
+<Figure
+  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589704549-784839274-confirm-crditnote.png"
+  title="Debit Note confirmation"
+  description="Review the total units being removed before confirming the debit note."
+/>
+
+Once confirmed, the selected quantities are deducted from inventory.
+
+</Step>
+
+</Steps>
+
+<Note>
+When using this method, the selected medications are already added to the debit note. You only need to review and adjust their return details before confirming.
+</Note>
 
 ---
 
 ## Method 2: From Drugs → Create Debit Note
-This opens a dedicated page to build a debit note from scratch, useful when you want to add drugs individually rather than starting from a selection on the Drug List.
+
+This method lets you create a debit note manually without selecting medications from the Drug List first.
+
+You can select the supplier, search for medications, and enter their return quantities and pricing information.
+
+### How To Create A Debit Note Manually
+
+<Steps>
+
+<Step title="Open Create Debit Note">
+
+Go to **Drugs → Create Debit Note**.
+
+The page opens with a date field, supplier selection, and medication entry table.
+
+<Figure
+  src="/images/inventory/create-debit-note-page.png"
+  title="Create Debit Note page"
+  description="Create a debit note manually by selecting a supplier and entering medication details."
+/>
+
+</Step>
+
+<Step title="Select the date and supplier">
+
+At the top of the page, enter the debit note information.
 
 | Field | Description |
 | --- | --- |
 | **Date** | Date of the debit note |
-| **Search for suppliers** | Select the supplier the debit note is being raised to |
+| **Search for suppliers** | Select the supplier against whom the debit note is being created |
 
-### Drug Entry Table
-For each drug added to the note, fill in:
+</Step>
 
-| Column | Description |
+<Step title="Search for medications">
+
+Click the **Drug Name** field.
+
+Start typing the medication name.
+
+MediFlux displays matching medications in a dropdown.
+
+Select the medication you want to return.
+
+</Step>
+
+<Step title="Enter medication details">
+
+For each medication, enter or review the following information:
+
+| Field | Description |
 | --- | --- |
-| **Drug Name** | Search and select the drug |
-| **Stock** | Current stock, shown automatically |
-| **Qty** | Quantity to remove |
+| **Drug Name** | Medication being returned |
+| **Stock** | Current stock quantity |
+| **Qty** | Number of strips to return |
+| **Tablets** | Additional tablets to return |
 | **Batch** | Batch number |
-| **Expiry** | Expiry date (MM/YY) |
-| **Free** | Free units, if any |
+| **Expiry** | Expiry date in `MM/YY` format |
+| **Free** | Free quantity included in the return |
 | **Cost** | Cost price |
 | **MRP** | Maximum retail price |
 | **Disc %** | Discount percentage |
-| **CGST / SGST / IGST** | Applicable tax rates |
-
-Click the **+** below the table to add another drug row, or the trash icon to remove one.
+| **CGST** | Central GST rate |
+| **SGST** | State GST rate |
+| **IGST** | Integrated GST rate |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589646647-563441710-creditnote-page.png"
-  title="Create Debit Note page"
-  description="Dedicated page to build a debit note from scratch with drug entry table."
+  src="/images/inventory/create-debit-note-medication-fields.png"
+  title="Medication return details"
+  description="Enter quantity, tablets, batch, expiry, free quantity, cost, MRP, discount, and GST rates."
 />
+
+</Step>
+
+<Step title="Enter strips and tablets">
+
+You can enter both complete strips and individual tablets.
+
+For example, suppose a medication contains `10` tablets per strip.
+
+If you want to return `2` strips and `3` additional tablets:
+
+| Field | Value |
+| --- | --- |
+| **Qty** | `2` |
+| **Tablets** | `3` |
+| **Total tablets** | `23` |
+
+This allows you to return loose tablets along with complete strips.
+
+</Step>
+
+<Step title="Add or remove medications">
+
+Click the **+** button below the table to add another medication row.
+
+To remove a medication, click the delete icon beside its row.
+
+</Step>
+
+<Step title="Create the debit note">
+
+Review the supplier, medications, return quantities, and pricing.
+
+Click **Create Debit Note**.
+
+Once successfully submitted, the returned stock is deducted from inventory.
+
+The newly created debit note appears under **Drugs → Billing Notes → Debit Notes**.
+
+</Step>
+
+</Steps>
+
+<Note>
+Unlike Method 1, this method starts with an empty medication entry table. You select the supplier and add the medications manually.
+</Note>
 
 ---
 
-## Confirming The Debit Note
-**Method 1 (Separated View)** shows a confirmation prompt before finalizing:
+## Method 3: Purchase Returns
 
-> **Create Debit Note?**
->
-> Removed Stock will not be available to sell
->
-> Total units to remove: [X]
+You can also create a debit note by returning medications from an existing purchase.
 
-Click **Confirm** to finalize, or **Cancel** to go back and make changes.
+This method is useful when you want to return stock associated with a particular purchase without manually creating a separate debit note.
 
-**Method 2 (Create Debit Note page)** doesn't show this prompt. Clicking **Create Debit Note** submits it directly, and a success message confirms the debit note has been created.
+MediFlux provides two purchase return options:
+
+| Return Type | Description |
+| --- | --- |
+| **Return Full Purchase** | Return the entire purchase |
+| **Partial Return** | Return selected medications or quantities from a purchase |
+
+Both options create a debit note for the returned stock.
+
+### How To Start A Purchase Return
+
+<Steps>
+
+<Step title="Open Purchase List">
+
+Go to **Purchases → Purchase List**.
+
+Find the purchase you want to return.
+
+You can search using the supplier name, drug name, or challan/invoice number.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783589704549-784839274-confirm-crditnote.png"
-  title="Create Debit Note confirmation"
-  description="Confirmation prompt showing total units to remove before finalizing."
+  src="/images/purchases/purchase-list.png"
+  title="Purchase List"
+  description="Find an existing purchase using supplier, medication, or invoice information."
 />
 
+</Step>
+
+<Step title="Open purchase details">
+
+Select the purchase to open its details.
+
+The purchase details page displays the supplier, purchase date, invoice number, purchase summary, and purchased medications.
+
+At the top of the page, you can access **Invoice**, **Download**, **Print Labels**, and **More**.
+
+<Figure
+  src="/images/purchases/purchase-details.png"
+  title="Purchase details"
+  description="View purchase information and access the available purchase actions."
+/>
+
+</Step>
+
+<Step title="Open Return Purchase">
+
+Click **More**.
+
+Expand **Return Purchase**.
+
+You will see:
+
+- **Return Full Purchase**
+- **Partial Return**
+
+<Figure
+  src="/images/purchases/return-purchase-options.png"
+  title="Return Purchase options"
+  description="Choose Return Full Purchase or Partial Return from the purchase details page."
+/>
+
+</Step>
+
+</Steps>
+
+### Option 1: Return Full Purchase
+
+Use **Return Full Purchase** when you want to return the complete purchase to the supplier.
+
+<Steps>
+
+<Step title="Select Return Full Purchase">
+
+Open the purchase details page.
+
+Go to **More → Return Purchase → Return Full Purchase**.
+
+</Step>
+
+<Step title="Review the purchase">
+
+Check the purchase information and ensure you intend to return the complete purchase.
+
+</Step>
+
+<Step title="Complete the return">
+
+Proceed with the full purchase return.
+
+MediFlux creates the corresponding debit note and deducts the returned stock from inventory.
+
+</Step>
+
+<Step title="Review the debit note">
+
+Go to **Drugs → Billing Notes → Debit Notes**.
+
+Find the debit note created for the purchase return.
+
+</Step>
+
+</Steps>
+
+<Warning title="Returning an entire purchase">
+Use **Return Full Purchase** only when you intend to return the complete purchase. If you want to return selected medications or quantities, choose **Partial Return**.
+</Warning>
+
+### Option 2: Partial Return
+
+Use **Partial Return** when you want to return only certain medications or quantities from a purchase.
+
+You do not need to return every medication included in the purchase.
+
+#### How To Create A Partial Purchase Return
+
+<Steps>
+
+<Step title="Open Partial Return">
+
+Go to the purchase details page.
+
+Select **More → Return Purchase → Partial Return**.
+
+The **Partial Purchase Return** dialog opens.
+
+<Figure
+  src="/images/purchases/partial-purchase-return.png"
+  title="Partial Purchase Return"
+  description="Select medications and specify the quantities to return from an existing purchase."
+/>
+
+</Step>
+
+<Step title="Review medication information">
+
+The dialog displays the medications included in the purchase.
+
+| Column | Description |
+| --- | --- |
+| **Select** | Checkbox to include a medication in the return |
+| **Drug Information** | Medication name, batch, and expiry |
+| **Total Stock** | Current stock quantity |
+| **Purchased** | Quantity originally purchased |
+| **Returned** | Quantity previously returned |
+| **Return Now** | Quantity to return in the current transaction |
+
+</Step>
+
+<Step title="Select medications">
+
+Use the checkboxes to select the medications you want to return.
+
+You can select one or more medications.
+
+</Step>
+
+<Step title="Enter return quantities">
+
+For each selected medication, enter the quantity in **Return Now**.
+
+For example:
+
+| Medication | Purchased | Returned | Return Now |
+| --- | ---: | ---: | ---: |
+| Acciban | `55` | `0` | `25` |
+| CANDID | `10` | `0` | `10` |
+| Petril-MD 0.5 Tablet | `20` | `0` | `5` |
+
+Only the selected medications and specified quantities are included in the return.
+
+<Figure
+  src="/images/purchases/partial-return-quantities.png"
+  title="Partial return quantities"
+  description="Select medications and enter the quantity to return in the Return Now field."
+/>
+
+</Step>
+
+<Step title="Submit the return">
+
+Review the selected medications and quantities.
+
+Click **Submit Return**.
+
+MediFlux deducts the specified quantities from current stock and adjusts the supplier's ledger.
+
+A corresponding debit note is created.
+
+</Step>
+
+</Steps>
+
 <Note>
-Once created, the debit note is finalized and the selected stock is deducted from your inventory immediately. This cannot be reversed. If you need the stock back, you'll need to add it again through a purchase.
+Review **Total Stock**, **Purchased**, and **Returned** before entering the quantity in **Return Now**.
 </Note>
 
-The newly created debit note appears in **Billing Notes → Debit Notes**, where you can track its status.
+---
+
+## Creating Debit Notes For Warehouse Stock
+If you have enabled the **Warehouse** module, you can create debit notes for medications stored in your warehouses using two methods:
+
+| Method | How it works |
+| --- | --- |
+| **From Drug List** | Filter medications by warehouse, select them in **Separated View**, and click **Generate Debit Note** |
+| **From Create Debit Note** | Search for a medication and select the correct warehouse stock entry using its warehouse label, such as `WH1` |
+
+### Method 1: From Drug List
+
+<Steps>
+
+<Step title="Select the warehouse">
+
+Go to **Drugs → Drug List**.
+
+Use the warehouse filter to select the warehouse containing the medications you want to return.
+
+You can select a specific warehouse or **All Warehouses** to view stock across locations.
+
+</Step>
+
+<Step title="Select warehouse medications">
+
+Switch to **Separated View**.
+
+Find the medications you want to return.
+
+Warehouse medications display a warehouse label, such as `WH1`, beside their names.
+
+Select the required medications using the checkboxes.
+
+<Figure
+  src="/images/inventory/warehouse-debit-note-selection.png"
+  title="Select warehouse medications"
+  description="Select medications marked with their warehouse label in Separated View and access Generate Debit Note."
+/>
+
+</Step>
+
+<Step title="Generate the debit note">
+
+Click **Generate Debit Note**.
+
+The selected warehouse medications appear in the **Create Debit Note** dialog.
+
+Review the automatically populated details, return quantities, pricing, and suppliers.
+
+Click **Create Debit Note** and confirm the return.
+
+</Step>
+
+</Steps>
+
+### Method 2: From Create Debit Note
+
+You can also select warehouse medications directly when creating a debit note manually.
+
+<Steps>
+
+<Step title="Open Create Debit Note">
+
+Go to **Drugs → Create Debit Note**.
+
+Select the date and supplier.
+
+</Step>
+
+<Step title="Search for warehouse medications">
+
+Click the **Drug Name** field and start typing the medication name.
+
+The search dropdown displays matching medications.
+
+Warehouse medications show a label such as `WH1` beside their names.
+
+Each result also displays the available stock and units per pack.
+
+| Information | Description |
+| --- | --- |
+| **Drug Name** | Medication name |
+| **Warehouse Label** | Warehouse associated with the medication, such as `WH1` |
+| **Stock** | Available stock quantity |
+| **Units/Pack** | Number of units in each pack |
+
+For example, searching for **ACILOC** can display medications such as **ACILOC 300 TAB** and **ACILOC 150 TAB**, along with their warehouse labels and stock quantities.
+
+<Figure
+  src="/images/inventory/debit-note-warehouse-drug-search.png"
+  title="Search warehouse medications"
+  description="Medication search results showing warehouse labels, available stock, and units per pack."
+/>
+
+</Step>
+
+<Step title="Select the correct warehouse medication">
+
+Select the medication entry associated with the warehouse from which you want to return stock.
+
+Check the warehouse label and stock quantity before selecting it.
+
+</Step>
+
+<Step title="Complete the debit note">
+
+Enter the return quantities, batch, expiry, free quantity, cost, MRP, discount, and applicable GST information.
+
+Add other medications if needed.
+
+Click **Create Debit Note** to submit the return.
+
+</Step>
+
+</Steps>
+
+<Note>
+When the same medication is available in multiple locations, check the warehouse label and stock quantity before selecting it.
+
+For information about enabling additional warehouses, see [**Modules**](/docs/settings/modules).
+</Note>
+
+---
+
+## Reviewing Created Debit Notes
+
+Debit notes created using any of the three methods appear under:
+
+**Drugs → Billing Notes → Debit Notes**
+
+The page displays the debit notes recorded against suppliers.
+
+| Column | Description |
+| --- | --- |
+| **Debit Note Details** | Debit note number and status |
+| **Supplier** | Supplier associated with the debit note |
+| **Amount** | Debit amount |
+| **Actions** | Available actions for the debit note |
+
+A debit note may display a status such as **Pending**.
+
+<Figure
+  src="/images/inventory/debit-notes-list.png"
+  title="Debit Notes list"
+  description="View debit note numbers, supplier information, debit amounts, and statuses."
+/>
+
+For more information, see [**Billing Notes**](/docs/inventory/billing-notes).
 
 ---
 
 ## Mistakes To Avoid
-<Warning title="Leaving required fields empty">
-**Batch**, **Expiry**, **Cost**, **MRP**, and at least one GST rate (**CGST**, **SGST**, or **IGST**) are mandatory for each drug row. Missing any of these will block submission with an error.
+
+<Warning title="Entering incorrect return quantities">
+
+Review the quantities before creating the debit note.
+
+For Method 1, verify the **Strips Qty**, **Tablets Qty**, and **Free Qty** fields.
+
+If you use **Return % Stock**, check the calculated quantities before confirming.
+
+For Method 3, review the quantities entered under **Return Now**.
+
 </Warning>
 
-<Warning title="Assuming a debit note can be edited after creation">
-Once confirmed, the stock is deducted immediately and cannot be added back automatically. If you need the stock again, it has to be re-added through a purchase.
+<Warning title="Selecting the wrong supplier">
+
+When creating a debit note from the Drug List, check the supplier assigned to each medication.
+
+If you use **Assign Supplier to All Medications**, verify that the selected supplier is correct.
+
 </Warning>
 
+<Warning title="Selecting the wrong warehouse">
+
+When the **Warehouse** module is enabled, the same medication may be available in multiple locations.
+
+Check the warehouse label before selecting stock for return.
+
+</Warning>
+
+<Warning title="Returning the complete purchase by mistake">
+
+**Return Full Purchase** returns the entire purchase.
+
+Use **Partial Return** when you need to return only selected medications or quantities.
+
+</Warning>
+
+<Warning title="Missing required details">
+
+When creating a debit note manually, ensure the required batch, expiry, pricing, and applicable GST information is provided.
+
+Missing required details may prevent submission.
+
+</Warning>
+
+---
 
 ## Restock Or Review
+
 <Cards cols={2}>
   <Card
     title="Billing Notes"
-    description="Track the status of your debit note until it's credited."
+    description="View and track debit notes created for supplier returns."
     href="/docs/inventory/billing-notes"
     icon="FileText"
   />
   <Card
     title="Drug List"
-    description="Verify that returned stock was deducted from inventory."
+    description="Review inventory and verify stock quantities after a return."
     href="/docs/inventory/drug-list"
     icon="List"
   />
   <Card
-    title="Supplier Ledger"
-    description="Check if the supplier issued a credit note against your debit note."
-    href="/docs/supplier/supplier-ledger"
-    icon="BookOpen"
+    title="Purchase List"
+    description="Review purchases and initiate full or partial purchase returns."
+    href="/docs/purchases/purchase-list"
+    icon="ShoppingCart"
   />
   <Card
-    title="Add Purchase"
-    description="Restock with quality items from the same or a different supplier."
-    href="/docs/purchases/add-purchase"
-    icon="Truck"
+    title="Supplier Ledger"
+    description="Review supplier transactions and adjustments related to returns."
+    href="/docs/supplier/supplier-ledger"
+    icon="BookOpen"
   />
 </Cards>

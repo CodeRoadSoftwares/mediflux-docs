@@ -1,239 +1,448 @@
 ---
 title: Customer List
-description: View and manage all your customers, switch between list and grid views, filter by store type, and export customer data.
+description: View and manage customers, track outstanding balances, filter and export customer data, and perform bulk updates or deletions.
 icon: List
 ---
 
-The **Customer List** is your main directory of every customer linked to your pharmacy, both individual consumers and businesses. It gives you a real-time snapshot of outstanding dues, customer ratings, and contact details, with the flexibility to view your customers as a list or as cards.
+The **Customer List** is your main directory of customers linked to your pharmacy, including individual consumers and businesses.
+
+It provides an overview of customer details, outstanding balances, and payment history, with options to search, filter, import, export, and manage multiple customers at once.
 
 ---
 
 ## Summary Cards
-At the top of the page, four summary cards give you an at-a-glance overview of your entire customer base:
+
+At the top of the page, four summary cards give you an overview of your customer base.
 
 | Card | What it shows |
 | --- | --- |
-| **Total Customers** | Total number of customer profiles in your system |
-| **Outstanding** | Total amount owed to you across all customers |
-| **Linked Stores** | Number of customers who are other pharmacy stores linked through MediFlux |
-| **Local Customers** | Number of manually added local/individual customers |
+| **Total Customers** | Total number of customer profiles |
+| **Outstanding** | Total outstanding amount across customers |
+| **Linked Stores** | Number of pharmacy stores linked through MediFlux |
+| **Local Customers** | Number of local customer profiles |
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660256341-950662883-summarycards.png"
-  title="Summary cards"
-  description="Four summary cards at the top of the Customer List page."
+  title="Customer summary cards"
+  description="Overview of total customers, outstanding balances, linked stores, and local customers."
 />
 
 ---
 
 ## Searching Customers
-The search bar at the top lets you search across **names, phone numbers, emails, and addresses**. Just start typing and the list filters instantly.
 
-To the left of the search bar is an **All** dropdown, use it to narrow the search scope if needed.
+Use the search bar at the top of the **Customer List** to find customers by **name, phone number, email, or address**.
+
+The **All** dropdown lets you narrow the search to a particular field.
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660256340-70445864-search-customer.png"
-  title="Search bar"
-  description="Search across names, phone numbers, emails, and addresses."
+  title="Search customers"
+  description="Search customer records using names, phone numbers, emails, or addresses."
 />
 
 ---
 
-## Filter Chips
-Below the search bar, two quick-filter chips let you slice the list instantly:
+## Quick Filters
+
+Below the search bar, two quick filters let you narrow the customer list.
 
 | Filter | What it shows |
 | --- | --- |
-| **Linked Stores** | Only customers who are other pharmacy stores linked via MediFlux |
-| **Local Customers** | Only manually added individual or business customers |
+| **Linked Stores** | Customers who are other pharmacy stores linked through MediFlux |
+| **Local Customers** | Local customers added to your store |
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660326678-821843156-filter-chips.png"
-  title="Filter chips"
-  description="Quick-filter chips for Linked Stores and Local Customers."
+  title="Customer quick filters"
+  description="Filter customers by Linked Stores or Local Customers."
 />
 
 ---
 
-## Switching Between List And Grid View
-Next to the filter chips, two view icons let you switch how customers are displayed:
+## Customer Table
 
-- **List view**: shows customers in a compact table format
-- **Grid view**: shows each customer as a card with their rating badge, name, type (Consumer/Business), phone, email, address, and how long they've been a customer
+The **Customer List** displays customer information in a table.
 
-
-
-<Figure
-  src=" https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660404796-559720747-list-view.png"
-  title="List view"
-  description="Customers displayed in a compact table in List view."
-/>
-<Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660404795-564251845-grid-view.png"
-  title="Grid view"
-  description="Customers displayed as cards in Grid view."
-/>
-
-
----
-
-## Customer Rating Badges
-Every customer card or row shows a rating badge based on the **Customer Rating** stars assigned when the customer was added or edited:
-
-| Badge | Meaning |
-| --- | --- |
-| **None** | No rating assigned |
-| **Gold** | A high rating assigned to the customer |
-
----
-
-## The Customer Table (List View)
 | Column | Description |
 | --- | --- |
-| **Name** | Customer name, with a **Linked Store** tag if applicable |
-| **Age** | Customer's age, if added. Shows `—` if not provided |
-| **Gender** | Customer's gender, if added. Shows `—` if not provided |
-| **Phone** | Primary contact number |
-| **Email** | Customer's email address |
-| **Outstanding** | Amount currently owed by this customer, shown in red |
-| **Last Payment** | Date of the customer's last payment. Shows `—` if none recorded |
-| **Actions** | Quick action menu for that customer row |
+| **Name** | Customer name and customer type |
+| **Phone** | Customer's contact number |
+| **Outstanding** | Customer's current outstanding balance |
+| **Last Payment** | Date of the customer's last recorded payment |
+| **Actions** | Opens the individual customer's action menu |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660559310-218822712-customer-table-list-view.png"
-  title="Customer table, List view"
-  description="Detailed table view of all customer records."
+  src="/images/customers/customer-list-table.png"
+  title="Customer List"
+  description="Customer records showing names, phone numbers, outstanding balances, last payment dates, and actions."
 />
+
+### Sorting The Table
+
+The **Name** and **Outstanding** columns are sortable.
+
+Click either column heading to change the sorting order between ascending and descending.
 
 ---
 
-## Sorting The Table
-The **Name** and **Outstanding** columns are sortable. Click the column header to toggle between ascending and descending order.
+## Filter And Sort
 
----
-
-## Filter & Sort Panel
-Click the **filter icon** to open the **Filter & Sort** panel:
-
-<Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660852278-699218987-filter-icon.png"
-  title="Filter & Sort Icon"
-  description="Advanced filtering and sorting options."
-/>
-
+Select the **Filter** icon beside the quick filters to open additional filtering and sorting options.
 
 | Option | What it does |
 | --- | --- |
 | **Sort By** | Sort customers by Name or Last Payment |
-| **Last Payment Date Range** | Filter customers by a Start Date and End Date based on their last payment |
+| **Last Payment Date Range** | Filter customers using a start and end date based on their last payment |
 
-Click **Apply Filters** to apply, or **Reset** to clear all filters.
+Select **Apply Filters** to apply your choices or **Reset** to clear them.
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660640379-866791328-filterandsort-panel.png"
-  title="Filter & Sort panel"
-  description="Advanced filtering and sorting options for the customer list."
+  title="Customer Filter and Sort"
+  description="Apply additional filters and sorting options to the Customer List."
 />
 
 ---
 
-## Page-Level Buttons
-| Button | What it does |
+## Page-Level Actions
+
+At the top of the **Customer List**, you can access the main customer management actions.
+
+| Action | What it does |
 | --- | --- |
-| **+ Add Customer** | Opens the Add New Customer form to create a new customer profile |
-| **Add Payment** | Opens the Add Customer Payment dialog to record a payment from a customer |
-| **Import Customers** | Opens the Import Customers dialog to bulk upload customers via CSV or Excel |
-| **Export** | Opens the Export Customers dialog |
+| **Add Customer** | Opens the form to create a new customer profile |
+| **Add Payment** | Opens the customer payment form |
+| **Actions → Bulk Payment** | Opens the bulk payment option |
+| **Actions → Import** | Imports customer records from a file |
+| **Actions → Export** | Exports customer data |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661054216-819186587-page-level-buttons.png"
-  title="Page-level action buttons"
-  description="Add Customer, Add Payment, Import Customers, and Export buttons at the top of the page."
+  src="/images/customers/customer-list-actions.png"
+  title="Customer List actions"
+  description="Access Add Customer, Add Payment, Bulk Payment, Import, and Export from the Customer List."
 />
+
+---
+
+## Selecting Customers And Bulk Actions
+
+You can select multiple customers to update or delete their records together.
+
+Select the checkboxes beside the customers you want to manage.
+
+Once at least one customer is selected, a bulk action toolbar appears above the table.
+
+The toolbar displays the number of selected customers and provides:
+
+| Action | What it does |
+| --- | --- |
+| **Bulk Edit** | Update State and Area for the selected customers |
+| **Bulk Delete** | Delete selected customer profiles and ledger entries |
+| **Clear Selection** | Deselect all selected customers |
+
+<Figure
+  src="/images/customers/customer-bulk-actions.png"
+  title="Customer bulk actions"
+  description="Select multiple customers to access Bulk Edit, Bulk Delete, and Clear Selection."
+/>
+
+---
+
+## Bulk Edit Customers
+
+**Bulk Edit** lets you update the address-related information of multiple customers at once.
+
+You can change the **State** and **Area** without opening each customer profile individually.
+
+### How To Bulk Edit Customers
+
+<Steps>
+
+<Step title="Select customers">
+
+Go to **Customers → Customer List**.
+
+Select the checkboxes beside the customers you want to update.
+
+</Step>
+
+<Step title="Open Bulk Edit">
+
+Click **Bulk Edit** from the selection toolbar.
+
+The **Bulk Edit Customers** dialog opens and displays the number of selected customers.
+
+</Step>
+
+<Step title="Enter the changes">
+
+You can update the following fields:
+
+| Field | Description |
+| --- | --- |
+| **State** | Select the state to apply to the selected customers |
+| **Area** | Enter the area to apply to the selected customers |
+
+Fields marked **Unchanged** are left as they are.
+
+You can update one field without changing the other.
+
+<Figure
+  src="/images/customers/bulk-edit-customers.png"
+  title="Bulk Edit Customers"
+  description="Update the State and Area of multiple selected customers."
+/>
+
+</Step>
+
+<Step title="Apply updates">
+
+Review your changes and click **Apply Updates**.
+
+The specified changes are applied to the selected customer profiles.
+
+</Step>
+
+</Steps>
+
+<Note>
+Bulk Edit applies the same entered values to all selected customers. Leave a field unchanged if you do not want to modify it.
+</Note>
+
+---
+
+## Bulk Delete Customers
+
+**Bulk Delete** lets you delete multiple customer profiles together.
+
+When you select **Bulk Delete**, MediFlux opens a confirmation dialog showing the number of selected customers.
+
+If the selected customers have outstanding balances, the dialog provides settlement options for handling positive and negative balances before deletion.
+
+<Warning title="Customer profiles and ledger entries will be deleted">
+Bulk Delete removes the selected customer profiles and their ledger entries. Review the customers and balance settlement options carefully before confirming.
+</Warning>
+
+### How To Bulk Delete Customers
+
+<Steps>
+
+<Step title="Select customers">
+
+Go to **Customers → Customer List**.
+
+Select the customers you want to delete using the checkboxes.
+
+</Step>
+
+<Step title="Open Bulk Delete">
+
+Click **Bulk Delete** from the selection toolbar.
+
+The **Bulk Delete Customers** dialog opens and displays the number of selected customers.
+
+<Figure
+  src="/images/customers/bulk-delete-customers.png"
+  title="Bulk Delete Customers"
+  description="Review selected customers and available balance settlement options before deletion."
+/>
+
+</Step>
+
+<Step title="Choose positive balance settlement">
+
+If the selected customers have positive balances, choose how those balances should be settled.
+
+| Option | Description |
+| --- | --- |
+| **Refunded to Customer** | Record the balance as refunded to the customer |
+| **Customer Credit Write-off** | Write off the customer's remaining credit balance |
+
+<Figure
+  src="/images/customers/bulk-delete-positive-balance.png"
+  title="Positive balance settlement"
+  description="Choose whether to refund the customer or write off their credit balance."
+/>
+
+</Step>
+
+<Step title="Choose negative balance settlement">
+
+If the selected customers have negative balances, the **Negative Balance Settlement** field appears.
+
+Choose how the balance should be handled.
+
+| Option | Description |
+| --- | --- |
+| **Customer Paid** | Record the outstanding amount as paid by the customer |
+| **Bad Debt / Waive Off** | Write off the outstanding amount instead of collecting payment |
+
+<Figure
+  src="/images/customers/bulk-delete-negative-balance.png"
+  title="Negative balance settlement"
+  description="Choose Customer Paid or Bad Debt / Waive Off to settle negative customer balances."
+/>
+
+</Step>
+
+<Step title="Select the payment method">
+
+When a settlement involves a payment or refund, select the **Payment Method**.
+
+Available options include:
+
+- **Cash**
+- **Card**
+- **UPI**
+- **Net Banking**
+
+<Figure
+  src="/images/customers/bulk-delete-payment-method.png"
+  title="Select payment method"
+  description="Choose Cash, Card, UPI, or Net Banking for the balance settlement."
+/>
+
+</Step>
+
+<Step title="Confirm deletion">
+
+Review the selected customers and their balance settlement options.
+
+Click **Confirm Delete** to proceed or **Cancel** to return without deleting the customers.
+
+</Step>
+
+</Steps>
+
+<Note>
+The settlement fields displayed depend on the balances of the selected customers. If your selection includes customers with both positive and negative balances, MediFlux provides options for handling both.
+</Note>
+
+### Accounting Records For Balance Settlements
+
+When customer balances are settled during bulk deletion, MediFlux automatically records the corresponding transactions in **Accounting → Journals**.
+
+These records include:
+
+| Settlement | Accounting record |
+| --- | --- |
+| **Refunded to Customer** | Records the customer refund |
+| **Customer Credit Write-off** | Records the credit balance write-off |
+| **Customer Paid** | Records the payment received from the customer |
+| **Bad Debt / Waive Off** | Records the outstanding balance written off as bad debt |
+
+This ensures that balance settlements remain traceable in accounting even after the customer profiles and ledger entries are deleted.
+
+For more information, see [**Journals**](/docs/accounting/journals).
 
 ---
 
 ## Importing Customers
-Click the **Import Customers** button to open the Import Customers dialog. The import process works in four steps:
+
+To import customer records in bulk, select **Actions → Import**.
+
+The import process works in four steps:
 
 <Steps>
-  <Step title="Upload">
-    Drag and drop your CSV or Excel file, or click **Select File** to browse. You can also **Download Template** to get a pre-formatted file with the correct headers.
-  </Step>
-  <Step title="Map Headers">
-    Match the columns from your uploaded file to MediFlux customer fields. Ensure required fields like Name and Phone are correctly mapped.
-  </Step>
-  <Step title="Preview">
-    Review the imported data before finalising. Check for errors, missing values, or duplicates.
-  </Step>
-  <Step title="Complete">
-    Confirm the import and all valid customers are added to your Customer List instantly.
-  </Step>
+
+<Step title="Upload">
+
+Upload your CSV or Excel file using **Select File** or drag and drop it into the upload area.
+
+You can also select **Download Template** to get a file with the expected column headers.
+
+</Step>
+
+<Step title="Map Headers">
+
+Match the columns from your uploaded file to the corresponding MediFlux customer fields.
+
+</Step>
+
+<Step title="Preview">
+
+Review the imported data and check for missing or incorrect information.
+
+</Step>
+
+<Step title="Complete">
+
+Confirm the import to add the valid customer records to your Customer List.
+
+</Step>
+
 </Steps>
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661173515-480779070-import-customers.png"
-  title="Import Customers dialog"
-  description="Upload CSV or Excel file to bulk import customers into MediFlux."
+  title="Import Customers"
+  description="Upload customer records using a CSV or Excel file."
 />
 
 <Note>
-  Download the template first to ensure your file has the correct column headers. Required fields include **Name** and **Phone**. Optional fields include Email, Address, GSTIN, Age, Gender, and more.
+Download the import template before preparing your file to make sure the column headers match the expected format.
 </Note>
 
 ---
 
 ## Exporting Customers
-Click the **export icon** to open the **Export Customers** dialog.
 
-<Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661502914-403835639-export-button.png"
-  title="Export Customers "
-  description="Export Customer in Pdf or Excel."
-/>
+Select **Actions → Export** to open the **Export Customers** dialog.
 
+You can choose which customer information to include, apply filters, and select the export format.
 
----
 ### Columns To Include
-Choose which columns to include in the export. **Name** is always included by default. You can select or deselect:
 
-`GSTIN`, `License Number`, `Phone`, `Address`, `Created At`, `Last Payment Date`, `Last Bill Date`, `Current Outstanding`
+**Name** is included by default.
 
-Click **Deselect All** to clear all selections at once.
+Additional columns include:
+
+`GSTIN`, `License Number`, `Phone`, `Address`, `Created At`, `Last Payment Date`, `Last Bill Date`, and `Current Outstanding`.
+
+Use **Deselect All** to clear the optional column selections.
 
 ### Filter By Date Ranges
-Filter the export by three independent date ranges, each with quick options, **All Time, This Month, Last Month, This Quarter, This Year, Last Year**, or a custom **From** and **To** date:
+
+You can filter the export using three date fields:
 
 - **Created At**
 - **Last Payment Date**
 - **Last Bill Date**
 
+Each supports date range options such as **All Time**, **This Month**, **Last Month**, **This Quarter**, **This Year**, **Last Year**, or a custom date range.
+
 ### Filter By Outstanding
+
 | Option | What it does |
 | --- | --- |
-| **Has outstanding** | Only include customers with a pending balance |
-| **No outstanding** | Only include customers with a zero balance |
-| **All** | Include all customers regardless of balance |
+| **Has outstanding** | Includes customers with an outstanding balance |
+| **No outstanding** | Includes customers with no outstanding balance |
+| **All** | Includes customers regardless of outstanding balance |
 
-You can also set a **Min (₹)** and **Max (₹)** outstanding amount range.
+You can also enter a **Min (₹)** and **Max (₹)** outstanding amount.
 
 ### Sort By
-Choose a field and order (ascending or descending) to sort the exported data.
+
+Choose the field and sorting order for the exported records.
 
 ### Export Format
-Click the dropdown arrow on the **Export** button to choose:
+
+Select the export format:
 
 - **Export PDF**
 - **Export Excel**
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783661247374-941995045-export.png"
-  title="Export Customers, Columns & Filters"
-  description="Select columns and apply filters before exporting."
+  title="Export Customers"
+  description="Select customer columns, date filters, outstanding balance filters, and export format."
 />
 
 ---
+
 ## Where To Go From Here
+
 <Cards cols={2}>
   <Card
     title="Add a Customer"
@@ -248,10 +457,10 @@ Click the dropdown arrow on the **Export** button to choose:
     icon="BookOpen"
   />
   <Card
-    title="Add Retail Sale"
-    description="Bill a customer directly from the sale page."
-    href="/docs/sales/add-sale-retail"
-    icon="ShoppingCart"
+    title="Accounting Journals"
+    description="Review accounting entries created for customer balance settlements."
+    href="/docs/accounting/journals"
+    icon="BookOpen"
   />
   <Card
     title="Sales List"

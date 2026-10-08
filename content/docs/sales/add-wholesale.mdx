@@ -1,10 +1,10 @@
 ---
 title: Add Wholesale
-description: Create sale and Challan bills for pharmacies and businesses with HSN codes and split tax breakdowns.
+description: Create wholesale sale and Challan bills with HSN codes, split tax breakdowns, and quick drug addition.
 icon: Truck
 ---
 
-The **Add Wholesale** page is where you create  sale bills for other pharmacies, distributors, and businesses. It supports both normal sale invoicing and **Challan mode** for delivery notes that can be converted to sales later. The wholesale layout includes additional columns for HSN codes, free units, discounts, and split tax breakdowns.
+The **Add Wholesale** page is where you create sale bills for other pharmacies, distributors, and businesses. It supports both normal sale invoicing and **Challan mode** for delivery notes that can be converted to sales later. The wholesale layout includes additional columns for HSN codes, free units, discounts, and split tax breakdowns.
 
 Navigate here from the sidebar: **Sales → Add Sale**, then click **Wholesale** at the top-right.
 
@@ -17,14 +17,15 @@ Navigate here from the sidebar: **Sales → Add Sale**, then click **Wholesale**
 ---
 
 ## Scan & Add Drugs
-Click **Scan** at the top-right to open the **Scan & Add Drugs** panel. This is designed for **phones and tablets**, it opens your device camera for two input methods:
+
+Click **Scan** at the top-right to open the **Scan & Add Drugs** panel. This is designed for **phones and tablets** and opens your device camera for two input methods:
 
 | Option | What it does |
 | --- | --- |
 | **Barcode Scanner** | Scan drug barcodes with your phone or tablet camera to instantly add items to the bill |
-| **Image (OCR)** | Photograph a prescription, drug label, or drug list with your camera: MediFlux reads the text and populates drugs automatically |
+| **Image (OCR)** | Photograph a prescription, drug label, or drug list with your camera. MediFlux reads the text and populates drugs automatically |
 
-Camera permissions are required for both options on phone and tablet.
+Camera permissions are required for both options on phones and tablets.
 
 If you have a **physical barcode scanner device** connected to your computer, you can scan barcodes directly into the bill without opening the Scan panel. The drug is added instantly with auto-populated name, batch, expiry, MRP, and available stock.
 
@@ -35,7 +36,8 @@ For detailed setup instructions, supported devices, OCR best practices, and trou
 ---
 
 ## Drafts
-Click **Drafts** at the top-right to access all saved draft bills. Any bill you save mid-way using **Save Draft** is stored here and can be resumed at any time.
+
+Click **Drafts** at the top-right to access all saved draft bills. Any bill you save midway using **Save Draft** is stored here and can be resumed at any time.
 
 If you are in the middle of adding a sale and need to navigate away, click **Save Draft** to save your progress. You can return to it anytime from Drafts.
 
@@ -48,6 +50,7 @@ If you are in the middle of adding a sale and need to navigate away, click **Sav
 ---
 
 ## Left Panel
+
 The left panel in Wholesale mode has two options:
 
 | Option | What it does |
@@ -61,21 +64,24 @@ The left panel in Wholesale mode has two options:
   description="Sale Mode toggle and Local Sale tax switch."
 />
 
-### Sale Mode: Normal Vs Challan
+### Sale Mode: Normal vs Challan
+
 | Mode | What it does |
 | --- | --- |
 | **Sale Mode** | Creates a standard wholesale invoice with full payment tracking |
 | **Challan Mode** | Creates a delivery challan without immediate payment. The challan is saved as a pending delivery note and can be converted into a sale later |
 
+Challan mode is useful when goods are dispatched before payment terms are finalised or when the exact invoice details need to be confirmed after delivery.
 
-Challan mode is useful when goods are dispatched before payment terms are finalised or when the exact invoice details need to be confirmed after delivery Once converted to a sale, the challan becomes a regular wholesale bill with payment status tracking.
+Once converted to a sale, the challan becomes a regular wholesale bill with payment status tracking.
 
 ---
 
 ## Customer And Salesperson
+
 | Field | Description |
 | --- | --- |
-| **Customer Details** | Search and select the customer for this wholesale |
+| **Customer Details** | Search and select the customer for this wholesale sale |
 | **Select Salesperson** *(Optional)* | Assign a salesperson to this sale for tracking commissions and performance reporting |
 
 <Figure
@@ -87,6 +93,7 @@ Challan mode is useful when goods are dispatched before payment terms are finali
 ---
 
 ## Payment Status
+
 Select the payment status for this sale:
 
 | Status | Description |
@@ -124,6 +131,7 @@ When **Unpaid** is selected, the Payment Method defaults to **None**, Paid Amoun
 ---
 
 ## Drug Table
+
 | Column | Description |
 | --- | --- |
 | **S.No** | Serial number |
@@ -153,7 +161,78 @@ Click the **grid icon (⊞)** at the bottom of the table to add more drug rows.
 
 ---
 
+## Quick Add Drug (`Alt + D`)
+
+If a medicine is not available in your Drug List while creating a wholesale sale, you can add it directly without leaving the **Add Sale** page.
+
+Press `Alt + D` to open the **Quick Add Drug** dialog. The medicine name you were searching for is automatically filled in, so you do not need to type it again.
+
+<Figure
+  src="/images/sales/quick-add-drug.png"
+  title="Quick Add Drug"
+  description="Add a new medicine directly from the Add Sale page using Alt + D without interrupting wholesale billing."
+/>
+
+### How To Quickly Add A Drug
+
+<Steps>
+
+<Step title="Search for a medicine">
+
+On the **Add Sale** page in **Wholesale** mode, start typing the medicine name in the **Drug** field.
+
+If the medicine is not available in your inventory, press `Alt + D`.
+
+The **Quick Add Drug** dialog opens with the searched medicine name already filled in.
+
+</Step>
+
+<Step title="Enter medicine details">
+
+Complete the required medicine information.
+
+| Field | Description |
+| --- | --- |
+| **Name** | Medicine name, prefilled from your search |
+| **Cost Price (₹)** | Purchase cost of the medicine |
+| **Unit Cost (₹)** | Cost per individual unit |
+| **MRP (₹)** | Maximum Retail Price |
+| **HSN Code** | HSN code for the medicine |
+| **Batch Number** | Medicine batch number, optional |
+| **Opening Stock** | Initial stock quantity |
+| **Expiry Date** | Expiry in `MM YY` format |
+| **Units Per Pack** | Number of units in each pack |
+| **Rack Number** | Storage rack or shelf location, optional |
+| **CGST (%)** | Central GST rate |
+| **SGST (%)** | State GST rate |
+| **IGST (%)** | Integrated GST rate |
+| **Dosage Form** | Medicine form, such as Tablet |
+| **Classification** | Medicine category, such as Rx |
+
+Fields marked with `*` are required.
+
+</Step>
+
+<Step title="Save the medicine">
+
+Review the entered details and click **Save Drug**.
+
+The medicine is added to your inventory and becomes available for the current wholesale sale without requiring you to leave the billing page.
+
+Continue entering the remaining sale details as usual.
+
+</Step>
+
+</Steps>
+
+<Note>
+The `Alt + D` shortcut lets you add a medicine that is missing from your Drug List while preparing a wholesale bill. You can create its inventory entry and continue billing without navigating to another page.
+</Note>
+
+---
+
 ## Price Comparison
+
 Once you select a drug and a customer, a hint appears below the drug table:
 
 > Click on a drug and select a customer to view sale history and price comparison
@@ -171,6 +250,7 @@ If no previous data exists, the message shows: *[Drug name]: No previous sale da
 ---
 
 ## Additional Notes
+
 The **Additional Notes** field at the bottom is for entering specific instructions, delivery remarks, or terms of sale relevant to the wholesale transaction.
 
 <Figure
@@ -182,6 +262,7 @@ The **Additional Notes** field at the bottom is for entering specific instructio
 ---
 
 ## Bill Summary Bar
+
 At the bottom of the page, a fixed summary bar shows a live breakdown of the bill:
 
 **Sub Total − Disc + Tax = Bill**
@@ -189,6 +270,7 @@ At the bottom of the page, a fixed summary bar shows a live breakdown of the bil
 ---
 
 ## Saving And Submitting
+
 | Button | What it does |
 | --- | --- |
 | **Save Draft** | Saves the bill as a draft so you can resume it later from Drafts |
@@ -197,6 +279,7 @@ At the bottom of the page, a fixed summary bar shows a live breakdown of the bil
 ---
 
 ## Next Actions
+
 After creating a wholesale bill, here's what most users do next:
 
 <Cards cols={2}>
