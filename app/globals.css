@@ -84,7 +84,7 @@
   --docs-layout-width: 100rem;
   --docs-sidebar-width: 13.5rem;
   --docs-toc-width: 11rem;
-  --docs-header-height: 4rem;
+  --docs-header-height: 6.5rem;
 }
 
 /* Sidebars only render at xl+ — scale column width with viewport */

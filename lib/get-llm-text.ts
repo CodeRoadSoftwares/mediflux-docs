@@ -1,9 +1,14 @@
-import type { source } from "@/lib/source";
+type LlmPage = {
+  url: string;
+  data: {
+    title?: string;
+    getText: (type: "processed" | "raw") => Promise<string>;
+  };
+};
 
-type DocsPage = ReturnType<typeof source.getPage>;
-
-export async function getLLMText(page: NonNullable<DocsPage>) {
+export async function getLLMText(page: LlmPage) {
   const processed = await page.data.getText("processed");
+  const title = page.data.title ?? page.url;
 
-  return `# ${page.data.title} (${page.url})\n\n${processed}`;
+  return `# ${title} (${page.url})\n\n${processed}`;
 }

@@ -1,0 +1,5 @@
+{
+  "title": "Account",
+  "pages": ["index", "reset-password", "add-user","user-permission","remove-user",
+            "change-store-details","login-troubleshoot"]
+}
