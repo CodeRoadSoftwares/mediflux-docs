@@ -1,6 +1,6 @@
 ---
 title: Add Wholesale
-description: Create wholesale sale and Challan bills with HSN codes, split tax breakdowns, and quick drug addition.
+description: Create wholesale sale and Challan bills with HSN codes, split tax breakdowns, adjusted returns, and quick drug addition.
 icon: Truck
 ---
 
@@ -130,11 +130,402 @@ When **Unpaid** is selected, the Payment Method defaults to **None**, Paid Amoun
 
 ---
 
+## Adjusted Returns
+
+**Adjusted Returns** allows you to adjust a customer's return amount against a new or existing wholesale sale or challan.
+
+You can apply the adjustment while **adding a sale** or **editing an existing sale**.
+
+There are two ways to adjust returns:
+
+| Method | How it works |
+| --- | --- |
+| **Direct Return** | Enter a return amount directly in **Direct Return (₹)** |
+| **Medicine Return** | Select **Rtn** beside individual medicines in the drug table |
+
+<Note>
+Adjusted Returns are available in **Wholesale Sale** and **Challan Mode**. You can also use the feature in Retail Sale when a customer is selected.
+</Note>
+
+### Method 1: Direct Return
+
+Use **Direct Return** when you want to adjust a return amount against the current bill without selecting individual medicines.
+
+#### How to Apply a Direct Return
+
+<Steps>
+
+<Step title="Select a customer">
+
+Open **Sales → Add Sale**, switch to **Wholesale**, and select the customer.
+
+You can also open an existing wholesale sale for editing.
+
+</Step>
+
+<Step title="Add medicines">
+
+Enter the medicines being sold, along with their quantities, rates, and applicable discounts.
+
+</Step>
+
+<Step title="Enter the return amount">
+
+Locate **Direct Return (₹)** in the payment section.
+
+Enter the amount you want to adjust against the sale.
+
+For example, enter `1500` to adjust ₹1,500 against the current bill.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/da1320d8-b064-4215-8f9a-1a6de563a5bf-adjusted-return-wholesale.png"
+  title="Direct Return in wholesale billing"
+  description="Enter a return amount to adjust it against the current wholesale sale."
+/>
+
+</Step>
+
+<Step title="Review the updated total">
+
+MediFlux deducts the return amount from the gross sale total.
+
+The bill summary updates to show the return adjustment and remaining amount.
+
+</Step>
+
+<Step title="Choose the payment status">
+
+If an amount remains payable, select **Paid**, **Partial**, or **Unpaid** as appropriate.
+
+</Step>
+
+<Step title="Complete the sale">
+
+Click **+ Add** to save the new sale or **Update** when editing an existing sale.
+
+</Step>
+
+</Steps>
+
+---
+
+### How Direct Return Affects Payment
+
+The adjustment depends on whether the return amount is equal to, less than, or greater than the sale amount.
+
+#### Case 1: Return Amount Equals the Sale Amount
+
+When the return amount equals the gross sale amount, the entire bill is adjusted against the return.
+
+For example:
+
+| Description | Amount |
+| --- | ---: |
+| Gross Sale Amount | ₹1,500 |
+| Direct Return | -₹1,500 |
+| Net Payable | ₹0 |
+
+The sale is marked as **Paid by Cash**, with no remaining amount to collect.
+
+---
+
+#### Case 2: Return Amount Is Less Than the Sale Amount
+
+When the return amount is less than the gross sale amount, MediFlux adjusts the return first.
+
+For example:
+
+| Description | Amount |
+| --- | ---: |
+| Gross Sale Amount | ₹2,435 |
+| Direct Return | -₹1,500 |
+| Remaining Amount | ₹935 |
+
+The remaining ₹935 is handled according to the payment status:
+
+| Payment Status | What happens |
+| --- | --- |
+| **Paid** | The remaining ₹730 is recorded as paid by cash |
+| **Partial** | The entered payment is deducted from ₹730, and the rest is recorded as customer credit |
+| **Unpaid** | The entire remaining ₹730 is recorded as customer credit |
+
+##### Example: Partial Payment
+
+Suppose the customer pays ₹200 after the return adjustment.
+
+| Description | Amount |
+| --- | ---: |
+| Gross Sale Amount | ₹2,230 |
+| Direct Return | -₹1,500 |
+| Remaining Amount | ₹935 |
+| Paid Amount | -₹200 |
+| Outstanding Credit | ₹735 |
+
+The remaining ₹735 is recorded as outstanding credit.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/610538f0-57e7-4268-b209-45b5d05cd5f4-directreturn-partial-payment.png"
+  title="Direct Return with partial payment"
+  description="The return is deducted from the sale first, and the unpaid portion is recorded as customer credit."
+/>
+
+You can review the outstanding balance in [**Customer Ledger**](/docs/customers/customer-ledger).
+
+<Note>
+The return amount is adjusted first. Any remaining amount is then handled according to the selected payment status.
+</Note>
+
+---
+
+#### Case 3: Return Amount Exceeds the Sale Amount
+
+When the return amount exceeds the gross sale amount, MediFlux displays the **Return Amount Exceeds Sale Bill** dialog.
+
+The dialog shows:
+
+- **Gross Sale Total**
+- **Return Total**
+- **Excess Balance Owed**
+
+For example:
+
+| Description | Amount |
+| --- | ---: |
+| Gross Sale Total | ₹1,826 |
+| Return Total | -₹2,000 |
+| Excess Balance Owed | ₹174 |
+
+You must choose how to handle the excess amount.
+
+##### Option 1: Keep as Credit
+
+Select **Keep as Credit** to retain the excess amount in the customer's account.
+
+The excess is saved as advance credit for future purchases and reduces the customer's outstanding balance.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/d4b19b77-52c4-4d43-8bf3-a1d96177d045-wholesale-keepcredit.png"
+  title="Keep excess return as credit"
+  description="Retain the excess return amount as customer credit instead of issuing a refund."
+/>
+
+Click **Confirm & Complete Sale** to save the adjustment.
+
+##### Option 2: Refund to Customer
+
+Select **Refund to Customer** to return the excess amount to the customer.
+
+The dialog provides:
+
+| Field | Description |
+| --- | --- |
+| **Refund Amount (₹)** | Amount to refund, which can be edited |
+| **Payment Method** | Cash, Card, UPI, or another available method |
+| **Receipt / Transaction Ref** | Optional reference number for the refund |
+
+<Steps>
+
+<Step title="Select Refund to Customer">
+
+Choose **Refund to Customer** in the excess-return dialog.
+
+</Step>
+
+<Step title="Enter the refund amount">
+
+Review or edit the amount shown in **Refund Amount (₹)**.
+
+</Step>
+
+<Step title="Select a payment method">
+
+Choose the method used to refund the customer.
+
+</Step>
+
+<Step title="Enter a reference if needed">
+
+Optionally enter a receipt or transaction reference.
+
+</Step>
+
+<Step title="Confirm">
+
+Click **Confirm & Complete Sale** to complete the adjustment.
+
+</Step>
+
+</Steps>
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/c11f4114-3522-4d3b-bc72-bc484e865ad3-wholesale-refund.png"
+  title="Refund excess return amount"
+  description="Choose the refund amount and payment method before completing the wholesale sale."
+/>
+
+<Note>
+When the return amount exceeds the sale amount, MediFlux requires you to choose whether to keep the excess as customer credit or refund it.
+</Note>
+
+---
+
+### Method 2: Return Individual Medicines Using Rtn
+
+Instead of entering a return amount directly, you can select individual medicines for return.
+
+The **Rtn** column in the wholesale drug table contains a checkbox for each medicine row.
+
+#### How to Return Individual Medicines
+
+<Steps>
+
+<Step title="Select a customer">
+
+Open **Add Sale** or **Edit Sale** in Wholesale mode and select the customer.
+
+</Step>
+
+<Step title="Locate the medicines">
+
+Find the medicines being returned in the drug table.
+
+</Step>
+
+<Step title="Select Rtn">
+
+Tick the **Rtn** checkbox beside each medicine you want to return.
+
+</Step>
+
+<Step title="Review the adjustment">
+
+Check the return adjustment and updated sale totals.
+
+</Step>
+
+<Step title="Save the sale">
+
+Click **+ Add** or **Update** to complete the sale.
+
+</Step>
+
+</Steps>
+
+<Note>
+Use **Direct Return** when you want to enter a return amount manually. Use **Rtn** when the return applies to specific medicines.
+</Note>
+
+---
+
+### Viewing Adjusted Returns in the Sale Summary
+
+After applying a return, the sale summary shows the original bill amount, return adjustment, and remaining net bill.
+
+For example:
+
+| Summary Field | Amount |
+| --- | ---: |
+| **Gross Total** | ₹2,435 |
+| **Direct Return Amount** | ₹2,700 |
+| **Return Adjustment** | -₹2,435 |
+| **Net Payable** | ₹0.00 |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/8e788d57-2741-4e22-9de7-66d2a2c35a5b-wholesale-returned-sale.png"
+  title="Wholesale adjusted return summary"
+  description="Review the gross total, return adjustment, and remaining net payable amount."
+/>
+
+When the sale is recorded, the confirmation dialog also shows that a return adjustment was applied.
+
+---
+
+### Adjusted Returns While Editing a Sale
+
+Adjusted Returns can also be applied while editing an existing wholesale sale.
+
+<Steps>
+
+<Step title="Open Edit Sale">
+
+Open the wholesale sale you want to edit.
+
+</Step>
+
+<Step title="Update the return">
+
+Enter or modify the **Direct Return (₹)** amount, or select **Rtn** for individual medicines.
+
+</Step>
+
+<Step title="Review the payment details">
+
+Check the adjusted net bill and select the appropriate payment status.
+
+</Step>
+
+<Step title="Save changes">
+
+Click **Update** to save the edited sale.
+
+</Step>
+
+</Steps>
+
+---
+
+### Adjusted Returns in Challan Mode
+
+Adjusted Returns are also available in **Challan Mode**.
+
+When preparing a challan, you can enter a **Direct Return** amount or use **Rtn** to mark individual medicines for return.
+
+<Steps>
+
+<Step title="Switch to Challan Mode">
+
+Open **Sales → Add Sale → Wholesale**.
+
+Enable **Challan Mode** using the **Sale Mode** toggle.
+
+</Step>
+
+<Step title="Select the customer">
+
+Choose the customer associated with the challan.
+
+</Step>
+
+<Step title="Add medicines and returns">
+
+Enter the medicines being dispatched.
+
+Use **Direct Return (₹)** to adjust a return amount or select **Rtn** beside medicines being returned.
+
+</Step>
+
+<Step title="Review and save">
+
+Review the adjusted totals and save the challan.
+
+</Step>
+
+</Steps>
+
+<Note>
+A challan remains a delivery note until it is converted into a sale. The payment tracking described in the preceding examples applies to sale billing.
+</Note>
+
+---
+
 ## Drug Table
+
+The wholesale drug table contains additional columns for pricing, GST, and free quantities.
 
 | Column | Description |
 | --- | --- |
 | **S.No** | Serial number |
+| **Rtn** | Select the checkbox to mark an individual medicine for return |
 | **Type** | Drug type: Rx, NRx, H1 |
 | **Drug** | Drug name |
 | **Batch** | Batch number |
@@ -168,7 +559,7 @@ If a medicine is not available in your Drug List while creating a wholesale sale
 Press `Alt + D` to open the **Quick Add Drug** dialog. The medicine name you were searching for is automatically filled in, so you do not need to type it again.
 
 <Figure
-  src="/images/sales/quick-add-drug.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/ce975837-6f34-4679-93c9-c9ad6d9cad50-wholesale-add-drug.png"
   title="Quick Add Drug"
   description="Add a new medicine directly from the Add Sale page using Alt + D without interrupting wholesale billing."
 />
@@ -267,6 +658,8 @@ At the bottom of the page, a fixed summary bar shows a live breakdown of the bil
 
 **Sub Total − Disc + Tax = Bill**
 
+When an adjusted return is applied, the summary also shows the return adjustment and remaining net bill.
+
 ---
 
 ## Saving And Submitting
@@ -275,6 +668,7 @@ At the bottom of the page, a fixed summary bar shows a live breakdown of the bil
 | --- | --- |
 | **Save Draft** | Saves the bill as a draft so you can resume it later from Drafts |
 | **+ Add** | Finalises and saves the sale bill (or challan, if in Challan mode) |
+| **Update** | Saves changes when editing an existing sale |
 
 ---
 

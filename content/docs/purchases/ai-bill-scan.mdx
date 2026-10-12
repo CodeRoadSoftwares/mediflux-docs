@@ -1,0 +1,575 @@
+---
+title: AI Bill Scan
+description: Scan supplier purchase invoices using your phone camera or upload invoice files, review scanned drafts, map column headers, and import medicines into your purchase bill.
+icon: Scan
+---
+
+The **AI Bill Scan** feature allows you to add medicines to a purchase bill by scanning a supplier invoice instead of entering each medicine manually.
+
+You can capture an invoice using your phone's camera or upload invoice files for MediFlux to scan and extract the medicine details.
+
+Once the invoice is processed, you can review the scanned items, map the invoice columns to MediFlux fields, and import the medicines into the [Add Purchase](/docs/purchases/add-purchase) form.
+
+Navigate to **Purchases → Add Purchase** and click **Scan** at the top-right.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/2ac6035f-c22c-4fcf-a093-83f3a15ba24b-purchase-scan.png"
+  title="Scan option on Add Purchase"
+  description="The Add Purchase page provides Scan, Import CSV, and Drafts options for entering purchase data."
+/>
+
+---
+
+## Available Scanning Methods
+
+Click **Scan** to open the **Scan Invoice** dialog.
+
+MediFlux provides two options depending on the device you are using.
+
+| Method | Description | Availability |
+| --- | --- | --- |
+| **Camera** | Capture the supplier invoice using your device camera | Phone and tablet |
+| **Upload Files** | Upload invoice photos or PDF documents | Phone, tablet, desktop, and laptop |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/98633891-41a4-4f3b-819c-ac69ee860e92-scan-options.png"
+  title="Scan Invoice options"
+  description="Choose Camera for a live document scan or Upload Files to select invoice photos or PDFs."
+/>
+
+<Note>
+On phones and tablets, you can use both **Camera** and **Upload Files**. On desktops and laptops, only **Upload Files** is available.
+</Note>
+
+---
+
+## Method 1: Scan Using Your Phone Camera
+
+Use the **Camera** option when you have a physical supplier invoice and want to scan it directly.
+
+<Steps>
+
+<Step title="Open Add Purchase">
+
+Go to **Purchases → Add Purchase** on your phone or tablet.
+
+</Step>
+
+<Step title="Open the scanner">
+
+Click **Scan** and select **Camera**.
+
+Allow camera access if your device requests permission.
+
+</Step>
+
+<Step title="Capture the invoice">
+
+Position the supplier invoice within the camera view and capture it.
+
+Make sure the medicine names, batch numbers, quantities, prices, and other details are clearly visible.
+
+</Step>
+
+<Step title="Wait for processing">
+
+After capturing the invoice, MediFlux processes the scanned document.
+
+The scanned invoice is available through **Purchase Drafts** while you continue the import workflow.
+
+</Step>
+
+</Steps>
+
+<Note>
+For better scanning results, place the invoice on a flat surface, use sufficient lighting, and make sure the entire invoice is visible and readable.
+</Note>
+
+---
+
+## Method 2: Upload Invoice Files
+
+Use **Upload Files** when you already have a digital copy or photograph of the supplier invoice.
+
+This is the available scanning method on desktops and laptops.
+
+<Steps>
+
+<Step title="Open Scan Invoice">
+
+Navigate to **Purchases → Add Purchase**.
+
+Click **Scan** at the top-right.
+
+</Step>
+
+<Step title="Select Upload Files">
+
+In the **Scan Invoice** dialog, select **Upload Files**.
+
+This option accepts invoice photos or PDF documents.
+
+</Step>
+
+<Step title="Upload the invoice">
+
+Choose the invoice file or files from your device.
+
+MediFlux processes the uploaded documents to extract the purchase details.
+
+</Step>
+
+<Step title="Access the scanned draft">
+
+Open **Drafts** to check the uploaded invoice and its processing status.
+
+</Step>
+
+</Steps>
+
+<Note>
+**Scan** and **Import CSV** are separate features. Use **Scan** for invoice photos or PDFs. Use **Import CSV** when importing purchase data from a structured CSV file.
+</Note>
+
+---
+
+## Purchase Drafts
+
+When you upload or scan a purchase invoice, it is stored in **Purchase Drafts** while the document is being processed.
+
+This allows you to access the scanned invoice and continue working with it once processing is complete.
+
+Click **Drafts** at the top-right of the **Add Purchase** page to open the **Purchase Drafts** panel.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/0b76d80c-a3e2-4559-8534-a6640b65ae24-purchase-drafts.png"
+  title="Purchase Drafts panel"
+  description="View scanned purchase drafts, processing status, attached invoice files, and available draft actions."
+/>
+
+### Understanding the Draft Information
+
+Each scanned draft displays information such as:
+
+| Information | Description |
+| --- | --- |
+| **Draft Number** | Unique reference for the draft |
+| **Date and Time** | When the draft was created |
+| **Status** | Processing status, such as Scanned |
+| **Files Attached** | Number of invoice files attached to the draft |
+| **File Previews** | Thumbnails of the uploaded invoice documents |
+
+Once a draft has been scanned, you can review it and choose how to proceed.
+
+### Available Draft Actions
+
+| Action | Description |
+| --- | --- |
+| **Edit** | Open the scanned draft for editing |
+| **Rescan** | Scan the invoice again |
+| **Append** | Add more files to the existing draft |
+| **Insert** | Continue with importing the scanned invoice data |
+| **Delete icon** | Delete the draft |
+
+<Warning title="Review before deleting">
+Deleting a draft removes it from the Purchase Drafts list. Make sure you no longer need the draft before using the delete option.
+</Warning>
+
+### How to Continue a Scanned Draft
+
+<Steps>
+
+<Step title="Open Purchase Drafts">
+
+Click **Drafts** from the **Add Purchase** page.
+
+</Step>
+
+<Step title="Find your invoice">
+
+Locate the draft using its reference number, date, or attached invoice previews.
+
+Check that its processing status shows **Scanned**.
+
+</Step>
+
+<Step title="Review the available actions">
+
+You can use **Edit**, **Rescan**, or **Append** if the scanned draft needs further changes.
+
+</Step>
+
+<Step title="Select Insert">
+
+When the scanned invoice is ready, click **Insert**.
+
+MediFlux opens the **Map Invoice Headers** dialog.
+
+</Step>
+
+</Steps>
+
+---
+
+## Map Invoice Headers
+
+Before importing the scanned medicines, you must review how the invoice's column headings are mapped to the corresponding fields in MediFlux.
+
+Supplier invoices may use different column names for the same information.
+
+For example, one invoice may use `Product Description` while another uses `Item Name`.
+
+The **Map Invoice Headers** step ensures the extracted information is assigned to the correct purchase fields.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/cdda7c76-f74a-4ca2-a4dd-9f9353c6bcf3-mapping-purchase.png"
+  title="Map Invoice Headers"
+  description="Match detected invoice columns with the corresponding MediFlux fields before importing."
+/>
+
+### Understanding the Mapping Table
+
+The mapping dialog displays two columns:
+
+| Column | Description |
+| --- | --- |
+| **Detected Column** | Column name extracted from the scanned supplier invoice, along with a sample value |
+| **Map To Field** | Corresponding MediFlux field where the extracted information should be imported |
+
+For each detected column, select the correct field from the **Map To Field** dropdown.
+
+### Common Header Mappings
+
+| Detected Invoice Column | Map To Field |
+| --- | --- |
+| Product Description | Drug/Product Name |
+| Pack | Units/Pack Size |
+| HSN | HSN Code |
+| Qty | Quantity |
+| Free | Free Quantity |
+| MRP | MRP |
+| Batch | Batch Number |
+
+The exact detected column names depend on the supplier's invoice.
+
+<Warning title="Check required fields">
+Fields marked with `*` are required. Make sure they are mapped correctly before continuing.
+
+Pay particular attention to **Drug/Product Name**, **Quantity**, and **Batch Number**, as incorrect mapping can lead to incorrect purchase entries.
+</Warning>
+
+### How to Map Invoice Headers
+
+<Steps>
+
+<Step title="Review detected columns">
+
+Check each column name detected from the invoice.
+
+Use the sample value shown below the column name to understand what information it contains.
+
+</Step>
+
+<Step title="Select the correct MediFlux field">
+
+Open the **Map To Field** dropdown and select the matching field.
+
+For example:
+
+- Map `Product Description` to **Drug/Product Name**
+- Map `Qty` to **Quantity**
+- Map `Batch` to **Batch Number**
+- Map `HSN` to **HSN Code**
+
+</Step>
+
+<Step title="Check all required mappings">
+
+Scroll through the mapping list and make sure all required fields have been assigned correctly.
+
+</Step>
+
+<Step title="Continue to review">
+
+Click **Next** to open the **Review & Import** step.
+
+</Step>
+
+</Steps>
+
+---
+
+## Review Scanned Items Before Importing
+
+After mapping the invoice headers, MediFlux displays the **Import Scanned Items** dialog.
+
+This is the final review step before adding the extracted medicines to the purchase form.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/4b86d9fa-b090-4f92-8025-ac3b8fdd0d9b-import-headers.png"
+  title="Review scanned purchase items"
+  description="Preview extracted medicines, quantities, rates, batches, MRP, subtotals, and HSN codes before importing."
+/>
+
+### What You Can Review
+
+The dialog displays the number of items found in the scanned invoice and a preview of the extracted medicines.
+
+Depending on the invoice, the preview can include:
+
+| Detail | Description |
+| --- | --- |
+| **Drug Name** | Medicine name extracted from the invoice |
+| **Dosage Form** | Medicine form, such as Tablet or Gel |
+| **Quantity** | Purchased quantity |
+| **Free Quantity** | Free units supplied, if applicable |
+| **Rate** | Purchase rate |
+| **Batch** | Batch number |
+| **MRP** | Maximum Retail Price |
+| **Subtotal** | Extracted line subtotal |
+| **HSN** | HSN code |
+
+For example, a scanned invoice might contain:
+
+| Drug | Quantity | Rate | Subtotal |
+| --- | ---: | ---: | ---: |
+| PSI LIC-21/02241/30004488 | 2 | ₹23.50 | ₹47.00 |
+| DAVERY GEL 30 GM | 6 + 1 free | ₹83.50 | ₹501.00 |
+| MEGANERV-LC TAB | 3 | ₹16.85 | ₹50.55 |
+
+Review the extracted details carefully before importing.
+
+### Important: Existing Purchase Rows Will Be Replaced
+
+<Warning title="Import replaces current purchase entries">
+Importing the scanned items will **replace all current entries in the purchase form**.
+
+If you have already entered medicines manually, review them before continuing with the import.
+</Warning>
+
+### Generic Items After Import
+
+Scanned medicines are initially imported as **generic items**.
+
+You can match them with medicines in your existing inventory after importing them into the purchase form.
+
+<Note>
+Importing scanned items does not automatically mean every medicine has been matched with an existing inventory record. Review and match the imported medicines as needed.
+</Note>
+
+### How to Import Scanned Items
+
+<Steps>
+
+<Step title="Review the extracted medicines">
+
+Check the medicine names, quantities, rates, batch numbers, and other extracted details.
+
+</Step>
+
+<Step title="Go back if corrections are needed">
+
+If the column mappings are incorrect, click **Back** to return to **Map Invoice Headers**.
+
+Correct the mappings and continue again.
+
+</Step>
+
+<Step title="Confirm the import">
+
+Once the extracted data looks correct, click **Import**.
+
+MediFlux inserts the scanned medicines into the **Add Purchase** table.
+
+</Step>
+
+</Steps>
+
+---
+
+## Review the Imported Purchase Bill
+
+After importing, the extracted medicines appear as rows in the **Add Purchase** table.
+
+You can review the imported values before saving the purchase.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/32d22eb7-b490-4a32-897c-ad109c7fcb86-review-purchase.png"
+  title="Imported medicines in Add Purchase"
+  description="Scanned medicines populated in the purchase table with drug names, batches, expiry dates, quantities, prices, tax rates, and totals."
+/>
+
+### What to Check After Importing
+
+Review the following information:
+
+| Field | What to verify |
+| --- | --- |
+| **Drug** | Correct medicine name |
+| **Units** | Correct units per pack |
+| **HSN** | Correct HSN code |
+| **Batch** | Correct batch number |
+| **Expiry** | Correct expiry date |
+| **QTY** | Correct purchased quantity |
+| **Free** | Correct free quantity |
+| **Cost** | Correct purchase rate |
+| **MRP** | Correct maximum retail price |
+| **SGST / CGST / IGST** | Correct applicable tax rates |
+| **Subtotal / Total** | Correct calculated amounts |
+
+You should also review the supplier, invoice number, invoice date, and warehouse selection before saving the purchase.
+
+### Complete the Purchase
+
+<Steps>
+
+<Step title="Select the supplier">
+
+Choose the supplier associated with the scanned invoice.
+
+</Step>
+
+<Step title="Enter invoice details">
+
+Enter or verify the invoice number and purchase date.
+
+Select a warehouse if the purchase should be assigned to a particular warehouse.
+
+</Step>
+
+<Step title="Review the imported medicines">
+
+Check all imported medicine rows and correct any information that needs updating.
+
+Match generic items with your inventory where applicable.
+
+</Step>
+
+<Step title="Review the bill summary">
+
+At the bottom of the page, review:
+
+- **Sub Total**
+- **Discount**
+- **Tax**
+- **Bill**
+- **Margin**
+
+</Step>
+
+<Step title="Save the purchase">
+
+Click **+ Add** to record the purchase.
+
+Alternatively, click **Save Draft** if you want to complete it later.
+
+</Step>
+
+</Steps>
+
+---
+
+## Complete Purchase Scanning Workflow
+
+The complete process follows this order:
+
+<Steps>
+
+<Step title="Scan or upload">
+
+Open **Purchases → Add Purchase → Scan**.
+
+Use **Camera** on a phone or tablet, or **Upload Files** to upload invoice photos or PDFs.
+
+</Step>
+
+<Step title="Wait for the scan">
+
+The uploaded invoice is stored in **Purchase Drafts** while processing.
+
+</Step>
+
+<Step title="Open the scanned draft">
+
+Once the draft is scanned, open **Drafts** and locate the invoice.
+
+Use **Edit**, **Rescan**, or **Append** if needed.
+
+</Step>
+
+<Step title="Insert the scanned invoice">
+
+Click **Insert** to continue with the import.
+
+</Step>
+
+<Step title="Map the headers">
+
+Match the detected invoice columns with the correct MediFlux fields.
+
+Click **Next**.
+
+</Step>
+
+<Step title="Review and import">
+
+Check the extracted medicine details.
+
+Click **Import** to populate the purchase table.
+
+</Step>
+
+<Step title="Verify and save">
+
+Review the imported medicines, purchase details, and totals.
+
+Click **+ Add** to save the purchase.
+
+</Step>
+
+</Steps>
+
+---
+
+## Important Things to Remember
+
+- **Camera** and **Upload Files** are both available on phones and tablets.
+- On desktops and laptops, use **Upload Files**.
+- Scanned invoices are available through **Purchase Drafts** while processing.
+- A scanned draft can be edited, rescanned, appended to, inserted, or deleted.
+- Always review **Map Invoice Headers** before importing.
+- The **Review & Import** step lets you check the extracted medicine details.
+- Importing scanned items replaces the existing medicine entries in the purchase form.
+- Imported medicines are initially treated as generic items and can be matched with inventory afterward.
+- Review all medicine details, tax rates, and purchase totals before saving.
+
+---
+
+## Related Guides
+
+<Cards cols={2}>
+  <Card
+    title="Add Purchase"
+    description="Learn how to create and save purchase bills."
+    href="/docs/purchases/add-purchase"
+    icon="Package"
+  />
+  <Card
+    title="Drug List"
+    description="Manage medicines and review existing inventory records."
+    href="/docs/inventory/drug-list"
+    icon="Pill"
+  />
+  <Card
+    title="Warehouse"
+    description="Manage warehouse locations for purchased stock."
+    href="/docs/inventory/warehouse"
+    icon="Warehouse"
+  />
+  <Card
+    title="Scan & Image OCR for Sales"
+    description="Learn how barcode scanning and drug OCR work during sales."
+    href="/docs/sales/scan-and-ocr"
+    icon="Scan"
+  />
+</Cards>

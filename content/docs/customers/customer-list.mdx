@@ -1,12 +1,12 @@
 ---
 title: Customer List
-description: View and manage customers, track outstanding balances, filter and export customer data, and perform bulk updates or deletions.
+description: View and manage customers, track outstanding balances and credit limits, record bulk payments, filter and export customer data, and perform bulk updates or deletions.
 icon: List
 ---
 
 The **Customer List** is your main directory of customers linked to your pharmacy, including individual consumers and businesses.
 
-It provides an overview of customer details, outstanding balances, and payment history, with options to search, filter, import, export, and manage multiple customers at once.
+It provides an overview of customer details, outstanding balances, credit limits, and payment history, with options to search, filter, record bulk payments, import, export, and manage multiple customers at once.
 
 ---
 
@@ -22,7 +22,7 @@ At the top of the page, four summary cards give you an overview of your customer
 | **Local Customers** | Number of local customer profiles |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660256341-950662883-summarycards.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/c95643ae-4c19-4008-89d7-ddd19120bb5d-customer-summary-cards.png"
   title="Customer summary cards"
   description="Overview of total customers, outstanding balances, linked stores, and local customers."
 />
@@ -36,7 +36,7 @@ Use the search bar at the top of the **Customer List** to find customers by **na
 The **All** dropdown lets you narrow the search to a particular field.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660256340-70445864-search-customer.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/b5f4c5fb-27ff-46ea-b777-bcc6f24b0f7c-search-customers.png"
   title="Search customers"
   description="Search customer records using names, phone numbers, emails, or addresses."
 />
@@ -53,7 +53,7 @@ Below the search bar, two quick filters let you narrow the customer list.
 | **Local Customers** | Local customers added to your store |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783660326678-821843156-filter-chips.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/2d84650c-b4d2-4046-a65a-d5d3b6c28169-customer-quickfilters.png"
   title="Customer quick filters"
   description="Filter customers by Linked Stores or Local Customers."
 />
@@ -66,14 +66,15 @@ The **Customer List** displays customer information in a table.
 
 | Column | Description |
 | --- | --- |
-| **Name** | Customer name and customer type |
+| **Checkbox** | Select customers for bulk editing or deletion |
+| **Name** | Customer name and customer type. Displays **Limit Exceeded** when the customer has exceeded their credit limit |
 | **Phone** | Customer's contact number |
 | **Outstanding** | Customer's current outstanding balance |
 | **Last Payment** | Date of the customer's last recorded payment |
 | **Actions** | Opens the individual customer's action menu |
 
 <Figure
-  src="/images/customers/customer-list-table.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/88241ddc-2d7f-473b-afc8-fa0d8756a6d8-customer-list.png"
   title="Customer List"
   description="Customer records showing names, phone numbers, outstanding balances, last payment dates, and actions."
 />
@@ -83,6 +84,122 @@ The **Customer List** displays customer information in a table.
 The **Name** and **Outstanding** columns are sortable.
 
 Click either column heading to change the sorting order between ascending and descending.
+
+---
+
+## Customer Credit Limit
+
+MediFlux lets you set credit limits to control how much outstanding credit customers can accumulate.
+
+You can set a **Global Customer Credit Limit** for your store or configure a separate limit for an individual customer.
+
+When a customer's outstanding balance exceeds their applicable limit, MediFlux displays a **Limit Exceeded** indicator in the Customer List and warns you during the sales process.
+
+### Setting a Global Customer Credit Limit
+
+The **Global Customer Credit Limit** is a store-wide credit threshold that applies to customers who do not have an individual credit limit configured.
+
+<Steps>
+
+<Step title="Open Account Settings">
+
+Go to **Settings → Account**.
+
+</Step>
+
+<Step title="Edit Account Information">
+
+Click **Edit** to open the account information form.
+
+</Step>
+
+<Step title="Enter the global credit limit">
+
+Find **Global Customer Credit Limit (₹)** and enter the amount you want to set.
+
+For example, enter `1000` to set a global customer credit limit of ₹1,000.
+
+</Step>
+
+<Step title="Save the changes">
+
+Save the updated account information.
+
+The global credit limit now applies to customers who do not have an individual credit limit.
+
+</Step>
+
+</Steps>
+
+{/* Add Figure: Global Customer Credit Limit field in Settings → Account → Edit */}
+
+<Note>
+A customer's individual credit limit overrides the global credit limit when one is configured.
+</Note>
+
+### Setting an Individual Customer Credit Limit
+
+You can also set a separate credit limit for a particular customer.
+
+There are two ways to do this:
+
+- **When creating a customer:** Enter the credit limit while adding a new customer profile.
+- **When editing a customer:** Open the existing customer's details and update their credit limit.
+
+For example, suppose your global credit limit is ₹1,000, but a particular customer has an individual limit of ₹5,000.
+
+MediFlux uses the customer's individual limit of ₹5,000 instead of the global ₹1,000 limit.
+
+### Identifying Customers Who Exceed Their Credit Limit
+
+Go to **Customers → Customer List**.
+
+Customers whose outstanding balance exceeds their applicable credit limit are marked with a red **Limit Exceeded** label beside their name.
+
+For example:
+
+| Customer | Credit Limit | Outstanding | Status |
+| --- | ---: | ---: | --- |
+| Naveed Anjum | ₹1,000 | ₹3,739 | **Limit Exceeded** |
+| Another Customer | ₹1,000 | ₹500 | Within Limit |
+
+This makes it easier to identify customers whose outstanding balances have crossed their allowed credit limit without opening each customer profile.
+
+{/* Add Figure: Customer List showing Limit Exceeded labels beside customer names */}
+
+### How Credit Limits Affect Sales
+
+Customer credit limits are also checked when creating a sale.
+
+When you search for a customer in **Add Sale**, MediFlux indicates whether their credit limit has already been exceeded.
+
+#### Credit Limit Warning During Customer Search
+
+In the **Quick Add Customer** search, customers who have exceeded their credit limit display a red **Limit Exceeded** label beside their name.
+
+This allows you to identify the customer's credit status before selecting them.
+
+{/* Add Figure: Quick Add Customer search showing Limit Exceeded */}
+
+#### Restriction on Unpaid Sales
+
+If you select a customer whose credit limit has already been reached or exceeded, MediFlux prevents an **Unpaid** sale.
+
+A warning appears showing the customer's outstanding amount and credit limit.
+
+For example:
+
+**Credit limit exceeded for customer "Naveed Anjum"!**
+
+`Outstanding: ₹3,739, Limit: ₹1,000`
+
+This prevents additional unpaid sales when the customer's credit limit has already been reached.
+
+{/* Add Figure: Add Sale showing the credit limit exceeded warning */}
+
+<Note>
+The credit limit applies to customer credit during sales. When the customer's applicable limit has already been reached or exceeded, an additional **Unpaid** sale is blocked.
+</Note>
 
 ---
 
@@ -113,15 +230,136 @@ At the top of the **Customer List**, you can access the main customer management
 | --- | --- |
 | **Add Customer** | Opens the form to create a new customer profile |
 | **Add Payment** | Opens the customer payment form |
-| **Actions → Bulk Payment** | Opens the bulk payment option |
+| **Actions → Bulk Payment** | Record payments from multiple customers in a single operation |
 | **Actions → Import** | Imports customer records from a file |
 | **Actions → Export** | Exports customer data |
 
 <Figure
-  src="/images/customers/customer-list-actions.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/d24ca0cc-f03b-489a-af61-c21a7f6b7a5e-bulk-actions.png"
   title="Customer List actions"
   description="Access Add Customer, Add Payment, Bulk Payment, Import, and Export from the Customer List."
 />
+
+---
+
+## Bulk Customer Payment
+
+**Bulk Customer Payment** allows you to record payments received from multiple customers in a single operation.
+
+Instead of opening each customer's ledger and recording payments separately, you can select multiple customers, enter their payment details, and submit the payments together.
+
+This is useful when collecting outstanding payments from several customers.
+
+### How to Record Bulk Customer Payments
+
+<Steps>
+
+<Step title="Open Bulk Payment">
+
+Go to **Customers → Customer List**.
+
+At the top-right, click **Actions → Bulk Payment**.
+
+The **Bulk Customer Payment** dialog opens.
+
+</Step>
+
+<Step title="Select customers">
+
+The dialog displays customers along with their outstanding balances.
+
+Use the checkboxes to select the customers whose payments you want to record.
+
+You can search for customers by **name, phone number, or address**.
+
+| Column | Description |
+| --- | --- |
+| **Checkbox** | Select or deselect customers |
+| **Customer** | Customer name, phone number, and address |
+| **Outstanding** | Current outstanding amount for the customer |
+
+Customers with outstanding balances are shown with the amount in red, while customers with a zero balance are shown in green.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/1a22e21f-0e99-4d8d-94dd-8027dd77fd08-bulk-customer-payment.png"
+  title="Select customers for bulk payment"
+  description="Search and select customers while reviewing their outstanding balances."
+/>
+
+After selecting the required customers, click **Next**.
+
+</Step>
+
+<Step title="Enter payment details">
+
+The next screen displays a separate payment section for each selected customer.
+
+At the top of the dialog, you can set:
+
+| Field | Description |
+| --- | --- |
+| **Date** | Payment date |
+| **Payment Method** | Payment method selected at the top of the form |
+| **% of amt.** | Percentage field for calculating payment amounts |
+
+Each selected customer has their own payment details.
+
+| Field | Description |
+| --- | --- |
+| **Amount (₹)** | Amount received from the customer |
+| **Full Pay** | Fills the payment amount with the customer's current outstanding balance |
+| **Payment Date** | Date the customer's payment was received |
+| **Method** | Payment method for the individual customer |
+| **Receipt No.** | Optional payment receipt or transaction number |
+| **Notes** | Optional remarks about the payment |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/2c943fc5-c816-40bc-af45-4f0fe4fe9e13-bulk-payment-details.png"
+  title="Enter bulk customer payment details"
+  description="Record payment amounts, dates, methods, receipt numbers, and notes for multiple customers."
+/>
+
+</Step>
+
+<Step title="Review the total payment">
+
+At the bottom of the dialog, **Total Payment** displays the combined amount entered for all selected customers.
+
+The number of selected customers is also displayed beside the total.
+
+Review the individual payment amounts before submitting.
+
+</Step>
+
+<Step title="Submit payments">
+
+Click **Submit** to record the customer payments.
+
+You can review the recorded payments and updated outstanding balances in the respective [**Customer Ledgers**](/docs/customers/customer-ledger).
+
+</Step>
+
+</Steps>
+
+### Example: Recording Payments for Two Customers
+
+Suppose two customers have the following outstanding balances:
+
+| Customer | Outstanding | Payment Received | Remaining |
+| --- | ---: | ---: | ---: |
+| Customer A | ₹14,622.65 | ₹5,000 | ₹9,622.65 |
+| Customer B | ₹4,269 | ₹4,269 | ₹0 |
+| **Total** | **₹18,891.65** | **₹9,269** | **₹9,622.65** |
+
+Enter ₹5,000 for Customer A and use **Full Pay** for Customer B.
+
+The **Total Payment** at the bottom displays ₹9,269.
+
+After recording these payments, Customer A still has an outstanding balance, while Customer B's balance is cleared.
+
+<Note>
+You can enter different payment amounts and payment methods for each customer. Use **Full Pay** to fill the customer's complete outstanding amount, or enter a smaller amount to record a partial payment.
+</Note>
 
 ---
 
@@ -142,7 +380,7 @@ The toolbar displays the number of selected customers and provides:
 | **Clear Selection** | Deselect all selected customers |
 
 <Figure
-  src="/images/customers/customer-bulk-actions.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/883f4235-84de-4344-9182-36e882eb00d6-bulk-actions-customers.png"
   title="Customer bulk actions"
   description="Select multiple customers to access Bulk Edit, Bulk Delete, and Clear Selection."
 />
@@ -189,7 +427,7 @@ Fields marked **Unchanged** are left as they are.
 You can update one field without changing the other.
 
 <Figure
-  src="/images/customers/bulk-edit-customers.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/4e7b1a65-fd4b-4e61-8a0f-036e3a557caf-customerbulk-edit.png"
   title="Bulk Edit Customers"
   description="Update the State and Area of multiple selected customers."
 />
@@ -243,7 +481,7 @@ Click **Bulk Delete** from the selection toolbar.
 The **Bulk Delete Customers** dialog opens and displays the number of selected customers.
 
 <Figure
-  src="/images/customers/bulk-delete-customers.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/fe6c057a-323a-41d0-8129-e9f1e3fabda4-customer-bulk-delete.png"
   title="Bulk Delete Customers"
   description="Review selected customers and available balance settlement options before deletion."
 />
@@ -259,11 +497,6 @@ If the selected customers have positive balances, choose how those balances shou
 | **Refunded to Customer** | Record the balance as refunded to the customer |
 | **Customer Credit Write-off** | Write off the customer's remaining credit balance |
 
-<Figure
-  src="/images/customers/bulk-delete-positive-balance.png"
-  title="Positive balance settlement"
-  description="Choose whether to refund the customer or write off their credit balance."
-/>
 
 </Step>
 
@@ -278,12 +511,6 @@ Choose how the balance should be handled.
 | **Customer Paid** | Record the outstanding amount as paid by the customer |
 | **Bad Debt / Waive Off** | Write off the outstanding amount instead of collecting payment |
 
-<Figure
-  src="/images/customers/bulk-delete-negative-balance.png"
-  title="Negative balance settlement"
-  description="Choose Customer Paid or Bad Debt / Waive Off to settle negative customer balances."
-/>
-
 </Step>
 
 <Step title="Select the payment method">
@@ -296,12 +523,6 @@ Available options include:
 - **Card**
 - **UPI**
 - **Net Banking**
-
-<Figure
-  src="/images/customers/bulk-delete-payment-method.png"
-  title="Select payment method"
-  description="Choose Cash, Card, UPI, or Net Banking for the balance settlement."
-/>
 
 </Step>
 
