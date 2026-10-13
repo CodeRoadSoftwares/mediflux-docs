@@ -1,4 +1,4 @@
 {
   "title": "Reports",
-  "pages": ["index"]
+  "pages": ["index", "stock-reports", "creditors-debtors", "gst-return"]
 }

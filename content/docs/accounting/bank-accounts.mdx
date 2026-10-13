@@ -91,7 +91,7 @@ Four buttons sit in the top-right corner of the page:
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/d54ceb0d-bcb0-4790-965b-777b2b776211-action-buttons.png"
   title="Actions Buttons"
-  description="View , Set Reconciliation rules and add bank."
+  description="View reconciliation rules, add rules, reconcile transactions, or add a bank account."
 />
 
 ---
@@ -103,12 +103,12 @@ Four buttons sit in the top-right corner of the page:
     Click **Add Bank** in the top-right corner.
   </Step>
   <Step title="Fill in the details">
-    - **Account Name** – A friendly name (e.g. Main Business Account)
-    - **Account Number** – The full bank account number
-    - **Bank Name** – The name of the bank
-    - **IFSC Code** – The Indian Financial System Code for the branch
-    - **Branch** – The branch name
-    - **Account Type** – Select **Savings**, **Current**, **Fixed Deposit**, or **Recurring Deposit**
+    - **Account Name**: A friendly name (e.g. Main Business Account)
+    - **Account Number**: The full bank account number
+    - **Bank Name**: The name of the bank
+    - **IFSC Code**: The Indian Financial System Code for the branch
+    - **Branch**: The branch name
+    - **Account Type**: Select **Savings**, **Current**, **Fixed Deposit**, or **Recurring Deposit**
   </Step>
   <Step title="Set as default (optional)">
     Check **Set as default bank account** if this should be the default for new transactions.
@@ -133,7 +133,7 @@ When you add a bank account, MediFlux automatically creates a corresponding ledg
 
 ## Reconcile your bank account
 
-**Bank reconciliation** is the process of comparing the transactions recorded in MediFlux against the transactions shown on your actual bank statement. The goal is to ensure both records agree.
+**Bank reconciliation** is the process of comparing the transactions recorded in MediFlux against the transactions shown on your actual bank statement. The goal is to identify and resolve differences between the two records.
 
 Differences can happen for several reasons:
 
@@ -148,73 +148,164 @@ Differences can happen for several reasons:
 
 Click **Reconcile** on the Bank Accounts page.
 
+The updated **Bank Reconciliation** workspace opens, displaying account selection, reconciliation period, balance summaries, system ledger transactions, and bank statement controls.
+
 <Figure
-  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/fd011030-8e21-46a4-96ec-800108131a6b-reconcile-ba.png"
-  alt="Bank Reconciliation screen"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/d469bc03-3f7d-4f42-bfe8-2a261f795748-bank-reconciliation.png"
+  alt="Updated Bank Reconciliation workspace"
   title="Bank Reconciliation"
-  description="Match system transactions (left) with imported bank statement (right)."
+  description="Select a bank account and period, review ledger and bank balances, and compare system transactions with an uploaded bank statement."
 />
 
-The screen is split into two panels:
+### Select the account and period
 
-| Panel | What it shows |
-|-------|---------------|
-| **System Transactions** (left) | All transactions recorded in MediFlux for the selected bank account and period |
-| **Import Statement** (right) | Where you upload your bank statement file |
+At the top of the reconciliation workspace, you will find the following controls:
 
-### Before you start
+| Control | What it does |
+|---------|--------------|
+| **Bank Account** | Select the bank account you want to reconcile |
+| **Reconciliation Period** | Select the period for which you want to review transactions |
+| **Workspace View** | Switch between **Split**, **Ledger**, and **Statement** views |
+
+The reconciliation period is shown as **All Time** in the example screenshot.
+
+### Workspace views
+
+You can change how transactions are displayed using the **Workspace View** control.
+
+| View | What it shows |
+|------|---------------|
+| **Split** | Displays the System Ledger and Bank Statement panels side by side |
+| **Ledger** | Displays the system ledger workspace |
+| **Statement** | Displays the bank statement workspace |
+
+<Note>
+The **Split** view is useful when comparing MediFlux transactions with the corresponding entries in your bank statement.
+</Note>
+
+### Reconciliation summary
+
+Below the account selection controls, four summary cards display the current reconciliation information.
+
+| Card | What it shows |
+|------|---------------|
+| **COA Ledger Balance** | The balance recorded in MediFlux's Chart of Accounts ledger for the selected bank account |
+| **Actual Bank Balance** | An input field where you enter the balance from your official bank statement |
+| **Difference** | The difference between the ledger balance and the actual bank balance |
+| **Transaction Summary** | The number of loaded transactions in the Ledger and Statement |
+
+#### Enter the actual bank balance
+
+In the **Actual Bank Balance** card, enter the balance shown on your official bank statement.
+
+The **Difference** card helps you identify whether the balance recorded in MediFlux differs from the balance reported by your bank.
+
+For example:
+
+| Balance | Amount |
+|---------|-------:|
+| COA Ledger Balance | `₹25,000` |
+| Actual Bank Balance | `₹24,500` |
+| Difference | `₹500` |
+
+In this example, you need to investigate the `₹500` difference before completing reconciliation.
+
+<Note>
+The amounts above are examples. Your actual balances depend on the selected bank account and its transactions.
+</Note>
+
+### System Ledger
+
+The **System Ledger** panel displays transactions recorded in MediFlux for the selected bank account.
+
+At the top of this panel, you can search for transactions using the **Search ref, narration, ₹...** field.
+
+You can also switch between three transaction tabs:
+
+| Tab | What it shows |
+|-----|---------------|
+| **All** | All available system ledger transactions |
+| **Reconciled** | Transactions that have already been reconciled |
+| **Pending** | Transactions that are still pending reconciliation |
+
+The number of transactions is displayed beside each tab.
+
+#### System Ledger table
+
+| Column | What it means |
+|--------|---------------|
+| **Status** | Reconciliation status of the transaction |
+| **Date** | Transaction date |
+| **Ref / Vch** | Reference or voucher number |
+| **Narration / Description** | Description of the transaction |
+| **Debit** | Debit amount |
+| **Credit** | Credit amount |
+| **Balance** | Ledger balance shown for the transaction |
+| **Action** | Available transaction actions |
+
+The table may also display an **Opening Balance** row.
+
+### Upload your bank statement
+
+The **Bank Statement** panel is used to load transactions from your official bank statement.
+
+If no statement has been uploaded, the panel displays **No Statement Loaded** with an **Upload Statement CSV** button.
+
+You can also access **Upload Statement CSV** from the top-right corner of the reconciliation page.
 
 <Steps>
-  <Step title="Select the account">
-    Choose the **Account** from the dropdown at the top.
+  <Step title="Select the bank account">
+    Choose the correct account from the **Bank Account** dropdown.
   </Step>
-  <Step title="Select the period">
-    Choose the **Period** that matches your bank statement.
+  <Step title="Select the reconciliation period">
+    Choose the period that matches the transactions you want to reconcile.
   </Step>
-  <Step title="Download the statement">
-    Download your bank statement from your bank’s website or app and save it as **CSV** or **Excel (XLSX)**.
+  <Step title="Download your bank statement">
+    Download the official statement for the selected account from your bank's website or mobile application in **CSV** format.
+  </Step>
+  <Step title="Upload the statement">
+    Click **Upload Statement CSV** and select the downloaded file.
+  </Step>
+  <Step title="Review the statement transactions">
+    Follow the on-screen instructions to load the statement.
+
+    Once loaded, review its entries in the **Statement** workspace or switch to **Split** view to compare them with the System Ledger.
   </Step>
 </Steps>
 
-### Import your bank statement
-
-<Steps>
-  <Step title="Choose the file">
-    In the **Import Statement** panel, click **Choose File** and select your downloaded statement.
-  </Step>
-  <Step title="Map the columns">
-    Match the columns in your file to the required fields: **Date**, **Description**, **Debit**, **Credit**, and **Balance**.
-  </Step>
-  <Step title="Import">
-    Click **Import** to load the statement data.
-  </Step>
-</Steps>
+<Note>
+The updated reconciliation interface provides an **Upload Statement CSV** option. Use a CSV file for this workflow.
+</Note>
 
 ### How matching works
 
-MediFlux attempts to auto-match transactions based on amount, date, and description.
+Reconciliation involves comparing the transactions recorded in MediFlux with the transactions imported from your bank statement.
 
 | Scenario | What it means | What to do |
 |----------|---------------|------------|
-| **Appears on both sides** | Already recorded in MediFlux and on the bank statement | Confirm the match and mark it reconciled |
-| **Only on bank statement** | Missing from MediFlux | Create the missing journal entry, then match it |
-| **Only in MediFlux** | Not yet cleared the bank, or reversed by the bank | Check if it is pending. If it never happened, reverse the entry |
-| **Amounts do not match** | Same transaction but different amounts | Investigate bank fees, partial payments, or data entry errors |
+| **Appears in both records** | The transaction is recorded in MediFlux and the bank statement | Verify the date, amount, and description before reconciling |
+| **Only on bank statement** | The transaction is not found in the expected MediFlux ledger entries | Check for an existing entry under another reference before recording a missing transaction |
+| **Only in MediFlux** | The transaction has not appeared in the bank statement | Check whether it is pending, uncleared, or incorrectly recorded |
+| **Amounts do not match** | The records show different amounts for a transaction | Investigate bank fees, partial payments, or data entry errors |
+
+<Warning title="Check before recording a missing transaction">
+A transaction may already exist in MediFlux under a different reference or narration. Search the existing ledger before creating another entry.
+</Warning>
 
 ### Set up reconciliation rules
 
-Reconciliation rules automatically match recurring transactions so you do not have to do it manually every month.
+Reconciliation rules help identify and match recurring transactions so you do not have to review the same types of entries manually every month.
 
 <Steps>
   <Step title="Click Add Rules">
     Click **Add Rules** on the Bank Accounts page.
   </Step>
   <Step title="Fill in the rule">
-    - **Bank Account** – The account this rule applies to
-    - **Narration** – A keyword or phrase from the bank statement (e.g. “Bank charges”)
-    - **Entry Type** – **Debit** or **Credit**
-    - **Amount Type** – **Exact**, **Contains**, or **Any**
-    - **Amount** – Optional. Enter the exact amount if you chose **Exact**
+    - **Bank Account**: The account this rule applies to
+    - **Narration**: A keyword or phrase from the bank statement (e.g. "Bank charges")
+    - **Entry Type**: **Debit** or **Credit**
+    - **Amount Type**: **Exact**, **Contains**, or **Any**
+    - **Amount**: Optional. Enter the exact amount if you chose **Exact**
   </Step>
   <Step title="Save">
     Click **Add Rule**.
@@ -225,16 +316,31 @@ Reconciliation rules automatically match recurring transactions so you do not ha
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/fa401419-3ec6-41ac-b332-3fc93dbef187-reconcilation-rule.png"
   alt="Add Reconciliation Rule dialog"
   title="Add Reconciliation Rule"
-  description="Automate matching for recurring transactions such as bank fees or EMIs."
+  description="Configure matching rules for recurring transactions such as bank fees or EMIs."
 />
 
 <Note>
-Example: If your bank charges a fixed monthly fee of `₹500`, create a rule with Narration = “Bank charges”, Entry Type = Debit, Amount Type = Exact, and Amount = `500`. MediFlux will auto-match it every month.
+Example: If your bank charges a fixed monthly fee of `₹500`, create a rule with Narration = "Bank charges", Entry Type = Debit, Amount Type = Exact, and Amount = `500`. MediFlux can use the rule to identify matching recurring transactions.
 </Note>
 
 ### Complete the reconciliation
 
-Once all transactions are matched and any discrepancies are resolved, click **Complete**. MediFlux marks the reconciliation as done for the selected period. The bank account balance in MediFlux now matches your bank statement.
+Once you have reviewed the statement transactions and investigated any differences, use the **Complete Reconciliation** button at the top-right corner of the workspace.
+
+<Steps>
+  <Step title="Review the selected account">
+    Confirm that the correct **Bank Account** and **Reconciliation Period** are selected.
+  </Step>
+  <Step title="Check the balances">
+    Compare the **COA Ledger Balance** with the **Actual Bank Balance** and review any difference.
+  </Step>
+  <Step title="Review transaction statuses">
+    Use the **Reconciled** and **Pending** tabs to check the transaction statuses.
+  </Step>
+  <Step title="Click Complete Reconciliation">
+    Click **Complete Reconciliation** and follow the on-screen confirmation instructions.
+  </Step>
+</Steps>
 
 <Note>
 Reconcile your bank accounts at least once a month, ideally when you receive your monthly bank statement.
@@ -245,11 +351,15 @@ Reconcile your bank accounts at least once a month, ideally when you receive you
 ## Common mistakes
 
 <Warning title="Creating duplicate entries during reconciliation">
-When you see a transaction on your bank statement that is missing from MediFlux, do not create a new journal entry without checking if it already exists under a different description. Use the match function first.
+When you see a transaction on your bank statement that is missing from MediFlux, do not create a new journal entry without checking if it already exists under a different description. Search the system ledger first.
 </Warning>
 
 <Warning title="Ignoring small differences">
-A difference of even a few rupees is usually a bank fee, interest, or rounding error. If you ignore it, your MediFlux balance will drift further from your actual bank balance every month.
+A difference of even a few rupees may result from bank fees, interest, or rounding errors. Investigate these differences rather than leaving them unresolved.
+</Warning>
+
+<Warning title="Uploading a statement for the wrong account">
+Make sure the selected bank account matches the official statement you are uploading. Using a statement from another account can produce incorrect reconciliation results.
 </Warning>
 
 ---
@@ -261,16 +371,28 @@ A difference of even a few rupees is usually a bank fee, interest, or rounding e
     Deleting a bank account removes it from the Bank Accounts list but does not delete the corresponding ledger in your Chart of Accounts. Historical transactions remain intact and can still be viewed in the General Ledger.
   </Accordion>
   <Accordion title="Can I reconcile multiple bank accounts at once?">
-    No. Reconciliation is done one account at a time. Select the account from the dropdown on the Reconciliation screen and import the statement for that specific account.
+    No. Reconciliation is done one account at a time. Select the account from the **Bank Account** dropdown and upload the statement for that specific account.
   </Accordion>
-  <Accordion title="What file formats does the statement import support?">
-    MediFlux supports **CSV** and **Excel (XLSX)** files. Most banks allow you to download your statement in one of these formats.
+  <Accordion title="What file format does the statement import support?">
+    The updated Bank Reconciliation interface provides **Upload Statement CSV**. Download your bank statement in CSV format to use this option.
   </Accordion>
   <Accordion title="Why is my MediFlux balance different from my bank balance?">
-    This is normal until reconciliation is complete. Common causes include pending cheques, unrecorded bank fees, or transactions recorded with the wrong date. Reconcile monthly to identify and fix these differences.
+    Common causes include pending cheques, unrecorded bank fees, missing transactions, or entries recorded with the wrong amount or date. Use Bank Reconciliation to identify and investigate these differences.
+  </Accordion>
+  <Accordion title="What is the difference between COA Ledger Balance and Actual Bank Balance?">
+    **COA Ledger Balance** is the balance recorded in MediFlux's Chart of Accounts.
+
+    **Actual Bank Balance** is the balance shown on your official bank statement, which you enter in the reconciliation workspace.
+  </Accordion>
+  <Accordion title="What is the difference between Split, Ledger, and Statement views?">
+    **Split** displays the System Ledger and Bank Statement side by side.
+
+    **Ledger** focuses on the transactions recorded in MediFlux.
+
+    **Statement** focuses on the imported bank statement transactions.
   </Accordion>
   <Accordion title="What is the difference between a Current account and a Savings account?">
-    In MediFlux the type is for your own organization and reporting. **Current** accounts are typically business accounts used for daily operations. **Savings** accounts are lower-transaction accounts. **Fixed Deposit** and **Recurring Deposit** are locked-in savings instruments.
+    In MediFlux the type is for your own organization and reporting. **Current** accounts are typically business accounts used for daily operations. **Savings** accounts are lower-transaction accounts. **Fixed Deposit** and **Recurring Deposit** are savings instruments with different deposit arrangements.
   </Accordion>
 </Accordions>
 

@@ -1,0 +1,1144 @@
+﻿[
+    {
+        "lines":  [
+                      {
+                          "text":  "Home",
+                          "words":  [
+                                        {
+                                            "y":  109,
+                                            "height":  12,
+                                            "width":  42,
+                                            "text":  "Home",
+                                            "x":  46
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Drugs",
+                          "words":  [
+                                        {
+                                            "y":  161,
+                                            "height":  15,
+                                            "width":  43,
+                                            "text":  "Drugs",
+                                            "x":  46
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Customers",
+                          "words":  [
+                                        {
+                                            "y":  213,
+                                            "height":  12,
+                                            "width":  78,
+                                            "text":  "Customers",
+                                            "x":  46
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Customer List",
+                          "words":  [
+                                        {
+                                            "y":  256,
+                                            "height":  10,
+                                            "width":  56,
+                                            "text":  "Customer",
+                                            "x":  64
+                                        },
+                                        {
+                                            "y":  256,
+                                            "height":  10,
+                                            "width":  20,
+                                            "text":  "List",
+                                            "x":  124
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Store Requests",
+                          "words":  [
+                                        {
+                                            "y":  320,
+                                            "height":  10,
+                                            "width":  31,
+                                            "text":  "Store",
+                                            "x":  64
+                                        },
+                                        {
+                                            "y":  320,
+                                            "height":  12,
+                                            "width":  53,
+                                            "text":  "Requests",
+                                            "x":  98
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Notes",
+                          "words":  [
+                                        {
+                                            "y":  352,
+                                            "height":  10,
+                                            "width":  34,
+                                            "text":  "Notes",
+                                            "x":  102
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Trash",
+                          "words":  [
+                                        {
+                                            "y":  384,
+                                            "height":  10,
+                                            "width":  32,
+                                            "text":  "Trash",
+                                            "x":  64
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Clinic",
+                          "words":  [
+                                        {
+                                            "y":  426,
+                                            "height":  13,
+                                            "width":  40,
+                                            "text":  "Clinic",
+                                            "x":  46
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "suppliers",
+                          "words":  [
+                                        {
+                                            "y":  476,
+                                            "height":  15,
+                                            "width":  68,
+                                            "text":  "suppliers",
+                                            "x":  46
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Sales",
+                          "words":  [
+                                        {
+                                            "y":  529,
+                                            "height":  12,
+                                            "width":  39,
+                                            "text":  "Sales",
+                                            "x":  46
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Sales List",
+                          "words":  [
+                                        {
+                                            "y":  572,
+                                            "height":  10,
+                                            "width":  31,
+                                            "text":  "Sales",
+                                            "x":  64
+                                        },
+                                        {
+                                            "y":  572,
+                                            "height":  10,
+                                            "width":  20,
+                                            "text":  "List",
+                                            "x":  99
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "O Add sale",
+                          "words":  [
+                                        {
+                                            "y":  599,
+                                            "height":  20,
+                                            "width":  20,
+                                            "text":  "O",
+                                            "x":  36
+                                        },
+                                        {
+                                            "y":  604,
+                                            "height":  10,
+                                            "width":  23,
+                                            "text":  "Add",
+                                            "x":  64
+                                        },
+                                        {
+                                            "y":  604,
+                                            "height":  10,
+                                            "width":  24,
+                                            "text":  "sale",
+                                            "x":  91
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Add credit Note",
+                          "words":  [
+                                        {
+                                            "y":  636,
+                                            "height":  9,
+                                            "width":  23,
+                                            "text":  "Add",
+                                            "x":  64
+                                        },
+                                        {
+                                            "y":  636,
+                                            "height":  10,
+                                            "width":  36,
+                                            "text":  "credit",
+                                            "x":  90
+                                        },
+                                        {
+                                            "y":  636,
+                                            "height":  10,
+                                            "width":  27,
+                                            "text":  "Note",
+                                            "x":  129
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Mouzin Gulzar",
+                          "words":  [
+                                        {
+                                            "y":  730,
+                                            "height":  12,
+                                            "width":  49,
+                                            "text":  "Mouzin",
+                                            "x":  70
+                                        },
+                                        {
+                                            "y":  730,
+                                            "height":  12,
+                                            "width":  44,
+                                            "text":  "Gulzar",
+                                            "x":  123
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "mouzi",
+                          "words":  [
+                                        {
+                                            "y":  750,
+                                            "height":  8,
+                                            "width":  31,
+                                            "text":  "mouzi",
+                                            "x":  70
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Download Mobile App",
+                          "words":  [
+                                        {
+                                            "y":  811,
+                                            "height":  12,
+                                            "width":  70,
+                                            "text":  "Download",
+                                            "x":  57
+                                        },
+                                        {
+                                            "y":  810,
+                                            "height":  13,
+                                            "width":  48,
+                                            "text":  "Mobile",
+                                            "x":  132
+                                        },
+                                        {
+                                            "y":  811,
+                                            "height":  14,
+                                            "width":  30,
+                                            "text":  "App",
+                                            "x":  184
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Help \u0026 Support",
+                          "words":  [
+                                        {
+                                            "y":  860,
+                                            "height":  14,
+                                            "width":  32,
+                                            "text":  "Help",
+                                            "x":  59
+                                        },
+                                        {
+                                            "y":  860,
+                                            "height":  12,
+                                            "width":  10,
+                                            "text":  "\u0026",
+                                            "x":  95
+                                        },
+                                        {
+                                            "y":  860,
+                                            "height":  14,
+                                            "width":  58,
+                                            "text":  "Support",
+                                            "x":  109
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Linked Stores",
+                          "words":  [
+                                        {
+                                            "y":  196,
+                                            "height":  9,
+                                            "width":  36,
+                                            "text":  "Linked",
+                                            "x":  338
+                                        },
+                                        {
+                                            "y":  196,
+                                            "height":  9,
+                                            "width":  36,
+                                            "text":  "Stores",
+                                            "x":  378
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "2 Local Customers",
+                          "words":  [
+                                        {
+                                            "y":  196,
+                                            "height":  10,
+                                            "width":  10,
+                                            "text":  "2",
+                                            "x":  448
+                                        },
+                                        {
+                                            "y":  196,
+                                            "height":  9,
+                                            "width":  29,
+                                            "text":  "Local",
+                                            "x":  465
+                                        },
+                                        {
+                                            "y":  196,
+                                            "height":  9,
+                                            "width":  60,
+                                            "text":  "Customers",
+                                            "x":  499
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Total Customers",
+                          "words":  [
+                                        {
+                                            "y":  318,
+                                            "height":  10,
+                                            "width":  32,
+                                            "text":  "Total",
+                                            "x":  369
+                                        },
+                                        {
+                                            "y":  317,
+                                            "height":  11,
+                                            "width":  72,
+                                            "text":  "Customers",
+                                            "x":  406
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "73",
+                          "words":  [
+                                        {
+                                            "y":  339,
+                                            "height":  18,
+                                            "width":  27,
+                                            "text":  "73",
+                                            "x":  370
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "NAME t",
+                          "words":  [
+                                        {
+                                            "y":  420,
+                                            "height":  10,
+                                            "width":  43,
+                                            "text":  "NAME",
+                                            "x":  316
+                                        },
+                                        {
+                                            "y":  420,
+                                            "height":  10,
+                                            "width":  6,
+                                            "text":  "t",
+                                            "x":  364
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Zahid Ahmad",
+                          "words":  [
+                                        {
+                                            "y":  473,
+                                            "height":  12,
+                                            "width":  41,
+                                            "text":  "Zahid",
+                                            "x":  316
+                                        },
+                                        {
+                                            "y":  473,
+                                            "height":  12,
+                                            "width":  53,
+                                            "text":  "Ahmad",
+                                            "x":  363
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Consumer",
+                          "words":  [
+                                        {
+                                            "y":  496,
+                                            "height":  9,
+                                            "width":  59,
+                                            "text":  "Consumer",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Ibrahim",
+                          "words":  [
+                                        {
+                                            "y":  546,
+                                            "height":  12,
+                                            "width":  55,
+                                            "text":  "Ibrahim",
+                                            "x":  316
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Consumer",
+                          "words":  [
+                                        {
+                                            "y":  569,
+                                            "height":  9,
+                                            "width":  59,
+                                            "text":  "Consumer",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Vive",
+                          "words":  [
+                                        {
+                                            "y":  619,
+                                            "height":  12,
+                                            "width":  33,
+                                            "text":  "Vive",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Consumer",
+                          "words":  [
+                                        {
+                                            "y":  642,
+                                            "height":  9,
+                                            "width":  59,
+                                            "text":  "Consumer",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Mouzin",
+                          "words":  [
+                                        {
+                                            "y":  692,
+                                            "height":  12,
+                                            "width":  55,
+                                            "text":  "Mouzin",
+                                            "x":  316
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Consumer",
+                          "words":  [
+                                        {
+                                            "y":  715,
+                                            "height":  9,
+                                            "width":  59,
+                                            "text":  "Consumer",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Aijaz",
+                          "words":  [
+                                        {
+                                            "y":  765,
+                                            "height":  15,
+                                            "width":  37,
+                                            "text":  "Aijaz",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Consumer",
+                          "words":  [
+                                        {
+                                            "y":  788,
+                                            "height":  9,
+                                            "width":  59,
+                                            "text":  "Consumer",
+                                            "x":  315
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Abc Store",
+                          "words":  [
+                                        {
+                                            "y":  838,
+                                            "height":  12,
+                                            "width":  30,
+                                            "text":  "Abc",
+                                            "x":  315
+                                        },
+                                        {
+                                            "y":  838,
+                                            "height":  12,
+                                            "width":  39,
+                                            "text":  "Store",
+                                            "x":  351
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Business",
+                          "words":  [
+                                        {
+                                            "y":  861,
+                                            "height":  9,
+                                            "width":  49,
+                                            "text":  "Business",
+                                            "x":  316
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "AGE",
+                          "words":  [
+                                        {
+                                            "y":  419,
+                                            "height":  11,
+                                            "width":  29,
+                                            "text":  "AGE",
+                                            "x":  537
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "GENDER",
+                          "words":  [
+                                        {
+                                            "y":  419,
+                                            "height":  11,
+                                            "width":  60,
+                                            "text":  "GENDER",
+                                            "x":  634
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "R Other",
+                          "words":  [
+                                        {
+                                            "y":  481,
+                                            "height":  14,
+                                            "width":  12,
+                                            "text":  "R",
+                                            "x":  636
+                                        },
+                                        {
+                                            "y":  482,
+                                            "height":  12,
+                                            "width":  41,
+                                            "text":  "Other",
+                                            "x":  655
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "R Other",
+                          "words":  [
+                                        {
+                                            "y":  627,
+                                            "height":  14,
+                                            "width":  12,
+                                            "text":  "R",
+                                            "x":  636
+                                        },
+                                        {
+                                            "y":  628,
+                                            "height":  12,
+                                            "width":  41,
+                                            "text":  "Other",
+                                            "x":  655
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "R Other",
+                          "words":  [
+                                        {
+                                            "y":  700,
+                                            "height":  14,
+                                            "width":  12,
+                                            "text":  "R",
+                                            "x":  636
+                                        },
+                                        {
+                                            "y":  701,
+                                            "height":  12,
+                                            "width":  41,
+                                            "text":  "Other",
+                                            "x":  655
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "R Other",
+                          "words":  [
+                                        {
+                                            "y":  846,
+                                            "height":  14,
+                                            "width":  12,
+                                            "text":  "R",
+                                            "x":  636
+                                        },
+                                        {
+                                            "y":  847,
+                                            "height":  12,
+                                            "width":  41,
+                                            "text":  "Other",
+                                            "x":  655
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Outstanding",
+                          "words":  [
+                                        {
+                                            "y":  317,
+                                            "height":  14,
+                                            "width":  81,
+                                            "text":  "Outstanding",
+                                            "x":  773
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "PHONE",
+                          "words":  [
+                                        {
+                                            "y":  419,
+                                            "height":  11,
+                                            "width":  50,
+                                            "text":  "PHONE",
+                                            "x":  771
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "9148123467",
+                          "words":  [
+                                        {
+                                            "y":  482,
+                                            "height":  12,
+                                            "width":  91,
+                                            "text":  "9148123467",
+                                            "x":  791
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "1234567890",
+                          "words":  [
+                                        {
+                                            "y":  555,
+                                            "height":  12,
+                                            "width":  94,
+                                            "text":  "1234567890",
+                                            "x":  790
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "9596959699",
+                          "words":  [
+                                        {
+                                            "y":  628,
+                                            "height":  12,
+                                            "width":  96,
+                                            "text":  "9596959699",
+                                            "x":  791
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "9906880612",
+                          "words":  [
+                                        {
+                                            "y":  701,
+                                            "height":  12,
+                                            "width":  94,
+                                            "text":  "9906880612",
+                                            "x":  791
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "1233211236",
+                          "words":  [
+                                        {
+                                            "y":  774,
+                                            "height":  12,
+                                            "width":  87,
+                                            "text":  "1233211236",
+                                            "x":  790
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "121267353344",
+                          "words":  [
+                                        {
+                                            "y":  847,
+                                            "height":  12,
+                                            "width":  110,
+                                            "text":  "121267353344",
+                                            "x":  790
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Test Store",
+                          "words":  [
+                                        {
+                                            "y":  24,
+                                            "height":  16,
+                                            "width":  42,
+                                            "text":  "Test",
+                                            "x":  979
+                                        },
+                                        {
+                                            "y":  24,
+                                            "height":  16,
+                                            "width":  51,
+                                            "text":  "Store",
+                                            "x":  1026
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Search in names, phones, emails or addresses...",
+                          "words":  [
+                                        {
+                                            "y":  113,
+                                            "height":  12,
+                                            "width":  51,
+                                            "text":  "Search",
+                                            "x":  907
+                                        },
+                                        {
+                                            "y":  113,
+                                            "height":  12,
+                                            "width":  12,
+                                            "text":  "in",
+                                            "x":  964
+                                        },
+                                        {
+                                            "y":  116,
+                                            "height":  12,
+                                            "width":  53,
+                                            "text":  "names,",
+                                            "x":  982
+                                        },
+                                        {
+                                            "y":  113,
+                                            "height":  15,
+                                            "width":  58,
+                                            "text":  "phones,",
+                                            "x":  1042
+                                        },
+                                        {
+                                            "y":  113,
+                                            "height":  12,
+                                            "width":  48,
+                                            "text":  "emails",
+                                            "x":  1106
+                                        },
+                                        {
+                                            "y":  116,
+                                            "height":  9,
+                                            "width":  15,
+                                            "text":  "or",
+                                            "x":  1159
+                                        },
+                                        {
+                                            "y":  113,
+                                            "height":  12,
+                                            "width":  91,
+                                            "text":  "addresses...",
+                                            "x":  1179
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Linked Stores",
+                          "words":  [
+                                        {
+                                            "y":  317,
+                                            "height":  11,
+                                            "width":  43,
+                                            "text":  "Linked",
+                                            "x":  1176
+                                        },
+                                        {
+                                            "y":  317,
+                                            "height":  11,
+                                            "width":  42,
+                                            "text":  "Stores",
+                                            "x":  1224
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "2",
+                          "words":  [
+                                        {
+                                            "y":  339,
+                                            "height":  18,
+                                            "width":  12,
+                                            "text":  "2",
+                                            "x":  1177
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "EMAIL A",
+                          "words":  [
+                                        {
+                                            "y":  420,
+                                            "height":  10,
+                                            "width":  45,
+                                            "text":  "EMAIL",
+                                            "x":  991
+                                        },
+                                        {
+                                            "y":  419,
+                                            "height":  5,
+                                            "width":  8,
+                                            "text":  "A",
+                                            "x":  1040
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "zahid67@gmail.com",
+                          "words":  [
+                                        {
+                                            "y":  482,
+                                            "height":  16,
+                                            "width":  152,
+                                            "text":  "zahid67@gmail.com",
+                                            "x":  1011
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "xyz@gmai.com",
+                          "words":  [
+                                        {
+                                            "y":  555,
+                                            "height":  16,
+                                            "width":  115,
+                                            "text":  "xyz@gmai.com",
+                                            "x":  1011
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "abcstore@gmail.com",
+                          "words":  [
+                                        {
+                                            "y":  847,
+                                            "height":  16,
+                                            "width":  158,
+                                            "text":  "abcstore@gmail.com",
+                                            "x":  1011
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "OUTSTANDING A",
+                          "words":  [
+                                        {
+                                            "y":  419,
+                                            "height":  11,
+                                            "width":  109,
+                                            "text":  "OUTSTANDING",
+                                            "x":  1317
+                                        },
+                                        {
+                                            "y":  420,
+                                            "height":  4,
+                                            "width":  8,
+                                            "text":  "A",
+                                            "x":  1430
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "*228",
+                          "words":  [
+                                        {
+                                            "y":  483,
+                                            "height":  11,
+                                            "width":  38,
+                                            "text":  "*228",
+                                            "x":  1317
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "*2ø1",
+                          "words":  [
+                                        {
+                                            "y":  556,
+                                            "height":  11,
+                                            "width":  38,
+                                            "text":  "*2ø1",
+                                            "x":  1317
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "527",
+                          "words":  [
+                                        {
+                                            "y":  848,
+                                            "height":  11,
+                                            "width":  28,
+                                            "text":  "527",
+                                            "x":  1347
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "+ Add Custorner",
+                          "words":  [
+                                        {
+                                            "y":  257,
+                                            "height":  12,
+                                            "width":  12,
+                                            "text":  "+",
+                                            "x":  1563
+                                        },
+                                        {
+                                            "y":  258,
+                                            "height":  10,
+                                            "width":  23,
+                                            "text":  "Add",
+                                            "x":  1584
+                                        },
+                                        {
+                                            "y":  258,
+                                            "height":  10,
+                                            "width":  56,
+                                            "text":  "Custorner",
+                                            "x":  1611
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Local Customers",
+                          "words":  [
+                                        {
+                                            "y":  318,
+                                            "height":  10,
+                                            "width":  34,
+                                            "text":  "Local",
+                                            "x":  1580
+                                        },
+                                        {
+                                            "y":  317,
+                                            "height":  11,
+                                            "width":  72,
+                                            "text":  "Customers",
+                                            "x":  1619
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "71",
+                          "words":  [
+                                        {
+                                            "y":  339,
+                                            "height":  18,
+                                            "width":  21,
+                                            "text":  "71",
+                                            "x":  1580
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "LAST PAYMENT",
+                          "words":  [
+                                        {
+                                            "y":  419,
+                                            "height":  11,
+                                            "width":  38,
+                                            "text":  "LAST",
+                                            "x":  1530
+                                        },
+                                        {
+                                            "y":  420,
+                                            "height":  10,
+                                            "width":  72,
+                                            "text":  "PAYMENT",
+                                            "x":  1573
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "29/03/2026",
+                          "words":  [
+                                        {
+                                            "y":  482,
+                                            "height":  14,
+                                            "width":  90,
+                                            "text":  "29/03/2026",
+                                            "x":  1530
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "29/03/2026",
+                          "words":  [
+                                        {
+                                            "y":  555,
+                                            "height":  14,
+                                            "width":  90,
+                                            "text":  "29/03/2026",
+                                            "x":  1530
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "02/04/2026",
+                          "words":  [
+                                        {
+                                            "y":  628,
+                                            "height":  14,
+                                            "width":  90,
+                                            "text":  "02/04/2026",
+                                            "x":  1530
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "13/05/2026",
+                          "words":  [
+                                        {
+                                            "y":  701,
+                                            "height":  14,
+                                            "width":  86,
+                                            "text":  "13/05/2026",
+                                            "x":  1530
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "12/05/2026",
+                          "words":  [
+                                        {
+                                            "y":  774,
+                                            "height":  14,
+                                            "width":  86,
+                                            "text":  "12/05/2026",
+                                            "x":  1530
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "10/01/2026",
+                          "words":  [
+                                        {
+                                            "y":  847,
+                                            "height":  14,
+                                            "width":  83,
+                                            "text":  "10/01/2026",
+                                            "x":  1530
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "Add Payment",
+                          "words":  [
+                                        {
+                                            "y":  258,
+                                            "height":  10,
+                                            "width":  23,
+                                            "text":  "Add",
+                                            "x":  1732
+                                        },
+                                        {
+                                            "y":  258,
+                                            "height":  12,
+                                            "width":  50,
+                                            "text":  "Payment",
+                                            "x":  1759
+                                        }
+                                    ]
+                      },
+                      {
+                          "text":  "ACTIONS O",
+                          "words":  [
+                                        {
+                                            "y":  419,
+                                            "height":  11,
+                                            "width":  67,
+                                            "text":  "ACTIONS",
+                                            "x":  1766
+                                        },
+                                        {
+                                            "y":  417,
+                                            "height":  17,
+                                            "width":  18,
+                                            "text":  "O",
+                                            "x":  1843
+                                        }
+                                    ]
+                      }
+                  ],
+        "file":  "customer-summary.png"
+    }
+]

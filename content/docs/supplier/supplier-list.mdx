@@ -1,138 +1,395 @@
 ---
 title: Supplier List
-description: View and manage all your suppliers, filter by outstanding dues, sort by margin or payment status, and take quick actions from one place.
+description: View and manage suppliers, track outstanding balances, record bulk payments, and perform bulk edit and delete actions.
 icon: List
 ---
 
-The **Supplier List** is your main directory of all suppliers added to your pharmacy. It gives you a real-time snapshot of outstanding dues, margin performance, and supplier details, all in one scrollable table.
+The **Supplier List** is your main directory for managing all suppliers added to your pharmacy. From this page, you can search suppliers, check outstanding balances, view supplier details, record payments, and perform bulk actions on multiple suppliers.
+
+Navigate to **Suppliers → Supplier List** from the sidebar.
 
 ---
 
 ## Summary Cards
-At the top of the page, four summary cards give you an at-a-glance overview of your entire supplier network:
+
+At the top of the page, four summary cards provide an overview of your suppliers.
 
 | Card | What it shows |
 | --- | --- |
-| **Total Suppliers** | Total number of supplier profiles in your system |
-| **Outstanding** | Total amount owed across all suppliers, with a count of how many suppliers have a pending balance |
-| **Platform Suppliers** | Number of suppliers linked from the MediFlux platform |
-| **Local Suppliers** | Number of manually added local suppliers |
+| **Total Suppliers** | Total number of suppliers added to your system |
+| **Outstanding** | Click to view outstanding supplier balances |
+| **Platform Suppliers** | Number of suppliers linked through the MediFlux platform |
+| **Local Suppliers** | Number of local suppliers |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782795364857-55022559-ss3.png"
-  title="Summary cards"
-  description="Four summary cards at the top of the Supplier List page."
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/e1e7ff2b-d997-45fb-bcc1-ce2d1108710b-supplier-summary-cards.png"
+  title="Supplier summary cards"
+  description="Overview of total suppliers, outstanding balances, platform suppliers, and local suppliers."
 />
 
 ---
 
 ## Searching Suppliers
-The search bar at the top lets you search across **names, phone numbers, emails, and addresses**. Just start typing and the list filters instantly.
 
-To the left of the search bar is an **All** dropdown. Use it to narrow the search scope if needed.
+Use the search bar at the top of the page to find suppliers by:
+
+- Name
+- Phone number
+- Email address
+- Address
+
+Start typing to filter the supplier list.
+
+The **All** dropdown beside the search bar allows you to change the search scope.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782795714561-279720084-ss4.png"
-  title="Search bar"
-  description="Search across names, phone numbers, emails, and addresses."
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/2741923e-2a33-49a2-9684-228ab770f1a7-supplier-search.png"
+  title="Search suppliers"
+  description="Search suppliers by name, phone number, email address, or address."
 />
 
 ---
 
 ## Filter Chips
-Below the search bar, four quick-filter chips let you slice the list instantly. Click a chip to apply it, click again to remove it:
+
+Below the search bar, you can use quick filters to narrow the supplier list.
 
 | Filter | What it shows |
 | --- | --- |
-| **Outstanding Only** | Only suppliers with a pending outstanding balance |
-| **No Outstanding** | Only suppliers with a zero balance |
-| **Platform Suppliers** | Only platform-linked suppliers |
-| **Local Suppliers** | Only manually added local suppliers |
+| **Outstanding Only** | Suppliers with pending outstanding balances |
+| **No Outstanding** | Suppliers with no outstanding balance |
+| **Platform Suppliers** | Suppliers linked through the MediFlux platform |
+| **Local Suppliers** | Local suppliers |
+
+Click a filter to apply it. Click it again to remove the filter.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782795714562-530333038-ss5.png"
-  title="Filter chips"
-  description="Quick-filter chips for slicing the supplier list."
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/3563b8f1-9228-4439-8cb6-488a1848ae19-supplier-filter-chips.png"
+  title="Supplier filters"
+  description="Filter suppliers by outstanding balance or supplier type."
 />
 
 ---
 
-## The Supplier Table
-The main table lists all your suppliers with the following columns:
+## Supplier Table
+
+The supplier table displays the following information:
 
 | Column | Description |
 | --- | --- |
-| **Name** | Supplier store name. The contact person's name appears below in smaller text |
-| **Phone** | Primary contact number |
-| **License Number** | Drug license number if added. Shows `—` if not provided |
-| **Margin %** | Gross margin percentage calculated from all purchases from this supplier. Shown in green |
-| **Outstanding** | Amount currently owed to this supplier. Shown in red if pending, green if zero |
-| **Actions** | Quick action for that supplier row |
+| **Checkbox** | Select one or more suppliers for bulk actions |
+| **Name** | Supplier name, with address displayed underneath |
+| **Phone** | Supplier contact number |
+| **Margin** | Click **Click to view** to check the supplier's margin details |
+| **Outstanding** | Click **Click to view** to check the supplier's outstanding balance |
+| **Last Payment** | Displays the last payment information, when available |
+| **Actions** | Opens the three-dot menu for supplier-specific actions |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782795926643-496287723-ss6.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/bccbdc34-f8c1-4e1e-9de4-24b285c3505e-supplier-table.png"
   title="Supplier table"
-  description="Main table listing all suppliers with details and actions."
+  description="View supplier details, margins, outstanding balances, last payment, and actions."
 />
 
----
+### Sorting the Table
 
-## Sorting The Table
-The **Margin %** and **Outstanding** columns are sortable. Click the column header to toggle between ascending and descending order. The small up/down arrows next to the header show the current sort direction.
+Click the sorting arrows beside supported column headings to arrange suppliers in ascending or descending order.
 
-This is useful for quickly spotting:
-
-- Suppliers with the highest pending dues
-- Suppliers giving you the best or worst margin on purchases
-
-<Callout type="info">
-**Tip:** Sort by **Outstanding** to instantly see which suppliers you owe the most money to. Click again to reverse the order and find fully paid suppliers.
-</Callout>
+You can use sorting to review suppliers by margin, outstanding balance, or last payment.
 
 ---
 
-## Row Action, View Ledger
-Clicking the **three-dot menu (⋮)** at the end of any supplier row gives you one quick action:
+## Supplier Actions
 
-- **View Ledger:** jumps directly to that supplier's ledger entries
+At the top-right of the Supplier List, you will find:
 
-To access the full supplier profile, click on the **supplier name** directly in the table.
+- **+ Add Supplier**
+- **Add Payment**
+- **Actions**
+
+The **Actions** dropdown contains the following options:
+
+| Action | Description |
+| --- | --- |
+| **Bulk Payment** | Record payments for multiple suppliers |
+| **Link** | Access the supplier linking option |
+| **Import** | Import supplier data |
+| **Export** | Export supplier data |
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782796347939-943005173-ss7.png"
-  title="Row actions"
-  description="Three-dot menu open showing View Ledger option."
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/422aa0f2-1a62-46ce-8ca3-5f085af2553b-actions-supplier.png"
+  title="Supplier actions dropdown"
+  description="Access Bulk Payment, Link, Import, and Export from the Actions menu."
 />
 
 ---
 
-## Adding A Supplier
-Click **+ Add Supplier** at the top-right of the page to create a new supplier profile. See <a href="/docs/supplier/add-supplier">Add a Supplier</a> for a full walkthrough.
+## Bulk Supplier Payment
+
+The **Bulk Payment** feature allows you to record payments for multiple suppliers in a single workflow.
+
+Instead of opening each supplier's ledger and recording payments individually, you can select the suppliers, enter their payment details, and submit them together.
+
+### How to Record Bulk Supplier Payments
+
+<Steps>
+
+<Step title="Open Bulk Payment">
+
+Go to **Suppliers → Supplier List**.
+
+Click **Actions → Bulk Payment**.
+
+The **Bulk Supplier Payment** dialog opens.
+
+</Step>
+
+<Step title="Select suppliers">
+
+The dialog displays a list of suppliers along with their outstanding balances.
+
+Use the checkboxes to select the suppliers you want to pay.
+
+You can also search for suppliers by name or address.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/3f15b854-813d-4c32-9c56-ed4637c05fe5-select-supplier.png"
+  title="Select suppliers for bulk payment"
+  description="Choose multiple suppliers and review their outstanding balances before recording payments."
+/>
+
+Click **Next** to continue.
+
+</Step>
+
+<Step title="Enter payment details">
+
+The next screen displays the selected suppliers and their current balances.
+
+At the top, you can set the payment date, payment method, and percentage of the amount.
+
+Each supplier has a separate payment section.
+
+| Field | Description |
+| --- | --- |
+| **Amount (₹)** | Amount to pay the supplier |
+| **Full Pay** | Quickly fill the amount required to clear the supplier's current balance |
+| **Payment Date** | Date of the payment |
+| **Method** | Payment method for that supplier |
+| **Receipt No.** | Optional payment receipt number |
+| **Notes** | Optional notes about the payment |
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/24ec5dde-6c0e-4aeb-a849-3a8272363528-bulk-payment.png"
+  title="Bulk Supplier Payment details"
+  description="Enter individual payment amounts, dates, methods, receipt numbers, and notes for selected suppliers."
+/>
+
+</Step>
+
+<Step title="Review the total payment">
+
+At the bottom of the dialog, **Total Payment** shows the combined amount entered for the selected suppliers.
+
+Review the amounts and payment details before proceeding.
+
+</Step>
+
+<Step title="Submit payments">
+
+Click **Submit** to record the bulk supplier payments.
+
+</Step>
+
+</Steps>
+
+<Note>
+Each supplier has an individual payment amount and payment method. You can use **Full Pay** for suppliers whose outstanding balance you want to clear completely.
+</Note>
 
 ---
+
+## Bulk Actions
+
+The Supplier List also supports selecting multiple suppliers to perform bulk actions.
+
+Available bulk actions include:
+
+- **Bulk Edit**
+- **Bulk Delete**
+
+### Selecting Suppliers
+
+<Steps>
+
+<Step title="Select supplier records">
+
+Go to **Suppliers → Supplier List**.
+
+Tick the checkbox beside each supplier you want to include.
+
+You can also use the checkbox in the table header to select all suppliers currently displayed.
+
+</Step>
+
+<Step title="Choose a bulk action">
+
+Once suppliers are selected, a selection bar appears above the table.
+
+It displays the number of selected suppliers and the available actions:
+
+- **Bulk Edit**
+- **Bulk Delete**
+- **Clear Selection**
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/6db8628a-d393-43a6-a299-8805f4fa99fc-bulk-delete.png"
+  title="Bulk supplier selection"
+  description="Select multiple suppliers to access Bulk Edit, Bulk Delete, and Clear Selection."
+/>
+
+</Step>
+
+</Steps>
+
+---
+
+### Bulk Edit Suppliers
+
+**Bulk Edit** allows you to update the **State** of multiple selected suppliers at once.
+
+<Warning title="Bulk Edit limitation">
+Currently, Bulk Edit supports changing only the supplier's **State**. Other supplier details cannot be modified through this bulk action.
+</Warning>
+
+#### How to Bulk Edit Suppliers
+
+<Steps>
+
+<Step title="Select suppliers">
+
+Tick the checkboxes beside the suppliers you want to update.
+
+</Step>
+
+<Step title="Open Bulk Edit">
+
+Click **Bulk Edit** in the selection bar.
+
+The **Bulk Edit Suppliers** dialog opens and displays the number of selected suppliers.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/4bbc809f-6cc9-45a1-892f-93ef4ffbff84-bulk-edit.png"
+  title="Bulk Edit Suppliers"
+  description="Update the State field for multiple selected suppliers."
+/>
+
+</Step>
+
+<Step title="Choose a state">
+
+Open the **State** dropdown and select the state you want to assign to the selected suppliers.
+
+The default option is **Select State (Unchanged)**.
+
+</Step>
+
+<Step title="Apply the update">
+
+Click **Apply Updates** to save the state change for the selected suppliers.
+
+</Step>
+
+</Steps>
+
+<Note>
+The selected state is applied to all suppliers included in the bulk edit operation.
+</Note>
+
+---
+
+### Bulk Delete Suppliers
+
+**Bulk Delete** allows you to delete multiple selected supplier records in one operation.
+
+<Steps>
+
+<Step title="Select suppliers">
+
+Tick the checkboxes beside the suppliers you want to delete.
+
+</Step>
+
+<Step title="Choose Bulk Delete">
+
+Click **Bulk Delete** in the selection bar.
+
+</Step>
+
+<Step title="Review the deletion">
+
+Review the selected suppliers and any confirmation shown by MediFlux before proceeding.
+
+</Step>
+
+</Steps>
+
+<Warning title="Check before deleting">
+Make sure you have selected the correct suppliers before using Bulk Delete. The screenshots provided do not establish whether deleted suppliers can be restored, so do not assume this action is reversible.
+</Warning>
+
+### Clear Selection
+
+Click **Clear Selection** to deselect all currently selected suppliers and close the bulk action bar.
+
+---
+
+## Row Actions and Supplier Details
+
+Click the **three-dot menu (⋮)** in a supplier's row to access the available actions for that supplier.
+
+To open the supplier's full profile, click the **supplier name**.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/b3400f3e-fea8-430c-9feb-989dda4c1ddb-individual-supplier-actions.png"
+  title="Supplier row actions"
+  description="Access supplier-specific actions from the three-dot menu."
+/>
+
+---
+
+## Adding a Supplier
+
+Click **+ Add Supplier** at the top-right to create a new supplier profile.
+
+For detailed instructions, see [Add a Supplier](/docs/supplier/add-supplier).
+
+---
+
 ## Common Follow-Ups
+
 <Cards cols={2}>
   <Card
     title="Supplier Ledger"
-    description="Check outstanding dues and record payments to suppliers."
+    description="Review supplier transactions, outstanding dues, and payment history."
     href="/docs/supplier/supplier-ledger"
     icon="BookOpen"
   />
   <Card
     title="Add a Supplier"
-    description="Create a new supplier profile if someone is missing from the list."
+    description="Create a new supplier profile."
     href="/docs/supplier/add-supplier"
     icon="UserPlus"
   />
   <Card
     title="Customer List"
-    description="Manage customers who might also be suppliers in wholesale scenarios."
+    description="View and manage customer records."
     href="/docs/customers/customer-list"
     icon="Users"
   />
   <Card
     title="Drug List"
-    description="Check stock levels before placing new orders with suppliers."
+    description="Review medicine inventory and stock details."
     href="/docs/inventory/drug-list"
     icon="Pill"
   />

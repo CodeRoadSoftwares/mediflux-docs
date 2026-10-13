@@ -9,42 +9,46 @@ The **Sales List** is your complete record of every sale made in your pharmacy. 
 ---
 
 ## Searching Sales
-The search bar at the top lets you search across **suppliers, drugs, and challan numbers**. Just start typing and the list filters instantly.
+
+The search bar at the top lets you search across **customers, drugs, and invoice numbers**. Just start typing and the list filters instantly.
 
 To the left of the search bar is an **All** dropdown. Use it to narrow the search scope if needed.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666304362-940150308-salelist-sidebar.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/0c085041-1c62-4efc-ad14-2f2a3a132a26-sidebar-saleslist.png"
   title="Sales list"
-  description="Navigate to Sales list from sidebar"
+  description="Navigate to Sales List from the sidebar."
 />
 
 ---
 
 ## Filter Chips
-Below the search bar, six quick-filter chips let you slice the list by sale type instantly:
+
+Below the search bar, eight quick-filter chips let you filter the sales list by sale type or category.
 
 | Filter | What it shows |
 | --- | --- |
 | **NRx** | Non-prescription medicine sales |
 | **H1** | Schedule H1 controlled medicine sales |
-| **Cash** | Standard retail cash sales |
-| **Wholesale** | Bulk sales to another pharmacy or business |
+| **Cash** | Cash sales |
+| **Wholesale** | Wholesale sales to pharmacies or businesses |
+| **Retail** | Retail sales made to individual customers |
 | **Stock Issue** | Internal stock movement recorded as a sale |
 | **Challan** | Delivery challans |
 | **Estimates** | Estimated bills not yet finalised |
 
-Click a chip to apply it, click again to remove it.
+Click a chip to apply it, and click again to remove it.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666396509-750740759-sales-filetchip.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/789b8f72-0824-4177-afd3-706372f1bdbe-sales-filterchips.png"
   title="Filter chips"
-  description="Quick-filter chips for slicing the sales list by sale type."
+  description="Quick-filter chips for NRx, H1, Cash, Wholesale, Retail, Stock Issue, Challan, and Estimates."
 />
 
 ---
 
 ## The Sales Table
+
 The main table lists all your sales with the following columns:
 
 | Column | Description |
@@ -57,7 +61,7 @@ The main table lists all your sales with the following columns:
 The page shows a **Found X** count above the table indicating how many sales match the current filters.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666455695-86851393-sales-table.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/67ee03da-9787-4e8a-93ce-c8320a4c349a-sale-columns.png"
   title="Sales List table"
   description="Main table listing all sales with details, customer, items, and actions."
 />
@@ -65,6 +69,7 @@ The page shows a **Found X** count above the table indicating how many sales mat
 ---
 
 ## Expanding A Sale Row
+
 Click the **chevron (▾)** on the left of any sale row to expand it and see the full line item breakdown:
 
 | Column | Description |
@@ -82,7 +87,7 @@ Click the **chevron (▾)** on the left of any sale row to expand it and see the
 The **Grand Total** is shown at the bottom right of the expanded row.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666519268-528475441-expanded-sale-row.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/d179244c-50cb-410b-ba5a-4535d5307c20-sale-dropdown.png"
   title="Expanded sale row"
   description="Line item breakdown with HSN, product, batch, expiry, quantity, MRP, discount, and total."
 />
@@ -90,6 +95,7 @@ The **Grand Total** is shown at the bottom right of the expanded row.
 ---
 
 ## Row Actions
+
 Clicking the **three-dot menu (⋮)** on any sale row opens a quick-actions menu with three options:
 
 | Option | What it does |
@@ -101,7 +107,7 @@ Clicking the **three-dot menu (⋮)** on any sale row opens a quick-actions menu
 These options are the same for all sale types.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666705318-74862538-action-menu.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/1665ff16-0590-40ac-a3a1-a2c911c8a799-sale-actions.png"
   title="Row actions"
   description="Three-dot menu showing View Invoice, Update, and Return Sale options."
 />
@@ -109,6 +115,7 @@ These options are the same for all sale types.
 ---
 
 ## Filters Panel
+
 Click the **Filter** button at the top-right to open the **Sales Filters** panel:
 
 | Filter | Options |
@@ -124,13 +131,15 @@ Click the **Filter** button at the top-right to open the **Sales Filters** panel
 Click **Apply** to apply filters. The filter button highlights when active filters are applied.
 
 <Figure
-  src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783666852559-987432627-sales-list-filter.png"
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/660c7583-6a73-4ff1-a37d-72413d53d911-filter-panel.png"
   title="Filter Button"
-  description="Filter by drug type , payment method etc and sort by different options."
+  description="Filter by drug type, payment method, payment status, sale type, date, amount, and sort order."
 />
+
 ---
 
 ## Exporting Sales
+
 Click the **export icon** at the top-right to choose your export format:
 
 - **Export as PDF**
@@ -145,15 +154,19 @@ Click the **export icon** at the top-right to choose your export format:
 ---
 
 ## Adding A Sale From Anywhere
+
 You don't have to navigate to the Sales section to add a sale. Click the **`+` button** in the top-right corner of any screen and select **Add Sale** to start a new sale bill from anywhere in MediFlux.
+
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783667143930-70609404-addsale-quickbutton.png"
   title="Quick Add Sale"
-  description="Click the `+` button in the top-right corner of any screen and select Add Sale to start a new sale from anywhere."
+  description="Click the + button in the top-right corner and select Add Sale."
 />
+
 ---
 
 ## Act On A Sale
+
 <Cards cols={2}>
   <Card
     title="Add Retail Sale"

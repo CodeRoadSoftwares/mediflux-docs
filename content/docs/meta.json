@@ -21,9 +21,11 @@
     "reports",
     "---Accounting---",
     "accounting",
+    "---Clinic Module---",
+    "clinics",
     "---Settings---",
     "settings",
-    "---Clinic Module---",
-    "clinics"
+    "---Wallet---",
+    "wallet"
   ]
 }
