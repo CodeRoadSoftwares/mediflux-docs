@@ -3,34 +3,21 @@ import type { Node } from "fumadocs-core/page-tree";
 import { helpSource, source } from "@/lib/source";
 import { SITE_URL } from "@/lib/site";
 
-const CANONICAL_ORIGIN_URL = "https://docs.mediflux.in";
+// Derive the canonical origin and expected hostname directly from your single source of truth
+const canonicalOrigin = new URL(SITE_URL).origin;
+const expectedHostname = new URL(SITE_URL).hostname;
 
 /**
  * Resolves and validates the canonical origin.
- * Safely verifies that protocol is "https:" and hostname is exactly "docs.mediflux.in".
- * If configuredOrigin doesn't match both exactly, uses canonicalOrigin.
+ * Safely returns the origin defined in SITE_URL.
  */
 function getCanonicalOrigin(): string {
-  const canonicalOrigin = new URL(CANONICAL_ORIGIN_URL);
-
-  try {
-    const configuredOrigin = new URL(SITE_URL);
-    if (
-      configuredOrigin.protocol === "https:" &&
-      configuredOrigin.hostname === "docs.mediflux.in"
-    ) {
-      return configuredOrigin.origin;
-    }
-  } catch {
-    // If SITE_URL is missing or invalid, fallback to canonicalOrigin
-  }
-
-  return canonicalOrigin.origin;
+  return canonicalOrigin;
 }
 
 /**
  * Normalizes a candidate URL path or absolute URL into a strict, standards-compliant sitemap URL.
- * - Enforces HTTPS and exact docs.mediflux.in hostname
+ * - Enforces HTTPS and the exact hostname defined in SITE_URL (e.g., www.docs.mediflux.in)
  * - Drops query strings and hash fragments
  * - Collapses duplicate slashes
  * - Preserves trailing slash on homepage ("/") and strips trailing slashes on all subpaths
@@ -44,9 +31,9 @@ function normalizeUrl(rawUrl: string, baseOrigin: string): string | null {
   try {
     const parsed = new URL(trimmed, baseOrigin);
 
-    // Exact protocol and hostname match
+    // Exact protocol and hostname match based on SITE_URL
     if (parsed.protocol !== "https:") return null;
-    if (parsed.hostname !== "docs.mediflux.in") return null;
+    if (parsed.hostname !== expectedHostname) return null;
 
     // Collapse duplicate slashes in pathname
     let pathname = parsed.pathname.replace(/\/+/g, "/");
