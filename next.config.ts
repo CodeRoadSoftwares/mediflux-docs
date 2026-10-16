@@ -4,9 +4,23 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async redirects() {
-    // Keep URLs from the previous documentation structure working. These are
-    // permanent redirects so crawlers replace the retired URLs in their index.
     return [
+      // ---------------------------------------------------------
+      // NEW: Force all non-www traffic to the www domain
+      // This must be at the top so it catches the domain first
+      // ---------------------------------------------------------
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "docs.mediflux.in",
+          },
+        ],
+        destination: "https://www.docs.mediflux.in/:path*",
+        permanent: true,
+      },
+    
       // Renamed sections.
       { source: "/docs/clinic/:path*", destination: "/docs/clinics/:path*", permanent: true },
       { source: "/docs/drugs/:path*", destination: "/docs/inventory/:path*", permanent: true },
