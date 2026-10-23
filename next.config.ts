@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
         ],
         destination: "https://www.docs.mediflux.in/:path*",
         permanent: true,
-      },
+      },  
     
       // Renamed sections.
       { source: "/docs/clinic/:path*", destination: "/docs/clinics/:path*", permanent: true },
