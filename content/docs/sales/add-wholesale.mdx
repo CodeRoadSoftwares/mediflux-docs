@@ -1,17 +1,17 @@
 ---
-title: Add Wholesale
-description: Create wholesale sale and Challan bills with HSN codes, split tax breakdowns, adjusted returns, and quick drug addition.
+title: "Add Wholesale"
+description: "Learn how to create a wholesale pharmacy bill or Challan in MediFlux. Manage HSN codes, split taxes, adjusted returns, and bulk pricing easily."
 icon: Truck
 ---
 
-The **Add Wholesale** page is where you create sale bills for other pharmacies, distributors, and businesses. It supports both normal sale invoicing and **Challan mode** for delivery notes that can be converted to sales later. The wholesale layout includes additional columns for HSN codes, free units, discounts, and split tax breakdowns.
+The **Add Wholesale** page is where you **create wholesale pharmacy bills** and Challans for other pharmacies, distributors, and businesses in **MediFlux**. It supports both normal sale invoicing and **Challan mode** for delivery notes that can be converted to sales later. The wholesale layout includes additional columns for HSN codes, free units, discounts, and split tax breakdowns.
 
 Navigate here from the sidebar: **Sales → Add Sale**, then click **Wholesale** at the top-right.
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783937800722-967118673-add-sale-sidebar.png"
-  title="Add Wholesale page"
-  description="Wholesale mode with Challan toggle, customer selection, and drug table."
+  title="MediFlux Add Wholesale Pharmacy Sale Page"
+  description="The MediFlux wholesale sale page showing Challan toggle, customer selection, and the wholesale drug table."
 />
 
 ---
@@ -43,8 +43,8 @@ If you are in the middle of adding a sale and need to navigate away, click **Sav
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783937800716-13436338-wholesale-draft.png"
-  title="Drafts panel"
-  description="Access saved draft bills and resume them anytime."
+  title="MediFlux Saved Wholesale Draft Bills Panel"
+  description="Access and resume saved draft wholesale pharmacy bills anytime in MediFlux."
 />
 
 ---
@@ -60,8 +60,8 @@ The left panel in Wholesale mode has two options:
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783937800715-605577947-sale-mode.png"
-  title="Left panel options"
-  description="Sale Mode toggle and Local Sale tax switch."
+  title="MediFlux Wholesale Sale Mode and Tax Toggle"
+  description="The left panel in MediFlux wholesale sale showing the Sale Mode toggle and Local Sale tax switch."
 />
 
 ### Sale Mode: Normal vs Challan
@@ -77,7 +77,7 @@ Once converted to a sale, the challan becomes a regular wholesale bill with paym
 
 ---
 
-## Customer And Salesperson
+## Customer and Salesperson
 
 | Field | Description |
 | --- | --- |
@@ -86,8 +86,8 @@ Once converted to a sale, the challan becomes a regular wholesale bill with paym
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938063319-96447838-customer-salesperson.png"
-  title="Customer and salesperson selection"
-  description="Select a wholesale customer and assign a salesperson."
+  title="MediFlux Wholesale Customer and Salesperson Selection"
+  description="Select a wholesale pharmacy customer and assign a salesperson for commission tracking in MediFlux."
 />
 
 ---
@@ -104,8 +104,8 @@ Select the payment status for this sale:
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938063317-807345784-payment-options.png"
-  title="Payment status selection"
-  description="Choose between Paid, Unpaid, or Partial payment."
+  title="MediFlux Wholesale Payment Status Options"
+  description="Choose between Paid, Unpaid, or Partial payment status for wholesale pharmacy bills."
 />
 
 When **Paid** or **Partial** is selected, additional fields appear:
@@ -122,8 +122,8 @@ When **Card**, **UPI**, or **Net Banking** is selected, a **bank details dropdow
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938135349-539772848-bank-details.png"
-  title="Bank details dropdown"
-  description="Select the linked account for Card, UPI, or Net Banking payments."
+  title="MediFlux Linked Bank Account Details for Wholesale"
+  description="Select the linked bank account for Card, UPI, or Net Banking payments in MediFlux wholesale sales."
 />
 
 When **Unpaid** is selected, the Payment Method defaults to **None**, Paid Amount and Discount % remain editable, and the bank details section is hidden.
@@ -179,8 +179,8 @@ For example, enter `1500` to adjust ₹1,500 against the current bill.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/da1320d8-b064-4215-8f9a-1a6de563a5bf-adjusted-return-wholesale.png"
-  title="Direct Return in wholesale billing"
-  description="Enter a return amount to adjust it against the current wholesale sale."
+  title="MediFlux Direct Return Adjustment in Wholesale Billing"
+  description="Enter a return amount to adjust it against the current wholesale pharmacy sale in MediFlux."
 />
 
 </Step>
@@ -245,9 +245,9 @@ The remaining ₹935 is handled according to the payment status:
 
 | Payment Status | What happens |
 | --- | --- |
-| **Paid** | The remaining ₹730 is recorded as paid by cash |
-| **Partial** | The entered payment is deducted from ₹730, and the rest is recorded as customer credit |
-| **Unpaid** | The entire remaining ₹730 is recorded as customer credit |
+| **Paid** | The remaining amount is recorded as paid by cash |
+| **Partial** | The entered payment is deducted from the remaining amount, and the rest is recorded as customer credit |
+| **Unpaid** | The entire remaining amount is recorded as customer credit |
 
 ##### Example: Partial Payment
 
@@ -257,16 +257,16 @@ Suppose the customer pays ₹200 after the return adjustment.
 | --- | ---: |
 | Gross Sale Amount | ₹2,230 |
 | Direct Return | -₹1,500 |
-| Remaining Amount | ₹935 |
+| Remaining Amount | ₹730 |
 | Paid Amount | -₹200 |
-| Outstanding Credit | ₹735 |
+| Outstanding Credit | ₹530 |
 
-The remaining ₹735 is recorded as outstanding credit.
+The remaining ₹530 is recorded as outstanding credit.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/610538f0-57e7-4268-b209-45b5d05cd5f4-directreturn-partial-payment.png"
-  title="Direct Return with partial payment"
-  description="The return is deducted from the sale first, and the unpaid portion is recorded as customer credit."
+  title="MediFlux Wholesale Direct Return with Partial Payment"
+  description="The return is deducted from the wholesale sale first, and the unpaid portion is recorded as customer credit in MediFlux."
 />
 
 You can review the outstanding balance in [Customer Ledger](/docs/customers/customer-ledger).
@@ -305,8 +305,8 @@ The excess is saved as advance credit for future purchases and reduces the custo
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/d4b19b77-52c4-4d43-8bf3-a1d96177d045-wholesale-keepcredit.png"
-  title="Keep excess return as credit"
-  description="Retain the excess return amount as customer credit instead of issuing a refund."
+  title="MediFlux Keep Excess Wholesale Return as Customer Credit"
+  description="Retain the excess wholesale return amount as customer credit instead of issuing a refund in MediFlux."
 />
 
 Click **Confirm & Complete Sale** to save the adjustment.
@@ -359,8 +359,8 @@ Click **Confirm & Complete Sale** to complete the adjustment.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/c11f4114-3522-4d3b-bc72-bc484e865ad3-wholesale-refund.png"
-  title="Refund excess return amount"
-  description="Choose the refund amount and payment method before completing the wholesale sale."
+  title="MediFlux Refund Excess Wholesale Return to Customer"
+  description="Choose the refund amount and payment method before completing the wholesale pharmacy sale in MediFlux."
 />
 
 <Note>
@@ -432,8 +432,8 @@ For example:
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/8e788d57-2741-4e22-9de7-66d2a2c35a5b-wholesale-returned-sale.png"
-  title="Wholesale adjusted return summary"
-  description="Review the gross total, return adjustment, and remaining net payable amount."
+  title="MediFlux Wholesale Adjusted Return Summary Breakdown"
+  description="Review the gross total, return adjustment, and remaining net payable amount for wholesale pharmacy sales."
 />
 
 When the sale is recorded, the confirmation dialog also shows that a return adjustment was applied.
@@ -546,13 +546,13 @@ Click the **grid icon (⊞)** at the bottom of the table to add more drug rows.
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938260260-548234085-drug-table.png"
-  title="Wholesale drug table"
-  description="Columns for HSN, free units, rate, MRP, discount, and split GST."
+  title="MediFlux Wholesale Pharmacy Drug Table"
+  description="The MediFlux wholesale drug table with columns for HSN, free units, rate, MRP, discount, and split GST."
 />
 
 ---
 
-## Quick Add Drug (`Alt + D`)
+## Quick Add Drug (Alt + D)
 
 If a medicine is not available in your Drug List while creating a wholesale sale, you can add it directly without leaving the **Add Sale** page.
 
@@ -560,8 +560,8 @@ Press `Alt + D` to open the **Quick Add Drug** dialog. The medicine name you wer
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/ce975837-6f34-4679-93c9-c9ad6d9cad50-wholesale-add-drug.png"
-  title="Quick Add Drug"
-  description="Add a new medicine directly from the Add Sale page using Alt + D without interrupting wholesale billing."
+  title="MediFlux Quick Add Drug from Wholesale Billing Screen"
+  description="Add a new medicine directly from the MediFlux Add Sale page using Alt + D without interrupting wholesale pharmacy billing."
 />
 
 ### How To Quickly Add A Drug
@@ -630,8 +630,8 @@ Once you select a drug and a customer, a hint appears below the drug table:
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938260255-28942719-previous-sale.png"
-  title="Price comparison hint"
-  description="View past transactions and negotiated rates for this drug and customer."
+  title="MediFlux Wholesale Drug Price Comparison History"
+  description="View past wholesale transactions and negotiated rates for a specific drug and customer in MediFlux."
 />
 
 If previous sale data exists for that drug and customer, clicking the hint opens a panel showing past transactions with date, batch, rate, and discount. This helps you maintain consistent pricing and quickly reference past negotiations.
@@ -646,8 +646,8 @@ The **Additional Notes** field at the bottom is for entering specific instructio
 
 <Figure
   src="https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783938260255-347513752-additional-notes.png"
-  title="Additional notes field"
-  description="Enter delivery remarks, terms of sale, or specific instructions."
+  title="MediFlux Additional Notes for Wholesale Pharmacy Sales"
+  description="Enter delivery remarks, terms of sale, or specific instructions for wholesale pharmacy transactions in MediFlux."
 />
 
 ---
@@ -662,7 +662,7 @@ When an adjusted return is applied, the summary also shows the return adjustment
 
 ---
 
-## Saving And Submitting
+## Saving and Submitting
 
 | Button | What it does |
 | --- | --- |

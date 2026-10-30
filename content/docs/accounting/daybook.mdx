@@ -1,26 +1,26 @@
 ---
-title: Daybook
-description: View the daily record of all financial transactions in MediFlux. See money received, money spent, customer and supplier dues, and every journal entry for the selected period.
+title: "Daybook"
+description: "Track daily pharmacy financial transactions in MediFlux. View the Daybook for money received, spent, customer dues, and journal entries easily."
 icon: BookOpen
 ---
 
-The **Daybook** is a chronological list of every financial transaction that affected your accounts during the selected period. It shows money that came in, money that went out, new customer dues, and new supplier dues, along with the full debit and credit details of each entry.
+The **Daybook** is a chronological list of every **pharmacy financial transaction** that affected your accounts during the selected period in **MediFlux**. It shows money that came in, money that went out, new customer dues, and new supplier dues, along with the full debit and credit details of each entry.
 
 Navigate here from the sidebar: **Accounting → Daybook**.
 
 <Note>
-By default the Daybook shows the **current month**. A newly initialized store will usually show only the Accounting Initialization entry and zero values in most summary cards.
+By default, the Daybook shows the **current month**. A newly initialized store will usually show only the Accounting Initialization entry and zero values in most summary cards.
 </Note>
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/0b81ef48-9199-4738-bb2d-bed8aa2e8b65-daybook.png"
-  title="Daybook"
-  description="Daybook overview of a mature store."
+  title="MediFlux Pharmacy Accounting Daybook Overview"
+  description="Daybook overview showing daily financial transactions, money received, and dues for a pharmacy in MediFlux."
 />
 
 ---
 
-## Summary cards
+## Summary Cards
 
 Four cards at the top give you a quick overview of the selected period.
 
@@ -33,8 +33,8 @@ Four cards at the top give you a quick overview of the selected period.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/5db9e538-bf6c-4a1b-8f7d-b84a58ea1ddd-daybook-summarycards.png"
-  title="Summary Cards"
-  description="Summary cards for money received, money spent, customer dues, and supplier dues."
+  title="MediFlux Daybook Summary Cards"
+  description="Summary cards for money received, money spent, customer dues, and supplier dues in the MediFlux pharmacy Daybook."
 />
 
 ---
@@ -49,7 +49,7 @@ Use the controls at the top to change the period or narrow the list.
 | **Search description, account or...** | Find entries by description text, account name, or journal ID |
 | **All entry types** | Filter by how the entry was created |
 
-### Date range picker
+### Date Range Picker
 
 Click the date range to open the calendar. You can pick custom dates or use the quick options:
 
@@ -59,11 +59,11 @@ Click **Apply** to update the Daybook.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/06d71b6e-46f8-4cee-8757-51ab4b25d37e-date-range-filter.png"
-  title="Date range picker"
-  description="Calendar with quick filter options for common periods."
+  title="MediFlux Daybook Date Range Picker"
+  description="Calendar with quick filter options for common periods in the MediFlux pharmacy Daybook."
 />
 
-### Entry type filter
+### Entry Type Filter
 
 | Type | Meaning |
 |------|---------|
@@ -77,7 +77,7 @@ Click **Apply** to update the Daybook.
 
 ---
 
-## Understanding the table
+## Understanding the Table
 
 | Column | Description |
 |--------|-------------|
@@ -88,13 +88,13 @@ Click **Apply** to update the Daybook.
 | **Credit** | Account(s) credited. A small `+N` badge shows how many accounts are involved when there are more than one |
 | **Amount** | Value of the entry |
 
-### Clickable sale and purchase links
+### Clickable Sale and Purchase Links
 
 When a description contains a **Sale** or **Purchase** link (shown with an arrow icon), click it to open that specific sale or purchase document. This lets you jump straight from the Daybook to the original transaction.
 
 ---
 
-## Example entries of a test store
+## Example Entries of a Test Store
 
 | Date | Entry | Description | Debit | Credit | Amount |
 |------|-------|-------------|-------|--------|--------|
@@ -109,15 +109,15 @@ When a description contains a **Sale** or **Purchase** link (shown with an arrow
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/e5a9dcc3-e9d8-4fdf-a9bc-62113d70213a-daybook-entries.png"
-  title="Auto-generated entries"
-  description="Sale, credit note, stock adjustment, and return sale entries with linked descriptions."
+  title="MediFlux Auto-Generated Daybook Entries"
+  description="Auto-generated pharmacy sale, credit note, stock adjustment, and return sale entries with linked descriptions in MediFlux."
 />
 
 ---
 
-## Newly initialized stores
+## Newly Initialized Stores
 
-On a store that has just completed accounting setup you will typically see:
+On a store that has just completed accounting setup, you will typically see:
 
 - Summary cards mostly at `₹0.00` (except Supplier Dues Added if opening balances were entered)
 - A single entry with type **ACCOUNTING INITIALIZATION**
@@ -127,13 +127,13 @@ This is expected. More rows appear as soon as you record sales, purchases, payme
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/f0f11374-3804-4cc7-b374-54a262effe94-new-accounting.png"
-  title="Daybook on a newly initialized store"
-  description="Single Accounting Initialization entry with zero values in most summary cards."
+  title="MediFlux Newly Initialized Store Daybook"
+  description="Single Accounting Initialization entry with zero values in most summary cards for a new MediFlux pharmacy store."
 />
 
 ---
 
-## Common mistakes
+## Common Mistakes
 
 <Warning title="Looking at the wrong date range">
 The Daybook defaults to the **current month**. If the list looks empty or incomplete, open the date range picker and select a wider period or **Last Month**.
@@ -145,7 +145,7 @@ Some descriptions show a **Sale** or **Purchase** link with an arrow. Clicking t
 
 ---
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 <Accordions>
   <Accordion title="What is the difference between Daybook and Journal Entries?">
@@ -164,9 +164,9 @@ Some descriptions show a **Sale** or **Purchase** link with an arrow. Clicking t
 
 ---
 
-## Next steps
+## Next Steps
 
-<Cards>
+<Cards cols={2}>
   <Card
     title="Journal Entries"
     description="View every journal with status, type, and who posted it."
