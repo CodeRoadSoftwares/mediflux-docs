@@ -1,41 +1,41 @@
 ---
-title: ITC Reversals
-description: Review and manage pending ITC reversals for expired stock, charity, personal use, and other cases where input tax credit must be reversed.
+title: "ITC Reversals"
+description: "Manage pharmacy ITC reversals in MediFlux. Track and reverse input tax credit for expired stock, charity, and personal use to ensure GST compliance."
 icon: Receipt
 ---
 
-The **ITC Reversals** page lists every pending Input Tax Credit (ITC) reversal that MediFlux has detected. You can mark items as not applicable or reverse the credit so your GST liability stays accurate.
+The **ITC Reversals** page lists every pending **Input Tax Credit (ITC) reversal** that MediFlux has detected for your **pharmacy**. You can mark items as not applicable or reverse the credit so your GST liability stays accurate and compliant.
 
 Navigate here from the sidebar: **Accounting → ITC Reversals**.
 
 <Figure
   src="/images/accounting/itc-reversals-overview.png"
-  title="ITC Reversals"
-  description="Pending ITC reversal lines with type, value, CGST, SGST, IGST, and actions."
+  title="MediFlux Pharmacy ITC Reversals Overview"
+  description="Pending ITC reversal lines with type, value, CGST, SGST, IGST, and actions for pharmacy GST compliance in MediFlux."
 />
 
 ---
 
-## What is ITC reversal?
+## What Is ITC Reversal?
 
 When you buy medicines or goods, you pay GST to the supplier. That GST is your **Input Tax Credit (ITC)**. You can normally use it to reduce the GST you collect from customers.
 
-Sometimes you are **not allowed** to keep that credit. In those cases the law requires you to **reverse** the ITC. This means you add the credit back to your GST liability (you effectively pay it back to the government).
+Sometimes you are **not allowed** to keep that credit. In those cases, the law requires you to **reverse** the ITC. This means you add the credit back to your GST liability (you effectively pay it back to the government).
 
 Common situations in a pharmacy where ITC must be reversed:
 
 | Situation | Why reversal is required |
 |-----------|--------------------------|
-| **Expired** stock | Medicines that expired and cannot be sold. ITC claimed on their purchase must be reversed |
-| **Charity** / free samples | Goods given free or donated. No taxable supply is made, so ITC is not allowed |
-| **Personal Use** | Stock used for personal or non-business purposes |
-| Other non-business use | Any case where the goods are not used for making taxable supplies |
+| **Expired Stock** | Medicines that expired and cannot be sold. ITC claimed on their purchase must be reversed. |
+| **Charity / Free Samples** | Goods given free or donated. No taxable supply is made, so ITC is not allowed. |
+| **Personal Use** | Stock used for personal or non-business purposes. |
+| **Other Non-Business Use** | Any case where the goods are not used for making taxable supplies. |
 
 MediFlux automatically detects these cases (especially from stock adjustments, expired stock write-offs, and certain debit notes) and adds them to this page as **Pending** lines so you can review and act on them.
 
 ---
 
-## Summary cards
+## Summary Cards
 
 Three cards at the top show the current state of the list.
 
@@ -47,13 +47,13 @@ Three cards at the top show the current state of the list.
 
 <Figure
   src="/images/accounting/itc-reversals-summary-cards.png"
-  title="Summary cards"
-  description="Pending Lines, Total GST Value, and Selected GST Value."
+  title="MediFlux ITC Reversals Summary Cards"
+  description="Summary cards showing Pending Lines, Total GST Value, and Selected GST Value for pharmacy ITC reversals in MediFlux."
 />
 
 ---
 
-## Understanding the table
+## Understanding the Table
 
 | Column | Description |
 |--------|-------------|
@@ -69,23 +69,23 @@ Three cards at the top show the current state of the list.
 
 <Figure
   src="/images/accounting/itc-reversals-table.png"
-  title="ITC Reversals table"
-  description="Date, Type, Value, CGST, SGST, IGST, Status, and row actions."
+  title="MediFlux Pharmacy ITC Reversals Table"
+  description="ITC Reversals table showing Date, Type, Value, CGST, SGST, IGST, Status, and row actions in MediFlux."
 />
 
 ---
 
-## What you can do
+## What You Can Do
 
-### Reverse a single line
+### Reverse a Single Line
 
 Click **Reverse** on any row. MediFlux creates the necessary journal entry that reverses the ITC (debiting the appropriate GST expense/reversal account and crediting the Input GST accounts). The line is then removed from the pending list.
 
-### Mark a line as N/A
+### Mark a Line as N/A
 
 Click **Mark N/A** if the line should not be reversed (for example, the stock was later sold, or the detection was incorrect). The line is cleared from the pending list without creating a reversal entry.
 
-### Bulk actions
+### Bulk Actions
 
 | Button | What it does |
 |--------|--------------|
@@ -96,13 +96,13 @@ You can also check individual boxes and then use the bulk buttons if they suppor
 
 <Figure
   src="/images/accounting/itc-reversals-actions.png"
-  title="Row and bulk actions"
-  description="Mark N/A and Reverse on each row, plus Mark all N/A and Reverse all at the top."
+  title="MediFlux ITC Reversals Row and Bulk Actions"
+  description="Mark N/A and Reverse actions on each row, plus Mark all N/A and Reverse all bulk actions for pharmacy ITC in MediFlux."
 />
 
 ---
 
-## Example pending lines
+## Example Pending Lines
 
 | Date | Type | Value | CGST | SGST | IGST | Status |
 |------|------|-------|------|------|------|--------|
@@ -110,11 +110,11 @@ You can also check individual boxes and then use the bulk buttons if they suppor
 | 19 Aug 2026 | Charity | ₹200.00 | ₹14.13 | ₹14.13 | ₹0.00 | Pending |
 | 20 Aug 2026 | Personal Use | ₹773.80 | ₹53.57 | ₹53.57 | ₹0.00 | Pending |
 
-In this example the **Total GST Value** is ₹1,211.44 (sum of all CGST + SGST).
+In this example, the **Total GST Value** is ₹1,211.44 (sum of all CGST + SGST).
 
 ---
 
-## How the reversal works in the books
+## How the Reversal Works in the Books
 
 When you click **Reverse**:
 
@@ -129,7 +129,7 @@ This keeps your GSTR-3B and other GST returns accurate.
 
 ---
 
-## Common mistakes
+## Common Mistakes
 
 <Warning title="Leaving expired stock reversals pending">
 Expired medicines are one of the most common reasons for ITC reversal in pharmacies. Leaving them in Pending status for a long time can cause your GST returns to understate liability.
@@ -141,7 +141,7 @@ Only reverse lines that genuinely require ITC reversal. If stock was later sold 
 
 ---
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 <Accordions>
   <Accordion title="Does reversing ITC create a journal entry?">
@@ -160,9 +160,9 @@ Only reverse lines that genuinely require ITC reversal. If stock was later sold 
 
 ---
 
-## Next steps
+## Next Steps
 
-<Cards>
+<Cards cols={2}>
   <Card
     title="Journal Entries"
     description="View the reversal journals created when you reverse ITC."
