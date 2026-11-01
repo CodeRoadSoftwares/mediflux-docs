@@ -31,8 +31,7 @@ Go to **Settings → User Management** and select **Create user**.
 
    Review the details and select **Create User**.
 
-![Create New User](/images/faqs/add-user.png)
-*Caption: User Management page for creating a new user and assigning permissions.*
+Selecting **Create User** saves the account, adds the user to the **Store Users** list under **Settings → User Management**, and activates their assigned module permissions immediately.
 
 > **[Note]** The permissions assigned to a user determine what they can view, add, or delete in MediFlux.
 

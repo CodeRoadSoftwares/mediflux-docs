@@ -21,8 +21,7 @@ A sale is added only when you complete the sale and select **+ Add**. Until then
 
 Use **Save Draft** when you need to pause the billing process, review the details later, or complete the sale at another time. When you are ready to finalise it, open the draft and select **+ Add**.
 
-![Save Draft and Add](/images/faqs/save-draft-vs-add.png)
-*Caption: Save Draft and + Add options on the Add Sale page.*
+Both actions appear in the billing footer: **Save Draft** stores the current bill under **Sales → Drafts** without deducting inventory, while **+ Add** finalises the transaction and commits the sale.
 
 > **[Note]** A saved draft is not a completed sale. Saving it does not add the sale to your sales records.
 

@@ -27,8 +27,7 @@ Update the password for the **main account** from **Profile**, or change passwor
 3. Enter the new password in **Password** and again in **Confirm Password**.
 4. Click **Update**.
 
-![Edit Profile](/images/faqs/edit-profile-password.png)
-*Caption: Password and Confirm Password fields in the Edit Profile form.*
+> **[IMAGE PENDING]** Edit Profile dialog showing Password and Confirm Password input fields with Update button. Source this image or expand this section with the specific data.
 
 ---
 
@@ -41,8 +40,7 @@ This action is available to **Admin** users only.
 3. Click **Edit**.
 4. Update the password and save.
 
-![User Management](/images/faqs/user-management.png)
-*Caption: Store Users list under Settings → User Management with Edit action.*
+In the **Store Users** table, locate the user row and click **Edit** under **Actions** to open their profile dialog and enter new credentials.
 
 ---
 

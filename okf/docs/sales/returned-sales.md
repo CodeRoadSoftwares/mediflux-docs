@@ -85,8 +85,7 @@ Click the **chevron (▾)** on the right of any return card to expand it and see
 
 The **Grand Total** is shown at the bottom right of the expanded row.
 
-![Expanded return row](/images/returned-expanded-row.png)
-*Caption: Line item breakdown with HSN, product, batch, expiry, quantity, MRP, discount, and total.*
+> **[IMAGE PENDING]** Expanded return card showing sample line item breakdown with HSN, batch, expiry, MRP, discount, and Grand Total. Source this image or expand this section with the specific data.
 
 ---
 

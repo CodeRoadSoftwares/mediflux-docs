@@ -30,8 +30,7 @@ Go to **Settings → User Management** and find the user whose permissions you w
 
    After updating the permissions, select **Save**.
 
-![Change User Permissions](/images/faqs/change-user-permissions.png)
-*Caption: User permissions can be updated from the Edit User screen.*
+Permissions are configured across individual functional modules — including **Sale**, **Purchase**, **Customer**, **Supplier**, and **Reports** — using dedicated checkboxes for **Read**, **Write**, and **Delete** access.
 
 > **[Note]** Changing a user's permissions controls which features and actions they can access in MediFlux.
 

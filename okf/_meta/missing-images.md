@@ -24,40 +24,40 @@ This manifest audits the **32 dead local image references** identified in `okf/_
 
 ---
 ## 2. Detailed Manifest
-| # | Section | Concept file | Image (basename) | Alt text | Criticality | Status | Notes |
-| :---: | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-| 1 | `help/sales` | `create-debit-note.md` | `generate-debit-note-drug-list.png` | Generate Debit Note from Drug List | **CRITICAL** | pending | Shows Separated View bulk action toolbar to generate debit note; load-bearing for Method 2 procedure. |
-| 2 | `help/sales` | `nrx-sale.md` | `nrx-h1-type-column.png` | Drug Type column | **CRITICAL** | pending | Shows Type column badge (Rx, NRx, H1) in billing table; load-bearing for scheduled drug compliance. |
-| 3 | `help/sales` | `wrong-calculations.md` | `drug-list-separated-view.png` | Drug List – Separated View | **CRITICAL** | pending | Shows batch-level Separated View toggle; load-bearing for locating editable Units field per batch. |
-| 4 | `help/sales` | `wrong-calculations.md` | `edit-units-on-drug.png` | Edit Units | **CRITICAL** | pending | Highlights Units field (tablets per strip) in batch edit dialog; load-bearing for fixing calculation error. |
-| 5 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-actions.png` | MediFlux ITC Reversals Row and Bulk Actions | **SUPPORTING** | pending | Illustrates row and bulk actions table; actions already described in markdown table. |
-| 6 | `docs/sales` | `returned-sales.md` | `returned-expanded-row.png` | Expanded return row | **SUPPORTING** | pending | Illustrates line item breakdown in expanded view; columns already tabulated in markdown. |
-| 7 | `docs/sales` | `scan-and-ocr.md` | `scan-bar-code` | Barcode Scanner | **SUPPORTING** | pending | Data issue: Filename has no extension — verify source MDX; asset cannot be sourced without ext. Viewfinder guidance. |
-| 8 | `docs/sales` | `scan-and-ocr.md` | `scan-ocr-mode.png` | Image (OCR) | **SUPPORTING** | pending | Illustrates OCR text recognition viewfinder on drug packaging. |
-| 9 | `help/account` | `add-user.md` | `add-user.png` | Create New User | **SUPPORTING** | pending | Illustrates completed user creation and permission form; procedural text stands alone. |
-| 10 | `help/account` | `remove-user.md` | `remove-user.png` | Deactivate User | **SUPPORTING** | pending | Shows Deactivate User toggle switch in edit modal; procedure describes action fully. |
-| 11 | `help/account` | `reset-password.md` | `edit-profile-password.png` | Edit Profile | **SUPPORTING** | pending | Shows password update fields in personal profile dialog; steps stand alone. |
-| 12 | `help/account` | `reset-password.md` | `user-management.png` | User Management | **SUPPORTING** | pending | Shows Store Users table with Edit action button; procedure stands alone. |
-| 13 | `help/account` | `user-permission.md` | `change-user-permissions.png` | Change User Permissions | **SUPPORTING** | pending | Shows user permission checkboxes in edit modal; steps describe procedure. |
-| 14 | `help/ledgers` | `customer-adjust-entry.md` | `customer-ledger-adjust.png` | Actions → Adjust | **SUPPORTING** | pending | Visualizes Actions dropdown and Adjust dialog on customer ledger. |
-| 15 | `help/ledgers` | `supplier-adjust-entry.md` | `supplier-ledger-adjust.png` | Actions → Adjust | **SUPPORTING** | pending | Visualizes Actions dropdown and Adjust dialog on supplier ledger. |
-| 16 | `help/purchases` | `add-purchase-from-photo.md` | `add-purchase-scan.png` | Scan supplier invoice | **SUPPORTING** | pending | Shows bill scan option on Add Purchase interface; steps describe workflow. |
-| 17 | `help/sales` | `create-credit-note.md` | `add-credit-note.png` | Add Credit Note | **SUPPORTING** | pending | Illustrates customer selection, drug table, and CN quantity calculation. |
-| 18 | `help/sales` | `create-debit-note.md` | `create-debit-note-page.png` | Create Debit Note page | **SUPPORTING** | pending | Illustrates manual debit note creation table for Method 1. |
-| 19 | `help/sales` | `draft-and-add-sale-diff.md` | `save-draft-vs-add.png` | Save Draft and Add | **SUPPORTING** | pending | Shows Save Draft vs + Add button positions in billing footer. |
-| 20 | `help/sales` | `return-sale.md` | `return-sale.png` | Return Sale | **SUPPORTING** | pending | Shows Return Sale confirmation modal with refund calculation; steps stand alone. |
-| 21 | `help/sales` | `wrong-calculations.md` | `wrong-tabs-calculation.png` | Wrong calculation example | **SUPPORTING** | pending | Illustrates symptom of wrong loose tablet calculation; prose explains cause and fix. |
-| 22 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-overview.png` | MediFlux Pharmacy ITC Reversals Overview | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Top-of-page UI screenshot introducing section; redundant with prose. |
-| 23 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-summary-cards.png` | MediFlux ITC Reversals Summary Cards | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Redundant screenshot of summary card metrics already tabulated in markdown. |
-| 24 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-table.png` | MediFlux Pharmacy ITC Reversals Table | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Redundant screenshot of table columns already detailed in markdown table. |
-| 25 | `docs/clinics` | `overview.md` | `clinic-prescriptions-overview.png` | MediFlux Clinic Prescriptions Overview | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Section banner screenshot illustrating prescription list in overview page. |
-| 26 | `docs/sales` | `returned-sales.md` | `returned-list.png` | Returned page | **DECORATIVE** | removed (Batch 1) | prose-defect: no. General overview screenshot of return list; columns tabulated in prose. |
-| 27 | `help/account` | `change-store-details.md` | `change-store-details.png` | Store Information | **DECORATIVE** | removed (Batch 1) | prose-defect: no. End-of-article UI screenshot; prose explains editable vs restricted fields. |
-| 28 | `help/account` | `login-troubleshoot.md` | `cannot-login.png` | MediFlux Login | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Screenshot of login screen with no procedural dependencies; prose stands alone. |
-| 29 | `help/getting-started` | `how-do-i-sign-in.md` | `sign-in-steps.png` | Sign in steps | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Generic screenshot of login page following self-explanatory 3-step sign in. |
-| 30 | `help/sales` | `cannot-find-a-sale.md` | `find-previous-sale.png` | Sales List | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Redundant screenshot of sales search filters; criteria described in prose. |
-| 31 | `help/sales` | `print-or-share-bill.md` | `print-share-bill.png` | Invoice Actions | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Redundant dialog screenshot; bullet list fully details options in text. |
-| 32 | `help/sales` | `update-sale.md` | `update-sale.png` | Update Sale | **DECORATIVE** | removed (Batch 1) | prose-defect: no. Menu screenshot showing Update option; 3-step numbered procedure stands alone. |
+| # | Section | Concept file | Image (basename) | Alt text | Criticality | Status | Batch | Rewrite summary | Notes |
+| :---: | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :--- | :--- |
+| 1 | `help/sales` | `create-debit-note.md` | `generate-debit-note-drug-list.png` | Generate Debit Note from Drug List | **CRITICAL** | pending | — | — | Shows Separated View bulk action toolbar to generate debit note; load-bearing for Method 2 procedure. |
+| 2 | `help/sales` | `nrx-sale.md` | `nrx-h1-type-column.png` | Drug Type column | **CRITICAL** | pending | — | — | Shows Type column badge (Rx, NRx, H1) in billing table; load-bearing for scheduled drug compliance. |
+| 3 | `help/sales` | `wrong-calculations.md` | `drug-list-separated-view.png` | Drug List – Separated View | **CRITICAL** | pending | — | — | Shows batch-level Separated View toggle; load-bearing for locating editable Units field per batch. |
+| 4 | `help/sales` | `wrong-calculations.md` | `edit-units-on-drug.png` | Edit Units | **CRITICAL** | pending | — | — | Highlights Units field (tablets per strip) in batch edit dialog; load-bearing for fixing calculation error. |
+| 5 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-actions.png` | MediFlux ITC Reversals Row and Bulk Actions | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents row-level Mark N/A & Reverse buttons and bulk Mark all N/A & Reverse all buttons above table | Illustrates row and bulk actions table; actions already described in markdown table. |
+| 6 | `docs/sales` | `returned-sales.md` | `returned-expanded-row.png` | Expanded return row | **SUPPORTING** | promoted to Batch 3 | 2→3 (promoted) | Promoted: carried 9-column sample breakdown and specific product/pricing numbers already structurally tabulated above | Illustrates line item breakdown in expanded view; columns already tabulated in markdown. |
+| 7 | `docs/sales` | `scan-and-ocr.md` | `scan-bar-code` | Barcode Scanner | **SUPPORTING** | pending | 3 | — | Data issue: Filename has no extension — verify source MDX; asset cannot be sourced without ext. Viewfinder guidance. |
+| 8 | `docs/sales` | `scan-and-ocr.md` | `scan-ocr-mode.png` | Image (OCR) | **SUPPORTING** | pending | 3 | — | Illustrates OCR text recognition viewfinder on drug packaging. |
+| 9 | `help/account` | `add-user.md` | `add-user.png` | Create New User | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents that selecting Create User saves account, adds to Store Users list, and activates permissions | Illustrates completed user creation and permission form; procedural text stands alone. |
+| 10 | `help/account` | `remove-user.md` | `remove-user.png` | Deactivate User | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents Deactivate User toggle location under Other Options below permissions grid with Save/Cancel | Shows Deactivate User toggle switch in edit modal; procedure describes action fully. |
+| 11 | `help/account` | `reset-password.md` | `edit-profile-password.png` | Edit Profile | **SUPPORTING** | promoted to Batch 3 | 2→3 (promoted) | Promoted: steps 1–4 already fully cover all depicted fields and buttons without redundant claims | Shows password update fields in personal profile dialog; steps stand alone. |
+| 12 | `help/account` | `reset-password.md` | `user-management.png` | User Management | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents Store Users table layout and clicking Edit under Actions to update credentials | Shows Store Users table with Edit action button; procedure stands alone. |
+| 13 | `help/account` | `user-permission.md` | `change-user-permissions.png` | Change User Permissions | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents module list (Sale, Purchase, Customer, Supplier, Reports) and Read/Write/Delete checkboxes | Shows user permission checkboxes in edit modal; steps describe procedure. |
+| 14 | `help/ledgers` | `customer-adjust-entry.md` | `customer-ledger-adjust.png` | Actions → Adjust | **SUPPORTING** | pending | 3 | — | Visualizes Actions dropdown and Adjust dialog on customer ledger. |
+| 15 | `help/ledgers` | `supplier-adjust-entry.md` | `supplier-ledger-adjust.png` | Actions → Adjust | **SUPPORTING** | pending | 3 | — | Visualizes Actions dropdown and Adjust dialog on supplier ledger. |
+| 16 | `help/purchases` | `add-purchase-from-photo.md` | `add-purchase-scan.png` | Scan supplier invoice | **SUPPORTING** | pending | 3 | — | Shows bill scan option on Add Purchase interface; steps describe workflow. |
+| 17 | `help/sales` | `create-credit-note.md` | `add-credit-note.png` | Add Credit Note | **SUPPORTING** | pending | 3 | — | Illustrates customer selection, drug table, and CN quantity calculation. |
+| 18 | `help/sales` | `create-debit-note.md` | `create-debit-note-page.png` | Create Debit Note page | **SUPPORTING** | pending | 3 | — | Illustrates manual debit note creation table for Method 1. |
+| 19 | `help/sales` | `draft-and-add-sale-diff.md` | `save-draft-vs-add.png` | Save Draft and Add | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents billing footer locations and distinction between Save Draft (paused) and + Add (committed) | Shows Save Draft vs + Add button positions in billing footer. |
+| 20 | `help/sales` | `return-sale.md` | `return-sale.png` | Return Sale | **SUPPORTING** | rewritten (Batch 2) | 2 (done — rewritten) | Documents Return Sale confirmation, Cancel option, and Sale returned successfully! toast message | Shows Return Sale confirmation modal with refund calculation; steps stand alone. |
+| 21 | `help/sales` | `wrong-calculations.md` | `wrong-tabs-calculation.png` | Wrong calculation example | **SUPPORTING** | promoted to Batch 3 | 2→3 (promoted) | Promoted: illustrated concrete numerical billing calculation discrepancy requiring visual grounding | Illustrates symptom of wrong loose tablet calculation; prose explains cause and fix. |
+| 22 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-overview.png` | MediFlux Pharmacy ITC Reversals Overview | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Top-of-page UI screenshot introducing section; redundant with prose. |
+| 23 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-summary-cards.png` | MediFlux ITC Reversals Summary Cards | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Redundant screenshot of summary card metrics already tabulated in markdown. |
+| 24 | `docs/accounting` | `itc-reversals.md` | `itc-reversals-table.png` | MediFlux Pharmacy ITC Reversals Table | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Redundant screenshot of table columns already detailed in markdown table. |
+| 25 | `docs/clinics` | `overview.md` | `clinic-prescriptions-overview.png` | MediFlux Clinic Prescriptions Overview | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Section banner screenshot illustrating prescription list in overview page. |
+| 26 | `docs/sales` | `returned-sales.md` | `returned-list.png` | Returned page | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. General overview screenshot of return list; columns tabulated in prose. |
+| 27 | `help/account` | `change-store-details.md` | `change-store-details.png` | Store Information | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. End-of-article UI screenshot; prose explains editable vs restricted fields. |
+| 28 | `help/account` | `login-troubleshoot.md` | `cannot-login.png` | MediFlux Login | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Screenshot of login screen with no procedural dependencies; prose stands alone. |
+| 29 | `help/getting-started` | `how-do-i-sign-in.md` | `sign-in-steps.png` | Sign in steps | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Generic screenshot of login page following self-explanatory 3-step sign in. |
+| 30 | `help/sales` | `cannot-find-a-sale.md` | `find-previous-sale.png` | Sales List | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Redundant screenshot of sales search filters; criteria described in prose. |
+| 31 | `help/sales` | `print-or-share-bill.md` | `print-share-bill.png` | Invoice Actions | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Redundant dialog screenshot; bullet list fully details options in text. |
+| 32 | `help/sales` | `update-sale.md` | `update-sale.png` | Update Sale | **DECORATIVE** | removed (Batch 1) | 1 (done) | — | prose-defect: no. Menu screenshot showing Update option; 3-step numbered procedure stands alone. |
 
 ---
 
@@ -340,10 +340,11 @@ The remediation of the 32 dead image references will be conducted in three disti
 - **Safety**: None of these images have anchoring prose demonstratives in the subsequent sentence; prose flows naturally after removal without leaving awkward grammatical stubs.
 - **Targets**: `itc-reversals-overview.png`, `itc-reversals-summary-cards.png`, `itc-reversals-table.png`, `clinic-prescriptions-overview.png`, `returned-list.png`, `change-store-details.png`, `cannot-login.png`, `sign-in-steps.png`, `find-previous-sale.png`, `print-share-bill.png`, `update-sale.png`.
 
-### Batch 2 (Text Rewrite & Inline Clarification) — 10 Images
-- **Scope**: 10 **SUPPORTING** images where the surrounding prose already covers the workflow but benefits from minor inline text clarification.
-- **Strategy**: Replace the dead image tag with a brief 1-2 sentence inline description or note, preserving full procedural comprehension without requiring visual assets.
-- **Targets**: `itc-reversals-actions.png`, `returned-expanded-row.png`, `add-user.png`, `remove-user.png`, `edit-profile-password.png`, `user-management.png`, `change-user-permissions.png`, `save-draft-vs-add.png`, `return-sale.png`, `wrong-tabs-calculation.png`.
+### Batch 2 (Text Rewrite & Inline Clarification) — 10 Images (Completed: 7 Rewritten, 3 Promoted)
+- **Scope**: 10 **SUPPORTING** images audited for inline text rewrites vs escape hatch promotion to Batch 3.
+- **Status**: Completed in Phase 4b / Batch 2.
+- **Rewritten (7)**: `itc-reversals-actions.png`, `add-user.png`, `remove-user.png`, `user-management.png`, `change-user-permissions.png`, `save-draft-vs-add.png`, `return-sale.png`.
+- **Promoted to Batch 3 (3)**: `returned-expanded-row.png`, `edit-profile-password.md` (`edit-profile-password.png`), `wrong-tabs-calculation.png` (due to load-bearing tabular/numerical data or complete pre-existing coverage).
 
 ### Batch 3 (Asset Sourcing & R2 Cloud Migration) — 11 Images
 - **Scope**: 4 **CRITICAL** images + 7 **SUPPORTING** images that carry unique visual information (plus 1 extension defect investigation).

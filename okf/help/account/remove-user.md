@@ -29,8 +29,7 @@ To remove a user's access to your MediFlux account, **deactivate the user**.
 
    Enable **Deactivate User** and select **Save**.
 
-![Deactivate User](/images/faqs/remove-user.png)
-*Caption: Deactivate User option in the user settings.*
+The **Deactivate User** toggle is located under **Other Options** below the permissions grid; toggle it on and select **Save** (or **Cancel** to discard).
 
 > **[Note]** Deactivating a user logs them out of any active session and prevents them from logging in to MediFlux. The user's account is not permanently deleted.
 

@@ -140,3 +140,31 @@ Per migration constraints, the following defects and remediation tasks are expli
 - **Prose Defect Verification**: Confirmed `prose-defect: no` for all 11 targets. None of the removed images had trailing demonstratives (such as "As shown above...") or procedural dependencies in adjacent prose.
 - **Remediation Action**: Deleted the `![alt](src)` line and adjacent `*Caption: ...*` line, collapsing surrounding whitespace to a clean single blank line between paragraphs/headings.
 - **Remaining Dead Image References**: 21 (17 SUPPORTING, 4 CRITICAL), scheduled for Phase 4b Batch 2 and Batch 3.
+
+
+## 8. Phase 4b / Batch 2 — Supporting Image Rewrites Record
+
+- **Total Images Processed**: 10 SUPPORTING dead image references audited
+- **Remediation Breakdown**:
+  - **Rewritten as Inline Prose (7 rows)**:
+    1. `itc-reversals-actions.png` in `okf/docs/accounting/itc-reversals.md`
+    2. `add-user.png` in `okf/help/account/add-user.md`
+    3. `remove-user.png` in `okf/help/account/remove-user.md`
+    4. `user-management.png` in `okf/help/account/reset-password.md`
+    5. `change-user-permissions.png` in `okf/help/account/user-permission.md`
+    6. `save-draft-vs-add.png` in `okf/help/sales/draft-and-add-sale-diff.md`
+    7. `return-sale.png` in `okf/help/sales/return-sale.md`
+  - **Promoted to Batch 3 via Escape Hatch (3 rows)**:
+    8. `returned-expanded-row.png` in `okf/docs/sales/returned-sales.md`: Promoted due to structural 9-column sample breakdown and specific product/pricing numbers already fully described in adjacent prose table; generating fake drug numbers would invent data.
+    9. `edit-profile-password.png` in `okf/help/account/reset-password.md`: Promoted per Q3 as numbered steps 1–4 already fully describe all depicted input fields and button without redundant claims.
+    10. `wrong-tabs-calculation.png` in `okf/help/sales/wrong-calculations.md`: Promoted due to load-bearing arithmetic calculation defect illustration where paraphrasing without visual grounding requires inventing fictional data.
+- **Factual Claims and Sources**:
+  - `itc-reversals-actions.png`: Sourced button names (**Mark N/A**, **Reverse**, **Mark all N/A**, **Reverse all**) from caption and adjacent bulk actions table.
+  - `add-user.png`: Sourced **Store Users** destination and module permission activation from `okf/docs/settings/user-management.md`.
+  - `remove-user.png`: Sourced **Other Options** location, toggle placement below permissions grid, and **Save** / **Cancel** buttons from `okf/docs/settings/user-management.md`.
+  - `user-management.png`: Sourced **Store Users** table layout and **Actions** column with **Edit** button from `okf/docs/settings/user-management.md`.
+  - `change-user-permissions.png`: Sourced specific functional module names (**Sale**, **Purchase**, **Customer**, **Supplier**, **Reports**) and access controls (**Read**, **Write**, **Delete**) from `okf/docs/settings/user-management.md`.
+  - `save-draft-vs-add.png`: Sourced billing footer location and difference in stock handling from `okf/docs/sales/add-sale-retail.md:610-618` and `okf/docs/sales/drafts.md`.
+  - `return-sale.png`: Sourced **Return Sale** confirmation, **Cancel** option, **Sale returned successfully!** toast message, and **Returned Sales** destination from `okf/docs/sales/returned-sales.md:41-43`.
+- **Placeholder Insertions**: Inserted standard `> **[IMAGE PENDING]**` blockquotes for all 3 promoted rows.
+- **Remaining Dead Image References**: 14 (10 SUPPORTING [7 original Batch 3 + 3 promoted], 4 CRITICAL), scheduled for Phase 4b Batch 3 asset sourcing.

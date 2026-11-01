@@ -7,3 +7,4 @@
 - **Phase 3**: Remediated 8 broken related links (6 fixed, 2 removed). Image remediation deferred to Phase 4.
 - **Phase 4a**: Triaged 32 dead image references. Manifest at okf/_meta/missing-images.md. Remediation (Phase 4b) pending.
 - **Phase 4b / Batch 1**: Removed 11 decorative dead image refs. Batches 2 and 3 pending.
+- **Phase 4b / Batch 2**: Rewrote 7 supporting images as inline prose; promoted 3 to Batch 3. Batch 3 (assets) pending.

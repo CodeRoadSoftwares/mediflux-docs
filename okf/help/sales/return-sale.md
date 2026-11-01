@@ -34,8 +34,7 @@ You can return a completed sale directly from **Sales → Sales List**.
 
    Select **Return Sale** to confirm.
 
-![Return Sale](/images/faqs/return-sale.png)
-*Caption: Return Sale confirmation dialog with refund details.*
+Click **Return Sale** to confirm the return (or **Cancel** to exit without changes); a **Sale returned successfully!** toast confirms the return, and the transaction is recorded under **Returned Sales**.
 
 > **[Warning: Important]** Returning a sale cannot be undone. All drugs in the sale are added back to inventory immediately. Make sure the details are correct before confirming.
 

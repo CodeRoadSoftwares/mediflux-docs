@@ -84,8 +84,7 @@ Click **Mark N/A** if the line should not be reversed (for example, the stock wa
 
 You can also check individual boxes and then use the bulk buttons if they support selected rows.
 
-![MediFlux ITC Reversals Row and Bulk Actions](/images/accounting/itc-reversals-actions.png)
-*Caption: Mark N/A and Reverse actions on each row, plus Mark all N/A and Reverse all bulk actions for pharmacy ITC in MediFlux.*
+Each row has two row-level buttons — **Mark N/A** and **Reverse** — plus bulk **Mark all N/A** and **Reverse all** buttons above the table.
 
 ---
 

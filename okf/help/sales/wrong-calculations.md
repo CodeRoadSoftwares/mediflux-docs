@@ -70,8 +70,7 @@ In the **Add Sale** drug table:
 
 If you are selling only tablets, keep QTY at `0` (or blank) and enter the tablet count in **TABS**.
 
-![Wrong calculation example](/images/faqs/wrong-tabs-calculation.png)
-*Caption: Example where TABS is entered but Units were missing at purchase, causing an incorrect total.*
+> **[IMAGE PENDING]** Example calculation demonstrating an incorrect bill total when TABS is entered without Units set at purchase. Source this image or expand this section with the specific data.
 
 ---
 
