@@ -121,7 +121,7 @@ Review your Cash on Hand, Bank Accounts, and Digital Wallets in the Chart of Acc
 ## Next Steps
 
 
-  * [Profit & Loss](/docs/accounting/profit-loss) - See the full income and expense breakdown that feeds the dashboard numbers.
+  * [Profit & Loss](/docs/accounting/profitandloss-statements.md) - See the full income and expense breakdown that feeds the dashboard numbers.
   * [Daybook](/docs/accounting/daybook) - View every transaction that contributed to revenue, expenses, and cash flow.
-  * [Journal Entries](/docs/accounting/journal-entries) - Inspect the individual journals behind the dashboard figures.
+  * Journal Entries - Inspect the individual journals behind the dashboard figures.
   * [Balance Sheet](/docs/accounting/balance-sheet) - Check your assets, liabilities, and equity position.

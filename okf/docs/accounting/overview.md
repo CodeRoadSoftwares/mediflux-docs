@@ -175,4 +175,4 @@ Basic GST reports in MediFlux work without the Accounting module. However, advan
   * [Daybook](/docs/accounting/daybook) - View and understand your daily transaction log.
   * [Add Journal Entry](/docs/accounting/add-journal-entry) - Create manual journal entries for adjustments and transfers.
   * [Dashboard](/docs/accounting/dashboard) - Explore financial KPIs and summary cards.
-  * [Accounts](/docs/accounting/accounts) - Manage your Chart of Accounts and account heads.
+  * Accounts - Manage your Chart of Accounts and account heads.

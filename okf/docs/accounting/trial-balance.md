@@ -205,5 +205,5 @@ A balanced Trial Balance confirms that total debits equal total credits. It does
 
   * [General Ledger](/docs/accounting/ledger) - Drill down into any account to see its full transaction history.
   * [Balance Sheet](/docs/accounting/balance-sheet) - View your assets, liabilities, and equity in a formal financial statement.
-  * [Profit and Loss Statement](/docs/accounting/pl-statement) - See your revenue, expenses, and net profit for the period.
-  * [Ledgers](/docs/accounting/accounts) - Browse and manage your complete Chart of Accounts.
+  * [Profit and Loss Statement](/docs/accounting/profitandloss-statements.md) - See your revenue, expenses, and net profit for the period.
+  * [Ledgers](/docs/accounting/ledger.md) - Browse and manage your complete Chart of Accounts.

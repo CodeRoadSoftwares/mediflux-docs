@@ -239,6 +239,6 @@ Most pharmacy owners review the Balance Sheet monthly alongside the Profit and L
 
 
   * [Trial Balance](/docs/accounting/trial-balance) - Verify that all your ledger debits and credits are in balance.
-  * [Profit and Loss Statement](/docs/accounting/pl-statement) - See your revenue, expenses, and net profit for the period.
+  * [Profit and Loss Statement](/docs/accounting/profitandloss-statements.md) - See your revenue, expenses, and net profit for the period.
   * [General Ledger](/docs/accounting/ledger) - Drill down into any account to see its full transaction history.
-  * [Ledgers](/docs/accounting/accounts) - Browse and manage your complete Chart of Accounts.
+  * [Ledgers](/docs/accounting/ledger.md) - Browse and manage your complete Chart of Accounts.

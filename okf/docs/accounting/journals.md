@@ -161,6 +161,6 @@ Click **Export** and choose PDF or Excel. The export respects the current search
 
 
   * [Add Journal Entry](/docs/accounting/add-journal-entry) - Create a manual debit and credit entry using your Chart of Accounts.
-  * [Chart of Accounts](/docs/accounting/accounts) - Browse the full list of accounts used in journal entries.
+  * [Chart of Accounts](/docs/accounting/ledger.md) - Browse the full list of accounts used in journal entries.
   * [General Ledger](/docs/accounting/ledger) - View the running balance and full history of any individual account.
   * [Trial Balance](/docs/accounting/trial-balance) - Check that total debits equal total credits across all accounts.

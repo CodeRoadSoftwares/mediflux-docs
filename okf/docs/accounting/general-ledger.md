@@ -271,7 +271,7 @@ The Balance column shows the running balance of the account after each transacti
 ## Next Steps
 
 
-  * [Ledgers](/docs/accounting/accounts) - Browse and manage your complete Chart of Accounts.
+  * [Ledgers](/docs/accounting/ledger.md) - Browse and manage your complete Chart of Accounts.
   * [Add a Journal Entry](/docs/accounting/add-journal-entry) - Manually record transactions that post to multiple ledgers.
   * [Trial Balance](/docs/accounting/trial-balance) - See all ledger balances in one place to verify your books.
   * [Daybook](/docs/accounting/daybook) - View all journal entries across all accounts in chronological order.

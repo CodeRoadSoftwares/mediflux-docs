@@ -154,7 +154,7 @@ These cards only count actual cash and bank movements. Credit sales, stock adjus
 ## Next Steps
 
 
-  * [Journal Entries](/docs/accounting/journal-entries) - View every journal with status, type, and who posted it.
+  * Journal Entries - View every journal with status, type, and who posted it.
   * [Add Journal Entry](/docs/accounting/add-journal-entry) - Create a manual debit and credit entry.
   * [General Ledger](/docs/accounting/ledger) - See the full history and running balance of any single account.
-  * [Profit & Loss](/docs/accounting/profit-loss) - See how the transactions in the Daybook flow into your income and expenses.
+  * [Profit & Loss](/docs/accounting/profitandloss-statements.md) - See how the transactions in the Daybook flow into your income and expenses.

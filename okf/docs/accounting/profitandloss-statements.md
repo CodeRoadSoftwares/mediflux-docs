@@ -234,4 +234,4 @@ Yes. Click **Export** and choose **Excel Sheet** for a spreadsheet your accounta
   * [Balance Sheet](/docs/accounting/balance-sheet) - View your assets, liabilities, and equity at a point in time.
   * [Trial Balance](/docs/accounting/trial-balance) - Verify that all ledger debits and credits are in balance.
   * [General Ledger](/docs/accounting/ledger) - Drill down into any income or expense account to see its transaction history.
-  * [Ledgers](/docs/accounting/accounts) - Browse and manage your complete Chart of Accounts.
+  * [Ledgers](/docs/accounting/ledger.md) - Browse and manage your complete Chart of Accounts.

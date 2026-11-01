@@ -46,7 +46,7 @@ This action is available to **Admin** users only.
 
 ---
 
-> **[Note]** If you forgot your password and cannot sign in, use [How do I reset my password?](/docs/faqs/account/reset-password).
+> **[Note]** If you forgot your password and cannot sign in, use How do I reset my password?.
 
 ## Related
 

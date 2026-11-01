@@ -71,3 +71,16 @@ Per migration constraints, the following defects and remediation tasks are expli
 
 ### Lossy JSX Review
 - **Zero JSX Tags Remain**: All container and presentational JSX tags (`<Steps>`, `<Tabs>`, `<Cards>`, `<Callout>`, `<Figure>`, `<Accordion>`, `<Badge>`, etc.) were transformed completely into standard Markdown without loss of content.
+
+## 4. Phase 2 — Body Link Remediation Record
+
+- **Total Body Links Processed**: 22 / 22
+- **Action Breakdown**: 14 FIX, 8 UNLINK
+- **Unique Files Touched**: 15
+- **Policy Applied**:
+  - **Policy A (Fix-When-Obvious)**: Applied to 14 rows where the link text and prose unambiguously matched existing concepts in the bundle (`profitandloss-statements.md`, `ledger.md`, `help/account/reset-password.md`).
+  - **Policy B (Unlink Otherwise)**: Applied to 8 rows where the target was ambiguous (e.g. `journal-entries` between `journals.md` vs `add-journal-entry.md`; `add-sale` between `add-sale-retail.md` vs `add-wholesale.md`), missing (e.g. `Chart of Accounts`, `Help & Support`), or pointed to the same self-referencing question.
+- **Assumptions / Inferences Made**:
+  - `[ASSUMPTION]` Pointed `[Profit & Loss]` and `[Profit & Loss Statement]` (rows 2, 4, 7, 9, 13, 18) to `/docs/accounting/profitandloss-statements.md`.
+  - `[ASSUMPTION]` Pointed `[Ledgers]` and `[Chart of Accounts]` (rows 3, 5, 10, 11, 14, 16, 17) to `/docs/accounting/ledger.md`, since `ledger.md` explicitly documents the pharmacy's Chart of Accounts.
+  - `[ASSUMPTION]` Pointed `[How do I reset my password?]` in `how-do-i-sign-in.md` (row 22) to `/help/account/reset-password.md`.

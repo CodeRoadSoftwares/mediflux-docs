@@ -236,7 +236,7 @@ Complete the sale as you normally would: select payment status, review the bill 
 ## After Dispensing
 
 
-  * [Add Sale](/docs/sales/add-sale) - Full retail and wholesale billing workflow.
+  * Add Sale - Full retail and wholesale billing workflow.
   * [Doctors](/docs/clinics/doctors) - Manage the doctor profiles linked to prescriptions.
   * [Appointments](/docs/clinics/appointments) - View appointments that may be linked to a prescription.
   * [Customers](/docs/customers) - Manage patient profiles used across prescriptions and sales.

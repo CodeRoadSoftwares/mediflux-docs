@@ -311,7 +311,7 @@ You can be profitable on paper but run out of cash if:
 Once your accounts are set up, MediFlux generates three core statements automatically. Each one answers a different question about your business.
 
 
-  * [Profit & Loss Statement](/docs/accounting/pl-statement) - Did I make money this month?
+  * [Profit & Loss Statement](/docs/accounting/profitandloss-statements.md) - Did I make money this month?
   * [Balance Sheet](/docs/accounting/balance-sheet) - What does my business own and owe right now?
   * [Trial Balance](/docs/accounting/trial-balance) - Do my books actually balance?
 
@@ -495,7 +495,7 @@ MediFlux uses a two-level structure. **Bank Accounts** is the group header. Indi
 ## Next steps
 
 
-  * [Set up Chart of Accounts](/docs/accounting/index) - Initialize your accounts and enter opening balances.
+  * Set up Chart of Accounts - Initialize your accounts and enter opening balances.
   * [Daybook](/docs/accounting/daybook) - See how daily transactions flow through your books.
   * [Ledger](/docs/accounting/ledger) - Drill into individual accounts and their running balances.
   * [Trial Balance](/docs/accounting/trial-balance) - Verify your books are balanced before generating reports.

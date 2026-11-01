@@ -70,4 +70,4 @@ Your referral code is ready. Share it with fellow pharmacy owners and grow the M
   * [Subscriptions](/docs/settings/subscriptions) - Check your current plan and see how referral credits can reduce your costs.
   * [Account](/docs/settings/account-info) - Review your store details, they're what show up when someone registers with your code.
   * [User Management](/docs/settings/user-management) - Add team members who can also share your referral code with their network.
-  * [Help & Support](/docs/settings/index) - Need help with referrals? Reach out to the MediFlux support team.
+  * Help & Support - Need help with referrals? Reach out to the MediFlux support team.

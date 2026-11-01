@@ -40,7 +40,7 @@ For full setup steps, see [Installation & Setup](/docs/introduction/installation
 
 ---
 
-> **[Note]** If you cannot remember your password, use [How do I reset my password?](/docs/faqs/account/reset-password).
+> **[Note]** If you cannot remember your password, use [How do I reset my password?](/help/account/reset-password.md).
 
 ## Related
 

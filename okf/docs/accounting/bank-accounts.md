@@ -365,6 +365,6 @@ In MediFlux, the type is for your own organization and reporting. **Current** ac
 
 
   * [General Ledger](/docs/accounting/ledger) - View the complete transaction history for any bank account ledger.
-  * [Ledgers](/docs/accounting/accounts) - Browse the Chart of Accounts and see how bank accounts fit into the structure.
+  * [Ledgers](/docs/accounting/ledger.md) - Browse the Chart of Accounts and see how bank accounts fit into the structure.
   * [Add a Journal Entry](/docs/accounting/add-journal-entry) - Manually record bank fees, transfers, and other transactions.
   * [Trial Balance](/docs/accounting/trial-balance) - Verify that your bank account balances are reflected correctly in the overall books.

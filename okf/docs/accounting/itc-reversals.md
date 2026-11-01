@@ -155,7 +155,7 @@ No. A supplier credit note reduces your purchase and the related ITC automatical
 ## Next Steps
 
 
-  * [Journal Entries](/docs/accounting/journal-entries) - View the reversal journals created when you reverse ITC.
+  * Journal Entries - View the reversal journals created when you reverse ITC.
   * [Daybook](/docs/accounting/daybook) - See the daily impact of ITC reversals on your accounts.
-  * [Profit & Loss](/docs/accounting/profit-loss) - ITC reversal expenses appear in your expense section.
-  * [Chart of Accounts](/docs/accounting/accounts) - Locate the Input GST and ITC reversal accounts.
+  * [Profit & Loss](/docs/accounting/profitandloss-statements.md) - ITC reversal expenses appear in your expense section.
+  * [Chart of Accounts](/docs/accounting/ledger.md) - Locate the Input GST and ITC reversal accounts.
