@@ -29,9 +29,6 @@ You can update an existing sale from **Sales → Sales List**.
 
    Make the required changes to the sale details and save the updates.
 
-![Update Sale](/images/faqs/update-sale.png)
-*Caption: Sales List row actions showing the Update option.*
-
 ## Related
 
 * [Sale List](/docs/sales/sale-list)

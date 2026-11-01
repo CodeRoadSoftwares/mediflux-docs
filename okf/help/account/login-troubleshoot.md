@@ -20,6 +20,3 @@ If you cannot log in to MediFlux, first check that the **Email** and **Password*
 If you are still unable to log in with your password, try logging in using **OTP** instead.
 
 If you still cannot access your account, contact the **MediFlux Support Team** for assistance.
-
-![MediFlux Login](/images/faqs/cannot-login.png)
-*Caption: MediFlux login screen with email, password, and OTP login options.*

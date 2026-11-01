@@ -21,9 +21,6 @@ You can update details such as the **Owner Name**, **Phone**, **Email**, and **A
 
 The **Store Name** and **License Number** cannot be changed directly. To update either of these details, contact the **MediFlux Support Team**.
 
-![Store Information](/images/faqs/change-store-details.png)
-*Caption: Store Information section in Account settings.*
-
 ## Related
 
 * [Settings](/docs/settings/overview.md)

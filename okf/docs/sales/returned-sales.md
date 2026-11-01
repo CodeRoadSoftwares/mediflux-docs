@@ -66,9 +66,6 @@ Each return is displayed as a card showing:
 
 The page shows a **Found X** count above the list indicating how many returns are recorded.
 
-![Returned page](/images/returned-list.png)
-*Caption: List of returned sales with invoice numbers, customer names, and return details.*
-
 ---
 
 ## Expanding A Return

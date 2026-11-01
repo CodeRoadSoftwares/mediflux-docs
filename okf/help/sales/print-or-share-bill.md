@@ -29,9 +29,6 @@ You can print or download a bill by opening its invoice from **Sales → Sales L
    - **Thermal**: Print the invoice using a thermal printer.
    - **Download**: Download the invoice to your device.
 
-![Invoice Actions](/images/faqs/print-share-bill.png)
-*Caption: Invoice dialog showing Download, Print, and Thermal options.*
-
 ## Related
 
 * [Sale List](/docs/sales/sale-list)

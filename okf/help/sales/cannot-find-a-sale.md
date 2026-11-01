@@ -21,9 +21,6 @@ You can search for a sale using the search bar. Enter a **Customer Name**, **Dru
 
 You can also use the available filters to narrow down the results by sale type or payment method.
 
-![Sales List](/images/faqs/find-previous-sale.png)
-*Caption: Sales List page with search bar and filters for finding previous sales.*
-
 ## Related
 
 * [Sale List](/docs/sales/sale-list)

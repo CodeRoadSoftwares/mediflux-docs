@@ -16,9 +16,6 @@ The **ITC Reversals** page lists every pending **Input Tax Credit (ITC) reversal
 
 Navigate here from the sidebar: **Accounting → ITC Reversals**.
 
-![MediFlux Pharmacy ITC Reversals Overview](/images/accounting/itc-reversals-overview.png)
-*Caption: Pending ITC reversal lines with type, value, CGST, SGST, IGST, and actions for pharmacy GST compliance in MediFlux.*
-
 ---
 
 ## What Is ITC Reversal?
@@ -50,9 +47,6 @@ Three cards at the top show the current state of the list.
 | **Total GST Value** | Combined CGST + SGST + IGST of all pending lines |
 | **Selected GST Value** | GST value of the rows you have currently checked |
 
-![MediFlux ITC Reversals Summary Cards](/images/accounting/itc-reversals-summary-cards.png)
-*Caption: Summary cards showing Pending Lines, Total GST Value, and Selected GST Value for pharmacy ITC reversals in MediFlux.*
-
 ---
 
 ## Understanding the Table
@@ -68,9 +62,6 @@ Three cards at the top show the current state of the list.
 | **IGST** | Integrated GST portion (usually ₹0.00 for intra-state) |
 | **Status** | Current state of the line (Pending) |
 | **Actions** | **Mark N/A** or **Reverse** for that single line |
-
-![MediFlux Pharmacy ITC Reversals Table](/images/accounting/itc-reversals-table.png)
-*Caption: ITC Reversals table showing Date, Type, Value, CGST, SGST, IGST, Status, and row actions in MediFlux.*
 
 ---
 

@@ -25,9 +25,6 @@ If you already have an **active subscription** and a store, you can sign in dire
 2. Enter your registered email address and password.
 3. Select **Sign in**. You will land on the dashboard for your store.
 
-![Sign in steps](/images/faqs/sign-in-steps.png)
-*Caption: Login flow: open app.mediflux.in, enter email and password, then Sign in.*
-
 ---
 
 ## Do not have a store yet?

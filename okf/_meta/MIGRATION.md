@@ -110,3 +110,33 @@ Per migration constraints, the following defects and remediation tasks are expli
 - **Data Issue Identified**: Image reference `scan-bar-code` in `docs/sales/scan-and-ocr.md` has no file extension (confirmed present in source MDX `content/docs/sales/scan-and-ocr.mdx`).
 - **Deliverable**: Manifest written to `okf/_meta/missing-images.md`.
 - **Status**: Remediation deferred to **Phase 4b** (Batch 1 mechanical removal, Batch 2 text rewrite, Batch 3 asset sourcing).
+
+
+## 7. Phase 4b / Batch 1 — Decorative Image Removal Record
+
+- **Total Images Processed**: 11 / 11 DECORATIVE dead image references removed
+- **Files Touched**: 8 unique concept files (11 image references total)
+  - `okf/docs/accounting/itc-reversals.md` (3 images)
+  - `okf/docs/clinics/overview.md` (1 image)
+  - `okf/docs/sales/returned-sales.md` (1 image)
+  - `okf/help/account/change-store-details.md` (1 image)
+  - `okf/help/account/login-troubleshoot.md` (1 image)
+  - `okf/help/getting-started/how-do-i-sign-in.md` (1 image)
+  - `okf/help/sales/cannot-find-a-sale.md` (1 image)
+  - `okf/help/sales/print-or-share-bill.md` (1 image)
+  - `okf/help/sales/update-sale.md` (1 image)
+- **Image Basenames Removed**:
+  1. `itc-reversals-overview.png`
+  2. `itc-reversals-summary-cards.png`
+  3. `itc-reversals-table.png`
+  4. `clinic-prescriptions-overview.png`
+  5. `returned-list.png`
+  6. `change-store-details.png`
+  7. `cannot-login.png`
+  8. `sign-in-steps.png`
+  9. `find-previous-sale.png`
+  10. `print-share-bill.png`
+  11. `update-sale.png`
+- **Prose Defect Verification**: Confirmed `prose-defect: no` for all 11 targets. None of the removed images had trailing demonstratives (such as "As shown above...") or procedural dependencies in adjacent prose.
+- **Remediation Action**: Deleted the `![alt](src)` line and adjacent `*Caption: ...*` line, collapsing surrounding whitespace to a clean single blank line between paragraphs/headings.
+- **Remaining Dead Image References**: 21 (17 SUPPORTING, 4 CRITICAL), scheduled for Phase 4b Batch 2 and Batch 3.

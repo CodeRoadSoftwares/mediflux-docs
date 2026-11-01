@@ -53,9 +53,6 @@ The **Doctors** page is your complete doctor directory. View all associated doct
 ## Prescriptions
 The **Prescriptions** page keeps a record of every prescription issued by your doctors. Each prescription is linked back to the doctor who wrote it and the patient it was for. Search by patient name, doctor, or date. View prescription details including medicines prescribed, dosage instructions, and issue date.
 
-![MediFlux Clinic Prescriptions Overview](/images/clinic-prescriptions-overview.png)
-*Caption: Track all prescriptions issued by your pharmacy clinic's doctors, linked to patients and doctors in MediFlux.*
-
 ---
 
 ## Schedules
