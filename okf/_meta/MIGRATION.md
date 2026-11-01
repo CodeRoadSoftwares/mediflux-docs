@@ -99,3 +99,14 @@ Per migration constraints, the following defects and remediation tasks are expli
     - `help/account/login-troubleshoot.md`: `* [Login](/docs/account/login)` removed as no Login documentation concept exists in `docs/`. The empty `## Related` section was dropped entirely.
     - `help/sales/draft-and-add-sale-diff.md`: `* [Add Sale](/docs/sales/add-sale)` removed as `add-sale` is ambiguous between retail and wholesale concepts. The remaining `* [Drafts]` link was retained.
 - **Sections Dropped**: 1 (`help/account/login-troubleshoot.md`).
+
+## 6. Phase 4a — Dead Image References Triage Record
+
+- **Total Image References Audited**: 32 / 32
+- **Triage Breakdown**:
+  - **CRITICAL**: 4 images (load-bearing in multi-step procedures)
+  - **SUPPORTING**: 17 images (illustrative; prose stands alone)
+  - **DECORATIVE**: 11 images (redundant UI screenshots; `prose-defect: no` across all 11)
+- **Data Issue Identified**: Image reference `scan-bar-code` in `docs/sales/scan-and-ocr.md` has no file extension (confirmed present in source MDX `content/docs/sales/scan-and-ocr.mdx`).
+- **Deliverable**: Manifest written to `okf/_meta/missing-images.md`.
+- **Status**: Remediation deferred to **Phase 4b** (Batch 1 mechanical removal, Batch 2 text rewrite, Batch 3 asset sourcing).
