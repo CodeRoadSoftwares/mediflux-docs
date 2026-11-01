@@ -1,0 +1,242 @@
+---
+type: Guide
+title: Prescriptions
+description: Create prescriptions as a doctor and dispense them directly into a sale from the pharmacy side.
+timestamp: "2026-09-10T14:01:19+05:30"
+resource: /docs/clinics/prescriptions
+status: current
+audience: User (Doctor/Staff)
+owner: ""
+icon: ClipboardList
+---
+
+# Prescriptions
+
+The **Prescriptions** page connects the doctor’s prescribing workflow with the pharmacy’s dispensing workflow. A doctor creates a prescription. It then appears on the pharmacy side under **Clinic → Prescriptions**. The pharmacist clicks **Dispense** and is taken straight to the **Add Sale** page with the prescribed medicines already loaded.
+
+---
+
+## What You Can Do
+
+- Create new prescriptions with full clinical details, medicines, frequency, duration, and vitals
+- View a complete history of every prescription you have issued
+- Search prescriptions by patient name, medicine, or notes
+- Dispense a prescription directly into a sale with medicines pre-filled
+- Keep a clear record linking the patient, doctor, and medicines prescribed
+
+---
+
+## Doctor Side: My Prescriptions
+
+Navigate to **Clinic → My Prescriptions**.
+
+This is the page a doctor uses to review past prescriptions and create new ones.
+
+![My Prescriptions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/43fadb2b-666a-4905-87e2-a2fd2be4be37-doctor-prescription.png)
+*Caption: Prescription History table with search, total count, and Add Prescription button.*
+
+### Page overview
+
+| Element | What it shows |
+| --- | --- |
+| **TOTAL** / **SHOWING** | Total prescriptions and how many are currently visible |
+| **Search bar** | Search by patient name, medicine, or notes |
+| **+ Add Prescription** | Opens the create prescription flow |
+| **Prescription History** table | List of all prescriptions you have issued |
+
+![Page overview](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/a217162c-f6f7-412a-94a6-35f9ab99d140-searchbar-prescritpions.png)
+*Caption: TOTAL, SHOWING counts, search bar, and Add Prescription button.*
+
+### Prescription History table
+
+| Column | Description |
+| --- | --- |
+| **Patient** | Patient name with phone number below it |
+| **Date & Time** | When the prescription was created |
+| **Medicines** | Prescribed medicines shown as chips |
+| **Actions** | Three-dot menu for additional actions |
+
+![Prescription History table](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/54bb2bcd-7b93-4d97-8e2a-dfa0d3533e3e-history-prescription.png)
+*Caption: Columns for Patient, Date & Time, Medicines, and Actions.*
+---
+
+## Creating A Prescription
+
+1. **Open the create flow**
+
+   On the **My Prescriptions** page, click **+ Add Prescription**.
+
+2. **Select or add a patient**
+
+   The **Create Prescription** dialog opens.
+
+       ![Select Patient](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/d66fde4b-8392-46a3-bc82-1c297d68c80f-patient-prescription.png)
+*Caption: Search an existing patient or add a new one.*
+
+       - Search by name, phone, or address to select an existing patient.
+       - Click **+ Add New Patient** if the patient is not yet in the system.
+       - Recent patients appear below the search field when available.
+
+3. **Fill the prescription form**
+
+   After selecting the patient, the full prescription form opens.
+
+       ![Create Prescription form](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/4e800b58-24e7-4c42-8467-892e369dd1e0-patient-info_prescription.png)
+*Caption: Patient information, clinical sections, medications, vitals, follow-up, and remarks.*
+
+       ### Patient Information
+
+       | Field | Description |
+       | --- | --- |
+       | **Name** | Patient’s full name |
+       | **Age** | Patient’s age |
+       | **Gender** | Male / Female / Other |
+       | **Phone** | Contact number |
+       | **Date** | Prescription date |
+       | **Address** | Patient’s address |
+
+       Use **Change Patient** at any time to switch to a different patient.
+
+       ### Clinical sections
+
+       | Section | How to use it |
+       | --- | --- |
+       | **COMPLAINTS** | Click **+ Add Complaints** to record the patient’s complaints |
+       | **HISTORY** | Click **+ Add History** to record relevant medical history |
+       | **DIAGNOSIS** | Enter the diagnosis in the free-text field |
+       | **INVESTIGATIONS** | Click **+ Add Investigations** to record tests or investigations |
+       | **OBSERVATION** | Enter any observation notes |
+
+       ### Medications
+
+       Add each medicine with:
+
+       - **MEDICINE** name
+       - **FREQUENCY** (dropdown)
+       - **DURATION** (in days)
+
+       Frequency options:
+
+       | Code | Meaning |
+       | --- | --- |
+       | `OD` | Once Daily |
+       | `BD` | Twice Daily |
+       | `TDS` | Three times |
+       | `QID` | Four times |
+       | `PRN` | As needed |
+       | `SOS` | If needed |
+       | `STAT` | Immediately |
+       | `1-0-1` | Morning and Evening |
+       | `1-1-1` | Morning, Afternoon, Evening |
+
+       ![Frequency dropdown](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/a874b8aa-5dfb-409d-9452-e5d4025cbb79-frequency-prescription.png)
+*Caption: Common dosing frequencies available while adding medicines.*
+
+       ### Vitals
+
+       | Field | Unit |
+       | --- | --- |
+       | **BP** | e.g. 120/80 |
+       | **Weight** | kg |
+       | **Height** | cm |
+       | **Temp** | °F |
+       | **Pulse** | bpm |
+       | **SpO2** | % |
+
+       ### Follow-up and Remarks
+
+       - Set a **Follow-up Date** or use the quick buttons: **1 Day**, **3 Days**, **1 Week**, **2 Weeks**
+       - Add any additional notes or instructions in **Remarks**
+
+4. **Save the prescription**
+
+   Click **Save & Print** at the top right.
+
+       The prescription is saved, appears in the doctor’s **Prescription History**, and becomes available on the pharmacy side for dispensing.
+
+---
+
+## Pharmacy Side: Prescriptions List
+
+Navigate to **Clinic → Prescriptions**.
+
+This is the view used by the store or pharmacist.
+
+![Pharmacy Prescriptions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/e2fa8f66-a769-4cf4-b82e-937983ee4b15-pside-prescription.png)
+*Caption: Search, Pending/All filters, and Dispense action.*
+
+### What you see
+
+- Search and select a customer to view their prescriptions
+- Filter chips: **Pending** and **All**
+- Table of prescriptions waiting to be dispensed
+
+### Prescriptions table
+
+| Column | Description |
+| --- | --- |
+| **DATE** | Date and time the prescription was issued |
+| **PATIENT** | Patient name with phone number |
+| **MEDICINES** | Prescribed medicines shown as chips |
+| **ACTIONS** | **Dispense** button |
+
+![Prescriptions table](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/2a0974dd-55c6-49f4-9f7f-64082620eb28-prescription-table.png)
+*Caption: Columns for Date, Patient, Medicines, and the Dispense action.*
+---
+
+## Dispensing A Prescription
+
+Click **Dispense** on any pending prescription.
+
+You are taken directly to the **Add Sale** page with the prescription details already loaded.
+
+![Add Sale opened from Dispense](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/f06f1f0d-0417-4ab4-95c1-747141f70247-dispense-prescription.png)
+*Caption: Prescription Details panel on the right and Rx items pre-filled in the drug table.*
+
+### What is pre-filled
+
+**Right panel – Prescription Details**
+- Patient name, phone, and address
+- List of prescribed medicines with **Frequency** and **Duration**
+
+**Drug table**
+- Each prescribed medicine is added as a row
+- **Type** is set to `Rx`
+- You can adjust quantity, rate, discount, and other sale fields as needed
+
+Complete the sale as you normally would: select payment status, review the bill summary, and save.
+
+> **[Note]** The **Prescription Details** panel stays visible on the right so you can use it as a live reference while building the bill.
+
+---
+
+## Full Flow Summary
+
+1. Doctor opens **Clinic → My Prescriptions**
+2. Clicks **+ Add Prescription**
+3. Selects an existing patient or adds a new one
+4. Fills clinical details, medicines, frequency, duration, vitals, and follow-up
+5. Clicks **Save & Print**
+6. Pharmacy opens **Clinic → Prescriptions**
+7. Finds the prescription under **Pending**
+8. Clicks **Dispense**
+9. Completes the sale on the **Add Sale** page with medicines already loaded
+
+---
+
+## Common Mistakes To Avoid
+
+> **[Warning: Missing frequency or duration]** Always set **Frequency** and **DURATION** for every medicine. These details appear on the printed prescription and in the pharmacy view.
+
+
+> **[Warning: Dispensing without checking stock]** Use the pre-filled medicines as a guide, then confirm actual batch, expiry, and available quantity before finalising the sale.
+
+---
+
+## After Dispensing
+
+
+  * [Add Sale](/docs/sales/add-sale) - Full retail and wholesale billing workflow.
+  * [Doctors](/docs/clinics/doctors) - Manage the doctor profiles linked to prescriptions.
+  * [Appointments](/docs/clinics/appointments) - View appointments that may be linked to a prescription.
+  * [Customers](/docs/customers) - Manage patient profiles used across prescriptions and sales.

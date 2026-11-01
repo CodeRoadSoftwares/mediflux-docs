@@ -1,0 +1,552 @@
+---
+type: Internal Guide
+title: How to Write Docs
+description: Internal guide for the MediFlux documentation team, file structure, frontmatter, components, and writing conventions.
+timestamp: "2026-09-10T13:19:16+05:30"
+resource: /docs/how-to-write
+status: current
+audience: Contributor
+owner: ""
+---
+
+# How to Write Docs
+
+> **[Note: Internal only]** This page is **not linked in the sidebar or navigation**. Share the URL directly with team members: `/docs/how-to-write`. Do not add this file to any `meta.json`.
+
+This guide covers everything you need to author, organize, and publish MediFlux documentation. The site is built with [Fumadocs](https://fumadocs.dev) + Next.js. Documentation lives under `content/docs/`. Help & FAQs live under `content/help/` with the same folder, `meta.json`, and MDX component setup.
+
+## Quick Reference
+| Task | What to do |
+| ---- | ---------- |
+| Add a new page | Create `content/docs/{section}/{slug}.mdx` |
+| Set the URL | File path maps to `/docs/{section}/{slug}` (omit `index` for section roots) |
+| Show in sidebar | Add the slug to that section's `meta.json` → `pages` array |
+| Page title & SEO | Set `title` and `description` in frontmatter |
+| Sidebar icon (docs only) | Set `icon` to a [Lucide](https://lucide.dev/icons) icon name (PascalCase) |
+| FAQ tags (help only) | Set `tags` to a list of strings, e.g. `[sales, gst]` |
+| Related docs (help only) | Set `related` to `/docs/...` URLs for the full guides |
+| Add a Help FAQ | Create `content/help/{section}/{slug}.mdx` and add the slug to that section's `meta.json` |
+| Step-by-step guides | Use `&lt;Steps&gt;` + `&lt;Step&gt;` |
+| Link grids on index pages | Use `&lt;Cards&gt;` + `&lt;Card&gt;` |
+| Full-width link rows | Use `&lt;WideCards&gt;` + `&lt;WideCard&gt;` |
+
+---
+
+## File Structure And URLs
+All documentation files live in `content/docs/`. The folder structure determines the URL:
+
+```text
+📁 content/docs/
+📁 introduction/
+  📄 index.mdx → /docs/introduction
+  📄 getting-started.mdx → /docs/introduction/getting-started
+  📄 meta.json
+📁 sales/
+  📄 index.mdx → /docs/sales
+  📄 create-sale.mdx → /docs/sales/add-sale-retail
+  📄 meta.json
+  📄 meta.json (root navigation)
+  📄 how-to-write.mdx → /docs/how-to-write (hidden)
+```
+
+### Naming Rules
+- Use **kebab-case** for file and folder names: `create-sale.mdx`, not `CreateSale.mdx`.
+- Every section folder should have an **`index.mdx`**: this is the landing page for that section (e.g. `/docs/sales`).
+- Co-locate a **`meta.json`** inside each section folder to control sidebar order.
+
+### Where To Put A New Page
+1. Pick the section (e.g. `sales`, `purchases`, `introduction`).
+2. Create `{section}/{slug}.mdx`.
+3. Add the slug (without `.mdx`) to `{section}/meta.json` under `"pages"`.
+4. If you created a **new section**, also add the folder name to the root `content/docs/meta.json`.
+
+Example, adding a page to Sales:
+
+```json title="content/docs/sales/meta.json"
+{
+  "title": "Sales",
+  "pages": ["index", "create-sale", "returns", "your-new-page"]
+}
+```
+
+Example, root navigation with section dividers:
+
+```json title="content/docs/meta.json"
+{
+  "title": "MediFlux",
+  "pages": [
+    "---Introduction---",
+    "introduction",
+    "---Sales---",
+    "sales"
+  ]
+}
+```
+
+Strings like `"---Introduction---"` render as **non-clickable section labels** in the sidebar.
+
+---
+
+## Help & FAQs
+Help articles use the same MDX components and `meta.json` navigation as docs. They live in `content/help/` and map to `/help/{section}/{slug}`.
+
+Do **not** put an `index.mdx` at the help root: `/help` is the searchable FAQ list. Each section still needs its own `index.mdx` and `meta.json`.
+
+### Help vs documentation
+Keep these as two layers, not two copies of the same page.
+
+| | Documentation (`content/docs`) | Help & FAQs (`content/help`) |
+| - | --- | --- |
+| Job | Explain how a feature works | Unblock someone who is stuck |
+| Voice | “Here is Sales List and what you can do” | “How do I find last week’s bill?” |
+| Length | Full guide | Short answer, then a link to the guide |
+| In-page FAQs | Short accordion answers on the doc are fine | Do not paste the whole doc into Help |
+
+Rules:
+
+1. **Docs own the feature.** Help should not retell the full workflow.
+2. **Help owns the stuck moment.** Write the question the way a pharmacist would ask it.
+3. **Link, don’t copy.** Every Help article should set `related` to one or more `/docs/...` URLs. Those render as “Related documentation” under the answer.
+4. **Doc-page FAQs stay short.** If an accordion answer on a doc grows past a few sentences, move it to Help and link there.
+
+```yaml
+---
+title: Why is GST not applying on a sale?
+description: Check tax settings, item HSN, and customer GSTIN when GST is missing from a bill.
+tags: [sales, gst, billing]
+related:
+  - /docs/sales/add-sale-retail
+---
+```
+
+- Use `title` and `description` the same way as docs.
+- Use `tags` instead of `icon`. Tags appear as filters on `/help`.
+- Use `related` for the canonical doc pages. Titles and descriptions are pulled from those pages.
+- Add the slug to `{section}/meta.json`, and add new sections to `content/help/meta.json`.
+- Search on `/help` matches title, description, tags, section, **and the answer body**.
+
+---
+
+## Frontmatter
+Every MDX file starts with YAML frontmatter between `---` delimiters:
+
+```yaml
+---
+title: Create Sale
+description: Learn how to create and process a new sale transaction.
+icon: Plus
+---
+```
+
+### Supported Fields
+| Field | Required | Description |
+| ----- | -------- | ----------- |
+| `title` | Yes | Page heading (H1) and browser tab title |
+| `description` | Recommended | Subtitle under the title; used for SEO and search |
+| `icon` | Optional | Docs only. Lucide icon name for search results and cards that link to this page |
+| `tags` | Optional | Help & FAQs only. List of strings shown as filters on `/help` |
+| `related` | Optional | Help & FAQs only. List of `/docs/...` URLs shown as related guides |
+| `badge` | Optional | Small label (reserved for future use) |
+| `enableToc` | Optional | Show table of contents on the right (default: `true`). Set `false` for short pages |
+| `index` | Optional | Fumadocs index flag (default: `false`) |
+
+### Icons
+Use any icon name from [Lucide Icons](https://lucide.dev/icons) in **PascalCase**:
+
+```yaml
+icon: ShoppingCart   # ✓
+icon: shopping-cart  # ✗ won't render
+```
+
+Icons appear in search results and are auto-filled on `&lt;Card&gt;` / `&lt;WideCard&gt;` when you link to a page that has an `icon` set.
+
+---
+
+## Writing A Doc
+### Structure
+Follow this pattern for most guides:
+
+1. **Opening paragraph**, what the page covers and who it's for (2–4 sentences).
+2. **Prerequisites or context**, link to related pages if needed.
+3. **Main sections**, use `##` for top-level sections (these appear in the table of contents).
+4. **Steps or tabs**, for procedural or multi-path content.
+5. **Reference tables or code**, for API fields, shortcuts, config options.
+6. **Next steps**, cards linking to related docs.
+
+### Headings
+- Use a single `#` only if you need an in-page heading: the page `title` in frontmatter is already rendered as the H1.
+- Use `##` for main sections (shown in TOC).
+- Use `###` inside steps, tabs, or accordions.
+- Keep heading text short and scannable.
+
+### Links
+Internal links use root-relative paths:
+
+```markdown
+See [Installation](/docs/introduction/installation) for setup steps.
+```
+
+External links open in a new tab automatically. You don't need to add `target="_blank"`.
+
+### Text Formatting
+```markdown
+**Bold** for UI labels and emphasis.
+*Italic* for terms on first use.
+`inline code` for keys, commands, and field names.
+```
+
+Keyboard shortcuts use the `&lt;kbd&gt;` HTML tag:
+
+Press <kbd>F2</kbd> to start a new sale.
+
+### Lists
+Unordered:
+
+```markdown
+- First item
+- Second item
+  - Nested item
+```
+
+Ordered:
+
+```markdown
+1. Step one
+2. Step two
+3. Step three
+```
+
+---
+
+## Standard Markdown Elements
+These work out of the box, no custom components needed.
+
+### Tables
+Tables are wrapped automatically in a responsive scroll container:
+
+| Column | Type | Description |
+| ------ | ---- | ----------- |
+| `id` | string | Unique identifier |
+| `status` | enum | `pending`, `completed` |
+
+### Code Blocks
+Use fenced code blocks with an optional language and title:
+
+````markdown
+```typescript title="Example: Create a sale"
+const sale = await fetch("/v1/sales", { method: "POST" });
+```
+````
+
+Features:
+
+- Syntax highlighting for common languages
+- **Copy button** on hover
+- Title bar when you add `title="..."` after the language
+
+Supported title syntax: ` ```lang title="My title" ` or the `data-title` attribute.
+
+### Images
+Standard Markdown images get a styled figure with the alt text as caption:
+
+```markdown
+![Dashboard overview](https://example.com/image.png)
+```
+
+For separate title and description, use the `Figure` component (see [Media](#media)).
+
+---
+
+## Components
+All components below are registered in `lib/mdx-components.tsx` and available in every MDX file without importing.
+
+### Callout
+Highlighted boxes for tips, warnings, and important notes.
+
+**Props:** `type` (`info` | `warning` | `success` | `danger` | `note`), optional `title`
+
+```mdx
+> **[Info]** MediFlux supports both cloud and on-premise deployments.
+
+> **[Warning: Important]** Prescription items require pharmacist verification before payment.
+```
+
+**Shorthand aliases:**
+
+```mdx
+> **[Note]** Same as Callout type="info".
+> **[Warning]** Same as Callout type="warning".
+```
+
+<Callout type="info">
+  This is a live `info` callout.
+</Callout>
+
+<Callout type="warning" title="Example warning">
+  This is a live `warning` callout with a title.
+</Callout>
+
+<Callout type="success">
+  This is a live `success` callout.
+</Callout>
+
+<Callout type="danger">
+  This is a live `danger` callout.
+</Callout>
+
+<Callout type="note" title="Example note">
+  This is a live `note` callout.
+</Callout>
+
+---
+
+### Steps
+Numbered vertical steps for procedures. Each step can contain headings, paragraphs, code, and callouts.
+
+**`<Steps>` props:** optional `className`
+
+**`<Step>` props:** optional `title` (renders above step body; you can also use `###` headings inside)
+
+```mdx
+1. **First step**
+
+   Body text for step one.
+
+2. ### Or Use A Heading Inside
+    Body text for step two.
+```
+
+<Steps>
+  <Step title="Example step one">
+    Steps render with numbered circles and a connecting line.
+  </Step>
+  <Step title="Example step two">
+    Nest callouts, code blocks, and lists inside steps freely.
+  </Step>
+</Steps>
+
+---
+
+### Tabs
+Switch between alternative content (install methods, languages, auth types).
+
+**`<Tabs>` props:** `items` (tab labels), optional `defaultValue`, optional `className`
+
+**`<Tab>` props:** `value` (must match an entry in `items`), optional `label`
+
+```mdx
+### Docker
+
+Docker install instructions…
+
+### Manual
+
+Manual install instructions…
+```
+
+<Tabs items={["Tab A", "Tab B"]}>
+  <Tab value="Tab A">
+    Content for tab A.
+  </Tab>
+  <Tab value="Tab B">
+    Content for tab B.
+  </Tab>
+</Tabs>
+
+---
+
+### Cards
+Grid of link cards, ideal for section index pages and "Explore" sections.
+
+**`<Cards>` / `<CardGroup>` props:** `cols` (`1` | `2` | `3` | `4`, default `2`)
+
+**`<Card>` props:** `title`, `description`, `icon`, `href`, optional `className`
+
+When `href` points to an internal doc page, **title, description, and icon are auto-filled** from that page's frontmatter if you omit them.
+
+```mdx
+
+  * [Create Sale](/docs/sales/add-sale-retail) - Step-by-step sale workflow.
+  * [Returned Sales](/docs/sales/returned-sales)
+
+```
+
+<Cards cols={2}>
+  <Card
+    title="Cards example"
+    description="Grid layout with optional icons and links."
+    icon="LayoutGrid"
+  />
+  <Card
+    title="Linked card"
+    description="Links to the sales section."
+    href="/docs/sales"
+  />
+</Cards>
+
+---
+
+### Wide Cards
+Full-width stacked link rows, good for "Next steps" at the bottom of a page.
+
+**`<WideCards>` props:** optional `className`
+
+**`<WideCard>` props:** `title`, `description`, `icon`, `href`, `target`, optional `className`
+
+External URLs open in a new tab automatically. Use `target="_blank"` to force it on internal links if needed.
+
+```mdx
+
+  * [Installation](/docs/introduction/installation)
+  * [External link](https://example.com) - Opens in a new tab.
+
+```
+
+<WideCards>
+  <WideCard
+    title="Wide card example"
+    description="Full-width card for prominent links."
+    icon="ArrowRight"
+  />
+</WideCards>
+
+---
+
+### Accordion
+Collapsible sections for FAQ-style or advanced content.
+
+Use `<Accordions>` as the wrapper and `<Accordion>` for each item (these names map to the underlying Accordion / AccordionItem components).
+
+**`<Accordions>` props:** `type` (`single` | `multiple`, default `single`)
+
+**`<Accordion>` props:** `title` (required), optional `value`
+
+```mdx
+
+  ### First question
+
+Answer content here.
+  ### Second question
+
+More answer content.
+
+```
+
+<Accordions>
+  <Accordion title="What is an accordion?">
+    A collapsible panel for dense or optional content.
+  </Accordion>
+  <Accordion title="When should I use it?">
+    FAQ sections, advanced config, or content most readers can skip.
+  </Accordion>
+</Accordions>
+
+---
+
+### Badge
+Inline status labels.
+
+**Props:** `variant` (`default` | `secondary` | `destructive` | `outline`)
+
+```mdx
+**[New]**
+**[Beta]**
+**[Deprecated]**
+**[Optional]**
+```
+
+Examples: <Badge>New</Badge> <Badge variant="secondary">Beta</Badge> <Badge variant="destructive">Deprecated</Badge> <Badge variant="outline">Optional</Badge>
+
+---
+
+### File Tree
+Visual folder structure for explaining project layout.
+
+**`<FileTree>` props:** optional `className`
+
+**`<FileTreeFolder>` props:** `name`, optional `defaultOpen`, children
+
+**`<FileTreeFile>` props:** `name`, optional `active`
+
+```mdx
+```text
+📁 src/
+  📄 index.ts
+  📄 utils.ts
+```
+```
+
+---
+
+### Media
+#### Figure
+Image with separate title and description (better than Markdown when you need both).
+
+**Props:** `src`, `title`, optional `description`, optional `alt`, optional `className`
+
+```mdx
+![Example screenshot](https://picsum.photos/seed/example/800/400)
+*Caption: Replace with a real product screenshot.*
+```
+
+#### YouTube
+**Props:** `id` or `url`, optional `title`, optional `description`
+
+```mdx
+> **Video:** [Walkthrough](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+> **Video:** [Walkthrough](https://www.youtube.com/watch?v=)
+```
+
+#### Video
+Hosted MP4 or other video URL.
+
+**Props:** `src`, optional `title`, optional `description`
+
+```mdx
+> **Video:** [Product demo](https://example.com/demo.mp4)
+```
+
+---
+
+## Putting It Together, Checklist
+Before opening a PR for a new doc page:
+
+1. File is in the correct section folder with kebab-case name
+2. Frontmatter has `title` and `description`
+3. `icon` is set (PascalCase Lucide name)
+4. Slug added to section `meta.json` (unless intentionally hidden like this page)
+5. Opening paragraph explains purpose without repeating the title
+6. `##` headings structure the page and populate the TOC
+7. Procedures use `<Steps>`; alternatives use `<Tabs>`
+8. Code blocks include `title="..."` when the snippet needs context
+9. Internal links use `/docs/...` paths
+10. Index/landing pages link to child pages via `<Cards>`
+
+---
+
+## Local Development
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000/docs/how-to-write](http://localhost:3000/docs/how-to-write) to preview this page.
+
+After editing MDX, the dev server hot-reloads. If a new file doesn't appear, restart the dev server once so Fumadocs regenerates the content source.
+
+---
+
+## Adding A New Component
+If the team needs a component that doesn't exist yet:
+
+1. Create it in `components/mdx/your-component.tsx`
+2. Register it in `lib/mdx-components.tsx` inside `getMdxComponents()`
+3. Mirror the registration in `mdx-components.tsx` (used by the MDX bundler)
+4. Document it on this page with props and a live example
+
+Keep components in `components/mdx/` and follow existing patterns (Tailwind classes, `cn()` utility, client directive only when needed).
+
+---
+
+## Markdown Export
+Every public doc page exposes a raw markdown version at `{url}.md` (e.g. `/docs/sales/add-sale-retail.md`). This is used by the "Copy markdown" action and LLM integrations. Write content so it reads well in both rendered and plain markdown form.

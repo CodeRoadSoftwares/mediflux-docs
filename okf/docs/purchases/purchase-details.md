@@ -1,0 +1,140 @@
+---
+type: Reference
+title: Purchase Details
+description: View the complete breakdown of a single purchase, including its summary, line items, and invoice.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/purchases/purchase-details
+status: current
+audience: User (Pharmacist)
+owner: ""
+icon: FileText
+---
+
+# Purchase Details
+
+Clicking any purchase from the **Purchase List** or selecting **View Details** from its row actions menu opens the **Purchase Details** page. This gives you the full picture of that purchase: who it was made from, what was bought, how the bill was calculated, and access to the invoice and related actions.
+
+---
+
+## Purchase Info
+At the top of the page:
+
+| Field | Description |
+| --- | --- |
+| **Created by** | Who created the purchase (e.g. "Created by You") |
+| **Purchase From** | Name of the supplier |
+| **Purchase** | Date the purchase was made |
+| **Added** | Date and time the purchase was added to MediFlux |
+
+---
+
+## Actions
+A set of action buttons sits alongside the purchase info:
+
+| Button | What it does |
+| --- | --- |
+| **Invoice** | Opens a preview of the purchase invoice |
+| **Download** | Downloads the purchase invoice |
+| **Print Labels** | Prints drug labels for the items in this purchase |
+| **More** | Opens additional actions for this purchase |
+
+![Purchase detail page](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/8cae055a-5751-493f-b61d-d85593bd0d90-detailed-purchase-view.png)
+*Caption: Purchase header with supplier name, invoice number, and action buttons, plus summary cards showing subtotal, discount, tax, and grand total*
+---
+The **More** menu contains:
+
+| Option | What it does |
+| --- | --- |
+| **Print** | Prints the purchase |
+| **Add Payment** | Records a payment made against this purchase |
+| **View Supplier** | Opens the supplier's profile |
+| **View Ledger** | Opens the supplier's ledger |
+| **Return Purchase** | Initiates a return for this purchase |
+| **Edit** | Edit this purchase entry |
+| **Delete** | Deletes the purchase and moves it to Trash |
+
+![Purchase Actions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/65e753c1-bda9-4a63-bd90-08e933dba38b-more-menu.png)
+*Caption: Invoice, Download, Print Labels, and More actions for a purchase.*
+
+---
+
+## Summary
+Four cards give an at-a-glance breakdown of the purchase:
+
+| Card | Description |
+| --- | --- |
+| **Subtotal** | Total value of all line items before discount and tax |
+| **Total Discount** | Total discount applied on the purchase |
+| **Total Tax** | Total tax charged on the purchase |
+| **Grand Total** | Final purchase amount |
+
+Below the cards, a **Calculation Breakdown** shows how the grand total was arrived at, the base amount, the discount deducted, the resulting subtotal, tax applied (with the GST split, e.g. CGST + SGST), the total tax, and the final grand total.
+
+![Purchase Summary](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/beb928ef-65ef-4cd1-a71d-a903f0f2df82-summary-purchase.png)
+*Caption: Subtotal, discount, tax, and grand total cards with full calculation breakdown.*
+
+---
+
+## Drugs
+The **Drugs** section lists every line item in the purchase:
+
+| Column | Description |
+| --- | --- |
+| **Drug** | Name of the drug |
+| **Batch** | Batch number |
+| **QTY** | Quantity purchased |
+| **Rate** | Purchase rate per unit |
+| **MRP** | Maximum Retail Price |
+| **Subtotal** | Line item value before tax |
+| **Dis.** | Discount percentage applied |
+| **Tax** | Tax amount and percentage applied |
+| **Ret.** | Returned quantity, if any |
+| **Total** | Final line item value |
+
+A **Grand Total** row at the bottom of the table sums up the quantity, subtotal, discount, tax, and total across all line items.
+
+![Drugs Section](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/011c51e8-686c-4cb9-99ef-989d70ec5060-drugs.png)
+*Caption: Line item breakdown with batch, quantity, rate, MRP, discount, tax, and total.*
+
+---
+
+## Invoice
+Clicking **Invoice** opens a preview of the purchase bill, showing:
+
+- Store details and the supplier's details, including DL number and GSTIN
+- Invoice number and date
+- An itemised drug table (HSN, batch, expiry, quantity, free quantity, rate, MRP, discount, subtotal, tax, and total)
+- A GST breakdown by tax slab (CGST and SGST)
+- The grand total and balance
+- Standard terms & conditions
+
+From this preview, you can **Download** the invoice, **Print** it, or **Change Template** to switch the invoice layout.
+
+![Invoice Preview](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/e87c9e75-3969-4c35-8776-65a59c8b13f0-invoice.png)
+*Caption: Full purchase invoice with store and supplier details, itemised drugs, and GST breakdown.*
+
+---
+
+## FAQs
+
+  ### Can I edit a purchase after it's been added?
+
+Yes, use **Edit** from the **More** menu on the Purchase Details page.
+  ### How do I record a partial payment against a purchase?
+
+Use **Add Payment** from the **More** menu. This is also reflected in the supplier's ledger.
+  ### Where do I go to return this purchase to the supplier?
+
+Use **Return Purchase** from the **More** menu.
+
+
+---
+
+## Follow Up On This Purchase
+Reviewed the details? Here's what to do next.
+
+
+  * [Supplier Ledger](/docs/supplier/supplier-ledger) - Check outstanding payments and credit history for this supplier.
+  * [Add Payment](/docs/supplier/supplier-ledger) - Record a payment against this purchase from the More menu.
+  * [Purchase List](/docs/purchases/purchase-list) - Return to the full list to review other purchases.
+  * [Drug List](/docs/inventory/drug-list) - Verify the new stock from this purchase is reflected in inventory.

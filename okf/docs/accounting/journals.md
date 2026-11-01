@@ -1,0 +1,166 @@
+---
+type: Guide
+title: Journals
+description: View and manage pharmacy journal entries in MediFlux. Search, filter, and export manual and auto-generated accounting ledgers easily.
+timestamp: "2026-10-30T11:34:57+05:30"
+resource: /docs/accounting/journals
+status: current
+audience: User (Accountant/Owner)
+owner: ""
+icon: FileText
+---
+
+# Journals
+
+The **Journals** page is where you can see every **pharmacy journal entry** that has been posted to your ledgers in **MediFlux**. This includes manual journals you create yourself, automatic entries generated from purchases and sales, and the one-time initialization entry that is created when your Chart of Accounts is first set up.
+
+Navigate here from the sidebar: **Accounting → Journals**.
+
+> **[Note]** By default, the page shows entries for the **current month**. If your store is newly initialized, you will usually see only one entry: the Accounting Initialization journal.
+
+![MediFlux Pharmacy Journal Entries List](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/76d5d379-b67d-4411-8b93-b126f340d805-journals.png)
+*Caption: Search, date range, status, and type filters for pharmacy journal entries in the MediFlux accounting module.*
+
+---
+
+## Adding a New Journal Entry
+
+Click **+ Add Journal** in the top-right corner to create a manual journal entry.
+
+This opens the journal entry form where you select debit and credit accounts, enter amounts, and add a description. Once posted, the entry appears in this list with status **POSTED** and type **MANUAL**.
+
+![MediFlux Add Pharmacy Journal Entry Button](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/e3071f6e-450f-4071-b4db-d000e75b6206-add-journal.png)
+*Caption: Click + Add Journal in the top-right to create a manual accounting entry in MediFlux.*
+
+---
+
+## Searching and Filtering
+
+Use the controls at the top of the page to narrow down the list.
+
+| Control | What it does |
+|---------|--------------|
+| **Search entry or description...** | Find journals by Journal ID or by the text in the description |
+| **Date range** | Choose the period to view. Defaults to the current month. Click to open the calendar |
+| **All Statuses** | Filter by status: Posted, Draft, Reversed, or Cancelled |
+| **All Types** | Filter by account type categories such as Current Asset, Non Current Asset, Current Liability, Equity, Revenue, or Expense |
+| **Clear** | Remove all active filters and return to the default view |
+| **Export** | Download the current list as PDF or Excel |
+
+### Date Range Picker
+
+Click the date range to open the calendar. You can:
+
+- Select custom start and end dates
+- Use quick presets: **Today**, **Yesterday**, **Last 7 days**, **Last 14 days**, **Last 30 days**, **This Week**, **Last Week**, **This Month**, **Last Month**
+
+Click **Apply** to update the list.
+
+![MediFlux Journal Date Range Picker](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/48119dca-e2ab-4f51-9fa6-046dfbc5bd4d-date-range-picker.png)
+*Caption: Calendar with quick filter options for common periods in the MediFlux pharmacy Journals list.*
+
+### Status Filter
+
+| Status | Meaning |
+|--------|---------|
+| **Posted** | The entry has been successfully posted to the ledgers |
+| **Draft** | The entry is saved but not yet posted |
+| **Reversed** | The original entry has been reversed |
+| **Cancelled** | The entry was cancelled and has no effect on the books |
+
+![MediFlux Journal Status Filter](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/1cfb1b27-4677-4370-b077-042dd046a25b-all-statuses.png)
+*Caption: Filter pharmacy journal entries by Posted, Draft, Reversed, or Cancelled status in MediFlux.*
+
+### Type Badges on Each Row
+
+Each journal shows a small badge under the Journal ID that tells you how it was created:
+
+| Badge | Meaning |
+|-------|---------|
+| **MANUAL** | Created by a user through **Add Journal** |
+| **AUTO PURCHASE** | Automatically generated when a purchase is recorded |
+| **AUTO PURCHASE REVERSAL** | Automatically created when a purchase is edited or reversed |
+| **ACCOUNTING INITIALIZATION** | Created once when the Chart of Accounts is first set up |
+
+---
+
+## Understanding the Table
+
+| Column | Description |
+|--------|-------------|
+| **JOURNAL ID** | Unique identifier (e.g. `JE-2026-08-00221`). The type badge appears below it |
+| **DATE** | Date and time the entry was posted |
+| **DESCRIPTION** | Short text explaining the entry. Some descriptions are clickable links that open the related purchase or document |
+| **STATUS** | Current status of the entry (Posted, Reversed, etc.) |
+| **POSTED BY** | Name and email of the user who posted the entry |
+
+### Example Entries of a Mature Account
+
+| Journal ID | Date | Description | Status | Posted By |
+|------------|------|-------------|--------|-----------|
+| `JE-2026-08-00219` <br/> MANUAL | 31 Aug 2026 <br/> 03:42 PM | Return Purchase | POSTED | Mujtabaa |
+| `JE-2026-08-00218` <br/> MANUAL | 31 Aug 2026 <br/> 03:28 PM | Returned Purchase | POSTED | Mujtabaa |
+| `JE-2026-08-00217` <br/> MANUAL | 31 Aug 2026 <br/> 03:19 PM | Advance Amount To Supplier | POSTED | Mujtabaa |
+| `JE-2026-08-00216` <br/> MANUAL | 31 Aug 2026 <br/> 03:10 PM | Purchase Drugs | POSTED | Mujtabaa |
+| `JE-2026-08-00212` <br/> MANUAL | 31 Aug 2026 <br/> 12:41 PM | Purchased Drugs | POSTED | Mujtabaa |
+| `JE-2026-08-00210` <br/> MANUAL | 31 Aug 2026 <br/> 12:25 PM | Medicine Inventory | POSTED | Mujtabaa |
+| `JE-2026-08-00208` <br/> AUTO PURCHASE | 31 Aug 2026 <br/> 11:34 AM | Purchase 2026/124 From Aleeza | POSTED | Mujtabaa |
+| `JE-2026-08-00206` <br/> AUTO PURCHASE REVERSAL | 31 Aug 2026 <br/> 11:33 AM | Purchase Was Updated | REVERSAL | Mujtabaa |
+| `JE-2026-08-00207` <br/> AUTO PURCHASE | 31 Aug 2026 <br/> 11:33 AM | Edit Purchase From 2026/123 To Aleeza | POSTED | Mujtabaa |
+| `JE-2026-08-00205` <br/> AUTO PURCHASE | 31 Aug 2026 <br/> 11:32 AM | Purchase 2026/123 From Aleeza | REVERSED | Mujtabaa |
+
+![MediFlux Auto-Generated and Reversed Journal Entries](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/0c4f7562-f89d-4dcd-a110-0d95d91b27f7-journal-entries.png)
+*Caption: Purchase-related pharmacy journals showing POSTED, REVERSAL, and REVERSED statuses in MediFlux.*
+
+---
+
+## Newly Initialized Stores
+
+When you first set up accounting, MediFlux creates a single journal entry:
+
+- **Journal ID**: something like `JE-2026-08-00004`
+- **Type**: **ACCOUNTING INITIALIZATION**
+- **Description**: Entries Added On Initialization Of Chart Of Accounts
+- **Status**: POSTED
+
+This is normal. As you start recording sales, purchases, and manual journals, more entries will appear in the list.
+
+![MediFlux Newly Initialized Store Journal Entry](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/09/d9ff3887-9dd9-4dc8-9660-ed86377ef303-new-journal.png)
+*Caption: The single Accounting Initialization journal shown on a newly set-up MediFlux pharmacy store.*
+
+---
+
+## Common Mistakes
+
+> **[Warning: Looking at the wrong date range]** The list defaults to the **current month**. If you expect to see older entries and the list looks empty, open the date range picker and select a wider period or **Last Month**.
+
+> **[Warning: Confusing REVERSED and REVERSAL]** **REVERSED** means the original entry has been cancelled by a later reversal entry. **REVERSAL** is the status of the entry that performed the reversal. Both appear in the list so you have a complete audit trail.
+
+---
+
+## Frequently Asked Questions
+
+
+  ### Can I edit a posted journal entry?
+
+Posted journal entries cannot be edited directly. If a correction is needed, create a new reversing entry or use the appropriate adjustment workflow (for example, editing a purchase will automatically generate a reversal and a new entry).
+  ### Why do some descriptions appear as links?
+
+Descriptions that come from purchases or other linked documents are clickable. Clicking them opens the related purchase or document so you can see the full details.
+  ### What is the difference between MANUAL and AUTO PURCHASE?
+
+**MANUAL** entries are created by you using **Add Journal**. **AUTO PURCHASE** (and **AUTO PURCHASE REVERSAL**) entries are generated automatically by MediFlux whenever a purchase is recorded, edited, or reversed.
+  ### How do I export the list for my accountant?
+
+Click **Export** and choose PDF or Excel. The export respects the current search and filter settings, so only the entries you are viewing are included.
+
+
+---
+
+## Next Steps
+
+
+  * [Add Journal Entry](/docs/accounting/add-journal-entry) - Create a manual debit and credit entry using your Chart of Accounts.
+  * [Chart of Accounts](/docs/accounting/accounts) - Browse the full list of accounts used in journal entries.
+  * [General Ledger](/docs/accounting/ledger) - View the running balance and full history of any individual account.
+  * [Trial Balance](/docs/accounting/trial-balance) - Check that total debits equal total credits across all accounts.

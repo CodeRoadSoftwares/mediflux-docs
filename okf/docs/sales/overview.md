@@ -1,0 +1,145 @@
+---
+type: Overview
+title: Sales
+description: Manage all your pharmacy sales, credit notes, returns, reorders and drafts, all from one place.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/sales/overview
+status: current
+audience: User (Pharmacist/Cashier)
+owner: ""
+icon: ShoppingCart
+---
+
+# Sales
+
+The **Sales** section is where every sale your pharmacy makes is recorded and managed. From walk-in cash sales to wholesale billing, challans, and estimates, MediFlux handles every sale type your pharmacy needs, with each sale automatically updating your inventory and customer ledger.
+
+---
+
+## What You Can Do In Sales
+- **Record sales:** for individual customers or walk-in patients
+- **Handle different sale types:** retail, wholesale, stock issue, challan, and estimates
+- **Manage prescription-based sales:** Rx, NRx, H1
+- **Issue credit notes:** for billing corrections
+- **Track and process returned items**
+- **Manage reorders and draft bills**
+- **Export your sales list:** as PDF or Excel
+
+---
+
+## Navigating The Sales Section
+The **Sales** section in the left sidebar expands into six pages:
+
+| Page | What it's for |
+| --- | --- |
+| **Sales List** | View, search, and manage all your recorded sales |
+| **Add Sale** | Create a new sale bill |
+| **Add Credit Note** | Issue a credit note against an existing sale |
+| **Returned** | View and manage items returned by customers |
+| **Reorders** | Manage reorder requests |
+| **Drafts** | Access saved draft bills that haven't been finalised yet |
+
+![Sales sidebar navigation](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783593916573-458990938-sales-sidebar.png)
+*Caption: Sidebar showing Sales List, Add Sale, Add Credit Note, Returned, Reorders, and Drafts.*
+
+---
+
+## Quick Actions From Anywhere
+You don't have to navigate to the Sales section to add a sale. The **`+` button** in the top-right corner of any screen gives you instant access:
+
+- **Add Sale:** start a new sale bill from anywhere in MediFlux
+
+> **[Note]** The `+` quick-add menu is available on every screen. Use it whenever you need to quickly start a new sale without interrupting your current workflow.
+
+![Dashboard + menu](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783593997149-864673037-sale-quickAdd.png)
+*Caption: Quick-add menu showing the Add Sale option.*
+
+---
+
+## Sale Types
+MediFlux supports multiple sale types to cover every billing scenario in your pharmacy:
+
+| Sale Type | Description |
+| --- | --- |
+| **Cash** | Standard retail sale paid in cash |
+| **NRx** | Sale of non-prescription medicines |
+| **H1** | Sale of Schedule H1 controlled medicines |
+| **Wholesale** | Bulk sale to another pharmacy or business |
+| **Stock Issue** | Internal stock movement recorded as a sale |
+| **Challan** | Delivery challan issued without immediate payment |
+| **Estimates** | Estimated bill created before finalising a sale |
+
+---
+
+## Payment Methods
+MediFlux supports the following payment methods when recording a sale:
+
+| Method | Description |
+| --- | --- |
+| **Cash** | Physical currency payment with automatic change calculation |
+| **Card** | Credit or debit card payment via swipe or payment gateway |
+| **UPI** | Unified Payments Interface, e.g. Google Pay, PhonePe, Paytm |
+| **Net Banking** | Direct bank transfer or online banking payment |
+
+> **[Note]** The **Payment Method** field defaults to **None** when creating a new sale. Select one of the above methods before finalising the bill. If the sale is unpaid or pending, you can leave it as **None** and update it later.
+
+![Payment Method dropdown](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594174831-118923284-payment-methods.png)
+*Caption: Select from Cash, Card, UPI, or Net Banking when recording a sale.*
+
+---
+
+## Sales List
+The **Sales List** is your complete sales record. View all your recorded sales at a glance with customer details, sale type, amount, and payment status. Search by customer name, bill number, or date. Filter by sale type, payment method, or date range. Click any sale to view full details, print the bill, or issue a credit note.
+
+![Sales List](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594343008-235351158-salesList-overview.png)
+*Caption: Complete sales record with search, filters, and detailed sale information.*
+
+---
+
+## Add Sale
+The **Add Sale** page is where you create new sale bills. Select the sale type (retail, wholesale, stock issue, challan, or estimate), add customer details, scan or search for drugs, apply discounts, and choose the payment method. The bill auto-calculates taxes, totals, and change due. Once finalised, inventory is updated automatically and the sale appears in the customer's ledger.
+
+![Add Sale](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594480190-908824246-addSale-overview.png)
+*Caption: Create new sale bills with drug scanning, tax auto-calculation, and multiple payment options.*
+
+---
+
+## Add Credit Note
+The **Add Credit Note** page lets you issue credit notes against existing sales for billing corrections, returns, or adjustments. Select the original sale, specify the reason, adjust quantities or amounts, and generate the credit note. This automatically updates the customer's outstanding balance and inventory where applicable.
+
+![Add Credit Note](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594672384-754899979-AddCreditNote-overview.png)
+*Caption: Issue credit notes against existing sales for corrections and adjustments.*
+
+---
+
+## Returned
+The **Returned** page tracks all items returned by customers. View return details including original sale reference, returned drugs, quantities, and refund status. Process new returns, verify returned items, and update inventory automatically. Filter by date, customer, or return status to stay on top of all return activity.
+
+![Returned](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594805278-491206898-retured-overview.png)
+*Caption: Track and manage customer returns with automatic inventory updates.*
+
+---
+
+## Reorders
+The **Reorders** page helps you manage reorder requests from customers or linked stores. View pending reorders, check drug availability, convert reorders into sales, or send purchase orders to suppliers for out-of-stock items. Track reorder status from request to fulfilment.
+
+![Reorders](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783594924791-173963958-re-order-overview.png)
+*Caption: Manage customer reorder requests and convert them into sales or purchase orders.*
+
+---
+
+## Drafts
+The **Drafts** page holds all saved but unfinalised sale bills. Access draft estimates, incomplete sales, or bills saved for later. Edit draft details, add or remove drugs, and finalise them into proper sales when ready. Drafts are perfect for creating estimates or handling interrupted billing sessions.
+
+![Drafts](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783595033276-706315416-drafts-overview.png)
+*Caption: Access, edit, and finalise saved draft bills.*
+
+---
+## Start Selling
+
+  * [Sales List](/docs/sales/sale-list) - Review all recorded sales and check payment status.
+  * [Add Retail Sale](/docs/sales/add-sale-retail) - Create a bill for a walk-in or regular customer.
+  * [Add Wholesale Sale](/docs/sales/add-wholesale) - Issue a bulk sale invoice or delivery challan.
+  * [Add Credit Note](/docs/sales/add-credit-note) - Correct a bill or process a return with a credit note.
+  * [Returned](/docs/sales/returned-sales) - Handle items returned by customers.
+  * [Drafts](/docs/sales/drafts) - Resume or finalise saved draft bills.

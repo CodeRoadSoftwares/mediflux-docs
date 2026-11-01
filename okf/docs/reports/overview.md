@@ -1,0 +1,51 @@
+---
+type: Overview
+title: Reports
+description: Explore MediFlux reports to monitor stock, track outstanding balances, and review GST-related business data.
+timestamp: "2026-10-12T11:55:46+05:30"
+resource: /docs/reports/overview
+status: current
+audience: User (Accountant/Owner)
+owner: ""
+icon: ChartNoAxesCombined
+---
+
+# Reports
+
+The **Reports** section in MediFlux helps you review important business information in one place. From monitoring inventory and outstanding payments to reviewing GST-related records, these reports make it easier to understand your pharmacy's operations and keep track of business activity.
+
+Each report focuses on a specific area of your business, allowing you to find the information you need without going through individual transactions.
+
+## Explore Reports
+
+Choose a report category to view detailed information and learn how to use it.
+
+
+  * [Stock Reports](/docs/reports/stock-reports) - Review medicine stock, monitor inventory movement, and access stock-related information.
+
+  * [Creditors & Debtors](/docs/reports/creditors-debtors) - Review outstanding amounts payable to suppliers and receivable from customers.
+
+  * [GST Returns](/docs/reports/gst-return) - Access GST-related reports and review tax information for your business.
+
+
+---
+
+## Why Use Reports?
+
+Reports help you understand different aspects of your pharmacy's operations.
+
+| Area | What You Can Review |
+| --- | --- |
+| **Inventory** | Stock information and medicine inventory activity |
+| **Outstanding Balances** | Amounts receivable from customers and payable to suppliers |
+| **GST** | Tax-related information required for reviewing business records |
+
+Instead of checking individual sales, purchases, or inventory entries, you can use the relevant report to review information for that part of your business.
+
+---
+
+## More Reports
+
+MediFlux continues to expand its reporting capabilities. As additional reports become available, they will be included in this section with dedicated guides explaining their purpose and how to use them.
+
+> **[Note]** Select any report from the **Explore Reports** section to learn about its available options, filters, and how to interpret the information it provides.

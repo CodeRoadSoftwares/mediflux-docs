@@ -1,0 +1,87 @@
+---
+type: Reference
+title: Purchase Trash
+description: View, restore, or permanently review purchases that have been deleted.
+timestamp: "2026-09-10T14:01:19+05:30"
+resource: /docs/purchases/trash
+status: current
+audience: User (Pharmacist)
+owner: ""
+icon: Trash2
+---
+
+# Purchase Trash
+
+The **Trash** page holds every purchase that has been deleted from your pharmacy's records. Deleted purchases stay here until restored, giving you a safety net for accidental deletions.
+
+---
+
+## Searching Deleted Purchases
+The search bar at the top lets you search across **suppliers, drugs, and challan numbers**. To the left of the search bar, the **All** dropdown lets you narrow the search scope, similar to the [Purchase List](/docs/purchases/purchase-list) page.
+
+![Search Deleted Purchases](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/e7f9f13c-9152-4536-ae23-7b41f098ac07-trash-purchase-search.png)
+*Caption: Search across suppliers, drugs, and challan numbers to find deleted purchases.*
+
+---
+
+## The Trash List
+Each entry in the list shows:
+
+| Field | Description |
+| --- | --- |
+| **Purchase number** | The original purchase number, with an **Unpaid** tag where relevant |
+| **Supplier** | Name of the supplier the purchase was made from |
+| **Deleted** | Tag confirming the purchase is deleted, along with the date and time it was deleted |
+| **Items** | Number of items and total value of the purchase |
+| **Actions** | Quick action menu for that entry |
+
+The page shows a **Found X** count above the list indicating how many deleted purchases match your search.
+
+Every entry is shown expanded by default, with the full line item breakdown visible below it:
+
+| Column | Description |
+| --- | --- |
+| **SR.** | Serial number of the line item |
+| **HSN** | HSN code of the drug |
+| **Product** | Name of the drug |
+| **Batch** | Batch number |
+| **Expiry** | Expiry date of the batch |
+| **QTY** | Quantity purchased |
+| **Purchase Price** | Price paid per unit at the time of purchase |
+
+The **Grand Total** for that purchase is shown at the bottom right. Click the **chevron** on the right of an entry to collapse or expand its line items.
+
+![Trash List](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/2f5fa503-8079-4ae0-8ba0-b9f67c483a29-trash-purchase.png)
+*Caption: Deleted purchases with expanded line items, supplier details, and restore options.*
+
+---
+
+## Row Actions
+Clicking the **three-dot menu (⋮)** on any entry opens a quick-actions menu with two options:
+
+| Option | What it does |
+| --- | --- |
+| **View Details** | Opens the full details for this deleted purchase |
+| **Restore** | Restores the purchase back to the active Purchase List |
+
+![Trash Actions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/dfd63c27-033a-4fb1-bf2e-229c890cae45-row-actionss.png)
+*Caption: View details or restore a deleted purchase from the actions menu.*
+
+---
+
+## When There Are No Deleted Purchases
+If nothing matches your search, or Trash is empty, the page shows a **"No Deleted Purchases Found"** message along with a **Reset Filters** button to clear your search and start over.
+
+![Empty Trash](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/9d354638-ff28-448f-b0f3-64cc5d4af4a6-empty-trash.png)
+*Caption: No deleted purchases found, use Reset Filters to clear your search.*
+
+---
+
+## Recover What You Need
+Restored your purchases? Here's where to go next.
+
+
+  * [Purchase List](/docs/purchases/purchase-list) - Verify restored purchases are back in your active records.
+  * [Add Purchase](/docs/purchases/add-purchase) - Record new purchases and avoid future deletions with accurate entry.
+  * [Drug List](/docs/inventory/drug-list) - Check that restored purchase stock is reflected in inventory.
+  * [Supplier Ledger](/docs/supplier/supplier-ledger) - Confirm restored purchases updated supplier payables correctly.

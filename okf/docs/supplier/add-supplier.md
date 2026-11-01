@@ -1,0 +1,97 @@
+---
+type: Guide
+title: Add Supplier
+description: Learn how to add a new pharmacy drug supplier in MediFlux. Manually enter details or link a verified platform supplier, set opening balances, and track GST-ready ledgers.
+timestamp: "2026-10-30T11:34:57+05:30"
+resource: /docs/supplier/add-supplier
+status: current
+audience: User (Pharmacist)
+owner: ""
+icon: UserPlus
+---
+
+# Add Supplier
+
+> **Video:** [How to Add a Supplier in MediFlux](https://www.youtube.com/watch?v=)
+
+There are two ways to **add a new supplier** in MediFlux. You can create a **local supplier** manually by filling in their details, or you can **link a platform supplier** who is already registered on the MediFlux network. Both options are available from the Supplier List page and from the **`+` quick-add menu** available on every screen.
+
+---
+
+## Option 1: Add a Local Supplier Manually
+You can open the Add New Supplier form in three ways:
+
+- From the Supplier List page, click **+ Add Supplier**
+- Click the **`+` menu** in the top-right corner of any screen and select **Add Supplier**
+- Press `Ctrl + K`, type **Add Supplier**, and hit `Enter`
+
+![MediFlux Add New Pharmacy Supplier Form](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782796347940-517416265-ss8.png)
+*Caption: The MediFlux form for adding a new local pharmacy supplier, showing required fields like Store Name, GSTIN, and Phone Number.*
+
+### Basic Details
+| Field | Required | Description |
+| --- | --- | --- |
+| **Store Name** | Yes | The name of the supplier's store or business, e.g., ABC Pharmaceuticals |
+| **License Number** | No | The supplier's drug license number, e.g., `LIC-12345678` |
+| **GSTIN** | No | The supplier's GST Identification Number, e.g., `29ABCDE1234F1Z5` |
+| **Contact Person** | No | Name of the primary contact at the supplier, e.g., John Smith |
+| **Phone Number** | Yes | Supplier's primary contact number |
+| **Email Address** | No | Supplier's email address |
+| **Website** | No | Supplier's website URL |
+| **Address** | Yes | Full address of the supplier |
+
+### Additional Information
+| Field | Description |
+| --- | --- |
+| **Opening Balance** | Any existing outstanding amount you already owe this supplier before starting to record purchases in MediFlux. Defaults to `0`. |
+| **Notes** | Any internal notes about this supplier. |
+| **Reliability Score** | A manual 1–5 star rating you assign to reflect how reliable this supplier is. |
+
+![MediFlux Supplier Opening Balance and Reliability Score](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1782796347948-643887021-ss9.png)
+*Caption: Additional supplier information fields in MediFlux, including Opening Balance, Notes, and Reliability Score.*
+
+> **[Note]** If you are migrating from an older system or manual registers, enter the amount you already owe this supplier in **Opening Balance** before saving. For example, if you owe a supplier ₹25,000 before starting MediFlux, enter that here. All future purchases and payments will automatically adjust from this starting figure.
+
+Once all required fields are filled, click **+ Add Supplier** to save the profile. Click **Cancel** to discard and close the form.
+
+Once saved, MediFlux automatically maintains this supplier's ledger for every new purchase. No manual tracking needed.
+
+---
+
+## Option 2: Link a Platform Supplier
+If your supplier is already registered on the MediFlux platform, you can link them directly instead of entering their details manually.
+
+Click **+ Link Supplier** from the Supplier List page. This opens the **Link to Platform Supplier** dialog.
+
+Search for your supplier by **name, email, or license number**, select them from the results, and click **Link Supplier**. Their verified business details are pulled in automatically.
+
+![MediFlux Link Verified Platform Supplier](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783582218643-270436663-link-supplier.png)
+*Caption: Search and select a registered platform supplier to link directly to your MediFlux pharmacy account.*
+
+> **[Note]** If your supplier is not on the MediFlux platform, use **+ Add Supplier** to add them manually instead.
+
+---
+
+## Adding a Supplier From The Dashboard
+You can also add a supplier without navigating to the Suppliers section at all. Click the **`+` button** in the top-right corner of any screen and select **Add Supplier** from the dropdown. This opens the same Add New Supplier form.
+
+![MediFlux Dashboard Quick Add Supplier Menu](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783582261867-280108023-add-from-dashboard.png)
+*Caption: The MediFlux dashboard quick-add menu showing the Add Supplier option for fast workflow.*
+
+> **[Info]** **Tip:** Press `Ctrl + K` anywhere in MediFlux, type "Add Supplier", and hit `Enter` to open the form without touching the mouse.
+
+---
+
+## Common Mistakes To Avoid
+> **[Warning: Forgetting to add the Opening Balance]** If you owe a supplier money before starting MediFlux, make sure to enter it in the **Opening Balance** field when creating the supplier. If you forget, you cannot edit it directly later. Instead, go to the supplier's ledger and create an **Adjustment entry** to add it manually.
+
+> **[Warning: Skipping GSTIN and License Number]** These fields are optional but highly recommended. Without a GSTIN, your purchase entries will not be GST-ready, which can cause issues when generating GSTR reports during tax season.
+
+---
+
+## After Adding a Supplier
+
+  * [Record a Purchase](/docs/purchases/add-purchase) - Add inward stock from this supplier to your inventory.
+  * [Supplier Ledger](/docs/supplier/supplier-ledger) - Check outstanding balance and record payments.
+  * [Supplier List](/docs/supplier/supplier-list) - Browse all suppliers and add more if needed.
+  * [Drug List](/docs/inventory/drug-list) - Check current stock levels before placing orders.

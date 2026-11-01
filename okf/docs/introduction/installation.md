@@ -1,0 +1,115 @@
+---
+type: Guide
+title: Installation & Setup
+description: Install MediFlux pharmacy software in minutes. Choose self-service setup or free remote installation by our experts. No downloads required. Start your free trial today.
+timestamp: "2026-10-23T14:59:28+05:30"
+resource: /docs/introduction/installation
+status: current
+audience: All
+owner: ""
+icon: Download
+---
+
+# Installation & Setup
+
+Before you can start billing, your MediFlux store needs to be created. **MediFlux is a cloud-based pharmacy billing software** that runs entirely in your browser. You can do this yourself in a few minutes, or have our support team connect remotely and set everything up for you. This page covers both paths, along with how to install MediFlux as an app on your device. Once your store is created, head to [Getting Started](/docs/introduction/getting-started) to configure billing, add inventory, and make your first sale.
+
+---
+
+## What You Need
+MediFlux is a web-based PWA that runs on any device with a browser and internet connection. No downloads or local servers are required for the software itself.
+
+| Component | Minimum | Recommended |
+| --- | --- | --- |
+| **Operating System** | Any modern OS | Windows 10+, macOS, Linux, Android, iOS |
+| **Processor** | Any dual-core CPU | Intel Core i3 or above |
+| **RAM** | 2 GB | 4 GB or above |
+| **Internet** | Basic connectivity (2 Mbps) | Stable 4G or broadband (5–10 Mbps) |
+| **Browser** | Latest Chrome, Firefox, Edge | Chrome (latest version) |
+
+Even pharmacies in remote areas with modest connectivity and basic desktops can run MediFlux comfortably. *(See our [Getting Started guide](/docs/introduction/getting-started) for next steps.)*
+
+---
+
+## Self-Service Setup
+If you'd rather get started right away without waiting for support, sign up directly:
+
+Go to the [Start Free Trial](https://app.mediflux.in/registration) page and enter your pharmacy details, GSTIN, and business type. Your cloud store is provisioned instantly. No downloads, no servers, and no IT team required.
+
+Once done, log in and your store is ready to configure.
+
+---
+
+## Assisted Setup (Remote Installation)
+If you'd prefer our team to handle the setup for you, we install and configure your store remotely using **UltraViewer**, a remote-access tool that lets our support team see and control your screen with your permission, so they can set things up exactly as you'd do it yourself.
+
+**Here's how it works:**
+
+You'll need UltraViewer running on the computer you want to set up. You can either download it directly from your browser, or our team will send you the installer file directly over WhatsApp, or [click here](https://www.ultraviewer.net/) to download.
+
+Once UltraViewer is open, it displays a unique **ID** and **Password** for your computer. Share this ID and Password with our support team over call or chat. They'll enter it on their end and connect to your computer with your permission.
+
+**From there, our team will:**
+
+- Create and configure your MediFlux store
+- Help import or manually add your stock and customer records
+- Set up billing preferences, expiry alerts, and staff roles
+- Walk you through the system live, so your team can start using MediFlux confidently
+
+> **[Note]** You stay in control throughout the session. UltraViewer only allows access once you've shared your ID and Password, and you can close the connection at any time from your end.
+
+![UltraViewer Remote Setup for MediFlux Installation](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/08/7a5d35c5-e6af-4ea9-889e-ebf21078dda0-ultraviewer-ss.png)
+*Caption: UltraViewer interface showing ID and Password fields for remote MediFlux installation by the support team.*
+
+---
+
+## Installing MediFlux As An App
+MediFlux can be installed directly on your desktop or mobile device as a standalone app, so it opens with its own icon instead of running inside a browser tab.
+
+### Desktop (Windows)
+1. Go to [mediflux.in](https://mediflux.in)
+2. Scroll to the footer and click **Download for Windows**
+3. Run the downloaded **MediFluxSetup.exe** installer
+
+### Mobile (Android)
+1. Go to [mediflux.in](https://mediflux.in) on your Android device
+2. Scroll to the footer and click **GET IT ON Google Play**
+3. Install the MediFlux app from the Play Store
+
+> **[Note]** This is separate from the remote UltraViewer setup described above. Installing MediFlux as an app is simply a faster way to launch it on your own device. It doesn't involve anyone else connecting to your computer.
+
+![Download MediFlux App for Windows and Android](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/08/8864ca9c-90e2-4269-98c0-1fa28a489b87-website-url-for-mediflux-app.png)
+*Caption: Install MediFlux as a standalone app on a Windows desktop or Android mobile device for quick, easy access.*
+
+---
+
+> **[Success: You're in Control]** Close UltraViewer anytime once your store is configured. The connection ends immediately, with no lingering access.
+
+---
+
+## FAQs
+
+  ### Do I need to install anything to use MediFlux day-to-day?
+
+No, MediFlux runs entirely in your browser, or as an installed app if you prefer. UltraViewer is only needed temporarily if you choose assisted setup.
+  ### Is it safe to share my UltraViewer ID and Password with support?
+
+Yes, this only grants access for that specific session, and only after you've shared the credentials yourself. You can end the session at any time.
+  ### Can I switch from self-service to assisted setup later, or vice versa?
+
+Yes, reach out to our support team at any point and they can help you with either path.
+  ### What happens after my store is set up?
+
+Head to our [Getting Started guide](/docs/introduction/getting-started) to configure invoice templates, add inventory, and make your first sale.
+
+
+---
+
+## Start Using MediFlux
+Your store is ready. Here's how to get billing.
+
+
+  * [Getting Started](/docs/introduction/getting-started) - Configure your store, add inventory, and make your first sale.
+  * [Account](/docs/settings/account-info) - Set up your store's business details, logo, signature, and stamp.
+  * [Drug List](/docs/inventory/drug-list) - Import or add your drug catalog before you start billing.
+  * [Add Retail Sale](/docs/sales/add-sale-retail) - Create your first sale once inventory and settings are in place.

@@ -1,0 +1,59 @@
+---
+type: FAQ
+title: How do I create a debit note?
+description: Raise a debit note to a supplier to remove stock from inventory. Two methods are available.
+tags:
+  - inventory
+  - debit-note
+  - suppliers
+timestamp: "2026-09-16T10:37:42+05:30"
+resource: /help/sales/create-debit-note
+status: current
+audience: User (Pharmacist/Cashier)
+owner: ""
+---
+
+# How do I create a debit note?
+
+A **Debit Note** records that you are returning medications to a supplier (damaged, excess, or expired stock). The selected quantity is permanently removed from inventory.
+
+There are two ways to create a debit note.
+
+---
+
+## Method 1: From Drug List (Separated View)
+
+1. Go to **Drugs → Drug List**.
+2. Switch to **Separated View**.
+3. Select one or more drugs.
+4. Click **Generate Debit Note** from the bulk actions toolbar.
+5. Enter the **Quantity to Remove** for each drug.
+6. Click **Create Debit Note**, then **Confirm**.
+
+![Generate Debit Note from Drug List](/images/faqs/generate-debit-note-drug-list.png)
+*Caption: Select drugs in Separated View and use Generate Debit Note from the bulk actions toolbar.*
+
+---
+
+## Method 2: From Drugs → Create Debit Note
+
+1. Go to **Drugs → Create Debit Note**.
+2. Select the **date** and the **supplier**.
+3. Add drugs one by one in the table (Drug Name, Qty, Batch, Expiry, Cost, MRP, tax rates).
+4. Click **Create Debit Note**.
+
+![Create Debit Note page](/images/faqs/create-debit-note-page.png)
+*Caption: Build a debit note from scratch by selecting supplier and adding drugs.*
+
+---
+
+Once created, the stock is deducted immediately and the debit note appears under **Billing Notes → Debit Notes**.
+
+---
+
+> **[Warning: Cannot be reversed]** After confirmation, the stock is removed permanently. To get the stock back you must add it again through a purchase.
+
+## Related
+
+* [Create Debit Note](/docs/inventory/create-debit-note)
+* [Drug List](/docs/inventory/drug-list)
