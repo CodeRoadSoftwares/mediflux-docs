@@ -34,31 +34,31 @@ This report records all broken links, mismatched slugs, and missing image target
 | `docs/sales/scan-and-ocr` | image | `/images/scan-ocr-mode.png` | dead-image | — |
 | `docs/settings/referrals` | body | `/docs/settings/index` | missing-file | unlinked |
 | `help/account/add-user` | image | `/images/faqs/add-user.png` | dead-image | — |
-| `help/account/add-user` | related | `/docs/account/user-management` | meta-slug-mismatch | — |
+| `help/account/add-user` | related | `/docs/account/user-management` | meta-slug-mismatch | fixed → `/docs/settings/user-management.md` |
 | `help/account/change-store-details` | image | `/images/faqs/change-store-details.png` | dead-image | — |
-| `help/account/change-store-details` | related | `/docs/account/settings` | meta-slug-mismatch | — |
+| `help/account/change-store-details` | related | `/docs/account/settings` | meta-slug-mismatch | fixed → `/docs/settings/overview.md` |
 | `help/account/login-troubleshoot` | image | `/images/faqs/cannot-login.png` | dead-image | — |
-| `help/account/login-troubleshoot` | related | `/docs/account/login` | meta-slug-mismatch | — |
+| `help/account/login-troubleshoot` | related | `/docs/account/login` | meta-slug-mismatch | removed |
 | `help/account/remove-user` | image | `/images/faqs/remove-user.png` | dead-image | — |
-| `help/account/remove-user` | related | `/docs/account/user-management` | meta-slug-mismatch | — |
+| `help/account/remove-user` | related | `/docs/account/user-management` | meta-slug-mismatch | fixed → `/docs/settings/user-management.md` |
 | `help/account/reset-password` | body | `/docs/faqs/account/reset-password` | missing-file | unlinked |
 | `help/account/reset-password` | image | `/images/faqs/edit-profile-password.png` | dead-image | — |
 | `help/account/reset-password` | image | `/images/faqs/user-management.png` | dead-image | — |
 | `help/account/user-permission` | image | `/images/faqs/change-user-permissions.png` | dead-image | — |
-| `help/account/user-permission` | related | `/docs/account/user-management` | meta-slug-mismatch | — |
+| `help/account/user-permission` | related | `/docs/account/user-management` | meta-slug-mismatch | fixed → `/docs/settings/user-management.md` |
 | `help/getting-started/how-do-i-sign-in` | body | `/docs/faqs/account/reset-password` | missing-file | fixed → `/help/account/reset-password.md` |
 | `help/getting-started/how-do-i-sign-in` | image | `/images/faqs/sign-in-steps.png` | dead-image | — |
 | `help/ledgers/customer-adjust-entry` | image | `/images/faqs/customer-ledger-adjust.png` | dead-image | — |
 | `help/ledgers/supplier-adjust-entry` | image | `/images/faqs/supplier-ledger-adjust.png` | dead-image | — |
-| `help/ledgers/supplier-adjust-entry` | related | `/docs/suppliers` | meta-slug-mismatch | — |
-| `help/ledgers/supplier-adjust-entry` | related | `/docs/suppliers/supplier-ledger` | meta-slug-mismatch | — |
+| `help/ledgers/supplier-adjust-entry` | related | `/docs/suppliers` | meta-slug-mismatch | fixed → `/docs/supplier/overview.md` |
+| `help/ledgers/supplier-adjust-entry` | related | `/docs/suppliers/supplier-ledger` | meta-slug-mismatch | fixed → `/docs/supplier/supplier-ledger.md` |
 | `help/purchases/add-purchase-from-photo` | image | `/images/faqs/add-purchase-scan.png` | dead-image | — |
 | `help/sales/cannot-find-a-sale` | image | `/images/faqs/find-previous-sale.png` | dead-image | — |
 | `help/sales/create-credit-note` | image | `/images/faqs/add-credit-note.png` | dead-image | — |
 | `help/sales/create-debit-note` | image | `/images/faqs/create-debit-note-page.png` | dead-image | — |
 | `help/sales/create-debit-note` | image | `/images/faqs/generate-debit-note-drug-list.png` | dead-image | — |
 | `help/sales/draft-and-add-sale-diff` | image | `/images/faqs/save-draft-vs-add.png` | dead-image | — |
-| `help/sales/draft-and-add-sale-diff` | related | `/docs/sales/add-sale` | meta-slug-mismatch | — |
+| `help/sales/draft-and-add-sale-diff` | related | `/docs/sales/add-sale` | meta-slug-mismatch | removed |
 | `help/sales/nrx-sale` | image | `/images/faqs/nrx-h1-type-column.png` | dead-image | — |
 | `help/sales/print-or-share-bill` | image | `/images/faqs/print-share-bill.png` | dead-image | — |
 | `help/sales/return-sale` | image | `/images/faqs/return-sale.png` | dead-image | — |

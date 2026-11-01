@@ -23,7 +23,3 @@ If you still cannot access your account, contact the **MediFlux Support Team** f
 
 ![MediFlux Login](/images/faqs/cannot-login.png)
 *Caption: MediFlux login screen with email, password, and OTP login options.*
-
-## Related
-
-* [Login](/docs/account/login)

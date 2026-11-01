@@ -36,4 +36,4 @@ To remove a user's access to your MediFlux account, **deactivate the user**.
 
 ## Related
 
-* [User Management](/docs/account/user-management)
+* [User Management](/docs/settings/user-management.md)

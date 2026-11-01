@@ -38,4 +38,4 @@ Go to **Settings → User Management** and select **Create user**.
 
 ## Related
 
-* [User Management](/docs/account/user-management)
+* [User Management](/docs/settings/user-management.md)

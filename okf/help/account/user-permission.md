@@ -37,4 +37,4 @@ Go to **Settings → User Management** and find the user whose permissions you w
 
 ## Related
 
-* [User Management](/docs/account/user-management)
+* [User Management](/docs/settings/user-management.md)

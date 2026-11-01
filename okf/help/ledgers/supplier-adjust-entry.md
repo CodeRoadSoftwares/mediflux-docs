@@ -40,5 +40,5 @@ To correct a supplier’s outstanding balance (for example a missed opening bala
 
 ## Related
 
-* [Supplier Ledger](/docs/suppliers/supplier-ledger)
-* [Suppliers](/docs/suppliers)
+* [Supplier Ledger](/docs/supplier/supplier-ledger.md)
+* [Suppliers](/docs/supplier/overview.md)

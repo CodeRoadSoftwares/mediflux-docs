@@ -26,4 +26,4 @@ The **Store Name** and **License Number** cannot be changed directly. To update 
 
 ## Related
 
-* [Settings](/docs/account/settings)
+* [Settings](/docs/settings/overview.md)

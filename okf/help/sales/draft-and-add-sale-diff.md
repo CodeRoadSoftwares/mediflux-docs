@@ -28,5 +28,4 @@ Use **Save Draft** when you need to pause the billing process, review the detail
 
 ## Related
 
-* [Add Sale](/docs/sales/add-sale)
-* [Drafts](/docs/sales/drafts)
+* [Drafts](/docs/sales/drafts.md)

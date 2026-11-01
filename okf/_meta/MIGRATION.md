@@ -84,3 +84,18 @@ Per migration constraints, the following defects and remediation tasks are expli
   - `[ASSUMPTION]` Pointed `[Profit & Loss]` and `[Profit & Loss Statement]` (rows 2, 4, 7, 9, 13, 18) to `/docs/accounting/profitandloss-statements.md`.
   - `[ASSUMPTION]` Pointed `[Ledgers]` and `[Chart of Accounts]` (rows 3, 5, 10, 11, 14, 16, 17) to `/docs/accounting/ledger.md`, since `ledger.md` explicitly documents the pharmacy's Chart of Accounts.
   - `[ASSUMPTION]` Pointed `[How do I reset my password?]` in `how-do-i-sign-in.md` (row 22) to `/help/account/reset-password.md`.
+
+## 5. Phase 3 — Related Link Remediation Record
+
+- **Total Related Links Processed**: 8 / 8
+- **Action Breakdown**: 6 FIX, 2 REMOVED
+- **Unique Files Touched**: 6 concept files (`add-user.md`, `change-store-details.md`, `login-troubleshoot.md`, `remove-user.md`, `user-permission.md`, `supplier-adjust-entry.md`, `draft-and-add-sale-diff.md` — 7 total files touched)
+- **Policy Applied**:
+  - **Policy A (Fix-When-Obvious)**: Applied to 6 rows where the legacy slug or typo clearly mapped to an existing concept in the bundle:
+    - User management links (`/docs/account/user-management`) → `/docs/settings/user-management.md` (3 files).
+    - Store settings link (`/docs/account/settings`) → `/docs/settings/overview.md`.
+    - Supplier links with plural folder typo (`/docs/suppliers/*`) → `/docs/supplier/supplier-ledger.md` and `/docs/supplier/overview.md`.
+  - **Policy B (Remove Otherwise)**: Applied to 2 rows:
+    - `help/account/login-troubleshoot.md`: `* [Login](/docs/account/login)` removed as no Login documentation concept exists in `docs/`. The empty `## Related` section was dropped entirely.
+    - `help/sales/draft-and-add-sale-diff.md`: `* [Add Sale](/docs/sales/add-sale)` removed as `add-sale` is ambiguous between retail and wholesale concepts. The remaining `* [Drafts]` link was retained.
+- **Sections Dropped**: 1 (`help/account/login-troubleshoot.md`).
