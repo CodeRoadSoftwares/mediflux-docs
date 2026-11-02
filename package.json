@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/build-okf-index.mjs && next dev",
+    "build": "node scripts/build-okf-index.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@copperbox/okf-mcp": "2.1.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@modelcontextprotocol/server": "^2.4.0",
     "@radix-ui/react-accordion": "^1.2.14",
     "@radix-ui/react-collapsible": "^1.1.14",
     "@radix-ui/react-popover": "^1.1.17",
@@ -29,6 +32,7 @@
     "fumadocs-mdx": "^15.0.12",
     "fumadocs-ui": "^16.10.5",
     "lucide-react": "^1.21.0",
+    "mcp-handler": "^2.3.0",
     "next": "16.2.9",
     "next-themes": "^0.4.6",
     "react": "19.2.4",
@@ -40,7 +44,7 @@
     "remark-math": "^6.0.0",
     "shiki": "^4.3.0",
     "tailwind-merge": "^3.6.0",
-    "zod": "^3.25.76"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@fumadocs/cli": "^1.3.10",
@@ -50,6 +54,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
