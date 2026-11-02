@@ -30,7 +30,7 @@ There are two ways to create a debit note.
 5. Enter the **Quantity to Remove** for each drug.
 6. Click **Create Debit Note**, then **Confirm**.
 
-![Generate Debit Note from Drug List](/images/faqs/generate-debit-note-drug-list.png)
+![Generate Debit Note from Drug List](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/3bd1c372-b6e5-428c-bad0-4cb263e0b93a-generate-debit-note.png)
 *Caption: Select drugs in Separated View and use Generate Debit Note from the bulk actions toolbar.*
 
 ---
@@ -42,7 +42,7 @@ There are two ways to create a debit note.
 3. Add drugs one by one in the table (Drug Name, Qty, Batch, Expiry, Cost, MRP, tax rates).
 4. Click **Create Debit Note**.
 
-![Create Debit Note page](/images/faqs/create-debit-note-page.png)
+![Create Debit Note page](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/15f39cdf-e230-4f2e-af8e-1eda1ea75627-create-debit-note.png)
 *Caption: Build a debit note from scratch by selecting supplier and adding drugs.*
 
 ---

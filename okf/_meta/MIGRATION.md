@@ -168,3 +168,31 @@ Per migration constraints, the following defects and remediation tasks are expli
   - `return-sale.png`: Sourced **Return Sale** confirmation, **Cancel** option, **Sale returned successfully!** toast message, and **Returned Sales** destination from `okf/docs/sales/returned-sales.md:41-43`.
 - **Placeholder Insertions**: Inserted standard `> **[IMAGE PENDING]**` blockquotes for all 3 promoted rows.
 - **Remaining Dead Image References**: 14 (10 SUPPORTING [7 original Batch 3 + 3 promoted], 4 CRITICAL), scheduled for Phase 4b Batch 3 asset sourcing.
+
+
+## 9. Phase 4b / wrong-calculations.md Decision Record
+
+- **Evaluation Object**: `okf/help/sales/wrong-calculations.md`
+- **Rubric Findings (Q1–Q5)**:
+  - **Q1 (Navigation Reachability)**: **YES (Unreachable)**. Legacy `content/help/sales/meta.json` recorded singular `"wrong-calculation"`; `okf/help/sales/meta.json` was missing. Fixed by creating `okf/help/sales/meta.json` with plural slug `"wrong-calculations"`. Linked from `okf/help/sales/index.md`.
+  - **Q2 (Inbound Links)**: **YES (Orphaned)**. 0 inbound links from other concept files (`grep` across `okf/` yields only its own file and `index.md`).
+  - **Q3 (Content Overlap)**: **YES (Redundant)**. Core terms (TABS, Units, loose tablets, billing calculation) appear in 9 distinct concepts across `docs/sales/`, `docs/purchases/`, and `docs/inventory/`.
+  - **Q4 (Sourcing Cost of 3 Dead Refs)**: **YES (Expensive)**. References triaged in `r2-reconciliation.md` as Row 4 (`drug-list-separated-view.png` = MEDIUM), Row 10 (`edit-units-on-drug.png` = LOW), and Row 14 (`wrong-tabs-calculation.png` = NONE). 2 of 3 are LOW/NONE (expensive to source).
+  - **Q5 (Unique Value)**: **YES (Unique)**. Contains unique diagnostic and error-resolution workflows not documented anywhere else in the bundle:
+    > "If Units is left as `1` or `0`, the system treats the whole strip price as the price of one tablet and the bill total becomes incorrect."
+    Provides two concrete remedial paths ("Option 1: Update the purchase" vs "Option 2: Update from Drug List") to restore correct unit price calculations.
+- **Decision Rule Applied**: "KEEP if Q5 unique = YES."
+- **Outcome**: **DECISION: KEEP**. Navigational orphan status resolved via `meta.json` creation and `index.md` linking. Its 3 dead image references remain in the Batch 3 pending pool.
+
+## 10. Phase 4b / Batch 3a — HIGH-Confidence Image Rewire Record
+
+- **Total Images Rewired**: 2 dead image references in `okf/help/sales/create-debit-note.md`
+- **Source of Grounding**: `okf/_meta/r2-reconciliation.md` (HIGH confidence matches with exact alt text, caption, and UI screen equivalence in `okf/docs/inventory/create-debit-note.md`)
+- **Rewired Mappings**:
+  1. `![Generate Debit Note from Drug List](/images/faqs/generate-debit-note-drug-list.png)`  
+     → `![Generate Debit Note from Drug List](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/3bd1c372-b6e5-428c-bad0-4cb263e0b93a-generate-debit-note.png)`  
+     (Sourced from `okf/docs/inventory/create-debit-note.md:55`)
+  2. `![Create Debit Note page](/images/faqs/create-debit-note-page.png)`  
+     → `![Create Debit Note page](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/15f39cdf-e230-4f2e-af8e-1eda1ea75627-create-debit-note.png)`  
+     (Sourced from `okf/docs/inventory/create-debit-note.md:164`)
+- **Impact on Pending Pool**: Reduced remaining dead image references from 14 to 12.

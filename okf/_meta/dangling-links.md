@@ -55,8 +55,8 @@ This report records all broken links, mismatched slugs, and missing image target
 | `help/purchases/add-purchase-from-photo` | image | `/images/faqs/add-purchase-scan.png` | dead-image | — |
 | `help/sales/cannot-find-a-sale` | image | `/images/faqs/find-previous-sale.png` | dead-image | removed (Batch 1 — decorative) |
 | `help/sales/create-credit-note` | image | `/images/faqs/add-credit-note.png` | dead-image | — |
-| `help/sales/create-debit-note` | image | `/images/faqs/create-debit-note-page.png` | dead-image | — |
-| `help/sales/create-debit-note` | image | `/images/faqs/generate-debit-note-drug-list.png` | dead-image | — |
+| `help/sales/create-debit-note` | image | `/images/faqs/create-debit-note-page.png` | dead-image | rewired to R2 (HIGH confidence, Batch 3a) |
+| `help/sales/create-debit-note` | image | `/images/faqs/generate-debit-note-drug-list.png` | dead-image | rewired to R2 (HIGH confidence, Batch 3a) |
 | `help/sales/draft-and-add-sale-diff` | image | `/images/faqs/save-draft-vs-add.png` | dead-image | rewritten (Batch 2) |
 | `help/sales/draft-and-add-sale-diff` | related | `/docs/sales/add-sale` | meta-slug-mismatch | removed |
 | `help/sales/nrx-sale` | image | `/images/faqs/nrx-h1-type-column.png` | dead-image | — |
