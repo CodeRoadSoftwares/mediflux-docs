@@ -1,43 +1,46 @@
 ---
-title: Drafts
-description: Access and manage all your saved sale drafts, including bills saved mid-way and prescriptions being scanned.
+title: "Drafts"
+description: "Manage your pharmacy sale drafts in MediFlux. Access saved bills, track prescription scanning status, and resume billing easily."
 icon: SquarePen
 ---
 
-The **Drafts** page stores every sale bill that has been saved before being finalised. This includes bills you manually saved mid-way through entering drug details, as well as prescriptions that were uploaded for scanning and are still being processed.
+The **Drafts** page stores every **pharmacy sale draft** that has been saved before being finalised in **MediFlux**. This includes bills you manually saved mid-way through entering drug details, as well as prescriptions that were uploaded for scanning and are still being processed.
 
 Navigate here from the sidebar: **Sales → Drafts**, or click **Drafts** from the top-right of the Add Sale page.
 
 ---
 
 ## How Drafts Are Created
+
 A draft is created in two ways:
 
-- **Manually:** while creating a sale, click **Save Draft** at any point to save your progress and come back to it later. This is useful if you need to step away mid-billing or need more time to complete the bill.
-- **Prescription upload:** when you upload a prescription in the Add Sale form, MediFlux scans it automatically. While scanning is in progress, the bill is saved as a draft so you can continue other work and return once scanning is complete.
+- **Manually:** While creating a sale, click **Save Draft** at any point to save your progress and come back to it later. This is useful if you need to step away mid-billing or need more time to complete the pharmacy bill.
+- **Prescription upload:** When you upload a prescription in the Add Sale form, MediFlux scans it automatically. While scanning is in progress, the bill is saved as a draft so you can continue other work and return once scanning is complete.
 
 ---
 
 ## The Drafts Table
+
 | Column | Description |
 | --- | --- |
 | **Draft ID** | Unique identifier for the draft. Shows **Sale Draft** below it |
 | **Status** | Current status of the draft: Awaiting, Scanning, Completed, or Failed |
 | **Type** | Type of draft: Sale |
-| **Source** | How the draft was created, e.g. Sync |
-| **Files** | Number of files attached (e.g. uploaded prescription). Shows `—` if none |
+| **Source** | How the draft was created, e.g., Sync |
+| **Files** | Number of files attached (e.g., uploaded prescription). Shows `—` if none |
 | **Date** | Date the draft was saved |
 | **Actions** | Delete the draft |
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/ef97f439-e174-4dfd-b9bd-df156755e043-sales-drafts-overview.png"
-  title="Drafts page"
-  description="Drafts table showing a draft entry with status, type, source, and actions."
+  title="MediFlux Pharmacy Sale Drafts Overview"
+  description="Drafts table showing a pharmacy sale draft entry with status, type, source, and actions in MediFlux."
 />
 
 ---
 
 ## Draft Statuses
+
 | Status | What it means |
 | --- | --- |
 | **Awaiting** | The draft is waiting to be processed or scanned |
@@ -48,35 +51,39 @@ A draft is created in two ways:
 ---
 
 ## Filter By Status
+
 Use the status tabs at the top to filter drafts:
 
 **All · Awaiting · Scanning · Completed · Failed**
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/9526cfbf-75aa-4b16-89c8-748fc3fb24f2-drafts-filter.png"
-  title="Status filter tabs"
-  description="Filter drafts by All, Awaiting, Scanning, Completed, or Failed."
+  title="MediFlux Sale Draft Status Filter Tabs"
+  description="Filter pharmacy sale drafts by All, Awaiting, Scanning, Completed, or Failed in MediFlux."
 />
 
 ---
 
-## Resuming A Draft
-Click on any draft row to open it and resume the bill from where you left off. If the prescription scan is completed, the drug details will already be filled in for you.
+## Resuming a Draft
+
+Click on any draft row to open it and resume the pharmacy bill from where you left off. If the prescription scan is completed, the drug details will already be filled in for you.
 
 ---
 
-## Deleting A Draft
+## Deleting a Draft
+
 Click the **three-dot menu (⋮)** on any draft row and select **Delete Draft** to permanently remove it.
 
 <Figure
   src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/da921f18-2e78-4fb9-a00e-9430b9935d29-action-button.png"
-  title="Delete draft"
-  description="Three-dot menu showing the Delete Draft option."
+  title="MediFlux Delete Pharmacy Sale Draft"
+  description="Three-dot menu showing the Delete Draft option for a pharmacy sale in MediFlux."
 />
 
 ---
 
 ## Continue Where You Left Off
+
 <Cards cols={2}>
   <Card
     title="Add Retail Sale"
@@ -102,4 +109,4 @@ Click the **three-dot menu (⋮)** on any draft row and select **Delete Draft** 
     href="/docs/sales/scan-and-ocr"
     icon="Scan"
   />
-</Cards>  
+</Cards>
