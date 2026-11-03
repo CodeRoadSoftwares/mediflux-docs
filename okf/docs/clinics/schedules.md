@@ -1,0 +1,164 @@
+---
+type: Guide
+title: Schedules
+description: Set doctor availability, configure booking rules, and generate shareable booking links for patients.
+timestamp: "2026-08-27T13:35:29+05:30"
+resource: /docs/clinics/schedules
+status: current
+audience: User (Doctor/Admin)
+owner: ""
+icon: Clock
+---
+
+# Schedules
+
+The **Schedules** page is where you define when each doctor is available for consultations. A schedule controls the days and times a doctor can be booked, along with rules like slot duration, breaks, and how far in advance patients can book, this is what powers the Appointments and Pending Bookings pages.
+
+---
+
+## Searching And Filtering Schedules
+The search bar lets you search by **doctor name or speciality**.
+
+![Schedules search bar](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/cec81ab7-f655-474d-8df5-acf2731cc916-schedule-searchbar.png)
+*Caption: Search schedules by doctor name or speciality*
+
+Click **Filters** to open the **Filter & Sort** panel:
+
+| Option | What it does |
+| --- | --- |
+| **Days of Week** | Filter schedules active on specific days |
+| **Time Slot** | Filter by a Start Time and End Time |
+| **Status** | Active, Draft, Inactive, or Archived |
+| **Consultation Fee Range** | Set a Minimum and Maximum fee |
+| **Sort By** | Sort by Recently Added, in ascending or descending order |
+
+Click **Apply Filters** to apply, or **Reset** to clear all filters.
+
+![Filter & Sort panel](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/e01def9e-37f6-48b4-9eba-e746fff53b80-schedule-filter.png)
+*Caption: Filter and sort schedules using multiple criteria*
+
+---
+
+## The Schedules List
+Each schedule card shows the doctor's name and speciality, their **consultation fee**, the **days** they're available, and their **status** (e.g., Active).
+
+Click the **⌄** arrow on a card to expand it and see full details:
+
+| Section | What it shows |
+| --- | --- |
+| **Weekly Schedule** | Time ranges the doctor is available for, per day |
+| **Exception Dates** | Specific dates the doctor is marked unavailable (or otherwise), overriding their regular weekly schedule |
+| **Booking Rules** | Slot Duration, Buffer Time, Max Patients/Slot, and Advance Booking window for this schedule |
+| **Notes** | Any additional notes added when the schedule was created |
+
+![Schedules list](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/ca940d74-352a-4546-aff4-d2b283ffe782-all-schedule-list.png)
+*Caption: Schedule cards showing doctor availability overview*
+
+![Expanded schedule card](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/9cfe6200-4a3f-40f0-946b-12bba845a6b6-schedule-list.png)
+*Caption: Expanded view showing weekly schedule, exception dates, and booking rules*
+
+---
+
+## Row Actions
+Click the **⋮** menu on any schedule card to:
+
+| Action | What it does |
+| --- | --- |
+| **View** | Opens the schedule in a detailed view |
+| **Edit** | Opens the schedule for editing |
+| **Booking Link** | Generates a shareable link patients can use to book an appointment with that doctor directly |
+| **Archive** | Archives the schedule, removing it from active use without deleting it |
+| **Delete** | Permanently removes the schedule |
+
+![Row actions menu](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/a89f35b3-989b-4f60-8225-8114680bd3af-row-actions.png)
+*Caption: Schedule card actions including View, Edit, Booking Link, Archive, and Delete*
+
+---
+
+## Adding A Schedule
+Click **+ Add Schedule** to open the **Add New Schedule** form:
+
+![Add Schedule button](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f70b0c9a-c5f9-4d84-aa12-f772d969315d-add-schedule.png)
+*Caption: Button to open the Add New Schedule form*
+
+| Field | Description |
+| --- | --- |
+| **Select Doctor** | Choose the doctor this schedule is for, required |
+| **Consultation Fee** | Fee charged per consultation, required |
+
+### Schedule Type
+Choose how patients book against this schedule:
+
+| Type | What it means |
+| --- | --- |
+| **Slot Based** | Patients book a specific time slot |
+| **Token Based** | Patients book by date, with a maximum number of patients per day. Selecting this adds a **Max Patients Per Day** field, required |
+
+### Recurring Schedule
+Click **+ Add Day** to add a day to the doctor's weekly availability. For each day:
+
+- Select the **day of the week**
+- Set a time range (**from** – **to**)
+- Click **+ Add Time Slot** to add more than one time range for the same day
+- Use the copy icon to duplicate a day's schedule, or the delete icon to remove it
+
+### Break Times
+Click **+ Add Break Time** to block out a recurring time range within the day (e.g., a lunch break), with a time range and a label describing the break.
+
+### Exception Dates
+Click **+ Add Exception Date** to mark a specific date as an exception to the doctor's regular schedule, set a date, mark it **Unavailable** (or otherwise), and optionally add a reason.
+
+### Booking Rules
+| Field | Description |
+| --- | --- |
+| **Slot Duration (minutes)** | Length of each bookable slot |
+| **Buffer Time (minutes)** | Gap maintained between consecutive slots |
+| **Max Patients Per Slot** | Number of patients that can be booked into one slot |
+| **Advance Booking (days)** | How many days in advance patients can book |
+| **Allow Same Day Booking** | Lets patients book for the current day |
+| **Allow Walk-ins** | Allows patients to be added without a prior booking |
+| **Allow Rescheduling** | Lets patients reschedule an existing booking |
+
+### Other Fields
+| Field | Description |
+| --- | --- |
+| **Schedule Poster** | Optional image shown on the schedule's booking link |
+| **Effective From** | Date this schedule takes effect |
+| **Notes** | Any additional notes about the schedule |
+
+Once configured, click **Create Schedule** to save, or **Cancel** to discard.
+
+![Add New Schedule form](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/07f711d8-9eaa-42b6-a3b3-e5eae9816d02-schedule-form.png)
+*Caption: Complete form for creating a new doctor schedule with all fields and sections*
+
+---
+
+## FAQs
+
+
+  ### What's the difference between Slot Based and Token Based scheduling?
+
+Slot Based lets patients pick a specific time slot within the doctor's availability. Token Based only lets patients pick a date, with a maximum number of patients allowed that day — useful for doctors who see patients on a first-come basis rather than fixed time slots.
+  ### What happens if I archive a schedule instead of deleting it?
+
+Archiving keeps the schedule on record but removes it from active use, so it won't be available for new bookings. This is useful if a doctor's availability is paused temporarily rather than ended for good.
+  ### Can I share a doctor's schedule directly with patients?
+
+Yes, use **Booking Link** from the row's action menu to generate a shareable link patients can use to book an appointment with that doctor.
+
+
+---
+
+## Common Mistakes To Avoid
+- Setting **Advance Booking** too short: if it's too restrictive, patients may not be able to book far enough ahead
+- Forgetting to add **Break Times**: without this, patients could end up booking into a doctor's lunch or rest period
+- Leaving old schedules active instead of archiving them: this can cause confusion when multiple schedules exist for the same doctor
+
+---
+
+## Your Schedule Is Live
+
+  * [Appointments](/docs/clinics/appointments) - See bookings made against this schedule.
+  * [Pending Bookings](/docs/clinics/pending-bookings) - Confirm or reject requests for this schedule.
+  * [Doctors](/docs/clinics/doctors) - View the doctor whose schedule you just configured.
+  * [Prescriptions](/docs/clinics/prescriptions) - View prescriptions written during these appointments.

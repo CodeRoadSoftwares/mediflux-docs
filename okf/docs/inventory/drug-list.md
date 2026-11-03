@@ -1,0 +1,497 @@
+---
+type: Reference
+title: Drug List
+description: Manage your pharmacy drug inventory in MediFlux. Track batches, monitor expiries, reconcile negative stock, and import or export data easily.
+timestamp: "2026-10-30T11:34:57+05:30"
+resource: /docs/inventory/drug-list
+status: current
+audience: User (Pharmacist)
+owner: ""
+icon: List
+---
+
+# Drug List
+
+The **Drug List** is the main **pharmacy drug inventory** directory in **MediFlux**. It gives you a real-time view of the medicines available in your store, including stock, batches, prices, expiry, suppliers, and inventory activity.
+
+You can view inventory in three ways: **Consolidated View**, **Separated View**, and **Negative Stock**.
+
+---
+
+## Summary Cards
+
+At the top of the page, summary cards give you an at-a-glance overview of your inventory.
+
+| Card | What it shows |
+| --- | --- |
+| **Total Drugs** | Total number of unique drugs in your inventory |
+| **Total Value** | Total MRP value of your current stock, along with its cost value |
+| **Expired / Out of Stock** | Number of expired drugs and drugs with no available stock |
+
+![MediFlux Pharmacy Inventory Summary Cards](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/0d6cd04b-6c83-491b-9e67-d451c40250dd-inventory_summary.png)
+*Caption: Summary cards showing key pharmacy inventory information like total drugs, value, and expired or out of stock counts.*
+
+---
+
+## Searching Drugs
+
+Use the search bar at the top of the **Drug List** to quickly find medicines.
+
+You can search across **brands, salts, drug classes, or manufacturers**.
+
+The **All** dropdown lets you narrow the search to a particular field:
+
+| Option | Searches by |
+| --- | --- |
+| **All** | Searches across all supported fields |
+| **Batch Number** | Batch number of the drug |
+| **HSN** | HSN code |
+| **Manufacturer** | Manufacturer name |
+| **Rack Number** | Rack location |
+| **Salts** | Active salts in the drug |
+
+![MediFlux Drug List Search Bar](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/863170c9-7083-4ee4-8569-ccd0fa40c416-search_Drug.png)
+*Caption: Search the pharmacy Drug List using medicine names, batch numbers, HSN codes, manufacturers, or salts.*
+
+---
+
+## Quick Filters
+
+Quick filters below the search bar let you narrow the Drug List without opening the complete filter panel.
+
+| Filter | Available options |
+| --- | --- |
+| **Stock** | In Stock, Out of Stock |
+| **Schedule** | All, NRx, Rx, OTC, Sch H1, Sch H, Sch G |
+| **Expiry** | Unexpired, Expired, In 1 Month, In 3 Months, In 6 Months, In 1 Year |
+
+If the **Warehouse Module** is enabled, an additional warehouse filter lets you switch between the **Main Store**, individual warehouses, and **All Warehouses**.
+
+For details about warehouse inventory and stock transfers, see [Warehouse](/docs/inventory/warehouse).
+
+The filters can be used together to narrow the inventory further.
+
+![MediFlux Drug List Quick Filters](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/d5ae33dc-4a16-4ce0-a1d3-94e59c795219-drug-filters.png)
+*Caption: Filter pharmacy inventory by stock status, drug schedule, expiry, and warehouse in MediFlux.*
+
+---
+
+## Filter and Sort
+
+Select **Filter** to open additional filtering and sorting options.
+
+Use the filter panel when you need more control than the quick filters provide.
+
+You can filter inventory using stock, expiry, supplier, and other drug information, as well as save frequently used filter combinations.
+
+![MediFlux Filter and Sort Panel for Drugs](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/dc1d9031-fa09-4baf-ac18-8bee8a550e86-filter-and-sort.png)
+*Caption: Apply additional filters and sorting options to the pharmacy Drug List in MediFlux.*
+
+---
+
+## Inventory Views
+
+The Drug List has three inventory views:
+
+- **Consolidated View**
+- **Separated View**
+- **Negative Stock**
+
+Each view provides a different way to work with your inventory.
+
+---
+
+## Consolidated View
+
+**Consolidated View** groups matching inventory into a simpler inventory-level view.
+
+Use it when you want to review your inventory without working with every stock entry individually.
+
+The table includes:
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Row number |
+| **Name** | Drug name |
+| **Batch** | Batch number |
+| **HSN** | HSN code |
+| **Stock** | Available stock |
+| **Trade P** | Trade price |
+| **MRP** | Maximum retail price |
+| **Expiry** | Expiry month and year |
+| **Supplier** | Supplier associated with the stock |
+
+### Selecting Drugs
+
+Select one or more groups using the checkboxes to open the bulk action toolbar.
+
+| Action | What it does |
+| --- | --- |
+| **Export CSV** | Exports the selected inventory data |
+| **Export Activities** | Exports the activity history of the selected inventory groups |
+
+![MediFlux Consolidated View for Pharmacy Inventory](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/c4307e45-a5ad-4dba-8c0b-57ad65369f8c-consolidated-view.png)
+*Caption: Export inventory data or activity history for selected drug groups in MediFlux Consolidated View.*
+
+---
+
+## Separated View
+
+**Separated View** displays inventory at the individual stock-entry level.
+
+Use this view when you need to work with a specific rack, batch, expiry, supplier, or stock entry.
+
+The table includes:
+
+| Column | Description |
+| --- | --- |
+| **S.No** | Row number |
+| **Name** | Drug name |
+| **Rack** | Rack location |
+| **Batch** | Batch number |
+| **HSN** | HSN code |
+| **Stock** | Current stock |
+| **Price** | Price of the drug |
+| **Expiry** | Expiry month and year |
+| **Supplier** | Supplier associated with the stock |
+| **Actions** | Opens actions for the individual drug entry |
+
+### Selecting Drugs
+
+Selecting one or more drugs displays the available bulk actions:
+
+| Action | What it does |
+| --- | --- |
+| **Export Activities** | Exports the activity history of the selected drugs |
+| **Generate Debit Note** | Generates a debit note for the selected drugs |
+| **Reorder** | Reorders the selected drugs |
+| **Update** | Opens **Bulk Update Drugs** to update selected stock entries together |
+| **Delete** | Removes the selected drugs and moves them to Trash |
+
+![MediFlux Separated View Bulk Actions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/1319f545-c72d-4f7a-b678-caf662de6c34-seperated-view.png)
+*Caption: Bulk actions available for selected individual pharmacy drug stock entries in MediFlux Separated View.*
+
+### Bulk Update Selected Drugs
+
+In **Separated View**, select multiple drugs and click **Update** to open **Bulk Update Drugs**. This is useful when you need to apply the same change to several medicines, such as updating their **Discount (%)** or **Scheduling** together.
+
+> **[Note]** **Bulk Update:** You can apply a common **Discount (%)** or change the **Scheduling** classification for all selected drugs without editing them individually. Only fields you fill in are updated. Leave other fields blank or set dropdowns to **Leave unchanged** to preserve their existing values. Review the changes and click **Update Drugs** to apply them.
+
+![MediFlux Bulk Update Pharmacy Drugs](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/0aa94827-1695-4616-a0b1-b4127040abf8-global-discount.png)
+*Caption: Update discount, scheduling, stock, pricing, tax rates, and other fields for multiple selected pharmacy drugs.*
+
+### Individual Drug Actions
+
+Select the **⋮** menu beside a drug in **Separated View** to access actions for that individual stock entry.
+
+| Action | What it does |
+| --- | --- |
+| **Edit** | Opens the stock entry for editing |
+| **Add Deal** | Adds a purchase deal or scheme to the drug |
+| **Move** | Moves stock between the Main Store and a warehouse when Warehouse Module is enabled |
+| **Map** | Maps the drug entry |
+| **Reconcile Stock** | Uses matching positive stock to clear a negative stock deficit, when applicable |
+
+![MediFlux Individual Drug Stock Actions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/961a8c84-7200-451d-8b0f-53cdc824eb17-individual-drug-actions.png)
+*Caption: Access actions like Edit, Add Deal, Move, Map, and Reconcile Stock for an individual pharmacy drug entry.*
+
+> **[Note]** Use **Consolidated View** for a grouped inventory view. Use **Separated View** when you need to work with individual stock entries.
+
+---
+
+## Negative Stock
+
+The **Negative Stock** feature lets MediFlux record a sale even when the quantity being sold is greater than the available stock of a drug.
+
+When this happens, the remaining quantity is recorded as **negative stock** instead of preventing the sale.
+
+The **Negative Stock** tab gives you a separate view of drug entries that currently have a stock deficit and need to be reconciled. Negative quantities are shown directly in the **Stock** column.
+
+![MediFlux Negative Stock View](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/3a5b1662-f499-4613-8ec5-d2c0a54477ec-negative-stock.png)
+*Caption: View pharmacy drugs with stock below zero that need to be reconciled in MediFlux.*
+
+---
+
+## How Negative Stock Works
+
+Suppose you have `1` unit of **Laprox** in stock and a customer purchases `10` units.
+
+The available `1` unit is used, but the sale still requires another `9` units.
+
+The stock therefore becomes:
+
+`1 - 10 = -9`
+
+Instead of blocking the sale, MediFlux records the remaining `9` units as a stock deficit.
+
+| Drug | Stock before sale | Quantity sold | Stock after sale |
+| --- | ---: | ---: | ---: |
+| Laprox | `1` | `10` | `-9` |
+
+The **Laprox** entry now appears under the **Negative Stock** tab with a stock quantity of `-9`.
+
+![MediFlux Negative Stock Example](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/43098396-7c48-4f95-825c-357accfe1b34-laprox-negative-stock.png)
+*Caption: Example of a pharmacy drug (Laprox) appearing with negative stock after selling more units than available.*
+
+This keeps the shortage visible so it can later be corrected through **Stock Reconciliation**.
+
+> **[Note]** Only stock entries with a negative quantity need to be reconciled. Reconciliation is used to clear an existing stock deficit using matching positive stock.
+
+---
+
+## Reconciling Negative Stock
+
+**Stock Reconciliation** is used when a drug already has negative stock and matching positive stock is available elsewhere in your inventory.
+
+The positive stock may already exist under another inventory entry, including stock associated with another supplier. In that case, you can reconcile the negative stock directly.
+
+If suitable positive stock is not currently available, stock can first be added through a purchase and then used for reconciliation.
+
+A new purchase is therefore **not required every time you reconcile stock**.
+
+### Reconciliation Example
+
+After the sale above, **Laprox** has `-9` units.
+
+Another matching **Laprox** stock entry has `22` units available. The `9` unit deficit can be reconciled using `9` units from that positive stock.
+
+| Medicine | Before | Reconciliation | After |
+| --- | ---: | ---: | ---: |
+| Negative Laprox | `-9` | `+9` | `0` |
+| Positive Laprox | `22` | `-9` | `13` |
+
+The negative entry is cleared, while the matching positive stock is reduced from `22` to `13`.
+
+![MediFlux Positive and Negative Stock Reconciliation](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/41c91406-8896-4967-a548-113a95962d73-laprox-reconcile-show.png)
+*Caption: Matching pharmacy drug entries showing negative stock and positive stock available for reconciliation in MediFlux.*
+
+---
+
+## How To Reconcile Negative Stock
+
+1. **Find the negative stock**
+
+   Go to **Drugs → Drug List → Negative Stock** and find the drug with the negative stock quantity you want to reconcile.
+
+2. **Open Reconcile Stock**
+
+   Go to **Separated View** and locate the negative stock entry.
+
+   Open the drug's **⋮ Actions** menu and select **Reconcile Stock**.
+
+3. **Set the reconciliation quantity**
+
+   The **Multi-Stock Reconciliation** window shows the negative drug and its current deficit.
+
+   Under **Reconcile Qty**, enter the quantity you want to reconcile. Select **MAX** to use the maximum quantity available for reconciliation.
+
+4. **Select positive stock**
+
+   Under **Positive Batches (Deducted)**, select the matching positive stock that should be used to offset the deficit.
+
+   You can search the available positive stock by **batch number, rack, expiry, or supplier**.
+
+5. **Review projected stock**
+
+   Check **Projected Stock** before confirming the reconciliation.
+
+   For example:
+
+   `-9.00 → 0.00`
+
+   means the complete `9` unit deficit will be cleared.
+
+6. **Confirm the reconciliation**
+
+   Select **Reconcile Stock**.
+
+   MediFlux adds the reconciled quantity to the negative entry to clear its deficit and deducts the same quantity from the selected positive stock.
+
+![MediFlux Multi-Stock Reconciliation Tool](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/f394966f-74b9-416b-90b6-45519bc4072d-reconcile-drug.png)
+*Caption: Select matching positive pharmacy stock and specify the quantity to use for clearing a negative stock deficit.*
+
+> **[Note]** A purchase is not a required step in reconciliation. If matching positive stock already exists, you can reconcile directly. If no suitable positive stock is available, stock must first become available before the deficit can be reconciled.
+
+---
+
+## Reconciliation Activity
+
+Completed reconciliation is recorded in the drug's **Activity** history as **Stock Reconciliation**.
+
+For example, if `9` units are deducted from positive **Laprox** stock containing `22` units, the activity records **Before** as `22`, **Change** as `-9`, and **After** as `13`.
+
+`22 → -9 → 13`
+
+This creates a traceable record of the stock deducted during reconciliation.
+
+![MediFlux Stock Reconciliation Activity History](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/064955a9-41bc-49c8-b7f3-9a91f97f110f-reconcile-acitivity.png)
+*Caption: Activity history showing the stock deducted from a positive pharmacy drug entry during reconciliation.*
+
+---
+
+## Viewing Drug Details And Activity
+
+Click a **drug name** in the Drug List to open its detailed view.
+
+The information available depends on the view you open the drug from:
+
+| Opened from | Available tabs |
+| --- | --- |
+| **Consolidated View** | **Info**, **Batches**, **Activity**, and **Warehouse** when Warehouse Module is enabled |
+| **Separated View** | **Info**, **Activity**, and **Warehouse** when Warehouse Module is enabled |
+
+### Drug Details From Consolidated View
+
+When you click a drug from **Consolidated View**, MediFlux opens the consolidated profile for that drug.
+
+#### Info
+
+The **Info** tab gives you an overview of the drug across its inventory.
+
+| Section | Information shown |
+| --- | --- |
+| **Stock & Pricing** | Total Stock, Cost, Trade Price, MRP, and Total Batches |
+| **Basic Information** | Generic Name, Brand Name, Dosage Form, Pack Size, Units Per Pack, and Schedule |
+| **Identification Details** | HSN Code, Rack Numbers, Expiry Range, Batches Count, and Suppliers |
+
+![MediFlux Consolidated Drug Information](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/76a87a83-e55c-417f-884d-5ee51cf0d248-consolidated-drug-info.png)
+*Caption: View overall stock, pricing, basic information, and identification details for a pharmacy drug.*
+
+#### Batches
+
+Open **Batches** to view the individual batches associated with the drug.
+
+| Field | What it shows |
+| --- | --- |
+| **Batch Number** | Batch identifier |
+| **Stock** | Current stock in the batch |
+| **Cost** | Cost of the batch |
+| **Trade Price** | Trade price |
+| **MRP** | Maximum retail price |
+| **Expiry** | Batch expiry |
+| **Supplier** | Supplier associated with the batch |
+| **Rack** | Rack location |
+
+![MediFlux Drug Batches Overview](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/4a18f4e3-9e3a-4248-9316-a8943bcdba83-consolidated-drug-batched.png)
+*Caption: View the individual batches, expiry dates, and suppliers associated with a pharmacy drug.*
+
+#### Activity
+
+Open **Activity** to view the inventory history for the drug across its stock entries.
+
+Each activity shows:
+
+| Column | What it shows |
+| --- | --- |
+| **Date & Time** | When the activity occurred |
+| **Activity** | The transaction or inventory action |
+| **Before** | Stock before the activity |
+| **Change** | Quantity added or deducted |
+| **After** | Stock after the activity |
+| **Reference** | Related transaction or inventory record |
+
+Use **All Activity Types** to filter the history by inventory activity, such as **Add Purchase**, **Update Purchase**, **Delete Purchase**, **Restore Purchase**, **Purchase Return**, **Add Sale**, **Update Sale**, **Sale Return**, and **Stock Reconciliation**.
+
+Use **All Dates** to filter the activity history by date.
+
+![MediFlux Consolidated Drug Activity History](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/42a52dce-f511-415b-a375-83630820b7d6-consolidated-drug-activity.png)
+*Caption: View and filter the complete inventory activity history of a pharmacy drug.*
+
+---
+
+### Drug Details From Separated View
+
+When you click a drug from **Separated View**, MediFlux opens the details for that specific inventory entry.
+
+The profile contains **Info** and **Activity**, along with **Warehouse** when Warehouse Module is enabled.
+
+#### Info
+
+The **Info** tab provides detailed information about the selected stock entry.
+
+| Section | Information shown |
+| --- | --- |
+| **Stock & Pricing** | Unit Cost, Cost, Trade Price, Margin, Stock, Rack, and Expiry |
+| **Deal Information** | Deal Start Date, Buy Quantity, and Free Quantity, when a deal is available |
+| **Basic Information** | Dosage Form, Pack Size, Units Per Pack, Reorder Level, Schedule, and Discount |
+| **Identification Details** | HSN Code, NDC Code, Batch Number, and Barcode |
+| **Composition Details** | Active Salts and Drug Classes |
+| **Tax Information** | CGST Rate, SGST Rate, and IGST Rate |
+| **Clinical & Safety Information** | Indications, side effects, dosage, warnings, and other available clinical information |
+
+![MediFlux Separated Drug Information Details](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/1a93aac2-620a-48e5-a98e-99071b908f6d-seperated-drug-info.png)
+*Caption: View stock, pricing, deal, basic, identification, composition, tax, and clinical information for a specific pharmacy inventory entry.*
+
+#### Activity
+
+Open **Activity** to view the inventory history for that specific stock entry.
+
+The activity table shows **Date & Time**, **Activity**, **Before**, **Change**, **After**, and **Reference**.
+
+Use **All Activity Types** to filter by the type of inventory activity and **All Dates** to filter activity by date.
+
+![MediFlux Separated Drug Activity History](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/9a9ddc91-38c6-41a2-b738-e1d84ddbe172-seperated-drug-activity.png)
+*Caption: View and filter activity history for a specific pharmacy drug inventory entry.*
+
+> **[Note]** Open a drug from **Consolidated View** to see its overall information, batches, and combined activity. Open it from **Separated View** to inspect the information and activity of a specific inventory entry.
+>
+> When the **Warehouse Module** is enabled, use the **Warehouse** tab to check stock availability across warehouses. See [Viewing Warehouse Stock](/docs/inventory/warehouse) for details.
+
+---
+
+## Add Deal
+
+The **Add Deal** option is available from the individual drug's **⋮ Actions** menu in **Separated View**.
+
+Use it to configure a purchase scheme for a drug, such as a buy quantity with a free quantity. You can set the **Buy Quantity**, **Free Quantity**, **Start Date**, **End Date**, and whether the deal is **Active**.
+
+---
+
+## Warehouse Inventory
+
+**Main Store** is available by default. With the **Warehouse Module** enabled, you can also view stock in individual warehouses, move medicines between locations, and check warehouse-wise availability.
+
+For instructions on enabling the module, see [Modules](/docs/settings/modules).
+
+For warehouse filtering, stock transfers, and viewing a medicine's warehouse stock, see the [Warehouse](/docs/inventory/warehouse).
+
+---
+
+## Page-Level Actions
+
+Select **Actions** at the top of the Drug List to access inventory-level actions.
+
+| Action | What it does |
+| --- | --- |
+| **Export Stock** | Exports your stock data |
+| **Stock Audit** | Opens the stock audit option |
+| **Import** | Opens the inventory import process |
+
+![MediFlux Drug List Page-Level Actions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/10/89d77a2a-b129-450e-9a78-f9f4de58b016-actions.png)
+*Caption: Access Export Stock, Stock Audit, and Import options from the pharmacy Drug List Actions menu.*
+
+---
+
+## Importing Your Inventory
+
+If you're setting up MediFlux for the first time or need to add drugs in bulk, select **Actions → Import** to open the inventory import process.
+
+The import process includes:
+
+1. **Upload:** upload your inventory as a CSV or Excel file. You can also download a template to see the expected format
+2. **Map Headers:** match the columns in your file to MediFlux's drug fields
+3. **Preview:** review your data before confirming the import
+4. **Complete:** finish the import and add the drugs to your inventory
+
+![MediFlux Import Pharmacy Drugs via CSV/Excel](https://waibusiness.s3.ap-south-1.amazonaws.com/media/1783587724164-934031354-importdrugs.png)
+*Caption: Import pharmacy inventory into MediFlux from a supported CSV or Excel file.*
+
+---
+
+## Common Follow-Ups
+
+
+  * [Add Purchase](/docs/purchases/add-purchase) - Add purchased stock to your inventory.
+  * [Sales List](/docs/sales/sale-list) - Review sales and transactions affecting your inventory.
+  * [Add Retail Sale](/docs/sales/add-sale-retail) - Create a retail sale from your available inventory.
+  * [Supplier List](/docs/supplier/supplier-list) - View and manage suppliers associated with your inventory.

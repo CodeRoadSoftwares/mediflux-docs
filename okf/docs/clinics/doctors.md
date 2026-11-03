@@ -1,0 +1,149 @@
+---
+type: Guide
+title: Doctors
+description: View and manage doctor profiles, search by qualification or speciality, and add new doctors to your clinic.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/clinics/doctors
+status: current
+audience: User (Doctor/Admin)
+owner: ""
+icon: BriefcaseMedical
+---
+
+# Doctors
+
+The **Doctors** page is your directory of every doctor associated with your pharmacy's clinic. It gives you a quick view of each doctor's contact details, qualifications, and specialities, with the ability to search, filter, and manage profiles from one place.
+
+---
+
+## Searching Doctors
+The search bar lets you search by **name, phone, email, or registration number**. Just start typing and the list filters instantly.
+
+![Doctors search bar](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/bc81105a-8c70-4875-a00f-78a2fad20e4b-searching-doctors.png)
+*Caption: Search for doctors by name, phone, email, or registration number*
+
+---
+
+## Filtering By Qualification And Speciality
+Two dropdowns next to the search bar let you narrow the list further:
+
+| Filter | What it does |
+| --- | --- |
+| **All Qualifications** | Filter doctors by a specific qualification |
+| **All Specialities** | Filter doctors by a specific speciality |
+
+You can type in either dropdown to search for a qualification or speciality, and select a match from the list.
+
+![Qualifications and Specialities dropdowns](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/849c120f-9a50-4bbb-af59-bff9b9e65b34-drop-down.png)
+*Caption: Filter doctors by qualification and speciality using the dropdowns*
+
+---
+
+## The Doctors Table
+| Column | Description |
+| --- | --- |
+| **Name** | Doctor's name, with their registration number shown below it |
+| **Phone** | Contact number |
+| **Email** | Email address |
+| **Qualification** | Qualifications held by the doctor, shown as tags (e.g., MBBS, MD) |
+| **Speciality** | Speciality or specialities the doctor practices in |
+| **Actions** | Quick action menu for that doctor row |
+
+![Doctors table](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/adfcc8a1-3a2c-4382-8543-e802c8497b1f-doctors-table.png)
+*Caption: Doctors table showing all columns and data*
+
+---
+
+## Sorting The Table
+The **Name**, **Qualification**, and **Speciality** columns are sortable. Click the column header to toggle between ascending and descending order.
+
+---
+
+## Row Actions
+Click the **⋮** menu on any doctor row to:
+
+| Action | What it does |
+| --- | --- |
+| **Edit** | Opens the doctor's profile for editing |
+| **Delete** | Removes the doctor from your clinic |
+
+![Row actions menu](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/383486f9-7cc2-4bd6-b1e8-065cc1f36e30-actions.png)
+*Caption: Row actions menu with Edit and Delete options*
+
+---
+
+## Pagination
+At the bottom of the table, you can move between pages and choose how many doctors to display per page using the **Items per page** dropdown.
+
+---
+
+## Viewing A Doctor'S Profile
+Click on any doctor's name to open their full profile, showing:
+
+| Section | What it shows |
+| --- | --- |
+| **Header** | Doctor's name, phone, email, who created the profile, and when it was last edited |
+| **Doctor Information** | Registration Number, Phone, Email, and Status |
+| **Qualifications** | All qualifications, shown as tags |
+| **Specialities** | All specialities, shown as tags |
+
+![Doctor detail page](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f9067d5d-75db-479a-9fd5-61bf2856b365-doctors-detailed-page.png)
+*Caption: Doctor profile page showing all sections and information*
+
+---
+
+## Adding A Doctor
+Click **+ Add Doctor** at the top of the page to open the **Add New Doctor** form:
+
+![Add Doctor button](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/a7079db4-8da7-4230-80a6-2a1215da4ee2-add-doctor.png)
+*Caption: Add Doctor button located at the top of the page*
+
+### The Doctors Form
+| Field | Description |
+| --- | --- |
+| **Full Name** | Doctor's full name, required |
+| **Registration Number** | The doctor's official medical registration number, required |
+| **Phone Number** | Contact number, required |
+| **Email Address** | Contact email, required |
+| **Qualifications** | Comma-separated list of qualifications (e.g., MBBS, MD, MS) |
+| **Specialities** | Comma-separated list of specialities (e.g., Cardiology, Neurology) |
+
+Qualifications and specialities you type in are added to the list and can be searched or filtered by later using the dropdowns on this page.
+
+![Add New Doctor form](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/9334c73a-dba7-4ea9-a681-72a505f282ba-doctors-form.png)
+*Caption: Add New Doctor form with all required and optional fields*
+
+### Creating A User Account For The Doctor
+Checking **Create User Account for this Doctor** creates a login for the doctor, allowing them to access MediFlux directly under their own account.
+
+> **[Note]** A doctor's login only gives them access to the **Clinic** section, they won't be able to view or manage other parts of MediFlux like Sales, Inventory, or Customers.
+
+Once all required fields are filled in, click **Add Doctor** to save the profile, or **Cancel** to discard it.
+
+---
+
+## FAQs
+
+  ### Can I search for a doctor by their registration number?
+
+Yes. The search bar covers **name**, **phone**, **email**, and **registration number**, so any of these will work.
+  ### Do I need to fill in Qualifications and Specialities when adding a doctor?
+
+No. Only **Full Name**, **Registration Number**, **Phone Number**, and **Email Address** are required. **Qualifications** and **Specialities** are optional but recommended, since they let you filter and search doctors more effectively later.
+  ### What happens if I delete a doctor?
+
+The doctor is removed from your **Doctors** list. Records linked to them elsewhere, like prescriptions or appointments, may still reference their name historically.
+
+---
+
+## Common Mistake To Avoid
+> **[Warning: Don't skip Qualifications and Specialities]** Without these, the doctor won't show up when filtering by qualification or speciality, making them harder to find and schedule later. Fill them in during setup to keep your clinic directory fully searchable.
+
+---
+
+## After Adding A Doctor
+
+  * [Schedules](/docs/clinics/schedules) - Set when this doctor is available for appointments.
+  * [Prescriptions](/docs/clinics/prescriptions) - View prescriptions this doctor will issue.
+  * [Appointments](/docs/clinics/appointments) - See appointments booked with this doctor.
+  * [Add Retail Sale](/docs/sales/add-sale-retail) - Bill patients after their appointment with this doctor.

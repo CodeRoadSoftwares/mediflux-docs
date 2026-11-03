@@ -1,0 +1,130 @@
+---
+type: Reference
+title: Bill Templates
+description: Customize your invoice template, theme color, columns, tax display, and terms and conditions.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/settings/bill-templates
+status: current
+audience: User (Admin)
+owner: ""
+icon: FileText
+---
+
+# Bill Templates
+
+The **Bill Templates** tab controls how your invoices look, the layout, which columns appear, tax display format, theme color, and the terms and conditions printed at the bottom. Changes here apply automatically to all future invoices.
+
+---
+
+## Select Template
+Choose from four invoice layouts:
+
+| Template | Style |
+| --- | --- |
+| **Classic Professional** | Clean and professional design with clear sections |
+| **Modern Minimalist** | Clean lines with emphasis on whitespace |
+| **Bold & Colorful** | Eye-catching design with a colored header |
+| **Compact Professional** | Space-efficient design for detailed invoices |
+
+![Select Template](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/68ad9ebc-f7de-4fef-a49b-80cab45cc94a-bill-template-1.png)
+*Caption: Choose from four invoice layouts: Classic Professional, Modern Minimalist, Bold & Colorful, or Compact Professional.*
+
+---
+
+## Invoice Columns
+Choose which columns appear on your invoice, up to a maximum of **13 columns**. Some fields are mandatory and locked, shown as **Required**; the rest can be toggled on or off:
+
+| Column | Required? |
+| --- | --- |
+| **Sr** | Optional |
+| **Item** | Required |
+| **Batch** | Optional |
+| **Exp** | Optional |
+| **Qty** | Required |
+| **Units** | Optional |
+| **MRP** | Required |
+| **Dis** | Required |
+| **cgst** | Optional |
+| **sgst** | Optional |
+| **igst** | Optional |
+| **Subtotal** | Optional |
+| **Tax** | Optional |
+| **Total** | Required |
+
+### Tax Display Mode
+Choose how tax is shown on your invoice:
+
+| Mode | Description |
+| --- | --- |
+| **Percentage (%)** | Shows tax as a percentage |
+| **Value (₹)** | Shows tax as a fixed amount |
+
+![Invoice Columns](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/0a0293e7-27f3-4627-be7e-c77daf245c9f-bill-template-2.png)
+*Caption: Toggle columns on or off, with mandatory fields locked as Required.*
+
+---
+
+## Terms & Conditions
+Add up to 3 terms and conditions to be displayed at the bottom of your invoices, for example, payment terms or return policies.
+
+![Terms & Conditions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/3bb812bb-5e3e-45c6-9e4a-12d7f11c308d-bill-template-3.png)
+*Caption: Add up to 3 custom terms to appear at the bottom of every invoice.*
+
+---
+
+## Colors
+Choose a theme color for your invoice from a preset palette, or enter a custom hex code directly.
+
+![Colors](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/c2164194-bbcd-45e7-96ab-08c1fbaa0db6-bill-template-4.png)
+*Caption: Pick a preset theme color or enter a custom hex code.*
+
+---
+
+## Preview
+The **Preview** panel on the right shows a live preview of your invoice as you make changes. Toggle **Preview as** between **Retail Sale** and **Wholesale** to see how the template looks for each. Click **Show Full Preview** to see the complete invoice layout.
+
+![Preview Panel](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/d434f427-03ea-4977-abeb-ec3913dd73bb-bill-template-5.png)
+*Caption: Live preview of your invoice with Retail Sale and Wholesale toggle.*
+
+![Full Invoice Preview](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f10e4c51-6b5f-46ae-b892-6109695fa0fd-bill-template-6.png)
+*Caption: Complete invoice layout before saving.*
+
+---
+
+## Saving Your Template
+Click **Save Settings** to apply your changes.
+
+> **[Note]** Changes apply to all future invoices automatically. Settings are saved to your store profile, and only admins can update invoice settings.
+
+---
+
+## FAQs
+
+  ### Will changing my Bill Template affect invoices I've already generated?
+
+No, changes only apply to future invoices. Past invoices keep the layout and settings they were created with.
+  ### Can I preview how my invoice looks before saving?
+
+Yes, use the **Preview** panel or click **Show Full Preview** to see the complete invoice layout before saving.
+  ### Is there a limit to how many columns I can show on an invoice?
+
+Yes, a maximum of 13 columns can be shown, and some fields are mandatory and cannot be turned off.
+
+
+---
+
+## Common Mistakes To Avoid
+- Removing too many optional columns: while allowed, leaving out useful fields like Batch or Expiry can make your invoices harder to reference later
+- Forgetting to click **Save Settings**: changes aren't applied until saved
+- Not checking the full preview before saving: always use **Show Full Preview** to confirm your invoice looks correct for both Retail Sale and Wholesale
+
+---
+
+## See It In Action
+Your invoice layout is ready. Create a bill and preview how it looks with real data.
+
+
+  * [Add Sale](/docs/sales/add-sale-retail) - Create a retail or wholesale sale and see your customized invoice template live.
+  * [Add Purchase](/docs/purchases/add-purchase) - Record a purchase and check how your template handles supplier invoices.
+  * [Invoice Counter](/docs/settings/invoice-counter) - Review or adjust your invoice numbering format to match your new template style.
+  * [Account](/docs/settings/account-info) - Make sure your store logo, signature, and stamp are uploaded, they appear on every invoice.

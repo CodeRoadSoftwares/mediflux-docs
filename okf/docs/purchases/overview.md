@@ -1,0 +1,137 @@
+---
+type: Overview
+title: Purchases
+description: Manage pharmacy purchases in MediFlux. Record purchase bills, track purchase orders, restock inventory, and scan supplier invoices from one central hub.
+timestamp: "2026-10-30T11:34:57+05:30"
+resource: /docs/purchases/overview
+status: current
+audience: User (Pharmacist)
+owner: ""
+icon: ShoppingCart
+---
+
+# Purchases
+
+The **Purchases** section is where every **pharmacy purchase** your store makes from suppliers is recorded and managed in **MediFlux**. From regular purchase bills to purchase orders, restocks, and scanned drafts, MediFlux handles the full purchase lifecycle, with each purchase automatically updating your inventory and supplier ledger.
+
+---
+
+## What You Can Do In Purchases
+- **Record purchases:** Log new stock coming in from a supplier, item by item.
+- **Raise purchase orders:** Create and track orders sent to suppliers before stock arrives.
+- **Track order status:** See which purchase orders are pending, synced, or completed.
+- **Restock inventory:** Manage restock orders for existing drugs.
+- **Scan and auto-fill bills:** Use the built-in scanner to read supplier invoices and pre-fill purchase details.
+- **Recover deleted purchases:** View and restore purchases from Trash.
+- **Access saved drafts:** Resume purchase bills that were scanned or saved but not yet finalised.
+
+---
+
+## Navigating the Purchases Section
+The **Purchases** section in the left sidebar expands into six main pages:
+
+| Page | What it's for |
+| --- | --- |
+| **Purchase List** | View, search, and manage all your recorded purchases |
+| **Purchase Orders** | Create and track purchase orders sent to suppliers |
+| **Add Purchase** | Record a new purchase bill from a supplier |
+| **Restocks** | View and manage restock orders for existing drugs |
+| **Trash** | View and restore deleted purchases |
+| **Drafts** | Access saved or scanned purchase drafts that haven't been finalised yet |
+
+![MediFlux Pharmacy Purchases Sidebar Navigation](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/32126322-8121-4ff5-8980-93aa82b78a43-purchases-navbar.png)
+*Caption: The MediFlux left sidebar showing Purchase List, Purchase Orders, Add Purchase, Restocks, Trash, and Drafts.*
+
+---
+
+## Quick Actions From Anywhere
+You don't have to navigate to the Purchases section to add a purchase. The **`+`** button in the top-right corner of any screen gives you instant access:
+
+- **Add Purchase:** Start a new purchase bill from anywhere in MediFlux.
+
+The **`+`** quick-add menu is available on every screen. Use it whenever you need to quickly start a new purchase without interrupting your current workflow.
+
+![MediFlux Quick Add Pharmacy Purchase](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/32fd2594-7e82-4fa0-8db9-2b0ac1d3f83d-quick-add-purchase.png)
+*Caption: The MediFlux dashboard quick-add menu showing the Add Purchase option for fast workflow.*
+
+---
+
+## Purchase List
+The **Purchase List** is your complete purchase record. Each entry shows the purchase number, date and time, the supplier it was billed from, the total item count and amount, and a status tag where applicable, such as **Partial** (partially received) or **Returned**. Some entries also display a challan number alongside the purchase number. You can search by supplier, drug, or challan/invoice number, and filter the list to narrow results. Each purchase can be expanded for more detail or actioned from the row.
+
+![MediFlux Pharmacy Purchase List Record](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/2103c87b-e762-451d-8c62-932dcd1b4d0b-purchase-list.png)
+*Caption: Complete MediFlux purchase record with purchase number, supplier, item count, amount, and status tags.*
+
+---
+
+## Purchase Orders
+The **Purchase Orders** page tracks orders raised with suppliers before stock physically arrives. Each order shows the order number, an **Unpaid** tag where relevant, the supplier, item count and amount, and a status such as **Pending** or **Synced**. Pending orders show quick approve/reject actions directly in the row, while synced orders use a standard actions menu. A counter at the top highlights how many orders are currently pending. You can search by supplier or drug name.
+
+![MediFlux Pharmacy Purchase Orders Tracking](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/33be1fd6-c614-4323-bcae-cb13daf73968-purchase-orders.png)
+*Caption: Track pharmacy purchase orders with suppliers in MediFlux, showing status, approve/reject actions, and pending count.*
+
+---
+
+## Add Purchase
+The **Add Purchase** page is where you record a new purchase bill. Select the supplier, enter the invoice number and date, then add drugs to the bill either manually or via **Scan** (to auto-read a supplier invoice) or **Import CSV**. Each line item captures details such as type (e.g., Rx), units, HSN code, batch, expiry, quantity, packs, deal, free quantity, cost, trade price, and MRP. Clicking on a drug shows its purchase history and price comparison. The bill auto-calculates the subtotal, discount, tax, final bill amount, and margin. You can save the purchase as a draft or add it directly.
+
+![MediFlux Add Pharmacy Purchase Bill](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/3eff5dac-b207-4860-b65e-5d26a1311836-add-purchase.png)
+*Caption: Record a new pharmacy purchase bill in MediFlux with manual entry, scan, or CSV import options.*
+
+---
+
+## Restocks
+The **Restocks** page manages restock orders for drugs already in your inventory. You can search by brand, salt, drug class, or manufacturer, and filter by order status using the **Filter by** dropdown. When no restock orders exist, the page shows an empty state.
+
+![MediFlux Pharmacy Inventory Restocks](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/456cb3bb-fbc4-4b95-802a-da5671ed9ca5-restocks.png)
+*Caption: Manage pharmacy restock orders for existing inventory in MediFlux, with search and filter options.*
+
+---
+
+## Trash
+The **Trash** page holds purchases that have been deleted. You can search by supplier, drug, or challan number, and reset filters if needed. When no deleted purchases match your search, the page displays an empty state.
+
+![MediFlux Deleted Pharmacy Purchase Recovery](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/b3865aa8-94ed-4925-8fd2-fb3be8164552-purchase-trash.png)
+*Caption: View and restore deleted pharmacy purchases in MediFlux, with search by supplier, drug, or challan number.*
+
+---
+
+## Drafts
+The **Drafts** page holds saved or scanned purchase bills that haven't been finalised yet. Drafts can be filtered by status: **All**, **Awaiting**, **Scanning**, **Completed**, or **Failed**. Each entry shows the draft ID, status, type, source (e.g., **Scan**), number of attached files, and date. This is where purchase bills scanned via the **Add Purchase** page land before they're reviewed and converted into a full purchase entry.
+
+![MediFlux Scanned Pharmacy Purchase Drafts](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/94d02af7-842a-420e-a969-6e37a57ffdb4-draft.png)
+*Caption: Review and finalise scanned or saved pharmacy purchase bills in MediFlux before converting to full entries.*
+
+---
+
+## Quick Tip
+Use the **Scan** option on the Add Purchase page whenever you receive a physical supplier invoice. It saves you from manually typing out every drug, batch, and expiry, and the scanned bill lands in **Drafts** for you to review before finalising.
+
+---
+
+## FAQs
+
+  ### What's the difference between Purchase Orders and Add Purchase?
+
+A Purchase Order is raised before stock arrives; it's a request sent to the supplier. Add Purchase is used to record stock that has actually been received, whether or not a purchase order was raised for it first.
+  ### Where do scanned invoices go before I can review them?
+
+Scanned purchase bills go to Drafts first, tagged with a status like Awaiting, Scanning, Completed, or Failed. Once processed, you can review and convert them into a full purchase entry.
+  ### Can I recover a purchase I deleted by mistake?
+
+Yes, deleted purchases move to Trash, where you can search for them and restore them.
+  ### Does adding a purchase automatically update my supplier ledger?
+
+Yes, every recorded purchase updates both your inventory and the relevant supplier's ledger.
+
+
+---
+
+## Start Purchasing
+Get stock into your pharmacy and keep your inventory up to date.
+
+
+  * [Add Purchase](/docs/purchases/add-purchase) - Record a new purchase bill, scan supplier invoices, or import via CSV.
+  * [Purchase List](/docs/purchases/purchase-list) - Review all recorded purchases, check status, and search by supplier or drug.
+  * [Supplier List](/docs/supplier/supplier-list) - Manage your suppliers before recording purchases against them.
+  * [Drug List](/docs/inventory/drug-list) - Check current stock levels before placing restock orders.

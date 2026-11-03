@@ -1,0 +1,147 @@
+---
+type: Guide
+title: User Management
+description: Manage users, roles, and permissions across your platform, including sessions and activity logs.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/settings/user-management
+status: current
+audience: User (Admin)
+owner: ""
+icon: Users
+---
+
+# User Management
+
+The **User Management** tab is where you manage everyone who has access to your MediFlux store, adding new users, setting their permissions, reviewing active sessions, and tracking activity. It's organized into four sub-tabs: **Users**, **Sessions**, **Create user**, and **Activity logs**.
+
+![User Management Tabs](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/94f81b86-ff0e-4e0f-988d-1603e12af96e-user-management-1.png)
+*Caption: Users, Sessions, Create user, and Activity logs sub-tabs.*
+
+---
+
+## Users
+The **Users** tab lists everyone with access to your store, showing their name, status (e.g., Active), role (e.g., Staff, Doctor), and email.
+
+Click **Edit** on any user to open the **Edit User** form:
+
+![Edit User Form](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/6abce209-06af-4da5-a9cb-80991aa54839-user-management-2.png)
+*Caption: Update role, name, email, password, and permissions for an existing user.*
+
+| Field | Description |
+| --- | --- |
+| **Role** | The user's role (e.g., Admin, Staff, Sales Person, Accountant) |
+| **Name** | The user's name |
+| **Email** | The user's email (read-only) |
+| **New Password / Confirm Password** | Set a new password for the user, if needed |
+
+### Permissions
+Below this, a permissions grid lets you control what the user can **Write**, **Read**, or **Delete** across: Sale, Purchase, Customer, Supplier, Reports, and Customer Ledger.
+
+![Permissions Grid](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/940b6b7c-a0aa-450d-b831-a8581b2bddd1-user-management-3.png)
+*Caption: Set Write, Read, and Delete access for each module.*
+
+### Clinic Permissions
+An expandable **Clinic Permissions** section lets you set Write, Read, and Delete access specifically for Doctors, Schedules, and Appointments.
+
+### Other Options
+| Option | What it does |
+| --- | --- |
+| **Deactivate User** | Prevents the user from logging in, without deleting their account |
+| **Privacy Mode Enabled** | Hides sensitive information from this user |
+
+Click **Save** to apply changes, or **Cancel** to discard.
+
+
+![Other options](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/ae7c9b2b-4fc0-4917-9872-d15f70b7f72e-user-management-4.png)
+*Caption: Deactivate User and Privacy Mode Enabled toggles below Clinic Permissions*
+
+---
+
+## Sessions
+The **Sessions** tab shows every active login session across your store's users.
+
+| Column | Description |
+| --- | --- |
+| **User** | User's name and role |
+| **Device / Browser** | The device and browser used for that session |
+| **Last Updated** | When the session was last active |
+| **Actions** | **Logout** to end that specific session |
+
+You can filter by a specific user using the **All users** dropdown, and use **Logout All** to end every active session at once.
+
+![Device Sessions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/6ae42b5a-6b42-49a7-8d67-4ed6d31bdc66-user-management-5.png)
+*Caption: View and manage active login sessions across all users.*
+
+> **[Note]** Logging out a session immediately signs that user out on that device, useful if a staff member's device is lost or a session looks unfamiliar.
+
+---
+
+## Create User
+Click **Create user** to add a new user to your store:
+
+![Create New User](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/45abc20f-969a-477d-af83-bb267ef3ad3c-user-management-6.png)
+*Caption: Form to add a new user with role, contact details, password, and permissions.*
+
+### Basic Information
+| Field | Description |
+| --- | --- |
+| **Role** | Admin, Staff, Sales Person, or Accountant, required |
+| **Name** | Full name, required |
+| **Email Address** | Required |
+| **Phone** | Optional |
+
+### Security
+| Field | Description |
+| --- | --- |
+| **Password** | Required |
+| **Confirm Password** | Required |
+
+### Permissions
+Set Write, Read, and Delete access across: Sale, Purchase, Customer, Supplier, Reports, Customer Ledger, Supplier Ledger, and Drug Management. An expandable **Clinic Permissions** section lets you set the same for Doctors, Schedules, and Appointments.
+
+![Create User Permissions](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/c44f03d1-227d-4bca-91e6-271d20646cc0-user-management-7.png)
+*Caption: Set module and clinic permissions for the new user.*
+
+![Role Dropdown](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/5678f8a4-3ecd-40a0-a646-ea5be439fc5a-user-management-8.png)
+*Caption: Select from Admin, Staff, Sales Person, or Accountant.*
+
+> **[Note]** Permissions aren't tied to a fixed role, you can customize exactly what each user can access, regardless of the role you assign them.
+
+---
+
+## Activity Logs
+The **Activity logs** tab is locked by default and requires a password to access.
+
+![Activity Logs](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/753b12e4-1914-40e6-bdec-b2acaec4255d-user-management-9.png)
+*Caption: Locked by default, contact MediFlux support to request access.*
+
+> **[Note]** If you need to review activity logs, reach out to MediFlux support with your request, and the support team will assist accordingly.
+
+---
+
+## FAQs
+
+  ### Can I set custom permissions for a user instead of relying on their role?
+
+Yes, permissions are fully customizable per user, the Role field doesn't automatically lock in a fixed set of permissions.
+  ### What happens if I deactivate a user?
+
+The user can no longer log in, but their account and historical records aren't deleted.
+  ### How do I access Activity Logs?
+
+Activity Logs are locked by default. Reach out to MediFlux support to request access.
+  ### Can I log out a specific device without logging out all users?
+
+Yes, use the **Logout** action on that specific session in the Sessions tab.
+
+
+---
+
+## Build Your Team
+Your users are set up. Now put them to work across your pharmacy.
+
+
+  * [Add Sale](/docs/sales/add-sale-retail) - Let your sales staff start billing with their assigned permissions.
+  * [Add Purchase](/docs/purchases/add-purchase) - Have your purchasing team record stock inward with controlled access.
+  * [Doctors](/docs/clinics/doctors) - Set up clinic doctors if you've assigned Clinic Permissions to any user.
+  * [Modules](/docs/settings/modules) - Enable or disable features so your users only see what they need.

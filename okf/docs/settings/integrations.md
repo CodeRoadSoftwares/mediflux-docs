@@ -1,0 +1,64 @@
+---
+type: Guide
+title: Integrations
+description: Manage external connections and automated workflows, including WhatsApp reports and AI-powered features.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/settings/integrations
+status: current
+audience: User (Admin)
+owner: ""
+icon: Link
+---
+
+# Integrations
+
+The **Integrations** tab lets you connect MediFlux with external services and automate certain workflows, like sending reports and invoices over WhatsApp, or enabling AI-powered features using your own API key.
+
+---
+
+## WhatsApp Automations
+| Option | What it does |
+| --- | --- |
+| **Daily WhatsApp Reports** | Sends automated daily business reports and summaries via WhatsApp |
+| **Auto Sale Invoice Sending** | Automatically sends sale invoices to customers via WhatsApp when a sale is created |
+| **Auto Payment Message Sending** | Automatically sends payment messages to customers via WhatsApp when a payment is received |
+
+Each option can be toggled on or off independently.
+
+![WhatsApp Automations](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/4006aacc-435b-46f0-8b01-55e2cf19dcf7-integration-1.png)
+*Caption: Toggle Daily WhatsApp Reports, Auto Sale Invoice Sending, and Auto Payment Message Sending on or off.*
+
+---
+
+## Gemini API Key
+To enable AI-powered features in MediFlux, add your own **Gemini API key**. You can get one from **Google AI Studio**.
+
+Enter your key in the field provided, then click **Save**. Use the eye icon to show or hide the key as you type.
+
+![Gemini API Key](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f8d5dfe3-6b84-4c70-b60f-190f178fb64f-intregration-2.png)
+*Caption: Enter your Gemini API key from Google AI Studio to enable AI-powered features.*
+
+> **[Note]** The Gemini API key powers MediFlux's AI-driven features. You'll need your own key from Google AI Studio to use these features.
+
+---
+
+## FAQs
+
+  ### Do I need a Gemini API key to use MediFlux?
+
+No, it's only needed if you want to use AI-powered features. Core MediFlux functionality works without one.
+  ### Will customers be notified automatically if I enable Auto Sale Invoice Sending?
+
+Yes, once enabled, sale invoices are sent to customers via WhatsApp automatically whenever a sale is created.
+
+
+---
+
+## Automate Your Workflow
+Your integrations are configured. Let them run while you focus on the business.
+
+
+  * [Add Sale](/docs/sales/add-sale-retail) - Create a sale and watch your invoice send automatically via WhatsApp.
+  * [Sales List](/docs/sales/sale-list) - Review sent invoices and track which customers received them.
+  * [Notifications](/docs/settings/notifications) - Fine-tune what your team gets notified about alongside WhatsApp automations.
+  * [Account](/docs/settings/account-info) - Make sure your store's WhatsApp number and contact details are up to date.

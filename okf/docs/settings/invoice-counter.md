@@ -1,0 +1,96 @@
+---
+type: Reference
+title: Invoice Counter
+description: Configure invoice numbering format, counters, and auto-reset behavior for sales and purchases.
+timestamp: "2026-08-27T10:54:01+05:30"
+resource: /docs/settings/invoice-counter
+status: current
+audience: User (Admin)
+owner: ""
+icon: Hash
+---
+
+# Invoice Counter
+
+The **Invoice Counter** tab controls how invoice numbers are generated across MediFlux, the prefix, numbering format, date components, and whether the counter resets periodically. Sales and Purchases have their own independent settings, so you can configure each separately.
+
+![Invoice Counter](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/ca7e27fa-b017-4ad0-9fb4-bdda7f51719a-invoice-counter-1.png)
+*Caption: Configure invoice numbering format, counters, and auto-reset behavior for sales and purchases.*
+
+---
+
+## Sale Settings And Purchase Settings
+At the top of the page, two tabs let you configure invoice numbering separately for **Sale Settings** and **Purchase Settings**. Both have the same fields, but changes to one don't affect the other.
+
+![Sale Settings and Purchase Settings](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/92988f8b-1da2-498d-ad45-500b1848bcc7-invoice-counter-2.png)
+*Caption: Toggle between Sale Settings and Purchase Settings tabs to configure each independently.*
+
+---
+
+## Basic Settings
+| Field | Description |
+| --- | --- |
+| **Prefix** | Optional starting text for invoice numbers (e.g., INV, PUR, SAL) |
+| **Counter Start** | The number the counter begins at. Cannot be changed once invoices have been generated |
+| **Current Counter** | The current counter value, updated automatically as invoices are created (read-only) |
+| **Counter Padding** | Number of digits used in the counter, from 1–10 (e.g., padding of 5 shows as 00001) |
+
+---
+
+## Date Settings
+| Field | Description |
+| --- | --- |
+| **Include Date in Invoice Number** | Adds a date component to your invoice numbering |
+| **Date Format** | DDMMYYYY, MMYYYY, YYYY, or None |
+| **Separator** | Character used to separate parts of the invoice number (e.g., -, /, _) |
+
+![Date Format Dropdown](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/f8bd771b-d341-451b-9a9d-4a6826ecb328-invoice-counter-3.png)
+*Caption: Choose from DDMMYYYY, MMYYYY, YYYY, or None for your invoice numbering.*
+
+---
+
+## Auto-Reset Counter
+| Field | Description |
+| --- | --- |
+| **Enable Auto-Reset** | Automatically resets the counter back to its start value on a schedule |
+| **Reset Period** | Daily, Monthly, Yearly, or Never |
+
+![Reset Period Dropdown](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/fe9d8bf8-eb38-424f-bfa0-252c04ad4e8e-invoice-counter-4.png)
+*Caption: Set the counter to reset Daily, Monthly, Yearly, or Never.*
+
+> **[Note]** Auto-reset is useful if you want your invoice numbers to restart each year or month (e.g., starting fresh at 001 every January), rather than counting up indefinitely.
+
+---
+
+## Live Preview And Configuration Summary
+As you adjust these settings, a **Live Preview** on the right shows what your next invoice number will look like. Below it, a **Configuration Summary** shows your current **Format**, **Next Invoice** number, and **Auto-Reset** status at a glance.
+
+Click **Save Settings** to apply your changes. The button shows how many fields have been modified, and displays **No Changes** when nothing's been edited.
+
+![Live Preview and Configuration Summary](https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/07/e9217b41-636b-4e39-8b84-fac1ecc497fd-invoice-counter-5.png)
+*Caption: See your next invoice number and current configuration at a glance.*
+
+---
+
+## FAQs
+
+  ### Can I change the Counter Start after invoices have already been generated?
+
+No, Counter Start becomes read-only once invoices exist, to prevent numbering conflicts with invoices already issued.
+  ### Do Sales and Purchases share the same invoice counter?
+
+No, each has its own independent settings under the Sale Settings and Purchase Settings tabs.
+  ### What happens if I enable Auto-Reset with a Yearly period?
+
+Your counter will automatically reset back to the Counter Start value at the beginning of each year.
+
+
+---
+## What'S Next
+Your invoice numbering is configured. Start creating bills with your new format.
+
+
+  * [Add Sale](/docs/sales/add-sale-retail) - Create a sale and see your configured invoice number in action.
+  * [Add Purchase](/docs/purchases/add-purchase) - Record a purchase with your purchase invoice numbering format.
+  * [Bill Templates](/docs/settings/bill-templates) - Customize how your invoices look alongside the numbering.
+  * [Account](/docs/settings/account-info) - Review your store details that appear on every invoice.
