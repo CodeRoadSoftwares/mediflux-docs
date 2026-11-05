@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated fumadocs source files; they are not hand-written source.
+    ".source/**",
   ]),
 ]);
 

@@ -55,27 +55,21 @@ export function AskAiBar() {
   const { barsVisible, revealMobile, pinBars, unpinBars } = useMobileBottomBars();
   const isXl = useMediaQuery("(min-width: 1280px)");
   const unpinTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [model, setModel] = useState<AiModelId>("chatgpt");
+  const [model, setModel] = useState<AiModelId>(() => {
+    if (typeof window === "undefined") return "chatgpt";
+
+    try {
+      const stored = window.localStorage.getItem(MODEL_STORAGE_KEY);
+      return stored && isAiModelId(stored) ? stored : "chatgpt";
+    } catch {
+      return "chatgpt";
+    }
+  });
   const [question, setQuestion] = useState("");
   const [pickerOpen, setPickerOpen] = useState(false);
   const [desktopHoverPeek, setDesktopHoverPeek] = useState(false);
   const expanded =
     barsVisible || pickerOpen || (isXl && desktopHoverPeek);
-
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(MODEL_STORAGE_KEY);
-      if (stored && isAiModelId(stored)) setModel(stored);
-    } catch {}
-  }, []);
-
-  useEffect(() => {
-    if (!isXl) setDesktopHoverPeek(false);
-  }, [isXl]);
-
-  useEffect(() => {
-    if (!barsVisible) setDesktopHoverPeek(false);
-  }, [barsVisible]);
 
   const selectModel = useCallback((id: AiModelId) => {
     setModel(id);

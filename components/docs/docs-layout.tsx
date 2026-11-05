@@ -36,6 +36,9 @@ function DocsLayoutShell({
   const pathname = usePathname();
 
   useEffect(() => {
+    // Closing the mobile menu when the route changes is intentional and should not
+    // be treated as a render loop; the route is the source of truth for the nav state.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMobileOpen(false);
   }, [pathname]);
 

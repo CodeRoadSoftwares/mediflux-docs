@@ -13,3 +13,8 @@
 
 - **Phase 4b**: Kept okf/help/sales/wrong-calculations.md (Q5 unique=YES). Nav fixed (meta.json slug + index link). Its 3 dead refs remain in Batch 3c sourcing list.
 - **Phase 4b / Batch 3a**: Rewired 2 HIGH-confidence dead image refs to existing R2 assets (create-debit-note.md).
+
+
+## 2026-11-04
+
+- **Concept Update**: Synchronized `okf/docs/reports/creditors-debtors.md` with updated content (enhanced pharmacy creditors/debtors guidance, pure GFM steps, updated image captions, and related links).

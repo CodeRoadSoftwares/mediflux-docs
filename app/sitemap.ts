@@ -87,18 +87,34 @@ function collectFromPageTree(nodes: Node[]): string[] {
 }
 
 /** Extracts internal page URLs from Fumadocs source.getPages(), filtering out drafts if flagged. */
+type PageDataLike = {
+  draft?: boolean;
+  published?: boolean;
+};
+
 function collectFromPages(
-  pages: Array<{ url: string; data?: any }>
+  pages: Array<{ url?: string | null; data?: unknown }>
 ): string[] {
   const urls: string[] = [];
   if (!Array.isArray(pages)) return urls;
 
   for (const page of pages) {
     if (!page || typeof page.url !== "string") continue;
+
+    const pageData = page.data;
+    const isDraft =
+      pageData !== null &&
+      pageData !== undefined &&
+      typeof pageData === "object" &&
+      (("draft" in pageData && (pageData as PageDataLike).draft === true) ||
+        ("published" in pageData &&
+          (pageData as PageDataLike).published === false));
+
     // Skip unpublished/draft pages if draft flag exists
-    if (page.data && (page.data.draft === true || page.data.published === false)) {
+    if (isDraft) {
       continue;
     }
+
     urls.push(page.url);
   }
   return urls;
