@@ -24,7 +24,8 @@ var help = defineDocs({
     schema: frontmatterSchema.extend({
       ...sharedFrontmatter,
       tags: z.array(z.string()).optional(),
-      related: z.array(z.string()).optional()
+      related: z.array(z.string()).optional(),
+      updatedAt: z.string().optional()
     })
   }
 });

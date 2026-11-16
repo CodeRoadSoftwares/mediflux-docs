@@ -87,10 +87,12 @@ export function resolveRelatedDocs(value: unknown): RelatedDoc[] {
     seen.add(normalized);
 
     const page = docsPageFromHref(normalized);
+    if (!page) continue;
+
     items.push({
-      href: page?.url ?? normalized,
-      title: page?.data.title || formatSlug(normalized.split("/").pop() ?? ""),
-      description: page?.data.description,
+      href: page.url,
+      title: page.data.title || formatSlug(normalized.split("/").pop() ?? ""),
+      description: page.data.description,
     });
   }
 
