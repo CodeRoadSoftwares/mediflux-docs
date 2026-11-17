@@ -1,0 +1,46 @@
+---
+title: Why is the MRP wrong after scanning a bill?
+description: Wrong MRP after bill scanning is usually caused by a poor-quality bill, a blurry camera photo, or incorrect column mapping.
+tags: [purchases, scan, ocr, mapping]
+related:
+  - /docs/purchases/ai-bill-scan
+---
+
+When you scan a purchase bill, MediFlux reads the **MRP** from the printed invoice. If the MRP looks wrong after scanning, it is almost always due to one of the three cases below.
+
+---
+
+## 1. The bill is not clear
+
+If the original bill is **faded, smudged, or low quality**, the scanner can misread digits (for example, reading **90.0** as **80.0**).
+
+- Re-scan the bill at a **higher resolution**, or use a cleaner copy.
+- Make sure the MRP column is **fully visible** — not cut off, folded, or covered.
+- After re-scanning, **verify the MRP** against the printed bill before saving.
+
+## 2. The camera photo is blurry
+
+If you uploaded a **photo of the bill taken with a camera**, poor focus, shadows, or a tilted angle can produce wrong values.
+
+- Retake the photo in **good lighting**, with the bill **flat** and the camera **directly above** it.
+- Keep the whole bill in frame and **focus on the MRP column** before capturing.
+- Avoid glare and shadows, upload the clearer photo, and re-check the MRP.
+
+## 3. The columns were mapped incorrectly
+
+During import, every detected column must be matched to the right field. If the **MRP column is mapped to the wrong field** (or left unmapped), the values will appear incorrect.
+
+1. In the **Map Invoice Headers** step, check the **Sample** value shown under each detected column.
+2. Map the column whose sample shows the printed MRP (e.g. **90.0**) to **MRP ***.
+3. Confirm the other required fields — **Drug/Product Name *** and **Quantity *** — and match **HSN Code**, **Free Quantity**, and **Units/Pack Size** to their correct columns.
+4. Click **Next** and verify the values in **Review & Import** before confirming.
+
+<Figure
+  src="https://pub-edab995818924e31a696b8a8c0fd961b.r2.dev/mediflux-docs/2026/11/2a22c1d5-3e99-4e9b-88ee-7d6c60ff9a30-header-mapping.png"
+  title="Map Invoice Headers"
+  description="Match each detected column to the correct field using the sample values before importing."
+/>
+
+---
+
+After fixing the scan, photo, or mapping, re-import the bill and **verify the MRP** in the review step. If the MRP is still wrong on a clear bill with correct mapping, contact the **MediFlux Support Team**.
